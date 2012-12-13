@@ -1,0 +1,15 @@
+!
+! This database stores the name-alias for database conversion.
+! Format: original name followed by alias, seperated by space
+! e.g., Bunsenite(alpha) Bunsenite_a
+! e.g., Bunsenite(beta)  Bunsenite_b
+! The alias can be useful for the program that can not support long name
+! as automatically truncation by the program sometimes make the name meaningless.
+!
+! Please note that the maximum length for the name/alias is 60 characters each.
+! The database is free form, name and alias are separated by space (no matter how many blank spaces).
+! The maximum line length is 260 characters.
+! All the name and alias is case-insensitive.
+!
+! Line start with "!" is comment line. Skip in reading.
+! 
