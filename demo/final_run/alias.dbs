@@ -13,6 +13,7 @@
 !
 ! Line start with "!" is comment line. Skip in reading.
 ! 
+h+                                                              h+1
 cr(oh)3(h2po4)-                                                 cr(oh)3(h2_-
 cr(oh)3(hpo4)-2                                                 cr(oh)3(h_-2
 cr(oh)3(po4)-3                                                  cr(oh)3(po4)

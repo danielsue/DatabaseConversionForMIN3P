@@ -1,7 +1,5 @@
 Open log file success:dbs.log
-Open alias database success:alias.dbs
-Start reading alias database: alias.dbs
-End reading alias database: alias.dbs
+No alias database found: alias.dbs
 Open TOUGHREACT database success: dbs.txt
 Begin reading TOUGHREACT database
 Read head success.
