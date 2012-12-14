@@ -178,7 +178,7 @@ contains
                 min3PRedoxReactions(j)%EnthalpyChange = 0.0d0
                 !The second temperature in TOUGHREACT 25C is used. 
                 !Should modify if 25C does not exist or in the different position.
-                min3PRedoxReactions(j)%AKLOG = aqueousSpecies(i)%AKLOG(2)   
+                min3PRedoxReactions(j)%AKLOG = -aqueousSpecies(i)%AKLOG(2)      !Min3P use the reverse equilibrium constant
                 min3PRedoxReactions(j)%Z = aqueousSpecies(i)%Z
                 !Convert Debye-Huckel constants
                 !Ion effective or hydrated radius used to compute the Debye-Huckel a0 parameter (see Appendix H
@@ -275,7 +275,7 @@ contains
                 min3PComplexReactions(k)%EnthalpyChange = 0.0d0
                 !The second temperature in TOUGHREACT 25C is used. 
                 !Should modify if 25C does not exist or in the different position.
-                min3PComplexReactions(k)%AKLOG = aqueousSpecies(i)%AKLOG(2)   
+                min3PComplexReactions(k)%AKLOG = -aqueousSpecies(i)%AKLOG(2)   
                 min3PComplexReactions(k)%Z = aqueousSpecies(i)%Z
                 !Convert Debye-Huckel constants
                 !Ion effective or hydrated radius used to compute the Debye-Huckel a0 parameter (see Appendix H
@@ -393,7 +393,7 @@ contains
             min3PGases(i)%EnthalpyChange = 0.0d0
             !The second temperature in TOUGHREACT 25C is used. 
             !Should modify if 25C does not exist or in the different position.
-            min3PGases(i)%AKLOG = gases(i)%AKLOG(2)   
+            min3PGases(i)%AKLOG = -gases(i)%AKLOG(2)   
 
             !Molecular weight
             min3PGases(i)%MWT = gases(i)%MWT
@@ -482,7 +482,7 @@ contains
             min3PMinerals(i)%EnthalpyChange = 0.0d0
             !The second temperature in TOUGHREACT 25C is used. 
             !Should modify if 25C does not exist or in the different position.
-            min3PMinerals(i)%AKLOG = minerals(i)%AKLOG(2)   
+            min3PMinerals(i)%AKLOG = -minerals(i)%AKLOG(2)   
 
             !Molecular weight
             min3PMinerals(i)%MWT = minerals(i)%MWT
