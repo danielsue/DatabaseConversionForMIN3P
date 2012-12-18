@@ -211,14 +211,14 @@ contains
 
                 !Some of the aqueous/minerals in TOUGHREACT have more than 5 reactant or product, 
                 !but min3p can only support 5, at present, the program only export 5
-                !!MIN3P can support 10 components or more, change to support 10
+                !change to support 20
                 !.....................................
-                min3PRedoxReactions(j)%NCP = min(aqueousSpecies(i)%NCP,10)
+                min3PRedoxReactions(j)%NCP = min(aqueousSpecies(i)%NCP,20)
                 
                 m = min3PRedoxReactions(j)%NCP                
                               
-                if (aqueousSpecies(i)%NCP > 10) then
-                    call WriteLog("Warning:"// "Number of components exceed 10, only 10 components are converted.") 
+                if (aqueousSpecies(i)%NCP > 20) then
+                    call WriteLog("Warning:"// "Number of components exceed 20, only 20 components are converted.") 
                     nWarnings = nWarnings + 1
                 end if
                 min3PRedoxReactions(j)%STQ(1:m) = aqueousSpecies(i)%STQ(1:m)
@@ -307,12 +307,12 @@ contains
                 end if
 
                 !
-                min3PComplexReactions(k)%NCP = min(aqueousSpecies(i)%NCP,10)
+                min3PComplexReactions(k)%NCP = min(aqueousSpecies(i)%NCP,20)
                
                 m = min3PComplexReactions(k)%NCP
                 
-                if (aqueousSpecies(i)%NCP > 10) then
-                    call WriteLog("Warning:"// "Number of components exceed 10, only 10 components are converted.") 
+                if (aqueousSpecies(i)%NCP > 20) then
+                    call WriteLog("Warning:"// "Number of components exceed 20, only 20 components are converted.") 
                     nWarnings = nWarnings + 1
                 end if
 
@@ -399,12 +399,12 @@ contains
             min3PGases(i)%MWT = gases(i)%MWT
 
             !
-            min3PGases(i)%NCP = min(gases(i)%NCP,10)
+            min3PGases(i)%NCP = min(gases(i)%NCP,20)
                 
             j = min3PGases(i)%NCP
                
-            if (gases(i)%NCP > 10) then
-                call WriteLog("Warning:"// "Number of components exceed 10, only 10 components are converted.") 
+            if (gases(i)%NCP > 20) then
+                call WriteLog("Warning:"// "Number of components exceed 20, only 20 components are converted.") 
                 nWarnings = nWarnings + 1
             end if
 
@@ -491,12 +491,12 @@ contains
             min3PMinerals(i)%Density = minerals(i)%MWT / minerals(i)%VMIN
 
             !Number of components
-            min3PMinerals(i)%NCP = min(minerals(i)%NCP,10)
+            min3PMinerals(i)%NCP = min(minerals(i)%NCP,20)
                 
             j = min3PMinerals(i)%NCP
                
-            if (minerals(i)%NCP > 10) then
-                call WriteLog("Warning:"// "Number of components exceed 10, only 10 components are converted.") 
+            if (minerals(i)%NCP > 20) then
+                call WriteLog("Warning:"// "Number of components exceed 20, only 20 components are converted.") 
                 nWarnings = nWarnings + 1
             end if
 
