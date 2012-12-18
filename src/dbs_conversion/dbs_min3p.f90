@@ -32,8 +32,8 @@ module dbs_min3p
         real            ::      AlkFac = 0.0d0             !Alkalinity factor
         real            ::      MWT = 0.0d0                !Molecular weight of the aqueous species (g/mol)
         integer         ::      NCP = 0                    !number of basis species defining the secondary species
-        real            ::      STQ(5) = 0.0d0             !stoichiometric coefficients of the components comprising the aqueous species                                                        
-        character(nMNLmin3P)   ::      NameOfSTQ(5) = ""          !name of the reactant or product
+        real            ::      STQ(10) = 0.0d0             !stoichiometric coefficients of the components comprising the aqueous species                                                        
+        character(nMNLmin3P)   ::      NameOfSTQ(10) = ""          !name of the reactant or product
 
     end type typeMin3PAqueousSpecies
     
@@ -45,8 +45,8 @@ module dbs_min3p
         real            ::      AKLOG = 0.0d0              !Equilibrium constant for 25C
         real            ::      MWT = 0.0d0                !Molecular weight of the aqueous species (g/mol)
         integer         ::      NCP = 0                    !number of basis species defining the secondary species
-        real            ::      STQ(5) = 0.0d0             !stoichiometric coefficients of the components                                                       
-        character(nMNLmin3P)   ::      NameOfSTQ(5) = ""          !name of the reactant or product  
+        real            ::      STQ(10) = 0.0d0             !stoichiometric coefficients of the components                                                       
+        character(nMNLmin3P)   ::      NameOfSTQ(10) = ""          !name of the reactant or product  
         
     end type typeMin3PGas
     
@@ -59,8 +59,8 @@ module dbs_min3p
         real            ::      MWT = 0.0d0               !Molecular weight of the mineral (g/mol)
         real            ::      Density = 0.0d0           !Density, g/cm^3
         integer         ::      NCP = 0                    !number of basis species defining the secondary species
-        real            ::      STQ(5) = 0.0d0             !stoichiometric coefficients of the components                                                       
-        character(nMNLmin3P)   ::      NameOfSTQ(5) = ""          !name of the reactant or product 
+        real            ::      STQ(10) = 0.0d0             !stoichiometric coefficients of the components                                                       
+        character(nMNLmin3P)   ::      NameOfSTQ(10) = ""          !name of the reactant or product 
         
     end type typeMin3PMineral   
 
@@ -176,7 +176,7 @@ contains
         call WriteLog("Write min3p database success: " // trim(filePathDbsMin3PComplex)) 
         
 200     format(a12,2x,2f10.4,16x,3f5.2,f9.4,f7.2)
-201     format(6x,i1,3x,5(a12,1x,f7.3,1x))
+201     format(6x,i1,3x,10(a12,1x,f7.3,1x))
     
     end subroutine writeDbsMin3PComplex   
 
@@ -206,7 +206,7 @@ contains
         !considered a comment line.
         
 300     format(a)
-301     format(i1,3x,5(a,1x,f7.3,1x))
+301     format(i1,3x,10(a,1x,f7.3,1x))
 302     format("'equilibrium'", 4x, 2f8.4)         
     
     end subroutine writeDbsMin3PRedox    
@@ -227,19 +227,19 @@ contains
         call WriteLog("Write min3p database success: " // trim(filePathDbsMin3PGases))         
         
 400     format(a12,2x,2f10.4,31x,f9.4)
-401     format(6x,i1,3x,5(a12,1x,f7.3,1x))        
+401     format(6x,i1,3x,10(a12,1x,f7.3,1x))        
     
     end subroutine writeDbsMin3PGases
     
     ! Write min3p database minerals.dbs
     !How to know from TOUGHREACT if the mineral is reversible or reversible 
     !and the parallel reaction pathways, which are needed in MIN3P? 
-    !At present, exported to as ‘surface’ and 'reversible'
-    !•	'uo3(c)'
-    !•	'surface'
-    !•	 286.0272    8.0435
-    !•	 3  'h+1'   -2.000  'uo2+2'    1.000  'h2o'    1.000
-    !•	'reversible'   -7.7190  19.3150
+    !At present, exported to as ‘surface?and 'reversible'
+    !?'uo3(c)'
+    !?'surface'
+    !? 286.0272    8.0435
+    !? 3  'h+1'   -2.000  'uo2+2'    1.000  'h2o'    1.000
+    !?'reversible'   -7.7190  19.3150
     subroutine writeDbsMin3PMinerals
     
         implicit none
@@ -261,7 +261,7 @@ contains
         
 500     format(a)
 501     format(2(f10.4,2x))
-502     format(i1,3x,5(a,1x,f7.3,1x))
+502     format(i1,3x,10(a,1x,f7.3,1x))
 503     format(a, 4x, 2f8.4)        
     
     end subroutine writeDbsMin3PMinerals
