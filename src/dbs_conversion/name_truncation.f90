@@ -63,11 +63,11 @@ contains
                 / "! It help you to decide the which name should be given a better alias."                      &
                 / "! You can modify the truncation name and then copy it to alias.dbs."                         &
                 / "! Maximum name length is 60, maximum data amount is 1000. "                                  &
-                / "! File format: name  truncation"                                                             &
+                / "! File format: name ; truncation"                                                             &
                 / "! e.g., abcdefghijkl abcde" )
         
         do i = 1, nNameTruncation
-            write(iUnitNameTruncation, "(a60,4x,a)")  longNames(i), trim(truncateNames(i))
+            write(iUnitNameTruncation, "(a60,a1,1x,a)")  longNames(i), ";", trim(truncateNames(i))
         end do
         
         call WriteLog("End writing name truncation.")

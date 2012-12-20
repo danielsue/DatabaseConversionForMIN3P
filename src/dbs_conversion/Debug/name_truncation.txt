@@ -2,5 +2,5 @@
 ! It help you to decide the which name should be given a better alias.
 ! You can modify the truncation name and then copy it to alias.dbs.
 ! Maximum name length is 60, maximum data amount is 1000. 
-! File format: name  truncation
+! File format: name ; truncation
 ! e.g., abcdefghijkl abcde

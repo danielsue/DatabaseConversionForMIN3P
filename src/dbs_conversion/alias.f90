@@ -91,10 +91,19 @@ contains
             end if
 
             if (strBuffer(1:1) /= strComment) then
-                i = index(strBuffer," ")
-                strName = strBuffer(1:i-1)
-                strAlias = trim(adjustl(strBuffer(i:)))
-                call AddAlias(strName, strAlias)
+                !considering some of the species name has blank space, in the alias database, the name and alias first is seperated by ";"
+                !if ";" is not found, then consider blank space as separator
+                i = index(strBuffer,";")
+                if(i > 0) then
+                    strName = trim(adjustl(strBuffer(1:i-1)))
+                    strAlias = trim(adjustl(strBuffer(i+1:)))
+                    call AddAlias(strName, strAlias)
+                else                    
+                    i = index(strBuffer," ")
+                    strName = trim(adjustl(strBuffer(1:i-1)))
+                    strAlias = trim(adjustl(strBuffer(i+1:)))
+                    call AddAlias(strName, strAlias)
+                end if
             end if
 
         end do

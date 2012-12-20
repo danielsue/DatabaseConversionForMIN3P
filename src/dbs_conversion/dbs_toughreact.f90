@@ -401,16 +401,10 @@ contains
 
         do while (.not. bEndOfFile)
             call readNextLine
-            if (index(strBuffer,strTemperature) > 0) then                   
+            if (index(strBuffer,strTemperature) > 0) then 
               
                 call skipNValues(strBuffer,1)
-                
-                if (index(strTemperature, " ") > 0) then
-                    call skipNValues(strBuffer,1)
-                end if
-            
-                write(*,*) trim(strBuffer)
-                
+              
                 read(strBuffer, *)  nTemperature
 
                 if (allocated(temperature)) then
@@ -434,8 +428,8 @@ contains
             call WriteLog("Read temperature points success.")
             call WriteLog("Number of termperature points:")
             call WriteLog(nTemperature)
-            !call WriteLog("Temperatures:")
-            !call WriteLog(temperature)
+            call WriteLog("Temperatures:")
+            call WriteLog(temperature)
         end if
 
      end subroutine readTemperature
