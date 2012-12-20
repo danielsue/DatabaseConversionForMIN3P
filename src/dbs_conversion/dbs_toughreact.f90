@@ -285,12 +285,16 @@ contains
             end if
 
             strBuffer = adjustl(strBuffer)
-            
-            ! Conver all case to lower case
-            call lowerCase(strBuffer)
 
-            if (strBuffer(1:1) /= strComment) then
-                exit
+            if(len_trim(strBuffer) /= 0 ) then
+            
+                ! Conver all case to lower case
+                call lowerCase(strBuffer)
+
+                if (strBuffer(1:1) /= strComment) then
+                    exit
+                end if
+
             end if
 
         end do
@@ -310,12 +314,18 @@ contains
         string = adjustl(string)
         
         do i = 1, n
-            j = index(string, " ")
-            if(j < 1) then
-                string = ""
-                exit
+            if(string(1:1) == "'") then
+                string = string(2:)
+                j = index(string, "'")
+                string = adjustl(string(j+1:))
+            else
+                j = index(string, " ")
+                if(j < 1) then
+                    string = ""
+                    exit
+                end if
+                string = adjustl(string(j:))
             end if
-            string = adjustl(string(j:))
         end do
         
      end subroutine skipNValues
@@ -366,6 +376,19 @@ contains
         end if
 
     end subroutine readHead
+
+    !Check if the number is zero
+    function isZero(dvalue) result(bFlag)
+        implicit none
+        real, intent(in) :: dvalue
+        logical ::bFlag
+        bFlag = .false.
+        if(abs(dvalue) < 1.0E-100) then
+            bFlag = .true.
+        else
+            bFlag = .false.
+        end if
+    end function isZero
     
      ! Read temperature points
      subroutine readTemperature
@@ -498,10 +521,12 @@ contains
         
         integer :: i, j, k
         character(nMNLTR) :: strName
+        character(nMNLTR) :: tempNames(3)
 
+        i = 0
         nAqueousSpecies = 0
         nRedoxReaction = 0
-
+        
         do while (.not. bEndOfFile)
             call readNextLine
             call getNameFromString(strBuffer, strName)
@@ -510,7 +535,26 @@ contains
             end if
             nAqueousSpecies = nAqueousSpecies + 1
             strBuffers(nAqueousSpecies) = strBuffer
+
+            !check if the three names are the same
+            i = i + 1
+            tempNames(i) = trim(strName)
+            if(i == 3) then
+                if(tempNames(1) /= tempNames(2) .or. tempNames(1) /= tempNames(3)) then
+                    call WriteLog("Error detected in reading aqueous species. Three names do not match: " &
+                    // trim(tempNames(1)) // ", " // trim(tempNames(2)) // ", " // trim(tempNames(3)))
+                    call ErrorHandling
+                else
+                    call WriteLog("Read in data: "//trim(tempNames(1)))
+                end if
+                i = 0
+            end if
         end do
+
+        if(mod(nAqueousSpecies,3) /= 0) then
+            call WriteLog("Error detected in reading aqueous species. Number of data lines is not 3x.")
+            call ErrorHandling
+        end if
 
         nAqueousSpecies = nAqueousSpecies / 3
         
@@ -566,9 +610,13 @@ contains
                 call skipNValues(strBuffers(j),1)
                 read(strBuffers(j),*) aqueousSpecies(i)%AKCOE
                 call skipNValues(strBuffers(j),5)
+                
                 if (len_trim(strBuffers(j)) > 0) then
-                    read(strBuffers(j),*) aqueousSpecies(i)%AKCOP
-                    aqueousSpecies(i)%bAKCOP = .true.
+                    read(strBuffers(j),*) aqueousSpecies(i)%AKCOP(1)
+                    if(.not. isZero(aqueousSpecies(i)%AKCOP(1))) then
+                        read(strBuffers(j),*) aqueousSpecies(i)%AKCOP
+                        aqueousSpecies(i)%bAKCOP = .true.
+                    end if
                 end if   
                 !write(*,*) aqueousSpecies(i)%AKCOE
             end do
@@ -612,7 +660,9 @@ contains
         
         integer :: i, j, k
         character(nMNLTR) :: strName
+        character(nMNLTR) :: tempNames(3)
 
+        i = 0
         nMinerals = 0
 
         do while (.not. bEndOfFile)
@@ -623,7 +673,27 @@ contains
             end if
             nMinerals = nMinerals + 1
             strBuffers(nMinerals) = strBuffer
+
+          !check if the three names are the same
+            i = i + 1
+            tempNames(i) = trim(strName)
+            if(i == 3) then
+                if(tempNames(1) /= tempNames(2) .or. tempNames(1) /= tempNames(3)) then
+                    call WriteLog("Error detected in reading minerals. Three names do not match: " &
+                    // trim(tempNames(1)) // ", " // trim(tempNames(2)) // ", " // trim(tempNames(3)))
+                    call ErrorHandling
+                else
+                    call WriteLog("Read in data: "//trim(tempNames(1)))
+                end if
+                i = 0
+            end if
         end do
+
+        if(mod(nMinerals,3) /= 0) then
+            call WriteLog("Error detected in reading minerals. Number of data lines is not 3x.")
+            call ErrorHandling
+        end if
+
 
         nMinerals = nMinerals / 3
         
@@ -672,10 +742,15 @@ contains
                 call skipNValues(strBuffers(j),1)
                 read(strBuffers(j),*) minerals(i)%AKCOE
                 call skipNValues(strBuffers(j),5)
+   
                 if (len_trim(strBuffers(j)) > 0) then
-                    read(strBuffers(j),*) minerals(i)%AKCOP
-                    minerals(i)%bAKCOP = .true.
-                end if   
+                    read(strBuffers(j),*) minerals(i)%AKCOP(1)
+                    if(.not. isZero(minerals(i)%AKCOP(1))) then
+                        read(strBuffers(j),*) minerals(i)%AKCOP
+                        minerals(i)%bAKCOP = .true.
+                    end if
+                end if 
+
                 !write(*,*) minerals(i)%AKCOE
             end do
         end if
@@ -716,7 +791,9 @@ contains
         
         integer :: i, j, k
         character(nMNLTR) :: strName
+        character(nMNLTR) :: tempNames(3)
 
+        i = 0
         nGases = 0
 
         do while (.not. bEndOfFile)
@@ -727,7 +804,25 @@ contains
             end if
             nGases = nGases + 1
             strBuffers(nGases) = strBuffer
+           !check if the three names are the same
+            i = i + 1
+            tempNames(i) = trim(strName)
+            if(i == 3) then
+                if(tempNames(1) /= tempNames(2) .or. tempNames(1) /= tempNames(3)) then
+                    call WriteLog("Error detected in reading gases. Three names do not match: " &
+                    // trim(tempNames(1)) // ", " // trim(tempNames(2)) // ", " // trim(tempNames(3)))
+                    call ErrorHandling
+                else
+                    call WriteLog("Read in data: "//trim(tempNames(1)))
+                end if
+                i = 0
+            end if
         end do
+
+        if(mod(nGases,3) /= 0) then
+            call WriteLog("Error detected in reading gases. Number of data lines is not 3x.")
+            call ErrorHandling
+        end if
 
         nGases = nGases / 3
         
@@ -777,8 +872,11 @@ contains
                 read(strBuffers(j),*) gases(i)%AKCOE
                 call skipNValues(strBuffers(j),5)
                 if (len_trim(strBuffers(j)) > 0) then
-                    read(strBuffers(j),*) gases(i)%AKCOP
-                    gases(i)%bAKCOP = .true.
+                    read(strBuffers(j),*) gases(i)%AKCOP(1)
+                    if(.not. isZero(gases(i)%AKCOP(1))) then
+                        read(strBuffers(j),*) gases(i)%AKCOP
+                        gases(i)%bAKCOP = .true.
+                    end if
                 end if   
                 !write(*,*) gases(i)%AKCOE
             end do
@@ -820,7 +918,9 @@ contains
         
         integer :: i, j, k
         character(nMNLTR) :: strName
+        character(nMNLTR) :: tempNames(3)
 
+        i = 0
         nSurfaceComplexes = 0
 
         do while (.not. bEndOfFile)
@@ -831,7 +931,25 @@ contains
             end if
             nSurfaceComplexes = nSurfaceComplexes + 1
             strBuffers(nSurfaceComplexes) = strBuffer
+           !check if the three names are the same
+            i = i + 1
+            tempNames(i) = trim(strName)
+            if(i == 3) then
+                if(tempNames(1) /= tempNames(2) .or. tempNames(1) /= tempNames(3)) then
+                    call WriteLog("Error detected in reading surface complexes. Three names do not match: " &
+                    // trim(tempNames(1)) // ", " // trim(tempNames(2)) // ", " // trim(tempNames(3)))
+                    call ErrorHandling
+                else
+                    call WriteLog("Read in data: "//trim(tempNames(1)))
+                end if
+                i = 0
+            end if
         end do
+
+        if(mod(nSurfaceComplexes,3) /= 0) then
+            call WriteLog("Error detected in reading surface complexes. Number of data lines is not 3x.")
+            call ErrorHandling
+        end if
 
         nSurfaceComplexes = nSurfaceComplexes / 3
         
