@@ -172,9 +172,10 @@ module dbs_toughreact
     character(18),  parameter   ::  strTemperature  =   "temperature points"
     character(6),   parameter   ::  strRedoxReaction = "o2(aq)"
 
-    integer, parameter          ::  maxStrBuffers = 10000
+    integer, parameter          ::  maxStrBuffers = 100000
     character(256)              ::  strBuffers(maxStrBuffers)       !Assume the maximum number of each data section 
     character(256)              ::  strBuffer        =   ""
+    integer                     ::  strBuffersLineIndex(maxStrBuffers)
     integer                      ::  iReadStat       =   1
     logical                      ::  bEndOfFile      =   .false.
 
@@ -196,6 +197,8 @@ module dbs_toughreact
     
     type(TypeSurfaceComplexes),allocatable  ::  surfaceComplexes(:)    ! surfaceComplexes
     integer                                 ::  nSurfaceComplexes = 0  ! number of surface complexes    
+    
+    integer :: currentLine = 0          
 
     
 contains
@@ -269,6 +272,8 @@ contains
         do while(.not. bEndOfFile)
 
             read(iUnitDbsTR, "(a)", iostat = iReadStat) strBuffer
+            
+            currentLine = currentLine + 1
        
             if (iReadStat > 0) then     !Error in reading
             
@@ -292,6 +297,7 @@ contains
                 call lowerCase(strBuffer)
 
                 if (strBuffer(1:1) /= strComment) then
+                    call replaceCharacter(strBuffer, achar(9), " ")
                     exit
                 end if
 
@@ -300,6 +306,41 @@ contains
         end do
     
     endsubroutine readNextLine
+    
+    ! replace character in string
+    subroutine replaceCharacter(str, stra, strb)
+    
+        implicit none
+        
+        character(*), intent(inout) :: str
+        character(*), intent(in) :: stra, strb
+        character(256) :: tempstr 
+        
+        integer :: i, j, k, n1, n2, n3
+        
+        n1 = len(str)
+        n2 = len(stra)
+        n3 = len(strb)        
+        j = 1
+        k = 0
+        do i = 1, n1 - n2 + 1
+            if (k>0) then
+                k = k - 1
+                continue
+            end if
+            if(str(i:i+n2-1) == stra(1:n2)) then
+                tempstr(j: j + n3 - 1) = strb(1:n3)
+                j = j + n3
+                k = n2 - 1
+            else                
+                tempstr(j:j) = str(i:i)
+                j = j + 1
+            end if
+        end do
+        
+        str = tempstr
+        
+    end subroutine
    
      !Skip n values and return the left value
      !Assume all the values are separated by blank space
@@ -340,8 +381,17 @@ contains
         integer :: i
         
         i = index(string, "'")
+        if (i < 1) then
+            call WriteLog("Error detected in converting species name: " // trim(string))
+            call ErrorHandling 
+        end if
         tempStr = string(i + 1:)
+
         i = index(tempStr, "'")
+        if (i < 2) then
+            call WriteLog("Error detected in converting species name: " // trim(string))
+            call ErrorHandling 
+        end if
         tempStr = adjustl(tempStr(:i-1))
         
         !if (len_trim(tempStr) > nMNLTR) then
@@ -404,8 +454,10 @@ contains
             if (index(strBuffer,strTemperature) > 0) then 
               
                 call skipNValues(strBuffer,1)
-              
-                read(strBuffer, *)  nTemperature
+                
+                read(strBuffer, *, end = 9999, err = 9999)  nTemperature
+                
+                write(*,*) nTemperature
 
                 if (allocated(temperature)) then
                     deallocate(temperature)
@@ -413,7 +465,7 @@ contains
             
                 allocate(temperature(nTemperature))
             
-                read(strBuffer, *)  nTemperature, temperature
+                read(strBuffer, *, end = 9999, err = 9999)  nTemperature, temperature(1:nTemperature)
             
                 bFlag = .false.
                 exit
@@ -431,6 +483,12 @@ contains
             call WriteLog("Temperatures:")
             call WriteLog(temperature)
         end if
+        
+	    return
+        
+9999    call WriteLog("Error detected in reading/converting data in the follow line number")
+        call WriteLog(currentLine)
+        call ErrorHandling
 
      end subroutine readTemperature
 
@@ -453,12 +511,13 @@ contains
             end if
             if (nSpecies == maxStrBuffers) then
                 nErrors = nErrors + 1
-                call WriteLog("The maximum database of TOUGHREACT is 10,000 lines." // & 
+                call WriteLog("The maximum database of TOUGHREACT is 100,000 lines for each section." // & 
                                 "Please modify the source code parameter maxStrBuffers to read more data.")
                 call ErrorHandling
             end if
             nSpecies = nSpecies + 1
             strBuffers(nSpecies) = strBuffer
+            strBuffersLineIndex(nSpecies) = currentLine
         end do
 
         if (nSpecies > 0) then
@@ -474,13 +533,19 @@ contains
                     call WriteLog("Error: This name has already been used as an alias in alias.dbs: "//trim(species(i)%Name))
                 end if
                 call skipNValues(strBuffers(i), 1)
-                read(strBuffers(i),*) species(i)%A0, species(i)%Z, species(i)%MWT
+                read(strBuffers(i),* , end = 9999, err = 9999) species(i)%A0, species(i)%Z, species(i)%MWT
             end do
         end if
 
         call WriteLog("Number of Species: ")
         call WriteLog(nSpecies)
         call WriteLog("Read species success")
+        
+	    return
+
+9999    call WriteLog("Error detected in reading/converting data in the follow line number")
+        call WriteLog(strBuffersLineIndex(i))
+        call ErrorHandling    
 
      end subroutine readSpecies    
 
@@ -529,7 +594,8 @@ contains
             end if
             nAqueousSpecies = nAqueousSpecies + 1
             strBuffers(nAqueousSpecies) = strBuffer
-
+            strBuffersLineIndex(nAqueousSpecies) = currentLine
+            
             !check if the three names are the same
             i = i + 1
             tempNames(i) = trim(strName)
@@ -567,11 +633,11 @@ contains
                     call WriteLog("Error: This name has already been used as an alias in alias.dbs: "//trim(species(i)%Name))
                 end if
                 call skipNValues(strBuffers(j),1)
-                read(strBuffers(j),*) aqueousSpecies(i)%MWT, aqueousSpecies(i)%A0, aqueousSpecies(i)%Z, aqueousSpecies(i)%NCP
+                read(strBuffers(j),*, end = 9999, err = 9999) aqueousSpecies(i)%MWT, aqueousSpecies(i)%A0, aqueousSpecies(i)%Z, aqueousSpecies(i)%NCP
                 call allocateOneAqueousSpecies(i,aqueousSpecies(i)%NCP, nTemperature)
                 call skipNValues(strBuffers(j),4)            
                 do k = 1, aqueousSpecies(i)%NCP, 1
-                    read(strBuffers(j),*) aqueousSpecies(i)%STQ(k)
+                    read(strBuffers(j),*, end = 9999, err = 9999) aqueousSpecies(i)%STQ(k)
                     call getNameFromString(strBuffers(j),aqueousSpecies(i)%NameOfSTQ(k))
                     !Check if this name is used as an alias
                     if (GetNameFromAlias(aqueousSpecies(i)%NameOfSTQ(k)) /= "") then
@@ -597,18 +663,18 @@ contains
                 !read the second line
                 j = 3 * i - 1
                 call skipNValues(strBuffers(j),1)
-                read(strBuffers(j),*) aqueousSpecies(i)%AKLOG
+                read(strBuffers(j),*, end = 9999, err = 9999) aqueousSpecies(i)%AKLOG
                 !write(*,*) aqueousSpecies(i)%AKLOG
                 !read the third line
                 j = 3 * i
                 call skipNValues(strBuffers(j),1)
-                read(strBuffers(j),*) aqueousSpecies(i)%AKCOE
+                read(strBuffers(j),*, end = 9999, err = 9999) aqueousSpecies(i)%AKCOE
                 call skipNValues(strBuffers(j),5)
                 
                 if (len_trim(strBuffers(j)) > 0) then
-                    read(strBuffers(j),*) aqueousSpecies(i)%AKCOP(1)
+                    read(strBuffers(j),*, end = 9999, err = 9999) aqueousSpecies(i)%AKCOP(1)
                     if(.not. isZero(aqueousSpecies(i)%AKCOP(1))) then
-                        read(strBuffers(j),*) aqueousSpecies(i)%AKCOP
+                        read(strBuffers(j),*, end = 9999, err = 9999) aqueousSpecies(i)%AKCOP
                         aqueousSpecies(i)%bAKCOP = .true.
                     end if
                 end if   
@@ -621,6 +687,12 @@ contains
         call WriteLog("Number of redox reactions:")
         call WriteLog(nRedoxReaction)
         call WriteLog("Read aqueous species success")
+        
+	    return
+
+9999    call WriteLog("Error detected in reading/converting data in the follow line number")
+        call WriteLog(strBuffersLineIndex(j))
+        call ErrorHandling
 
      end subroutine readAqueousSpecies
      
@@ -667,6 +739,7 @@ contains
             end if
             nMinerals = nMinerals + 1
             strBuffers(nMinerals) = strBuffer
+            strBuffersLineIndex(nMinerals) = currentLine
 
           !check if the three names are the same
             i = i + 1
@@ -708,11 +781,11 @@ contains
                 end if
                 
                 call skipNValues(strBuffers(j),1)
-                read(strBuffers(j),*) minerals(i)%MWT, minerals(i)%VMIN, minerals(i)%NCP
+                read(strBuffers(j),*, end = 9999, err = 9999) minerals(i)%MWT, minerals(i)%VMIN, minerals(i)%NCP
                 call allocateOneMineral(i,minerals(i)%NCP, nTemperature)
                 call skipNValues(strBuffers(j),3)            
                 do k = 1, minerals(i)%NCP, 1
-                    read(strBuffers(j),*) minerals(i)%STQ(k)
+                    read(strBuffers(j),*, end = 9999, err = 9999) minerals(i)%STQ(k)
                     call getNameFromString(strBuffers(j),minerals(i)%NameOfSTQ(k))
                     
                     !Check if this name is used as an alias
@@ -729,22 +802,21 @@ contains
                 !read the second line
                 j = 3 * i - 1
                 call skipNValues(strBuffers(j),1)
-                read(strBuffers(j),*) minerals(i)%AKLOG
-                !write(*,*) minerals(i)%AKLOG
+                read(strBuffers(j),*, end = 9999, err = 9999) minerals(i)%AKLOG
+                
                 !read the third line
                 j = 3 * i
                 call skipNValues(strBuffers(j),1)
-                read(strBuffers(j),*) minerals(i)%AKCOE
-                call skipNValues(strBuffers(j),5)
-   
+                read(strBuffers(j),*, end = 9999, err = 9999) minerals(i)%AKCOE
+                call skipNValues(strBuffers(j),5)                
                 if (len_trim(strBuffers(j)) > 0) then
-                    read(strBuffers(j),*) minerals(i)%AKCOP(1)
+                    read(strBuffers(j),*, end = 9999, err = 9999) minerals(i)%AKCOP(1)
                     if(.not. isZero(minerals(i)%AKCOP(1))) then
-                        read(strBuffers(j),*) minerals(i)%AKCOP
+                        read(strBuffers(j),*, end = 9999, err = 9999) minerals(i)%AKCOP
                         minerals(i)%bAKCOP = .true.
                     end if
                 end if 
-
+                
                 !write(*,*) minerals(i)%AKCOE
             end do
         end if
@@ -752,6 +824,12 @@ contains
         call WriteLog("Number of minerals: ")
         call WriteLog(nMinerals)
         call WriteLog("Read minerals success")
+        
+        return
+        
+9999    call WriteLog("Error detected in reading/converting data in the follow line number")
+        call WriteLog(strBuffersLineIndex(j))
+        call ErrorHandling
 
      end subroutine readMinerals
      
@@ -798,6 +876,8 @@ contains
             end if
             nGases = nGases + 1
             strBuffers(nGases) = strBuffer
+            strBuffersLineIndex(nGases) = currentLine
+            
            !check if the three names are the same
             i = i + 1
             tempNames(i) = trim(strName)
@@ -837,11 +917,11 @@ contains
                 end if
                 
                 call skipNValues(strBuffers(j),1)
-                read(strBuffers(j),*) gases(i)%MWT, gases(i)%DMDIAM, gases(i)%NCP
+                read(strBuffers(j),*, end = 9999, err = 9999) gases(i)%MWT, gases(i)%DMDIAM, gases(i)%NCP
                 call allocateOneGas(i,gases(i)%NCP, nTemperature)
                 call skipNValues(strBuffers(j),3)            
                 do k = 1, gases(i)%NCP, 1
-                    read(strBuffers(j),*) gases(i)%STQ(k)
+                    read(strBuffers(j),*, end = 9999, err = 9999) gases(i)%STQ(k)
                     call getNameFromString(strBuffers(j),gases(i)%NameOfSTQ(k))
                     
                     !Check if this name is used as an alias
@@ -858,17 +938,17 @@ contains
                 !read the second line
                 j = 3 * i - 1
                 call skipNValues(strBuffers(j),1)
-                read(strBuffers(j),*) gases(i)%AKLOG
+                read(strBuffers(j),*, end = 9999, err = 9999) gases(i)%AKLOG
                 !write(*,*) gases(i)%AKLOG
                 !read the third line
                 j = 3 * i
                 call skipNValues(strBuffers(j),1)
-                read(strBuffers(j),*) gases(i)%AKCOE
+                read(strBuffers(j),*, end = 9999, err = 9999) gases(i)%AKCOE
                 call skipNValues(strBuffers(j),5)
                 if (len_trim(strBuffers(j)) > 0) then
-                    read(strBuffers(j),*) gases(i)%AKCOP(1)
+                    read(strBuffers(j),*, end = 9999, err = 9999) gases(i)%AKCOP(1)
                     if(.not. isZero(gases(i)%AKCOP(1))) then
-                        read(strBuffers(j),*) gases(i)%AKCOP
+                        read(strBuffers(j),*, end = 9999, err = 9999) gases(i)%AKCOP
                         gases(i)%bAKCOP = .true.
                     end if
                 end if   
@@ -879,7 +959,13 @@ contains
         call WriteLog("Number of gases: ")
         call WriteLog(nGases)
         call WriteLog("Read gases success")
-     
+ 
+		return
+
+9999    call WriteLog("Error detected in reading/converting data in the follow line number")
+        call WriteLog(strBuffersLineIndex(j))
+        call ErrorHandling
+        
      end subroutine readGases
      
       !Allocate STQ and NAM for surface complexes
@@ -925,6 +1011,8 @@ contains
             end if
             nSurfaceComplexes = nSurfaceComplexes + 1
             strBuffers(nSurfaceComplexes) = strBuffer
+            strBuffersLineIndex(nSurfaceComplexes) = currentLine
+            
            !check if the three names are the same
             i = i + 1
             tempNames(i) = trim(strName)
@@ -964,11 +1052,11 @@ contains
                 end if
                 
                 call skipNValues(strBuffers(j),1)
-                read(strBuffers(j),*) surfaceComplexes(i)%Z, surfaceComplexes(i)%NCP
+                read(strBuffers(j),*, end = 9999, err = 9999) surfaceComplexes(i)%Z, surfaceComplexes(i)%NCP
                 call allocateOneSurfaceComplexes(i,surfaceComplexes(i)%NCP, nTemperature)
                 call skipNValues(strBuffers(j),2) 
                 do k = 1, surfaceComplexes(i)%NCP, 1
-                    read(strBuffers(j),*) surfaceComplexes(i)%STQ(k)
+                    read(strBuffers(j),*, end = 9999, err = 9999) surfaceComplexes(i)%STQ(k)
                     call getNameFromString(strBuffers(j),surfaceComplexes(i)%NameOfSTQ(k))
                     
                     !Check if this name is used as an alias
@@ -985,12 +1073,12 @@ contains
                 !read the second line
                 j = 3 * i - 1
                 call skipNValues(strBuffers(j),1)
-                read(strBuffers(j),*) surfaceComplexes(i)%AKLOG
+                read(strBuffers(j),*, end = 9999, err = 9999) surfaceComplexes(i)%AKLOG
                 !write(*,*) surfaceComplexes(i)%AKLOG
                 !read the third line
                 j = 3 * i
                 call skipNValues(strBuffers(j),1)
-                read(strBuffers(j),*) surfaceComplexes(i)%AKCOE                
+                read(strBuffers(j),*, end = 9999, err = 9999) surfaceComplexes(i)%AKCOE                
                 !write(*,*) surfaceComplexes(i)%AKCOE
             end do
         end if
@@ -998,7 +1086,13 @@ contains
         call WriteLog("Number of surface complexes: ")
         call WriteLog(nSurfaceComplexes)
         call WriteLog("Read surface complexes success")
-     
+        
+        return
+
+9999    call WriteLog("Error detected in reading/converting data in the follow line number")
+        call WriteLog(strBuffersLineIndex(j))
+        call ErrorHandling
+        
      end subroutine readSurfaceComplexes
     
 end module
