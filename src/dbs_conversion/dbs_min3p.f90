@@ -176,7 +176,7 @@ contains
         call WriteLog("Write min3p database success: " // trim(filePathDbsMin3PComplex)) 
         
 200     format(a12,2x,2f10.4,16x,3f5.2,f9.4,f7.2)
-201     format(6x,i2,2x,20(a12,1x,f7.3,1x))     !change from (6x,i1,3x,20(a12,1x,f7.3,1x))
+201     format(6x,i1,3x,20(a12,1x,f7.3,1x))     
     
     end subroutine writeDbsMin3PComplex   
 
@@ -206,7 +206,7 @@ contains
         !considered a comment line.
         
 300     format(a)
-301     format(i2,2x,20(a,1x,f7.3,1x))      !change from (i1,3x,20(a,1x,f7.3,1x)) 
+301     format(i1,3x,20(a,1x,f7.3,1x))       
 302     format("'equilibrium'", 4x, 2f8.4)         
     
     end subroutine writeDbsMin3PRedox    
@@ -227,7 +227,7 @@ contains
         call WriteLog("Write min3p database success: " // trim(filePathDbsMin3PGases))         
         
 400     format(a12,2x,2f10.4,31x,f9.4)
-401     format(6x,i2,2x,20(a12,1x,f7.3,1x))        !change from (6x,i1,3x,20(a12,1x,f7.3,1x)) 
+401     format(6x,i1,3x,20(a12,1x,f7.3,1x))        
     
     end subroutine writeDbsMin3PGases
     
@@ -261,7 +261,7 @@ contains
         
 500     format(a)
 501     format(2(f10.4,2x))
-502     format(i2,2x,20(a,1x,f7.3,1x))      !change from (i1,3x,20(a,1x,f7.3,1x))
+502     format(i1,3x,20(a,1x,f7.3,1x))   
 503     format(a, 4x, 2f8.4)        
     
     end subroutine writeDbsMin3PMinerals
