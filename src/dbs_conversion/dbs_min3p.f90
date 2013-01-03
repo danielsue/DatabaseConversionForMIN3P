@@ -261,7 +261,7 @@ contains
         
 500     format(a)
 501     format(2(f10.4,2x))
-502     format(i1,3x,20(a,1x,f7.3,1x))   
+502     format(i2,2x,20(a,1x,f7.3,1x))      !change from (i1,3x,20(a,1x,f7.3,1x))
 503     format(a, 4x, 2f8.4)        
     
     end subroutine writeDbsMin3PMinerals
