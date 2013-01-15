@@ -162,7 +162,7 @@ module dbs_toughreact
     end type TypeSurfaceComplexes
     
     
-    character(260)      ::      filePathDbsTR   !file path for toughreact database
+    character(1024)      ::      filePathDbsTR   !file path for toughreact database
     
     character(1),   parameter   ::  strComment      =   "#"
     character(1),   parameter   ::  strData         =   "'"
@@ -173,8 +173,8 @@ module dbs_toughreact
     character(6),   parameter   ::  strRedoxReaction = "o2(aq)"
 
     integer, parameter          ::  maxStrBuffers = 100000
-    character(256)              ::  strBuffers(maxStrBuffers)       !Assume the maximum number of each data section 
-    character(256)              ::  strBuffer        =   ""
+    character(1024)              ::  strBuffers(maxStrBuffers)       !Assume the maximum number of each data section 
+    character(1024)              ::  strBuffer        =   ""
     integer                     ::  strBuffersLineIndex(maxStrBuffers)
     integer                      ::  iReadStat       =   1
     logical                      ::  bEndOfFile      =   .false.
@@ -314,7 +314,7 @@ contains
         
         character(*), intent(inout) :: str
         character(*), intent(in) :: stra, strb
-        character(256) :: tempstr 
+        character(1024) :: tempstr 
         
         integer :: i, j, k, n1, n2, n3
         
@@ -377,7 +377,7 @@ contains
         implicit none
         character(*), intent(in) :: string        
         character(nMNLTR), intent(out) :: name
-        character(256)             :: tempStr
+        character(1024)             :: tempStr
         integer :: i
         
         i = index(string, "'")
@@ -447,7 +447,7 @@ contains
         
         logical :: bFlag = .true.
        
-        character(260) :: strTemp
+        character(1024) :: strTemp
 
         do while (.not. bEndOfFile)
             call readNextLine

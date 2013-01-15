@@ -25,7 +25,7 @@
     implicit none
 
     ! Variables    
-    character(260)  ::  strBuffer
+    character(1024)  ::  strBuffer
     logical         ::  file_exists =   .false.
     integer         ::  i
     

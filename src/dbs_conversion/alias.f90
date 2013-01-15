@@ -55,7 +55,7 @@ contains
         integer :: iReadStat = 0
         integer :: i = 0, j = 0
         character(60) :: strName, strAlias
-        character(260) :: strBuffer 
+        character(1024) :: strBuffer 
       
         if(.not.bOpenDbsAlias) then 
             return
