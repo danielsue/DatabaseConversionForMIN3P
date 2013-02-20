@@ -18,7 +18,7 @@
     use logfile,            only :  filePathLog, OpenLogFile, WriteLog, WriteLogSummary
     use dbs_toughreact,     only :  filePathDbsTR, OpenDbsTR, ReadDbsTR, CloseDbsTR
     use convt_tough_min3p,  only :  convert2Min3PDbs
-    use dbs_min3p,          only :  OpenAllDbsMin3P, WriteAllDbsMin3P
+    use dbs_min3p,          only :  OpenAllDbsMin3P, WriteAllDbsMin3P, temperature_min3p
     use alias,              only :  OpenDbsAlias, ReadDbsAlias
     use name_truncation,    only :  OpenNameTruncation, WriteNameTruncation
     
@@ -51,17 +51,23 @@
     if (file_exists == .false.) then
         write(*,"(a)") "File does not exist, please retype in the file path of toughreact database: " // trim(adjustl(strBuffer))
         goto 100
-    end if
+    end if    
     
     filePathDbsTR = trim(strBuffer)
     
+    write(*,*) "Type in the temperature (e.g., 25): "
+    ! Read in temperature
+200 read(*,*) temperature_min3p
+    write(*, "(a, f6.2)") "Tempreature input: ", temperature_min3p 
+    
+   
     ! Generate log file path
     i = index(filePathDbsTR, "." , .true.)
     if (i > 0) then
         filePathLog = filePathDbsTR(1:i) // "log"
     else
         filePathLog = trim(filePathDbsTR) // ".log"
-    end if    
+    end if
     
     ! Open log file
     call OpenLogFile

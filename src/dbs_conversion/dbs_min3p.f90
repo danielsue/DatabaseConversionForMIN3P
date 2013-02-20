@@ -10,6 +10,8 @@ module dbs_min3p
     
     integer, parameter:: nMNLmin3P = 12         !Please note: if you enlarge the maximum length of min3p, you should modify the output format.
     
+    real                ::     temperature_min3p = 25 !Default temperature 
+    
     ! define species data structure
     type typeMin3PSpecies        
         character(nMNLmin3P)   ::      Name = ""       !name or chemical formula of aqueous basis species       
@@ -25,7 +27,7 @@ module dbs_min3p
 
         character(nMNLmin3P)   ::      Name = ""                  !Name of the aqueous species
         real            ::      EnthalpyChange = 0.0d0     !Enthalpy change
-        real            ::      AKLOG = 0.0d0              !Equilibrium constant for 25C
+        real            ::      AKLOG = 0.0d0              !Equilibrium constant
         real            ::      Z = 0.0d0                  !charge of the species
         real            ::      DHA = 0.0d0                !Debye-Huckel constants a        
         real            ::      DHB = 0.0d0                !Debye-Huckel constants b
@@ -42,7 +44,7 @@ module dbs_min3p
         
         character(nMNLmin3P)   ::      Name = ""                 !Name of the aqueous species
         real            ::      EnthalpyChange = 0.0d0     !Enthalpy change
-        real            ::      AKLOG = 0.0d0              !Equilibrium constant for 25C
+        real            ::      AKLOG = 0.0d0              !Equilibrium constant
         real            ::      MWT = 0.0d0                !Molecular weight of the aqueous species (g/mol)
         integer         ::      NCP = 0                    !number of basis species defining the secondary species
         real            ::      STQ(20) = 0.0d0             !stoichiometric coefficients of the components                                                       
@@ -54,7 +56,7 @@ module dbs_min3p
     type typeMin3PMineral
         
         character(nMNLmin3P)   ::      Name = ""                 !Name of the mineral phase
-        real            ::      AKLOG = 0.0d0              !Equilibrium constant for 25C
+        real            ::      AKLOG = 0.0d0              !Equilibrium constant
         real            ::      EnthalpyChange = 0.0d0     !Enthalpy change
         real            ::      MWT = 0.0d0               !Molecular weight of the mineral (g/mol)
         real            ::      Density = 0.0d0           !Density, g/cm^3

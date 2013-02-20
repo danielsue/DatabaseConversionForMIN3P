@@ -6,7 +6,7 @@ module convt_tough_min3p
                                     nAqueousSpecies, minerals, nMinerals, gases, nGases, surfaceComplexes,  &
                                     nSurfaceComplexes, nRedoxReaction, nMNLTR
     
-    use dbs_min3p,      only :     min3PSpecies, nMin3PSpecies, min3PComplexReactions,                      &
+    use dbs_min3p,      only :     min3PSpecies, nMin3PSpecies, min3PComplexReactions, temperature_min3p,   &
                                     nMin3PComplexReactions, min3PRedoxReactions, nMin3PRedoxReactions,      &
                                     min3PGases,nMin3PGases, min3PMinerals, nMin3PMinerals,nMNLmin3P
     
@@ -178,8 +178,11 @@ contains
                 min3PRedoxReactions(j)%EnthalpyChange = 0.0d0
                 !The second temperature in TOUGHREACT 25C is used. 
                 !Should modify if 25C does not exist or in the different position.
-                min3PRedoxReactions(j)%AKLOG = -aqueousSpecies(i)%AKLOG(2)      !Min3P use the reverse equilibrium constant
+                !min3PRedoxReactions(j)%AKLOG = -aqueousSpecies(i)%AKLOG(2)      !Min3P use the reverse equilibrium constant
+                min3PRedoxReactions(j)%AKLOG = -linearInterpolation(nTemperature, temperature, aqueousSpecies(i)%AKLOG, temperature_min3p)
+                
                 min3PRedoxReactions(j)%Z = aqueousSpecies(i)%Z
+                
                 !Convert Debye-Huckel constants
                 !Ion effective or hydrated radius used to compute the Debye-Huckel a0 parameter (see Appendix H
                 !of Toughreact_V2_User_Guide.pdf for details).
@@ -275,7 +278,9 @@ contains
                 min3PComplexReactions(k)%EnthalpyChange = 0.0d0
                 !The second temperature in TOUGHREACT 25C is used. 
                 !Should modify if 25C does not exist or in the different position.
-                min3PComplexReactions(k)%AKLOG = -aqueousSpecies(i)%AKLOG(2)   
+                !min3PComplexReactions(k)%AKLOG = -aqueousSpecies(i)%AKLOG(2)  
+                min3PComplexReactions(k)%AKLOG = -linearInterpolation(nTemperature, temperature, aqueousSpecies(i)%AKLOG, temperature_min3p)
+                
                 min3PComplexReactions(k)%Z = aqueousSpecies(i)%Z
                 !Convert Debye-Huckel constants
                 !Ion effective or hydrated radius used to compute the Debye-Huckel a0 parameter (see Appendix H
@@ -393,7 +398,8 @@ contains
             min3PGases(i)%EnthalpyChange = 0.0d0
             !The second temperature in TOUGHREACT 25C is used. 
             !Should modify if 25C does not exist or in the different position.
-            min3PGases(i)%AKLOG = -gases(i)%AKLOG(2)   
+            !min3PGases(i)%AKLOG = -gases(i)%AKLOG(2) 
+            min3PGases(i)%AKLOG = -linearInterpolation(nTemperature, temperature, gases(i)%AKLOG, temperature_min3p)
 
             !Molecular weight
             min3PGases(i)%MWT = gases(i)%MWT
@@ -482,7 +488,8 @@ contains
             min3PMinerals(i)%EnthalpyChange = 0.0d0
             !The second temperature in TOUGHREACT 25C is used. 
             !Should modify if 25C does not exist or in the different position.
-            min3PMinerals(i)%AKLOG = -minerals(i)%AKLOG(2)   
+            !min3PMinerals(i)%AKLOG = -minerals(i)%AKLOG(2)   
+            min3PMinerals(i)%AKLOG = -linearInterpolation(nTemperature, temperature, minerals(i)%AKLOG, temperature_min3p)
 
             !Molecular weight
             min3PMinerals(i)%MWT = minerals(i)%MWT
@@ -528,5 +535,42 @@ contains
         end do
         
     end subroutine convert2Min3PMinerals
+    
+    !calculate y(x) based on the given x-y array
+    function linearInterpolation(n, xlist, ylist, x) result (y)
+    
+        implicit none
+        
+        integer, intent(in) :: n        
+        real, intent(in)    :: x
+        real, intent(in)    :: xlist(n)
+        real, intent(in)    :: ylist(n)
+        real                :: y
+        
+        integer             :: i
+        
+        !please note that xlist should be in ascending order
+        
+        if (n == 1) then
+            y = ylist(1)
+            return
+        end if
+        
+        if (x < xlist(1)) then
+            y = ylist(1)
+            return
+        else if (x > xlist(n)) then
+            y = ylist(n)
+            return
+        else
+            do i = 1, n - 1
+                if (x >= xlist(i) .and. x <= xlist(i + 1)) then
+                    y = ylist(i) + (ylist(i + 1) - ylist(i)) / (xlist(i + 1) - xlist(i)) * (x - xlist(i))
+                    return
+                end if
+            end do
+        end if
+    
+    end function linearInterpolation
 
 end module convt_tough_min3p
