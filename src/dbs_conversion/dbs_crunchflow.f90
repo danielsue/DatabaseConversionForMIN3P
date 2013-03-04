@@ -1,8 +1,8 @@
-﻿!Module to read and store toughreact database
+!Module to read and store toughreact database
     
 module dbs_toughreact 
 
-    use global, only : iUnitDbsTR, bOpenDbsTR, ErrorHandling
+    use global, only : iUnitDbsCF, bOpenDbsCF, ErrorHandling
     
     use logfile, only : WriteLog, nWarnings, nErrors
 
@@ -23,7 +23,7 @@ module dbs_toughreact
         
         character(nMNLCF)   ::      Name    !name or chemical formula of aqueous basis species, in quotes (truncated after 20 characters)
         
-        real            ::      A0      !Ion effective or hydrated radius used to compute the Debye-Hückel a0 parameter
+        real            ::      A0      !Ion effective or hydrated radius used to compute the Debye-H�ckel a0 parameter
         
         real            ::      Z       !the ion electric charge
         
@@ -36,7 +36,7 @@ module dbs_toughreact
         
         character(nMNLCF)   ::      Name    !chemical formula of secondary species, in quotes (truncated after 20 characters).
         
-        real            ::      A0      !Ion effective or hydrated radius used to compute the Debye-Hückel a0 parameter
+        real            ::      A0      !Ion effective or hydrated radius used to compute the Debye-H�ckel a0 parameter
         
         real            ::      Z       !the ion electric charge
         
@@ -60,9 +60,9 @@ module dbs_toughreact
                                                          !temperature (at a reference pressure P0) with log10(K)T,P0 = a*ln(Tk) + b + c*Tk + d/Tk + e/Tk^2,
                                                          !where Tk is absolute temperature (K), and ln stands for natural logarithm.
                                                          
-        real                        ::  AKCOP(5)         !(optional) contains regression coefficients a, b, c, d, and e to calculate the volume change ΔV
-                                                         !(in cm3/mol) for the reaction as a function of temperature (average ΔV over the pressure interval
-                                                         !P0 to P), with ΔV = a + b*Tk + c*Tk^2 + d/Tk + e/Tk^2.
+        real                        ::  AKCOP(5)         !(optional) contains regression coefficients a, b, c, d, and e to calculate the volume change ?V
+                                                         !(in cm3/mol) for the reaction as a function of temperature (average ?V over the pressure interval
+                                                         !P0 to P), with ?V = a + b*Tk + c*Tk^2 + d/Tk + e/Tk^2.
                                                          
         logical                     ::  bAKCOP = .false. !Indicate if AKCOP exists
 
@@ -99,9 +99,9 @@ module dbs_toughreact
                                                          !temperature (at a reference pressure P0) with log10(K)T,P0 = a*ln(Tk) + b + c*Tk + d/Tk + e/Tk^2,
                                                          !where Tk is absolute temperature (K), and ln stands for natural logarithm.
                                                          
-        real                        ::  AKCOP(5)         !(optional) contains regression coefficients a, b, c, d, and e to calculate the volume change ΔV
-                                                         !(in cm3/mol) for the reaction as a function of temperature (average ΔV over the pressure interval
-                                                         !P0 to P), with ΔV = a + b*Tk + c*Tk^2 + d/Tk + e/Tk^2.
+        real                        ::  AKCOP(5)         !(optional) contains regression coefficients a, b, c, d, and e to calculate the volume change ?V
+                                                         !(in cm3/mol) for the reaction as a function of temperature (average ?V over the pressure interval
+                                                         !P0 to P), with ?V = a + b*Tk + c*Tk^2 + d/Tk + e/Tk^2.
                                                          
         logical                     ::  bAKCOP = .false. !Indicate if AKCOP exists  
     
@@ -132,9 +132,9 @@ module dbs_toughreact
                                                          !temperature (at a reference pressure P0) with log10(K)T,P0 = a*ln(Tk) + b + c*Tk + d/Tk + e/Tk^2,
                                                          !where Tk is absolute temperature (K), and ln stands for natural logarithm.
                                                          
-        real                        ::  AKCOP(5)         !(optional) contains regression coefficients a, b, c, d, and e to calculate the volume change ΔV
-                                                         !(in cm3/mol) for the reaction as a function of temperature (average ΔV over the pressure interval
-                                                         !P0 to P), with ΔV = a + b*Tk + c*Tk^2 + d/Tk + e/Tk^2.
+        real                        ::  AKCOP(5)         !(optional) contains regression coefficients a, b, c, d, and e to calculate the volume change ?V
+                                                         !(in cm3/mol) for the reaction as a function of temperature (average ?V over the pressure interval
+                                                         !P0 to P), with ?V = a + b*Tk + c*Tk^2 + d/Tk + e/Tk^2.
                                                          
         logical                     ::  bAKCOP = .false. !Indicate if AKCOP exists                                                
         

@@ -15,6 +15,7 @@ module global
     integer, parameter  ::  iUnitDbsMin3PMinerals   =   iUnitDbsMin3PRedox + 1      !mineral.dbs for min3p
     integer, parameter  ::  iUnitDbsAlias           =   iUnitDbsMin3PMinerals + 1   !alias.dbs
     integer, parameter  ::  iUnitNameTruncation     =   iUnitDbsAlias + 1           !name_truncation.txt
+    integer, parameter  ::  iUnitInp                =   iUnitNameTruncation + 1     !input file for dbs conversion
     
     logical             ::  bOpenLog                =   .false.
     logical             ::  bOpenDbsTR              =   .false. 
@@ -25,6 +26,7 @@ module global
     logical             ::  bOpenDbsMin3PMinerals   =   .false.    
     logical             ::  bOpenDbsAlias           =   .false.
     logical             ::  bOpenNameTruncation     =   .false.
+    logical             ::  bOpenInp                =   .false.
     
  
 contains
@@ -79,6 +81,10 @@ contains
         
         if (bOpenNameTruncation) then
             close(iUnitNameTruncation)
+        end if
+
+        if (bOpenInp) then
+            close(iUnitInp)
         end if
     
     end subroutine CloseAllFiles

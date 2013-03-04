@@ -21,6 +21,8 @@ module logfile
         module procedure writeLogIntArray
 
         module procedure writeLogRealArray
+        
+        module procedure writeLogRealArray2
 
     end interface
     
@@ -119,6 +121,21 @@ contains
         end if
 
     end subroutine writeLogRealArray
+    
+    ! Write real array to log file
+    subroutine writeLogRealArray2(n, realArray)
+
+        implicit none
+        integer, intent(in) :: n
+        real, intent(in) :: realArray(n)
+
+        write (*,*) realArray
+
+        if(bOpenLog) then
+            write(iUnitLog, *)  realArray
+        end if
+
+    end subroutine writeLogRealArray2
     
     ! Write log summary
     subroutine WriteLogSummary

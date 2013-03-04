@@ -2,18 +2,23 @@
 
 module convt_tough_min3p
 
-    use dbs_toughreact, only :     temperature, nTemperature, species, nSpecies, aqueousSpecies,            &
-                                    nAqueousSpecies, minerals, nMinerals, gases, nGases, surfaceComplexes,  &
-                                    nSurfaceComplexes, nRedoxReaction, nMNLTR
+    use dbs_toughreact,  only :     temperature, nTemperature, species, nSpecies, aqueousSpecies,            &
+                                     nAqueousSpecies, minerals, nMinerals, gases, nGases, surfaceComplexes,  &
+                                     nSurfaceComplexes, nRedoxReaction, nMNLCF
     
-    use dbs_min3p,      only :     min3PSpecies, nMin3PSpecies, min3PComplexReactions, temperature_min3p,   &
-                                    nMin3PComplexReactions, min3PRedoxReactions, nMin3PRedoxReactions,      &
-                                    min3PGases,nMin3PGases, min3PMinerals, nMin3PMinerals,nMNLmin3P
+    use dbs_min3p,       only :     min3PSpecies, nMin3PSpecies, min3PComplexReactions, temperature_min3p,   &
+                                     nMin3PComplexReactions, min3PRedoxReactions, nMin3PRedoxReactions,       &
+                                     min3PGases,nMin3PGases, min3PMinerals, nMin3PMinerals,nMNLmin3P,         &
+                                     masterVariable_min3p
     
-    use logfile,        only :     WriteLog, nWarnings, nErrors
+    use logfile,         only :     WriteLog, nWarnings, nErrors
     
     use name_truncation, only :     AddNameTruncation
-    use alias, only :               GetAliasFromName
+    use alias,           only :     GetAliasFromName
+
+    use inputfile,       only :     targetDatabasePath, targetTemperature, targetMasterVariable
+
+    use geochemistry,    only :     switchMasterVariable
     
 contains    
 
@@ -21,6 +26,8 @@ contains
     subroutine convert2Min3PDbs
     
         implicit none
+
+        call setConvertParameters
         
         call convert2Min3PSpecies
 
@@ -31,6 +38,17 @@ contains
         call convert2Min3PMinerals
     
     end subroutine convert2Min3PDbs
+
+    ! Set convert parameters
+    subroutine setConvertParameters
+
+        implicit none
+
+        temperature_min3p = targetTemperature
+
+        masterVariable_min3p = targetMasterVariable
+
+    end subroutine setConvertParameters
 
     ! Convert species
     subroutine convert2Min3PSpecies
@@ -178,8 +196,7 @@ contains
                 min3PRedoxReactions(j)%EnthalpyChange = 0.0d0
                 !The second temperature in TOUGHREACT 25C is used. 
                 !Should modify if 25C does not exist or in the different position.
-                !min3PRedoxReactions(j)%AKLOG = -aqueousSpecies(i)%AKLOG(2)      !Min3P use the reverse equilibrium constant
-                min3PRedoxReactions(j)%AKLOG = -linearInterpolation(nTemperature, temperature, aqueousSpecies(i)%AKLOG, temperature_min3p)
+                min3PRedoxReactions(j)%AKLOG = aqueousSpecies(i)%AKLOG          !Min3P use the reverse equilibrium constant
                 
                 min3PRedoxReactions(j)%Z = aqueousSpecies(i)%Z
                 
@@ -246,6 +263,13 @@ contains
                         end if
                     end if
                 end do
+
+                call switchMasterVariable(trim(min3PRedoxReactions(j)%Name), min3PRedoxReactions(j)%NCP, nMNLmin3P, min3PRedoxReactions(j)%NameOfSTQ, &
+                min3PRedoxReactions(j)%STQ, nTemperature, min3PRedoxReactions(j)%AKLOG,masterVariable_min3p)
+                
+                min3PRedoxReactions(j)%AKLOG = -min3PRedoxReactions(j)%AKLOG
+
+                min3PRedoxReactions(j)%AKLOG_exp = linearInterpolation(nTemperature, temperature, min3PRedoxReactions(j)%AKLOG, temperature_min3p)
                 
                 call WriteLog("Convert redox reaction: "// trim(min3PRedoxReactions(j)%Name))
 
@@ -278,8 +302,7 @@ contains
                 min3PComplexReactions(k)%EnthalpyChange = 0.0d0
                 !The second temperature in TOUGHREACT 25C is used. 
                 !Should modify if 25C does not exist or in the different position.
-                !min3PComplexReactions(k)%AKLOG = -aqueousSpecies(i)%AKLOG(2)  
-                min3PComplexReactions(k)%AKLOG = -linearInterpolation(nTemperature, temperature, aqueousSpecies(i)%AKLOG, temperature_min3p)
+                min3PComplexReactions(k)%AKLOG = aqueousSpecies(i)%AKLOG  
                 
                 min3PComplexReactions(k)%Z = aqueousSpecies(i)%Z
                 !Convert Debye-Huckel constants
@@ -343,6 +366,13 @@ contains
                         end if
                     end if                    
                 end do
+
+                call switchMasterVariable(trim(min3PComplexReactions(k)%Name),min3PComplexReactions(k)%NCP, nMNLmin3P, min3PComplexReactions(k)%NameOfSTQ, &
+                min3PComplexReactions(k)%STQ, nTemperature, min3PComplexReactions(k)%AKLOG,masterVariable_min3p)
+
+                min3PComplexReactions(k)%AKLOG = -min3PComplexReactions(k)%AKLOG
+                
+                min3PComplexReactions(k)%AKLOG_exp = linearInterpolation(nTemperature, temperature, min3PComplexReactions(k)%AKLOG, temperature_min3p)
                 
                 call WriteLog("Convert complexation reaction: "// trim(min3PComplexReactions(k)%Name))
                 
@@ -398,8 +428,7 @@ contains
             min3PGases(i)%EnthalpyChange = 0.0d0
             !The second temperature in TOUGHREACT 25C is used. 
             !Should modify if 25C does not exist or in the different position.
-            !min3PGases(i)%AKLOG = -gases(i)%AKLOG(2) 
-            min3PGases(i)%AKLOG = -linearInterpolation(nTemperature, temperature, gases(i)%AKLOG, temperature_min3p)
+            min3PGases(i)%AKLOG = gases(i)%AKLOG 
 
             !Molecular weight
             min3PGases(i)%MWT = gases(i)%MWT
@@ -436,6 +465,13 @@ contains
                     end if
                 end if
             end do
+
+            call switchMasterVariable(trim(min3PGases(i)%Name), min3PGases(i)%NCP, nMNLmin3P, min3PGases(i)%NameOfSTQ, &
+            min3PGases(i)%STQ, nTemperature, min3PGases(i)%AKLOG,masterVariable_min3p)
+            
+            min3PGases(i)%AKLOG = -min3PGases(i)%AKLOG
+
+            min3PGases(i)%AKLOG_exp = linearInterpolation(nTemperature, temperature, min3PGases(i)%AKLOG, temperature_min3p)
                 
             call WriteLog("Convert gas: "// trim(min3PGases(i)%Name))
         
@@ -488,8 +524,7 @@ contains
             min3PMinerals(i)%EnthalpyChange = 0.0d0
             !The second temperature in TOUGHREACT 25C is used. 
             !Should modify if 25C does not exist or in the different position.
-            !min3PMinerals(i)%AKLOG = -minerals(i)%AKLOG(2)   
-            min3PMinerals(i)%AKLOG = -linearInterpolation(nTemperature, temperature, minerals(i)%AKLOG, temperature_min3p)
+            min3PMinerals(i)%AKLOG = minerals(i)%AKLOG   
 
             !Molecular weight
             min3PMinerals(i)%MWT = minerals(i)%MWT
@@ -529,6 +564,13 @@ contains
                     end if
                 end if
             end do
+
+            call switchMasterVariable(trim(min3PMinerals(i)%Name), min3PMinerals(i)%NCP, nMNLmin3P, min3PMinerals(i)%NameOfSTQ, &
+            min3PMinerals(i)%STQ, nTemperature, min3PMinerals(i)%AKLOG,masterVariable_min3p)
+            
+            min3PMinerals(i)%AKLOG = -min3PMinerals(i)%AKLOG
+
+            min3PMinerals(i)%AKLOG_exp = linearInterpolation(nTemperature, temperature, min3PMinerals(i)%AKLOG, temperature_min3p)
                 
             call WriteLog("Convert minerals: "// trim(min3PMinerals(i)%Name))
         

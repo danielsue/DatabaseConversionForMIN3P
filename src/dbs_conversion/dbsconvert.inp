@@ -1,0 +1,48 @@
+!
+!This input file contains parameters used in database conversion.
+!Current support database conversion from toughreact to min3p
+
+!--------------------------------
+!Block 1: Database settings
+!--------------------------------
+
+!set source database type, required
+source database type
+toughreact
+
+!set source database path, required
+!for toughreact or crunchflow database, this is a file path
+!for min3p, this is a folder
+source database path
+TR_FeII-H2-mod3.dat
+
+!set target database type, required
+target database type
+min3p
+
+!set targer database path, optional
+!if not provided, use the path of the program
+!for toughreact or crunchflow database, this is a file path
+!for min3p, this is a folder, please create the folder before running the program.
+target database path
+min3p_dbs
+
+!--------------------------------
+!Block 2: Conversion settings
+!--------------------------------
+
+!set target database temperature, required
+target database temperature 
+25
+
+!set target master variable, optional
+!can be h2(aq), o2(aq) or 'same as source database'
+!if not provided, use the master variable in the source database
+!note: if the target master variable is the same as the 
+!the master varialbe in the source database, you can comment out 
+!the command or provide same as source database.
+target database master variable
+h2(aq)
+
+
+

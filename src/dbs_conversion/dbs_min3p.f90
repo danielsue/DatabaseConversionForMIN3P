@@ -6,11 +6,14 @@ module dbs_min3p
     
     use logfile, only : WriteLog
     
+    use inputfile, only : targetDatabasePath
+    
     implicit none
     
     integer, parameter:: nMNLmin3P = 12         !Please note: if you enlarge the maximum length of min3p, you should modify the output format.
     
-    real                ::     temperature_min3p = 25 !Default temperature 
+    real                ::     temperature_min3p = 25       !Default temperature 
+    character(60)      ::     masterVariable_min3p = ""     !Database master varialbe
     
     ! define species data structure
     type typeMin3PSpecies        
@@ -27,7 +30,9 @@ module dbs_min3p
 
         character(nMNLmin3P)   ::      Name = ""                  !Name of the aqueous species
         real            ::      EnthalpyChange = 0.0d0     !Enthalpy change
-        real            ::      AKLOG = 0.0d0              !Equilibrium constant
+        real            ::      AKLOG_exp = 0.0d0          !Equilibrium constant
+        real            ::      AKLOG(20)                  !contains the equilibrium constants (log(K) in base 10) for the given reaction at each discrete
+                                                            !temperature listed in record
         real            ::      Z = 0.0d0                  !charge of the species
         real            ::      DHA = 0.0d0                !Debye-Huckel constants a        
         real            ::      DHB = 0.0d0                !Debye-Huckel constants b
@@ -44,7 +49,9 @@ module dbs_min3p
         
         character(nMNLmin3P)   ::      Name = ""                 !Name of the aqueous species
         real            ::      EnthalpyChange = 0.0d0     !Enthalpy change
-        real            ::      AKLOG = 0.0d0              !Equilibrium constant
+        real            ::      AKLOG_exp = 0.0d0          !Equilibrium constant
+        real            ::      AKLOG(20)                  !contains the equilibrium constants (log(K) in base 10) for the given reaction at each discrete
+                                                            !temperature listed in record
         real            ::      MWT = 0.0d0                !Molecular weight of the aqueous species (g/mol)
         integer         ::      NCP = 0                    !number of basis species defining the secondary species
         real            ::      STQ(20) = 0.0d0             !stoichiometric coefficients of the components                                                       
@@ -56,7 +63,9 @@ module dbs_min3p
     type typeMin3PMineral
         
         character(nMNLmin3P)   ::      Name = ""                 !Name of the mineral phase
-        real            ::      AKLOG = 0.0d0              !Equilibrium constant
+        real            ::      AKLOG_exp = 0.0d0          !Equilibrium constant
+        real            ::      AKLOG(20)                  !contains the equilibrium constants (log(K) in base 10) for the given reaction at each discrete
+                                                            !temperature listed in record
         real            ::      EnthalpyChange = 0.0d0     !Enthalpy change
         real            ::      MWT = 0.0d0               !Molecular weight of the mineral (g/mol)
         real            ::      Density = 0.0d0           !Density, g/cm^3
@@ -87,6 +96,8 @@ module dbs_min3p
     character(9), parameter  ::  filePathDbsMin3PGases     =   "gases.dbs"      !gases.dbs for min3p
     character(9), parameter  ::  filePathDbsMin3PRedox     =   "redox.dbs"      !redox.dbs for min3p
     character(11), parameter ::  filePathDbsMin3PMinerals  =   "mineral.dbs"    !mineral.dbs for min3p
+
+    
     
     
 contains
@@ -96,11 +107,11 @@ contains
     
         implicit none
         
-        call openDbsMin3P(iUnitDbsMin3PComp, filePathDbsMin3PComp)
-        call openDbsMin3P(iUnitDbsMin3PComplex, filePathDbsMin3PComplex)
-        call openDbsMin3P(iUnitDbsMin3PRedox, filePathDbsMin3PRedox)
-        call openDbsMin3P(iUnitDbsMin3PGases, filePathDbsMin3PGases)
-        call openDbsMin3P(iUnitDbsMin3PMinerals, filePathDbsMin3PMinerals)        
+        call openDbsMin3P(iUnitDbsMin3PComp, trim(targetDatabasePath) // "\" // filePathDbsMin3PComp)
+        call openDbsMin3P(iUnitDbsMin3PComplex, trim(targetDatabasePath) // "\" // filePathDbsMin3PComplex)
+        call openDbsMin3P(iUnitDbsMin3PRedox, trim(targetDatabasePath) // "\" // filePathDbsMin3PRedox)
+        call openDbsMin3P(iUnitDbsMin3PGases, trim(targetDatabasePath) // "\" // filePathDbsMin3PGases)
+        call openDbsMin3P(iUnitDbsMin3PMinerals, trim(targetDatabasePath) // "\" // filePathDbsMin3PMinerals)        
     
     end subroutine OpenAllDbsMin3P
     
@@ -168,7 +179,7 @@ contains
         
         do i = 1, nMin3PComplexReactions
             write(iUnitDbsMin3PComplex, 200) min3PComplexReactions(i)%Name, min3PComplexReactions(i)%EnthalpyChange, &
-                                             min3PComplexReactions(i)%AKLOG, min3PComplexReactions(i)%Z, &
+                                             min3PComplexReactions(i)%AKLOG_exp, min3PComplexReactions(i)%Z, &
                                              min3PComplexReactions(i)%DHA, min3PComplexReactions(i)%DHB, &
                                              min3PComplexReactions(i)%MWT, min3PComplexReactions(i)%AlkFac
             write(iUnitDbsMin3PComplex, 201) min3PComplexReactions(i)%NCP, ((min3PComplexReactions(i)%NameOfSTQ(j),min3PComplexReactions(i)%STQ(j)), &
@@ -198,7 +209,7 @@ contains
             write(iUnitDbsMin3PRedox, 300) "'"//trim(min3PRedoxReactions(i)%Name)//"'"
             write(iUnitDbsMin3PRedox, 301) min3PRedoxReactions(i)%NCP, (("'"//trim(min3PRedoxReactions(i)%NameOfSTQ(j))//"'",min3PRedoxReactions(i)%STQ(j)), &
                                             j = 1, min3PRedoxReactions(i)%NCP)
-            write(iUnitDbsMin3PRedox, 302) min3PRedoxReactions(i)%AKLOG, min3PRedoxReactions(i)%EnthalpyChange
+            write(iUnitDbsMin3PRedox, 302) min3PRedoxReactions(i)%AKLOG_exp, min3PRedoxReactions(i)%EnthalpyChange
         end do
         
         call WriteLog("Write min3p database success: " // trim(filePathDbsMin3PRedox)) 
@@ -222,7 +233,7 @@ contains
         
         do i = 1, nmin3PGases
            
-            write(iUnitDbsMin3PGases, 400) min3PGases(i)%Name,min3PGases(i)%EnthalpyChange, min3PGases(i)%AKLOG, min3PGases(i)%MWT
+            write(iUnitDbsMin3PGases, 400) min3PGases(i)%Name,min3PGases(i)%EnthalpyChange, min3PGases(i)%AKLOG_exp, min3PGases(i)%MWT
             write(iUnitDbsMin3PGases, 401) min3PGases(i)%NCP, ((min3PGases(i)%NameOfSTQ(j),min3PGases(i)%STQ(j)),j = 1, min3PGases(i)%NCP)
         end do
         
@@ -256,7 +267,7 @@ contains
             write(iUnitDbsMin3PMinerals, 500) "'surface'"
             write(iUnitDbsMin3PMinerals, 501) min3PMinerals(i)%MWT, min3PMinerals(i)%Density            
             write(iUnitDbsMin3PMinerals, 502) min3PMinerals(i)%NCP, (("'"//trim(min3PMinerals(i)%NameOfSTQ(j))//"'",min3PMinerals(i)%STQ(j)),j = 1, min3PMinerals(i)%NCP)
-            write(iUnitDbsMin3PMinerals, 503) "'reversible'",min3PMinerals(i)%AKLOG, min3PMinerals(i)%EnthalpyChange
+            write(iUnitDbsMin3PMinerals, 503) "'reversible'",min3PMinerals(i)%AKLOG_exp, min3PMinerals(i)%EnthalpyChange
         end do
         
         call WriteLog("Write min3p database success: " // trim(filePathDbsMin3PMinerals))         
