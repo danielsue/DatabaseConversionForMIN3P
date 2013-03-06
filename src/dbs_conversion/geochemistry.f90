@@ -7,6 +7,8 @@ implicit none
 
 real ::  aklog_o2aq(20)         !Equilibrium constants (log(K) in base 10) for o2(aq) or h2(aq) at each discrete temperature listed in record
 real ::  aklog_h2aq(20)         !Equilibrium constants (log(K) in base 10) for o2(aq) or h2(aq) at each discrete temperature listed in record
+
+
 !!Sample data                             
 !!O2(aq)=2H2O-2H2(aq)								
 !!2	H2O	-1	O2(aq)	-2	H2(aq)			
@@ -73,19 +75,19 @@ subroutine switchMasterVariable(spename, ncp, namelen, nameofstq, stq, ntemp, ak
 
     if (trim(targetvar) == "h2(aq)") then
         
-         call WriteLog("Switch master variable h2(aq) for "//trim(spename))
+         call WriteLog("Switch master variable to h2(aq) for "//trim(spename))
          
          call WriteLog ("aklog before converting:")
          
          call WriteLog (ntemp, aklog(:ntemp))
          
-         call WriteLog ("stq_o2aq:")
-         
-         call WriteLog (stq_o2aq)
-         
-         call WriteLog ("aklog_h2aq:")
-         
-         call WriteLog (ntemp, aklog_h2aq (:ntemp))         
+!         call WriteLog ("stq_o2aq:")
+!         
+!         call WriteLog (stq_o2aq)
+!         
+!         call WriteLog ("aklog_h2aq:")
+!         
+!         call WriteLog (ntemp, aklog_h2aq (:ntemp))         
 
          do i = 1, ntemp
             aklog(i) = aklog(i) + aklog_h2aq (i) * 2 * stq_o2aq            
@@ -95,10 +97,19 @@ subroutine switchMasterVariable(spename, ncp, namelen, nameofstq, stq, ntemp, ak
          
          call WriteLog (ntemp, aklog(:ntemp))        
          
+         call WriteLog ("Stoichiometry coefficient before converting:")
+         call WriteLog ("h2o ", stq_o2aq)
+         call WriteLog ("h2(aq) ", stq_h2aq)
+         call WriteLog ("o2(aq) ", stq_o2aq)
 
-         stq_h2o= stq_h2o + 2.0 * stq_o2aq
-         stq_o2aq = stq_o2aq - 1.0 * stq_o2aq
-         stq_h2aq = stq_h2aq - 2.0 * stq_o2aq
+         stq_h2o= stq_h2o + 2.0 * stq_o2aq         
+         stq_h2aq = -2.0 * stq_o2aq
+         stq_o2aq = 1.0
+         
+         call WriteLog ("Stoichiometry coefficient after converting:")
+         call WriteLog ("h2o ", stq_o2aq)
+         call WriteLog ("h2(aq) ", stq_h2aq)
+         call WriteLog ("o2(aq) ", stq_o2aq)
 
          !replace o2(aq) to h2(aq)
          do i = 1, ncp
@@ -143,16 +154,16 @@ subroutine switchMasterVariable(spename, ncp, namelen, nameofstq, stq, ntemp, ak
          call WriteLog("Switch master variable to o2(aq) for "//trim(spename))
          
          call WriteLog ("aklog before converting:")
-         
+            
          call WriteLog (ntemp, aklog(:ntemp))
          
-         call WriteLog ("stq_h2aq:")
-         
-         call WriteLog (stq_h2aq)
-         
-         call WriteLog ("aklog_o2aq:")
-         
-         call WriteLog (ntemp, aklog_o2aq (:ntemp))   
+!         call WriteLog ("stq_h2aq:")
+!         
+!         call WriteLog (stq_h2aq)
+!         
+!         call WriteLog ("aklog_o2aq:")
+!         
+!         call WriteLog (ntemp, aklog_o2aq (:ntemp))   
 
          do i = 1, ntemp
             aklog(i) = aklog(i) + aklog_o2aq (i) * 0.5 * stq_h2aq            
@@ -161,10 +172,20 @@ subroutine switchMasterVariable(spename, ncp, namelen, nameofstq, stq, ntemp, ak
          call WriteLog ("aklog after converting:")
          
          call WriteLog (ntemp, aklog(:ntemp)) 
+         
+         call WriteLog ("Stoichiometry coefficient before converting:")
+         call WriteLog ("h2o ", stq_o2aq)
+         call WriteLog ("h2(aq) ", stq_h2aq)
+         call WriteLog ("o2(aq) ", stq_o2aq)
 
          stq_h2o= stq_h2o + 1.0 * stq_h2aq
-         stq_o2aq = stq_o2aq - 0.5 * stq_h2aq
-         stq_h2aq = stq_h2aq - 1.0 * stq_h2aq
+         stq_o2aq = -0.5 * stq_h2aq
+         stq_h2aq = 0.0
+         
+         call WriteLog ("Stoichiometry coefficient after converting:")
+         call WriteLog ("h2o ", stq_o2aq)
+         call WriteLog ("h2(aq) ", stq_h2aq)
+         call WriteLog ("o2(aq) ", stq_o2aq)
 
          !replace h2(aq) to o2(aq)
          do i = 1, ncp

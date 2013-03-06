@@ -15,8 +15,12 @@ module logfile
         module procedure writeLogStr
 
         module procedure writeLogInt
+        
+        module procedure writeLogStrInt
 
         module procedure writeLogReal
+        
+        module procedure writeLogStrReal
 
         module procedure writeLogIntArray
 
@@ -76,6 +80,22 @@ contains
         end if
 
     end subroutine writeLogInt
+    
+    ! Write string and int to log file
+    subroutine writeLogStrInt(strLog, intValue)
+    
+        implicit none
+        
+        character(*), intent(in) :: strLog
+        integer, intent(in) :: intValue
+        
+        write(*,"(a, 1x, i)") trim(strLog), intValue
+        
+        if(bOpenLog) then
+            write(iUnitLog, "(a, 1x, i)")  trim(strLog), intValue
+        end if
+        
+    end subroutine writeLogStrInt    
 
     ! Write real  to log file
     subroutine writeLogReal(realValue)
@@ -91,6 +111,22 @@ contains
         end if
 
     end subroutine writeLogReal
+    
+    ! Write string and real to log file
+    subroutine writeLogStrReal(strLog, realValue)
+    
+        implicit none
+        
+        character(*), intent(in) :: strLog
+        real, intent(in) :: realValue
+        
+        write(*,"(a, 1x, i)") trim(strLog), realValue
+        
+        if(bOpenLog) then
+            write(iUnitLog, "(a, 1x, f)")  trim(strLog), realValue
+        end if
+        
+    end subroutine
 
     ! Write integer array to log file 
     subroutine writeLogIntArray(intArray)

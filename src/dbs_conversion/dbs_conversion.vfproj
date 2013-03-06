@@ -29,15 +29,18 @@
 		<File RelativePath=".\dbsconvert.inp"/></Filter>
 		<Filter Name="Source Files" Filter="f90;for;f;fpp;ftn;def;odl;idl">
 		<File RelativePath=".\alias.f90"/>
-		<File RelativePath=".\convt_tough_min3p.f90"/>
+		<File RelativePath=".\convt2min3p.f90"/>
 		<File RelativePath=".\dbs_conversion.f90"/>
+		<File RelativePath=".\dbs_crunchflow.f90"/>
 		<File RelativePath=".\dbs_min3p.f90"/>
 		<File RelativePath=".\dbs_toughreact.f90"/>
 		<File RelativePath=".\file_utility.f90"/>
 		<File RelativePath=".\geochemistry.f90"/>
 		<File RelativePath=".\global.f90"/>
 		<File RelativePath=".\inputfile.f90"/>
+		<File RelativePath=".\lexical_sort.f90"/>
 		<File RelativePath=".\logfile.f90"/>
-		<File RelativePath=".\name_truncation.f90"/></Filter>
+		<File RelativePath=".\name_truncation.f90"/>
+		<File RelativePath=".\sourcedata.f90"/></Filter>
 		<File RelativePath=".\ReadMe.txt"/></Files>
 	<Globals/></VisualStudioProject>

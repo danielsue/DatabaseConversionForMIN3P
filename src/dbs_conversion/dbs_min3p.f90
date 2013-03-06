@@ -6,7 +6,7 @@ module dbs_min3p
     
     use logfile, only : WriteLog
     
-    use inputfile, only : targetDatabasePath
+    use inputfile, only : targetDatabasePath, IsInSpecifiedExport, bSpecifiedExport
     
     implicit none
     
@@ -159,8 +159,13 @@ contains
         integer ::  i
         
         do i = 1, nMin3PSpecies
+            if (bSpecifiedExport) then
+                if (.not. IsInSpecifiedExport(min3PSpecies(i)%Name)) then
+                    cycle
+                end if
+            end if
             write(iUnitDbsMin3PComp, 100) min3PSpecies(i)%Name, min3PSpecies(i)%Z, min3PSpecies(i)%DHA,  &
-                                         min3PSpecies(i)%DHB, min3PSpecies(i)%MWT, min3PSpecies(i)%AlkFac
+                                            min3PSpecies(i)%DHB, min3PSpecies(i)%MWT, min3PSpecies(i)%AlkFac
         end do
         
         call WriteLog("Write min3p database success: " // trim(filePathDbsMin3PComp)) 
@@ -178,10 +183,15 @@ contains
         integer ::  i, j
         
         do i = 1, nMin3PComplexReactions
+            if (bSpecifiedExport) then
+                if (.not. IsInSpecifiedExport(min3PComplexReactions(i)%Name)) then
+                    cycle
+                end if
+            end if
             write(iUnitDbsMin3PComplex, 200) min3PComplexReactions(i)%Name, min3PComplexReactions(i)%EnthalpyChange, &
-                                             min3PComplexReactions(i)%AKLOG_exp, min3PComplexReactions(i)%Z, &
-                                             min3PComplexReactions(i)%DHA, min3PComplexReactions(i)%DHB, &
-                                             min3PComplexReactions(i)%MWT, min3PComplexReactions(i)%AlkFac
+                                                min3PComplexReactions(i)%AKLOG_exp, min3PComplexReactions(i)%Z, &
+                                                min3PComplexReactions(i)%DHA, min3PComplexReactions(i)%DHB, &
+                                                min3PComplexReactions(i)%MWT, min3PComplexReactions(i)%AlkFac
             write(iUnitDbsMin3PComplex, 201) min3PComplexReactions(i)%NCP, ((min3PComplexReactions(i)%NameOfSTQ(j),min3PComplexReactions(i)%STQ(j)), &
                                             j = 1, min3PComplexReactions(i)%NCP)
         end do
@@ -202,9 +212,15 @@ contains
         integer ::  i, j
         
         do i = 1, nMin3PRedoxReactions
+            if (bSpecifiedExport) then
+                if (.not. IsInSpecifiedExport(min3PRedoxReactions(i)%Name)) then
+                    cycle
+                end if
+            end if
+            
             write(iUnitDbsMin3PRedox, 300) "! "
             write(iUnitDbsMin3PRedox, 300) "! "// trim(min3PRedoxReactions(i)%Name)
-            write(iUnitDbsMin3PRedox, 300) "! equilibrium constant calculated from TOUGHREACT database"
+            write(iUnitDbsMin3PRedox, 300) "! equilibrium constant calculated from other database"
             write(iUnitDbsMin3PRedox, 300) "! enthalpy change is set to be zero"            
             write(iUnitDbsMin3PRedox, 300) "'"//trim(min3PRedoxReactions(i)%Name)//"'"
             write(iUnitDbsMin3PRedox, 301) min3PRedoxReactions(i)%NCP, (("'"//trim(min3PRedoxReactions(i)%NameOfSTQ(j))//"'",min3PRedoxReactions(i)%STQ(j)), &
@@ -232,7 +248,11 @@ contains
         integer ::  i, j
         
         do i = 1, nmin3PGases
-           
+            if (bSpecifiedExport) then 
+                if (.not. IsInSpecifiedExport(min3PGases(i)%Name)) then
+                    cycle
+                end if
+            end if
             write(iUnitDbsMin3PGases, 400) min3PGases(i)%Name,min3PGases(i)%EnthalpyChange, min3PGases(i)%AKLOG_exp, min3PGases(i)%MWT
             write(iUnitDbsMin3PGases, 401) min3PGases(i)%NCP, ((min3PGases(i)%NameOfSTQ(j),min3PGases(i)%STQ(j)),j = 1, min3PGases(i)%NCP)
         end do
@@ -260,9 +280,15 @@ contains
         integer ::  i, j
         
         do i = 1, nMin3PMinerals
+            if (bSpecifiedExport) then 
+                if (.not. IsInSpecifiedExport(min3PMinerals(i)%Name)) then
+                    cycle
+                end if
+            end if
+
             write(iUnitDbsMin3PMinerals, 500) "! "
             write(iUnitDbsMin3PMinerals, 500) "! " // trim(min3PMinerals(i)%Name)
-            write(iUnitDbsMin3PMinerals, 500) "! " // "equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0"
+            write(iUnitDbsMin3PMinerals, 500) "! " // "equilibrium constant, gram formula weight from other database and enthalpy change is set to 0"
             write(iUnitDbsMin3PMinerals, 500) "'"//trim(min3PMinerals(i)%Name)//"'"
             write(iUnitDbsMin3PMinerals, 500) "'surface'"
             write(iUnitDbsMin3PMinerals, 501) min3PMinerals(i)%MWT, min3PMinerals(i)%Density            

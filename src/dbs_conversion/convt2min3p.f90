@@ -1,12 +1,10 @@
 ! module of toughreact database to min3p converter
 
-module convt_tough_min3p
+module convt2min3p
 
-    use dbs_toughreact,  only :     temperature, nTemperature, species, nSpecies, aqueousSpecies,            &
-                                     nAqueousSpecies, minerals, nMinerals, gases, nGases, surfaceComplexes,  &
-                                     nSurfaceComplexes, nRedoxReaction, nMNLCF
+    use sourcedata
     
-    use dbs_min3p,       only :     min3PSpecies, nMin3PSpecies, min3PComplexReactions, temperature_min3p,   &
+    use dbs_min3p,       only :      min3PSpecies, nMin3PSpecies, min3PComplexReactions, temperature_min3p,   &
                                      nMin3PComplexReactions, min3PRedoxReactions, nMin3PRedoxReactions,       &
                                      min3PGases,nMin3PGases, min3PMinerals, nMin3PMinerals,nMNLmin3P,         &
                                      masterVariable_min3p
@@ -16,7 +14,7 @@ module convt_tough_min3p
     use name_truncation, only :     AddNameTruncation
     use alias,           only :     GetAliasFromName
 
-    use inputfile,       only :     targetDatabasePath, targetTemperature, targetMasterVariable
+    use inputfile,       only :     targetDatabasePath, targetTemperature, targetMasterVariable, bSortData
 
     use geochemistry,    only :     switchMasterVariable
     
@@ -36,6 +34,10 @@ contains
         call convert2Min3PGases
         
         call convert2Min3PMinerals
+        
+        if (bSortData) then
+            call sortData
+        end if
     
     end subroutine convert2Min3PDbs
 
@@ -577,6 +579,145 @@ contains
         end do
         
     end subroutine convert2Min3PMinerals
+
+    !Sort components by ascending lexical order.
+    !This is useful when you need to compare the databases converted
+    !from different database
+    subroutine sortData
+    
+        use lexical_sort, only : sort
+    
+        implicit none
+        
+        integer, allocatable :: sortedIndex(:)
+        character(nMNLmin3P), allocatable :: strNames(:)
+        character(nMNLmin3P), allocatable :: strNamesOfSTQ(:)
+        
+        integer :: i, j        
+        
+        !min3PSpecies, nMin3PSpecies, min3PComplexReactions, temperature_min3p,   &
+        !                             nMin3PComplexReactions, min3PRedoxReactions, nMin3PRedoxReactions,       &
+        !                             min3PGases,nMin3PGases, min3PMinerals, nMin3PMinerals,nMNLmin3P,         &
+        !                             masterVariable_min3p
+        !subroutine sort(StringArray,SortedIndex, CaseInsensitive)
+        
+        call WriteLog("Sort data by ascending lexical order.")        
+        
+        !sort species
+        call WriteLog("Sort min3p species data...")
+        if(nMin3PSpecies > 0) then
+            if(allocated(strNames)) then
+                deallocate(strNames)
+            end if
+            allocate(strNames(nMin3PSpecies))
+            strNames = min3PSpecies(:)%Name
+            call sort(strNames, sortedIndex, .true.)
+            min3PSpecies = min3PSpecies(sortedIndex)
+        end if
+        call WriteLog("End of sorting min3p species data.")
+        
+        
+        !sort min3PComplexReactions
+        call WriteLog("Sort min3p complexation reaction data...")
+        if (nMin3PComplexReactions > 0) then
+            if(allocated(strNames)) then
+                deallocate(strNames)
+            end if
+            allocate(strNames(nMin3PComplexReactions))
+            strNames = min3PComplexReactions(:)%Name
+            call sort(strNames, sortedIndex, .true.)
+            min3PComplexReactions = min3PComplexReactions(sortedIndex)
+            
+            do i = 1, nMin3PComplexReactions
+                call WriteLog("Sort components for " // min3PComplexReactions(i)%Name)
+                if(allocated(strNamesOfSTQ)) then
+                    deallocate(strNamesOfSTQ)
+                end if
+                allocate(strNamesOfSTQ(min3PComplexReactions(i)%NCP))
+                strNamesOfSTQ = min3PComplexReactions(i)%NameOfSTQ(:min3PComplexReactions(i)%NCP)
+                call sort(strNamesOfSTQ, sortedIndex, .true.)
+                min3PComplexReactions(i)%NameOfSTQ(:min3PComplexReactions(i)%NCP) = min3PComplexReactions(i)%NameOfSTQ(sortedIndex)
+                min3PComplexReactions(i)%STQ(:min3PComplexReactions(i)%NCP) = min3PComplexReactions(i)%STQ(sortedIndex)
+            end do
+        end if
+        call WriteLog("End of sorting min3p complexation reaction data.")
+        
+        !sort min3PRedoxReactions
+        call WriteLog("Sort min3p redox reaction data...")
+        if (nMin3PRedoxReactions > 0) then
+            if(allocated(strNames)) then
+                deallocate(strNames)
+            end if
+            allocate(strNames(nMin3PRedoxReactions))
+            strNames = min3PRedoxReactions(:)%Name
+            call sort(strNames, sortedIndex, .true.)
+            min3PRedoxReactions = min3PRedoxReactions(sortedIndex)
+            
+            do i = 1, nMin3PRedoxReactions
+                call WriteLog("Sort components for " // min3PRedoxReactions(i)%Name)
+                if(allocated(strNamesOfSTQ)) then
+                    deallocate(strNamesOfSTQ)
+                end if
+                allocate(strNamesOfSTQ(min3PRedoxReactions(i)%NCP))
+                strNamesOfSTQ = min3PRedoxReactions(i)%NameOfSTQ(:min3PRedoxReactions(i)%NCP)
+                call sort(strNamesOfSTQ, sortedIndex, .true.)
+                min3PRedoxReactions(i)%NameOfSTQ(:min3PRedoxReactions(i)%NCP) = min3PRedoxReactions(i)%NameOfSTQ(sortedIndex)
+                min3PRedoxReactions(i)%STQ(:min3PRedoxReactions(i)%NCP) = min3PRedoxReactions(i)%STQ(sortedIndex)
+            end do
+        end if
+        call WriteLog("End of sorting min3p redox reaction data.")
+        
+        !sort min3PGases
+        call WriteLog("Sort min3p gases data...")
+        if (nMin3PGases > 0) then
+            if(allocated(strNames)) then
+                deallocate(strNames)
+            end if
+            allocate(strNames(nMin3PGases))
+            strNames = min3PGases(:)%Name
+            call sort(strNames, sortedIndex, .true.)
+            min3PGases = min3PGases(sortedIndex)
+            
+            do i = 1, nMin3PGases
+                call WriteLog("Sort components for " // min3PGases(i)%Name)
+                if(allocated(strNamesOfSTQ)) then
+                    deallocate(strNamesOfSTQ)
+                end if
+                allocate(strNamesOfSTQ(min3PGases(i)%NCP))
+                strNamesOfSTQ = min3PGases(i)%NameOfSTQ(:min3PGases(i)%NCP)
+                call sort(strNamesOfSTQ, sortedIndex, .true.)
+                min3PGases(i)%NameOfSTQ(:min3PGases(i)%NCP) = min3PGases(i)%NameOfSTQ(sortedIndex)
+                min3PGases(i)%STQ(:min3PGases(i)%NCP) = min3PGases(i)%STQ(sortedIndex)
+            end do
+        end if
+        call WriteLog("End of sorting min3p gases data.")
+        
+        !sort min3PMinerals
+        call WriteLog("Sort min3p minerals data...")
+        if (nMin3PMinerals > 0) then
+            if(allocated(strNames)) then
+                deallocate(strNames)
+            end if
+            allocate(strNames(nMin3PMinerals))
+            strNames = min3PMinerals(:)%Name
+            call sort(strNames, sortedIndex, .true.)
+            min3PMinerals = min3PMinerals(sortedIndex)
+            
+            do i = 1, nMin3PMinerals
+                call WriteLog("Sort components for " // min3PMinerals(i)%Name)
+                if(allocated(strNamesOfSTQ)) then
+                    deallocate(strNamesOfSTQ)
+                end if
+                allocate(strNamesOfSTQ(min3PMinerals(i)%NCP))
+                strNamesOfSTQ = min3PMinerals(i)%NameOfSTQ(:min3PMinerals(i)%NCP)
+                call sort(strNamesOfSTQ, sortedIndex, .true.)
+                min3PMinerals(i)%NameOfSTQ(:min3PMinerals(i)%NCP) = min3PMinerals(i)%NameOfSTQ(sortedIndex)
+                min3PMinerals(i)%STQ(:min3PMinerals(i)%NCP) = min3PMinerals(i)%STQ(sortedIndex)
+            end do 
+        end if
+        call WriteLog("End of sorting min3p minerals data.")
+    
+    end subroutine
     
     !calculate y(x) based on the given x-y array
     function linearInterpolation(n, xlist, ylist, x) result (y)
@@ -614,5 +755,6 @@ contains
         end if
     
     end function linearInterpolation
+    
 
-end module convt_tough_min3p
+end module convt2min3p

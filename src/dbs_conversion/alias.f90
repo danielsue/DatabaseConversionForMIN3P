@@ -87,7 +87,7 @@ contains
             call lowerCase(strBuffer)
 
             if (len_trim(strBuffer) == 0 ) then
-                continue
+                cycle
             end if
 
             if (strBuffer(1:1) /= strComment) then

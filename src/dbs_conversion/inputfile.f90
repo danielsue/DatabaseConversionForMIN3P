@@ -5,14 +5,21 @@ module inputfile
 use global, only  : iUnitInp, bOpenInp, ErrorHandling
 use logfile, only : WriteLog
 use file_utility, only : LowerCase
+use sourcedata, only : nNameLength
+use file_utility, only : getNameFromString
 
 implicit none
 
-character(1),   parameter   ::  strComment      =   "!"
-character(1024)              ::  strBuffer        =   ""
-character(1024)              ::  filePathInp      =   ""
-integer                      ::  iReadStat       =   1
-logical                       ::  bEndOfFile      =   .false.
+character(1),   parameter    ::  strComment       = "!"
+character(1024)              ::  strBuffer        = ""
+character(1024)              ::  filePathInp      = ""
+integer                      ::  iReadStat        = 1
+logical                      ::  bEndOfFile       = .false.
+logical                      ::  bSortData        = .false.
+logical                      ::  bSpecifiedExport = .false. 
+
+integer                             :: nSpecifiedExport = 0
+character(nNameLength), allocatable :: specifiedExport(:)
 
 !Block 1: Database settings
 character(128) :: sourceDatabaseType = ""       !Source database type
@@ -22,7 +29,7 @@ character(256) :: targetDatabasePath = ""       !Source database path
 
 !Block 2: Conversion settings
 real            :: targetTemperature = -9999     !Target database temperature  
-character(60)  :: targetMasterVariable = ""      !Target database master varialbe
+character(60)   :: targetMasterVariable = ""     !Target database master varialbe
 
 contains
 
@@ -51,6 +58,8 @@ contains
      
         implicit none  
         
+        integer :: i 
+        
         call WriteLog ("Begin reading input file")
         
         do while(.not. bEndOfFile)
@@ -71,14 +80,7 @@ contains
                     call readNextLine
                     sourceDatabasePath = strBuffer
                     call WriteLog("source database path: " // trim(sourceDatabasePath))
-                case ("target database type")
-                    call readNextLine
-                    targetDatabaseType = strBuffer
-                    call WriteLog("target database type: " // trim(targetDatabaseType))
-                case ("target database path")
-                    call readNextLine
-                    targetDatabasePath = strBuffer
-                    call WriteLog("target database path: " // trim(targetDatabasePath))
+
                 case ("target database temperature")
                     call readNextLine
                     read(strBuffer, *) targetTemperature
@@ -87,9 +89,42 @@ contains
                     call readNextLine
                     targetMasterVariable = strBuffer
                     call WriteLog("target database master variable: " // trim(targetMasterVariable))
+                    
+                case ("target database type")
+                    call readNextLine
+                    targetDatabaseType = strBuffer
+                    call WriteLog("target database type: " // trim(targetDatabaseType))
+                case ("target database path")
+                    call readNextLine
+                    targetDatabasePath = strBuffer
+                    call WriteLog("target database path: " // trim(targetDatabasePath))
+                case ("sort data by lexical order")
+                    bSortData = .true.
+                    call WriteLog("sort data by lexical order: true")
+                case ("export following species only")                    
+                    bSpecifiedExport = .true.
+                    call readNextLine
+                    read(strBuffer, *) nSpecifiedExport                    
+                    if (nSpecifiedExport>0) then
+                        if(allocated(specifiedExport)) then
+                            deallocate(specifiedExport)
+                        end if
+                        allocate(specifiedExport(nSpecifiedExport))
+                        do i = 1, nSpecifiedExport
+                            call readNextLine
+                            call getNameFromString(strBuffer, nNameLength, specifiedExport(i))
+                        end do
+                    end if
+                    
+                    call WriteLog("export following species only: true")
+                    call WriteLog("number of specified exported: ", nSpecifiedExport)
+                    do i = 1, nSpecifiedExport
+                        call WriteLog(trim(specifiedExport(i)))
+                    end do
+                    
                 case default
-                    call WriteLog("Unknow instruction: " // trim(strBuffer))
-                    call ErrorHandling
+                    call WriteLog("Unknow instruction (ignored): " // trim(strBuffer))
+                    !call ErrorHandling
 
             end select
 
@@ -156,5 +191,25 @@ contains
         end do
     
     endsubroutine readNextLine
+    
+    !check if a string is in the specifiedExport string array
+    function IsInSpecifiedExport(strName) result (bFlag)
+    
+        implicit none
+        
+        character(*) :: strName        
+        logical :: bFlag
+        integer :: i
+        
+        bFlag = .false.
+        
+        do i = 1, nSpecifiedExport
+            if(trim(strName) == trim(specifiedExport(i))) then
+                bFlag = .true.
+                return
+            end if
+        end do
+    
+    end function IsInSpecifiedExport
 
 end module inputfile

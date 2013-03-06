@@ -17,7 +17,8 @@
     use global
     use logfile,            only :  filePathLog, OpenLogFile, WriteLog, WriteLogSummary
     use dbs_toughreact,     only :  OpenDbsTR, ReadDbsTR, CloseDbsTR
-    use convt_tough_min3p,  only :  convert2Min3PDbs
+    use dbs_crunchflow,     only :  OpenDbsCF, ReadDbsCF, CloseDbsCF
+    use convt2min3p,  only :  convert2Min3PDbs
     use dbs_min3p,          only :  OpenAllDbsMin3P, WriteAllDbsMin3P, temperature_min3p
     use alias,              only :  OpenDbsAlias, ReadDbsAlias
     use name_truncation,    only :  OpenNameTruncation, WriteNameTruncation
@@ -86,12 +87,15 @@
         
         case ("toughreact")
 
-            ! Read database
             call OpenDbsTR
-
             call ReadDbsTR
-
             call CloseDbsTR
+
+        case ("crunchflow")
+
+            call OpenDbsCF
+            call ReadDbsCF
+            call CloseDbsCF
 
         case default
 

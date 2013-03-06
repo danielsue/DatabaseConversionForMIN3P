@@ -6,165 +6,17 @@ module dbs_toughreact
     
     use logfile, only : WriteLog, nWarnings, nErrors
 
-    use file_utility, only : LowerCase
+    use file_utility, only : LowerCase, IsZero, getNameFromString, skipNValues, replaceCharacter
     
     use alias, only : GetNameFromAlias
 
     use inputfile, only : sourceDatabasePath
 
-    use geochemistry,    only :     aklog_o2aq, aklog_h2aq
+    use geochemistry, only : aklog_o2aq, aklog_h2aq
+
+    use sourcedata
     
     implicit none
-    
-    integer, parameter:: nMNLCF = 60
-    
-    !
-    type TypePrimarySpecies
-        
-        character(nMNLCF)   ::      Name    !name or chemical formula of aqueous basis species, in quotes (truncated after 20 characters)
-        
-        real            ::      A0      !Ion effective or hydrated radius used to compute the Debye-Hückel a0 parameter
-        
-        real            ::      Z       !the ion electric charge
-        
-        real            ::      MWT     !Molecular weight of the aqueous species (g/mol)
-        
-    end type TypePrimarySpecies   
-     
-    !
-    type TypeDerivedSpecies
-        
-        character(nMNLCF)   ::      Name    !chemical formula of secondary species, in quotes (truncated after 20 characters).
-        
-        real            ::      A0      !Ion effective or hydrated radius used to compute the Debye-Hückel a0 parameter
-        
-        real            ::      Z       !the ion electric charge
-        
-        real            ::      MWT     !Molecular weight of the aqueous species (g/mol)
-        
-        integer         ::      NCP     !number of basis species defining the secondary species
-        
-        real             ::  STQ(20)     !stoichiometric coefficients of component (basis) species NAM included in the dissociation
-                                          !reaction of the derived species (negative and positive values for reactants and products,
-                                          !respectively). The derived species is always assumed to have a stoichiometric coefficient of -1.0,
-                                          !which is not included in STQ.
-                                                        
-        
-        character(nMNLCF)          ::  NameOfSTQ(20)    !name of the reactant or product, in quotes (truncated after 20 characters; must match one of the
-                                                         !basis species).
-                                                         
-        real                        ::  AKLOG(20)         !contains the equilibrium constants (log(K) in base 10) for the given reaction at each discrete
-                                                         !temperature listed in record
-                                                         
-        real                        ::  AKCOE(5)         !contains regression coefficients a, b, c, d, and e to calculate log10(K) as a function of
-                                                         !temperature (at a reference pressure P0) with log10(K)T,P0 = a*ln(Tk) + b + c*Tk + d/Tk + e/Tk^2,
-                                                         !where Tk is absolute temperature (K), and ln stands for natural logarithm.
-                                                         
-        real                        ::  AKCOP(5)         !(optional) contains regression coefficients a, b, c, d, and e to calculate the volume change ΔV
-                                                         !(in cm3/mol) for the reaction as a function of temperature (average ΔV over the pressure interval
-                                                         !P0 to P), with ΔV = a + b*Tk + c*Tk^2 + d/Tk + e/Tk^2.
-                                                         
-        logical                     ::  bAKCOP = .false. !Indicate if AKCOP exists
-
-        logical                     ::  bRedoxReaction = .false.   !To seperate if it is complexation reaction or redox reaction
-                                                                     !If NameOfSTQ contain "o2(aq)", it is redox reaction
-                                                                     !...........IS IT CORRECT?.....................
-            
-    end type TypeDerivedSpecies   
-                                             
-    
-    !
-    type TypeMineral
-        
-        character(nMNLCF)   ::      Name    !name or chemical formula of a mineral, in quotes (truncated after 20 characters).
-        
-        real            ::      MWT     !molecular weight (g/mol)
-        
-        real            ::      VMIN    !molar volume (cm3/mole)
-        
-        integer         ::      NCP    !the number of component species defining the mineral.
-        
-        real             ::     STQ(20)      !contains the stoichiometric coefficient of basis species NAM in the dissociation (hydrolysis)
-                                              !reaction of the mineral (negative and positive values for reactants and products, respectively). The
-                                              !mineral species is always assumed to have a stoichiometric coefficient of -1.0, which is not
-                                              !included in STQ.
-                                                    
-        character(nMNLCF)            ::  NameOfSTQ(20)  !name of the reactant or product, in quotes (truncated after 20 characters; must match one of the
-                                                         !basis species).                                              
-                                                    
-        real                        ::  AKLOG(20)         !contains the equilibrium constants (log(K) in base 10) for the given reaction at each discrete
-                                                         !temperature listed in record
-                                                         
-        real                        ::  AKCOE(5)        !contains regression coefficients a, b, c, d, and e to calculate log10(K) as a function of
-                                                         !temperature (at a reference pressure P0) with log10(K)T,P0 = a*ln(Tk) + b + c*Tk + d/Tk + e/Tk^2,
-                                                         !where Tk is absolute temperature (K), and ln stands for natural logarithm.
-                                                         
-        real                        ::  AKCOP(5)         !(optional) contains regression coefficients a, b, c, d, and e to calculate the volume change ΔV
-                                                         !(in cm3/mol) for the reaction as a function of temperature (average ΔV over the pressure interval
-                                                         !P0 to P), with ΔV = a + b*Tk + c*Tk^2 + d/Tk + e/Tk^2.
-                                                         
-        logical                     ::  bAKCOP = .false. !Indicate if AKCOP exists  
-    
-    end type TypeMineral
-    
-    !
-    type TypeGas
-        
-        character(nMNLCF)   ::      Name    !name or chemical formula of a gas species, in quotes (truncated after 20 characters).
-        
-        real            ::      MWT    !molecular weight (g/mol)
-        
-        real            ::      DMDIAM  !molecular diameter (m) used to calculate gas diffusion coefficient
-        
-        integer         ::      NCP    !the number of basis species defining the gas.
-        
-        real            ::  STQ(20)     !contains the stoichiometric coefficient of component species NAM in the dissociation reaction
-                                         !of the gas (negative and positive values for reactants and products, respectively). The gas is
-                                         !always assumed to have a stoichiometric coefficient of -1.0, which is not included in STQ.
-                                                    
-        character(nMNLCF)            ::  NameOfSTQ(20)  !name of the reactant or product, in quotes (truncated after 20 characters; must match one of the
-                                                         !basis species).  
-                                                         
-        real                        ::  AKLOG(20)         !contains the equilibrium constants (log(K) in base 10) for the given reaction at each discrete
-                                                         !temperature listed in record
-                                                         
-        real                        ::  AKCOE(5)         !contains regression coefficients a, b, c, d, and e to calculate log10(K) as a function of
-                                                         !temperature (at a reference pressure P0) with log10(K)T,P0 = a*ln(Tk) + b + c*Tk + d/Tk + e/Tk^2,
-                                                         !where Tk is absolute temperature (K), and ln stands for natural logarithm.
-                                                         
-        real                        ::  AKCOP(5)         !(optional) contains regression coefficients a, b, c, d, and e to calculate the volume change ΔV
-                                                         !(in cm3/mol) for the reaction as a function of temperature (average ΔV over the pressure interval
-                                                         !P0 to P), with ΔV = a + b*Tk + c*Tk^2 + d/Tk + e/Tk^2.
-                                                         
-        logical                     ::  bAKCOP = .false. !Indicate if AKCOP exists                                                
-        
-    end type TypeGas
-    
-    !
-    type TypeSurfaceComplexes
-        
-        character(nMNLCF)   ::      Name    !name or chemical formula of a gas species, in quotes (truncated after 20 characters).
-        
-        real            ::      Z       !electric charge of surface complex.
-        
-        integer         ::      NCP     !the number of basis species defining the surface complex.
-        
-        real             ::  STQ(20)      !contains the stoichiometric coefficient of component species NAM in the dissociation reaction
-                                           !of the gas (negative and positive values for reactants and products, respectively). The gas is
-                                           !always assumed to have a stoichiometric coefficient of -1.0, which is not included in STQ.
-                                                    
-        character(nMNLCF)            ::  NameOfSTQ(20)  !name of the reactant or product, in quotes (truncated after 20 characters; must match one of the
-                                                         !basis species).  
-                                                         
-        real                        ::  AKLOG(20)         !contains the equilibrium constants (log(K) in base 10) for the given reaction at each discrete
-                                                         !temperature listed in record
-                                                         
-        real                        ::  AKCOE(5)         !contains regression coefficients a, b, c, d, and e to calculate log10(K) as a function of
-                                                         !temperature (at a reference pressure P0) with log10(K)T,P0 = a*ln(Tk) + b + c*Tk + d/Tk + e/Tk^2,
-                                                         !where Tk is absolute temperature (K), and ln stands for natural logarithm.                                             
-        
-    end type TypeSurfaceComplexes
-    
     
     character(1024)      ::      filePathDbsTR   !file path for toughreact database
     
@@ -179,28 +31,9 @@ module dbs_toughreact
     integer, parameter          ::  maxStrBuffers = 100000
     character(1024)              ::  strBuffers(maxStrBuffers)       !Assume the maximum number of each data section 
     character(1024)              ::  strBuffer        =   ""
-    integer                     ::  strBuffersLineIndex(maxStrBuffers)
+    integer                      ::  strBuffersLineIndex(maxStrBuffers)
     integer                      ::  iReadStat       =   1
     logical                      ::  bEndOfFile      =   .false.
-
-    real,allocatable           ::  temperature(:)       ! temperature points
-    integer                    ::  nTemperature = 0    ! number of temperature points
-
-    type(TypePrimarySpecies), allocatable :: species(:)             ! species
-    integer                               :: nSpecies = 0           ! number of species
-    
-    type(TypeDerivedSpecies), allocatable :: aqueousSpecies(:)      ! aqueous species
-    integer                               :: nAqueousSpecies = 0    ! number of aqueous species
-    integer                               :: nRedoxReaction  = 0
-    
-    type(TypeMineral), allocatable        :: minerals(:)            ! minerals
-    integer                               :: nMinerals = 0          ! number of minerals
-    
-    type(TypeGas), allocatable            :: gases(:)               ! gases
-    integer                               :: nGases = 0             ! number of gases    
-    
-    type(TypeSurfaceComplexes),allocatable  ::  surfaceComplexes(:)    ! surfaceComplexes
-    integer                                 ::  nSurfaceComplexes = 0  ! number of surface complexes    
     
     integer :: currentLine = 0          
 
@@ -313,103 +146,7 @@ contains
     
     endsubroutine readNextLine
     
-    ! replace character in string
-    subroutine replaceCharacter(str, stra, strb)
-    
-        implicit none
-        
-        character(*), intent(inout) :: str
-        character(*), intent(in) :: stra, strb
-        character(1024) :: tempstr 
-        
-        integer :: i, j, k, n1, n2, n3
-        
-        n1 = len(str)
-        n2 = len(stra)
-        n3 = len(strb)        
-        j = 1
-        k = 0
-        do i = 1, n1 - n2 + 1
-            if (k>0) then
-                k = k - 1
-                continue
-            end if
-            if(str(i:i+n2-1) == stra(1:n2)) then
-                tempstr(j: j + n3 - 1) = strb(1:n3)
-                j = j + n3
-                k = n2 - 1
-            else                
-                tempstr(j:j) = str(i:i)
-                j = j + 1
-            end if
-        end do
-        
-        str = tempstr
-        
-    end subroutine
-   
-     !Skip n values and return the left value
-     !Assume all the values are separated by blank space
-     subroutine skipNValues(string, n)
-     
-        implicit none
-        
-        character(*), intent(inout) :: string
-        integer, intent(in)         :: n
-        integer :: i, j
-        
-        string = adjustl(string)
-        
-        do i = 1, n
-            if(string(1:1) == "'") then
-                string = string(2:)
-                j = index(string, "'")
-                string = adjustl(string(j+1:))
-            else
-                j = index(string, " ")
-                if(j < 1) then
-                    string = ""
-                    exit
-                end if
-                string = adjustl(string(j:))
-            end if
-        end do
-        
-     end subroutine skipNValues
-     
-     !Get name from string
-     subroutine getNameFromString(string, name)
-     
-        implicit none
-        character(*), intent(in) :: string        
-        character(nMNLCF), intent(out) :: name
-        character(1024)             :: tempStr
-        integer :: i
-        
-        i = index(string, "'")
-        if (i < 1) then
-            call WriteLog("Error detected in converting species name: " // trim(string))
-            call ErrorHandling 
-        end if
-        tempStr = string(i + 1:)
-
-        i = index(tempStr, "'")
-        if (i < 2) then
-            call WriteLog("Error detected in converting species name: " // trim(string))
-            call ErrorHandling 
-        end if
-        tempStr = adjustl(tempStr(:i-1))
-        
-        !if (len_trim(tempStr) > nMNLCF) then
-        !    name = tempStr(1:nMNLCF)
-        !else
-            name = trim(tempStr)
-        !end if
-        
-     end subroutine getNameFromString
-    
-   
-    ! Read head
+      ! Read head
     subroutine readHead
 
         implicit none
@@ -432,19 +169,6 @@ contains
         end if
 
     end subroutine readHead
-
-    !Check if the number is zero
-    function isZero(dvalue) result(bFlag)
-        implicit none
-        real, intent(in) :: dvalue
-        logical ::bFlag
-        bFlag = .false.
-        if(abs(dvalue) < 1.0E-100) then
-            bFlag = .true.
-        else
-            bFlag = .false.
-        end if
-    end function isZero
     
      ! Read temperature points
      subroutine readTemperature
@@ -505,13 +229,13 @@ contains
 
         integer :: i
 
-        character (nMNLCF) :: strName
+        character (nNameLength) :: strName
 
         nSpecies = 0
 
         do while (.not. bEndOfFile)
             call readNextLine
-            call getNameFromString(strBuffer, strName)
+            call getNameFromString(strBuffer, nNameLength, strName)
             if (trim(strName) == strSection1 .or. trim(strName) == strSection2) then                
                 exit
             end if
@@ -532,7 +256,7 @@ contains
             end if
             allocate(species(nSpecies))
             do i = 1, nSpecies
-                call getNameFromString(strBuffers(i),species(i)%Name)
+                call getNameFromString(strBuffers(i), nNameLength, species(i)%Name)
                 !Check if this name is used as an alias
                 if (GetNameFromAlias(species(i)%Name) /= "") then
                     nErrors = nErrors + 1
@@ -585,8 +309,8 @@ contains
         implicit none
         
         integer :: i, j, k
-        character(nMNLCF) :: strName
-        character(nMNLCF) :: tempNames(3)
+        character(nNameLength) :: strName
+        character(nNameLength) :: tempNames(3)
 
         i = 0
         nAqueousSpecies = 0
@@ -594,7 +318,7 @@ contains
         
         do while (.not. bEndOfFile)
             call readNextLine
-            call getNameFromString(strBuffer, strName)
+            call getNameFromString(strBuffer, nNameLength, strName)
             if (trim(strName) == strSection1 .or. trim(strName) == strSection2) then                
                 exit
             end if
@@ -632,7 +356,7 @@ contains
             do i = 1, nAqueousSpecies                
                 !read first line
                 j = 3 * i - 2
-                call getNameFromString(strBuffers(j),aqueousSpecies(i)%Name)
+                call getNameFromString(strBuffers(j), nNameLength, aqueousSpecies(i)%Name)
                 !Check if this name is used as an alias
                 if (GetNameFromAlias(aqueousSpecies(i)%Name) /= "") then
                     nErrors = nErrors + 1
@@ -644,7 +368,7 @@ contains
                 call skipNValues(strBuffers(j),4)            
                 do k = 1, aqueousSpecies(i)%NCP, 1
                     read(strBuffers(j),*, end = 9999, err = 9999) aqueousSpecies(i)%STQ(k)
-                    call getNameFromString(strBuffers(j),aqueousSpecies(i)%NameOfSTQ(k))
+                    call getNameFromString(strBuffers(j), nNameLength, aqueousSpecies(i)%NameOfSTQ(k))
                     !Check if this name is used as an alias
                     if (GetNameFromAlias(aqueousSpecies(i)%NameOfSTQ(k)) /= "") then
                         nErrors = nErrors + 1
@@ -749,15 +473,15 @@ contains
         implicit none
         
         integer :: i, j, k
-        character(nMNLCF) :: strName
-        character(nMNLCF) :: tempNames(3)
+        character(nNameLength) :: strName
+        character(nNameLength) :: tempNames(3)
 
         i = 0
         nMinerals = 0
 
         do while (.not. bEndOfFile)
             call readNextLine
-            call getNameFromString(strBuffer, strName)
+            call getNameFromString(strBuffer, nNameLength, strName)
             if (trim(strName) == strSection1 .or. trim(strName) == strSection2) then                
                 exit
             end if
@@ -796,7 +520,7 @@ contains
             do i = 1, nMinerals                
                 !read first line
                 j = 3 * i - 2
-                call getNameFromString(strBuffers(j),minerals(i)%Name)
+                call getNameFromString(strBuffers(j), nNameLength, minerals(i)%Name)
                 
                 !Check if this name is used as an alias
                 if (GetNameFromAlias(minerals(i)%Name) /= "") then
@@ -810,7 +534,7 @@ contains
                 call skipNValues(strBuffers(j),3)            
                 do k = 1, minerals(i)%NCP, 1
                     read(strBuffers(j),*, end = 9999, err = 9999) minerals(i)%STQ(k)
-                    call getNameFromString(strBuffers(j),minerals(i)%NameOfSTQ(k))
+                    call getNameFromString(strBuffers(j), nNameLength, minerals(i)%NameOfSTQ(k))
                     
                     !Check if this name is used as an alias
                     if (GetNameFromAlias(minerals(i)%NameOfSTQ(k)) /= "") then
@@ -886,15 +610,15 @@ contains
         implicit none
         
         integer :: i, j, k
-        character(nMNLCF) :: strName
-        character(nMNLCF) :: tempNames(3)
+        character(nNameLength) :: strName
+        character(nNameLength) :: tempNames(3)
 
         i = 0
         nGases = 0
 
         do while (.not. bEndOfFile)
             call readNextLine
-            call getNameFromString(strBuffer, strName)
+            call getNameFromString(strBuffer, nNameLength, strName)
             if (trim(strName) == strSection1 .or. trim(strName) == strSection2) then                
                 exit
             end if
@@ -932,7 +656,7 @@ contains
             do i = 1, nGases                
                 !read first line
                 j = 3 * i - 2
-                call getNameFromString(strBuffers(j),gases(i)%Name)
+                call getNameFromString(strBuffers(j), nNameLength, gases(i)%Name)
                 
                 !Check if this name is used as an alias
                 if (GetNameFromAlias(gases(i)%Name) /= "") then
@@ -946,7 +670,7 @@ contains
                 call skipNValues(strBuffers(j),3)            
                 do k = 1, gases(i)%NCP, 1
                     read(strBuffers(j),*, end = 9999, err = 9999) gases(i)%STQ(k)
-                    call getNameFromString(strBuffers(j),gases(i)%NameOfSTQ(k))
+                    call getNameFromString(strBuffers(j), nNameLength, gases(i)%NameOfSTQ(k))
                     
                     !Check if this name is used as an alias
                     if (GetNameFromAlias(gases(i)%NameOfSTQ(k)) /= "") then
@@ -1021,15 +745,15 @@ contains
         implicit none
         
         integer :: i, j, k
-        character(nMNLCF) :: strName
-        character(nMNLCF) :: tempNames(3)
+        character(nNameLength) :: strName
+        character(nNameLength) :: tempNames(3)
 
         i = 0
         nSurfaceComplexes = 0
 
         do while (.not. bEndOfFile)
             call readNextLine
-            call getNameFromString(strBuffer, strName)
+            call getNameFromString(strBuffer, nNameLength, strName)
             if (trim(strName) == strSection1 .or. trim(strName) == strSection2) then                
                 exit
             end if
@@ -1067,7 +791,7 @@ contains
             do i = 1, nSurfaceComplexes                
                 !read first line
                 j = 3 * i - 2
-                call getNameFromString(strBuffers(j),surfaceComplexes(i)%Name)
+                call getNameFromString(strBuffers(j), nNameLength, surfaceComplexes(i)%Name)
                 
                 !Check if this name is used as an alias
                 if (GetNameFromAlias(surfaceComplexes(i)%Name) /= "") then
@@ -1081,7 +805,7 @@ contains
                 call skipNValues(strBuffers(j),2) 
                 do k = 1, surfaceComplexes(i)%NCP, 1
                     read(strBuffers(j),*, end = 9999, err = 9999) surfaceComplexes(i)%STQ(k)
-                    call getNameFromString(strBuffers(j),surfaceComplexes(i)%NameOfSTQ(k))
+                    call getNameFromString(strBuffers(j), nNameLength, surfaceComplexes(i)%NameOfSTQ(k))
                     
                     !Check if this name is used as an alias
                     if (GetNameFromAlias(surfaceComplexes(i)%NameOfSTQ(k)) /= "") then
