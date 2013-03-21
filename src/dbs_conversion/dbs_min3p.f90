@@ -105,13 +105,40 @@ contains
     ! Open all min3p database
     subroutine OpenAllDbsMin3P
     
+        use ifport
+    
         implicit none
         
-        call openDbsMin3P(iUnitDbsMin3PComp, trim(targetDatabasePath) // "\" // filePathDbsMin3PComp)
-        call openDbsMin3P(iUnitDbsMin3PComplex, trim(targetDatabasePath) // "\" // filePathDbsMin3PComplex)
-        call openDbsMin3P(iUnitDbsMin3PRedox, trim(targetDatabasePath) // "\" // filePathDbsMin3PRedox)
-        call openDbsMin3P(iUnitDbsMin3PGases, trim(targetDatabasePath) // "\" // filePathDbsMin3PGases)
-        call openDbsMin3P(iUnitDbsMin3PMinerals, trim(targetDatabasePath) // "\" // filePathDbsMin3PMinerals)        
+        logical ::  path_exists = .false. 
+        
+        !check and create folder if necessary
+        
+        if(len_trim(targetDatabasePath) > 0) then
+            inquire(file = trim(targetDatabasePath), exist = path_exists)
+            if (.not. path_exists) then
+                path_exists = makedirqq(trim(targetDatabasePath))
+                if (path_exists) then
+                    call WriteLog("Create output folder for min3p database: success")
+                else
+                    call WriteLog("Create output folder for min3p database: failed")
+                    call ErrorHandling
+                end if
+            end if
+        end if
+        
+        if (len_trim(targetDatabasePath) == 0) then
+            call openDbsMin3P(iUnitDbsMin3PComp, filePathDbsMin3PComp)
+            call openDbsMin3P(iUnitDbsMin3PComplex, filePathDbsMin3PComplex)
+            call openDbsMin3P(iUnitDbsMin3PRedox, filePathDbsMin3PRedox)
+            call openDbsMin3P(iUnitDbsMin3PGases, filePathDbsMin3PGases)
+            call openDbsMin3P(iUnitDbsMin3PMinerals, filePathDbsMin3PMinerals) 
+        else
+            call openDbsMin3P(iUnitDbsMin3PComp, trim(targetDatabasePath) // "\" // filePathDbsMin3PComp)
+            call openDbsMin3P(iUnitDbsMin3PComplex, trim(targetDatabasePath) // "\" // filePathDbsMin3PComplex)
+            call openDbsMin3P(iUnitDbsMin3PRedox, trim(targetDatabasePath) // "\" // filePathDbsMin3PRedox)
+            call openDbsMin3P(iUnitDbsMin3PGases, trim(targetDatabasePath) // "\" // filePathDbsMin3PGases)
+            call openDbsMin3P(iUnitDbsMin3PMinerals, trim(targetDatabasePath) // "\" // filePathDbsMin3PMinerals)
+        end if
     
     end subroutine OpenAllDbsMin3P
     
