@@ -1,0 +1,4911 @@
+Open log file success:dbs_crunch2min3p_o2aq.log
+Open input file success: dbs_crunch2min3p_o2aq.inp
+Begin reading input file
+source database type: crunchflow
+source database path: base_crunchv8cc25k_sid.dbs
+target database temperature: 90
+target database master variable: o2(aq)
+target database type: min3p
+target database path: crunch2min3p_o2aq
+sort data by lexical order: true
+export following species only: true
+number of specified exported:          156
+h2(aq)
+h+1
+na+
+cl-
+so4--
+hco3-
+al+++
+h4sio4(aq)
+k+
+mg+2
+sr++
+ca+2
+fe++
+b(oh)3(aq)
+h2(aq)
+traceri
+tracerv
+fe+++
+o2(aq)
+hs-
+h2s(aq)
+ch4(aq)
+oh-
+co3--
+co2(aq)
+b(oh)4-
+nab(oh)4(aq)
+al(oh)2+
+alh3sio4++
+alo2-
+aloh++
+also4+
+ca(hco3)+
+cacl+
+cacl2(aq)
+caco3(aq)
+caoh+
+caso4(aq)
+fe(co3)2--
+fecl+
+fecl2(aq)
+feco3(aq)
+feco3oh-
+fehco3+
+feo
+feo2--
+feoh+
+feso4(aq)
+h2sio4--
+halo2(aq)
+hcl(aq)
+hfeo2-
+hsio3-
+hso4-
+kalo2(aq)
+kcl(aq)
+koh(aq)
+kso4-
+mg(hco3)+
+mg4(oh)4++++
+mgcl+
+mgco3(aq)
+mgoh+
+mgso4(aq)
+naalo2(aq)
+nacl(aq)
+naco3-
+nahco3(aq)
+naoh(aq)
+naso4-
+si2o2(oh)5-
+si2o3(oh)4--
+si3o5(oh)5-3
+si3o6(oh)3-3
+si4o12h4----
+si4o6(oh)6--
+si4o7(oh)6-4
+si4o8(oh)4-4
+si6o15------
+sr(co3)(aq)
+sr(hco3)+
+srcl+
+sroh+
+srso4(aq)
+fe(co3)2-
+fecl++
+fecl2+
+feco3+
+feo+
+feo2-
+feoh++
+feso4+
+hfeo2(aq)
+co2(g)
+h2(g)
+o2(g)
+h2s(g)
+na-x(na)
+ca-x(na)
+mg-x(na)
+k-x(na)
+amorphous_si
+anhydrite
+calcite
+celestite
+chalcedony
+clinochlore_
+cronstedti,a
+cj4-glass
+daphnite_14a
+dolomite
+ettringite
+ettringite_f
+fe-saponitec
+fe-saponiten
+fe-saponitek
+fe-saponitem
+fe-montmo_ca
+fe-montmo_na
+fe-montmo_mg
+fe-montmo_k
+greenalite
+goethite_b
+gypsum
+illite-feii
+illite-feiii
+illite-mg
+iron
+kaolinite_b
+magnetite,be
+microcline
+mg-montmo-na
+mg-montmo-k
+mg-montmo-mg
+mg-montmo-ca
+nontroniteca
+nontronitek
+nontronitemg
+nontronitena
+pyrite
+pyrrhotite,a
+quartz_alpha
+saponitemg
+saponitena
+saponitek
+saponiteca
+sideritelt
+siderite
+huntite
+sepiolite
+minnesotaite
+brucite
+csh_0.8
+maghemite_di
+gyrolite
+mineralh2_45
+End reading input file
+Open alias database success:alias.dbs
+Start reading alias database: alias.dbs
+Name and alias added: h+  h+1
+Name and alias added: ca++  ca+2
+Name and alias added: mg++  mg+2
+Name and alias added: ca4h(po4)3:3h2o  ca4h(po4)3:3
+Name and alias added: chlorite(cca-2)  chlorite(cca
+Name and alias added: epidote(ordered)  epido(orded)
+Name and alias added: fluorapatite(pp)  fluor(pp)
+Name and alias added: fluorapatite(synth)  fluor(synth)
+Name and alias added: hbeidellite(ca)  hbeidell(ca)
+Name and alias added: hbeidellite(k)  hbeidell(k)
+Name and alias added: hbeidellite(mg)  hbeidell(mg)
+Name and alias added: hbeidellite(na)  hbeidell(na)
+Name and alias added: hmontmorillonite(hcca)  hmontm(hcca)
+Name and alias added: hmontmorillonite(hck)  hmontm(hck)
+Name and alias added: hmontmorillonite(hcmg)  hmontm(hcmg)
+Name and alias added: hmontmorillonite(hcna)  hmontm(hcna)
+Name and alias added: hmontmorillonite(mgca)  hmontm(mgca)
+Name and alias added: hmontmorillonite(mgk)  hmontm(mgk)
+Name and alias added: hmontmorillonite(mgmg)  hmontm(mgmg)
+Name and alias added: hmontmorillonite(mgna)  hmontm(mgna)
+Name and alias added: hnontronite(ca)  hnontron(ca)
+Name and alias added: hnontronite(k)  hnontron(k)
+Name and alias added: hnontronite(mg)  hnontron(mg)
+Name and alias added: hnontronite(na)  hnontron(na)
+Name and alias added: hsaponite(ca)  hsapon(ca)
+Name and alias added: hsaponite(feca)  hsapon(feca)
+Name and alias added: hsaponite(fek)  hsapon(fek)
+Name and alias added: hsaponite(femg)  hsapon(femg)
+Name and alias added: hsaponite(fena)  hsapon(fena)
+Name and alias added: hsaponite(mg)  hsapon(mg)
+Name and alias added: hsaponite(na)  hsapon(na)
+Name and alias added: hvermiculite(ca)  hvermicu(ca)
+Name and alias added: hvermiculite(k)  hvermicu(k)
+Name and alias added: hvermiculite(mg)  hvermicu(mg)
+Name and alias added: hvermiculite(na)  hvermicu(na)
+Name and alias added: hydroxyapatite(pp)  hydro(pp)
+Name and alias added: hydroxyapatite(synth)  hydro(synth)
+Name and alias added: i/s(iscz-1:2.966h2o)  i/s(iscz-1:2
+Name and alias added: magnesite(synth)  magnesite(sy
+Name and alias added: cr(oh)3(h2po4)-  cr(oh)3(h2_-
+Name and alias added: cr(oh)3(hpo4)-2  cr(oh)3(h_-2
+Name and alias added: cr(oh)3(po4)-3  cr(oh)3(po4)
+Name and alias added: cr(oh)4(hpo4)(h2po4)-4  cr(oh)4(h_-4
+Name and alias added: 2k2so4.fe2(so4)3:14h2o  2k2so4.fe2(s
+Name and alias added: 2kcl.fecl3:h2o  2kcl.fecl3:h
+Name and alias added: acanthite(alpha)  acanthite(al
+Name and alias added: acanthite(beta)  acanthite(be
+Name and alias added: acanthite(gamma)  acanthite(ga
+Name and alias added: aegerine(alpha)  aegerine(alp
+Name and alias added: almandine(alpha)  almandine(al
+Name and alias added: amorphous_silica  amorphous_si
+Name and alias added: anthophyllite  anthophyllit
+Name and alias added: argutite(alpha)  argutite(alp
+Name and alias added: argutite(beta)  argutite(bet
+Name and alias added: arsenocrandallite  arsenocranda
+Name and alias added: arsenoflorencite(ce)  arsenofl(ce)
+Name and alias added: arsenoflorencite(la)  arsenofl(la)
+Name and alias added: arsenogorceixite  arsenogorcei
+Name and alias added: arsenogoyazite  arsenogoyazi
+Name and alias added: beidellite(ca)  beidellite(c
+Name and alias added: beidellite(k)  beidellite(k
+Name and alias added: beidellite(mg)  beidellite(m
+Name and alias added: beidellite(na)  beidellite(n
+Name and alias added: beidellitesbid  beidellitesb
+Name and alias added: beidellitesbid(4.576h2o)  beidell_h2o)
+Name and alias added: berthierine(th)  berthier_th
+Name and alias added: bornite(alpha)  bornite(alph
+Name and alias added: bornite(beta)  bornite(beta
+Name and alias added: bornite(gamma)  bornite(gamm
+Name and alias added: bunsenite(alpha)  bunsenite(al
+Name and alias added: bunsenite(beta)  bunsenite(be
+Name and alias added: ca3(aso4)2:3.66h2o  ca3(aso4)2:3
+Name and alias added: ca4(oh)2(aso4)2:4h2o  ca4(oh)2(aso
+Name and alias added: ca4h(po4)3:2.5h2o  ca4h(po4)3:2
+Name and alias added: caalh(po4)2:6h2o  caalh(po4)2:
+Name and alias added: celadonite(fe)  celadonite(f
+Name and alias added: chalcocite(alpha)  chalcocite(a
+Name and alias added: chalcocyanite  chalcocyanit
+Name and alias added: chalcopyrite(alpha)  chalcopyri_a
+Name and alias added: chalcopyrite(beta)  chalcopyri_b
+Name and alias added: chalcopyrite(gamma)  chalcopyri_c
+Name and alias added: chamosite(daphnite)  chamosite(da
+Name and alias added: chlorapatite(pp)  chlorapat_pp
+Name and alias added: chlorapatite(synth)  chlorapat_th
+Name and alias added: chlorargyrite  chlorargyrit
+Name and alias added: chloromagnesite  chloromagnes
+Name and alias added: cinnabar(alpha)  cinnabar(alp
+Name and alias added: cinnabar(beta)  cinnabar(bet
+Name and alias added: clinoptilolite(ca)  clinoptil_ca
+Name and alias added: clinoptilolite(k)  clinoptilo_k
+Name and alias added: clinoptilolite(na)  clinoptil_na
+Name and alias added: co(feo2)2(alpha)  co(feo2)2(al
+Name and alias added: co(oh)2(blue)  co(oh)2(blue
+Name and alias added: co(oh)2(pink-pc)  co(oh)2(p_pc
+Name and alias added: co(oh)2(pink-wc)  co(oh)2(p_wc
+Name and alias added: coesite(alpha)  coesite(alph
+Name and alias added: cordierite(hydrated)  cordierite(h
+Name and alias added: corundum(alpha)  corundum(alp
+Name and alias added: corundum(gamma)  corundum(gam
+Name and alias added: cristobalite(alpha)  cristobali_a
+Name and alias added: cristobalite(beta)  cristobali_b
+Name and alias added: cronstedtite(th)  cronstedti_c
+Name and alias added: crpo4(purple)  crpo4(purple
+Name and alias added: cu3(po4)2:3h2o  cu3(po4)2:3h
+Name and alias added: cummingtonite  cummingtonit
+Name and alias added: dolomite(disordered)  dolomite(dis
+Name and alias added: dolomite(ordered)  dolomite(ord
+Name and alias added: edenite(alpha)  edenite(alph
+Name and alias added: enstatite(alpha)  enstatite(al
+Name and alias added: ettringite(cr)  ettringite(c
+Name and alias added: ettringite(fe)  ettringite(f
+Name and alias added: farringtonite  farringtonit
+Name and alias added: ferricopiapite  ferricopiapi
+Name and alias added: ferrihydrite(2l)  ferrihydr_21
+Name and alias added: ferrihydrite(6l)  ferrihydr_61
+Name and alias added: ferrohexahydrite  ferrohexahyd
+Name and alias added: ferropargasite  ferropargasi
+Name and alias added: ferrosilite(alpha)  ferrosilit_a
+Name and alias added: ferrosilite(beta)  ferrosilit_b
+Name and alias added: ferrotremolite  ferrotremoli
+Name and alias added: florencite(la)  florencite(l
+Name and alias added: fluorapatite(natur)  fluora_natur
+Name and alias added: fluorphlogopite  fluorphlogop
+Name and alias added: gallobeudantite  gallobeudant
+Name and alias added: greenrust(cl)  greenrust(cl
+Name and alias added: greenrust(co3)  greenrust(co
+Name and alias added: greenrust(oh)  greenrust(oh
+Name and alias added: greenrust(so3)  greenrust(so
+Name and alias added: greenrust2(so4)  greenrust2(s
+Name and alias added: hemicarboaluminate  hemicarboalu
+Name and alias added: hemihydroxichloride(ca)  hemihydroxic
+Name and alias added: heulandite(ca)  heulandite(c
+Name and alias added: heulandite(na)  heulandite(n
+Name and alias added: hilgenstockite  hilgenstocki
+Name and alias added: hillebrandite  hillebrandit
+Name and alias added: hopeite(alpha)  hopeite(alph
+Name and alias added: hopeite(beta)  hopeite(beta
+Name and alias added: hydrocalumnite(cr)  hydrocalumni
+Name and alias added: hydrocerussite  hydrocerussi
+Name and alias added: hydromagnesite  hydromagnesi
+Name and alias added: hydrotalcite(co3)  hydrotal_co3
+Name and alias added: hydroxichloride(ca)  hydroxichl_a
+Name and alias added: hydroxichloride(ca:13h2o)  hydroxichl_b
+Name and alias added: hydroxichloride(ca:h2o)  hydroxichl_c
+Name and alias added: hydroxichloride(mg:4h2o)  hydroxichl_d
+Name and alias added: hydroxyapatite(natur)  hydroxyapati
+Name and alias added: illite(feiii)  illite(feiii
+Name and alias added: jarosite(nh4)  jarosite(nh4
+Name and alias added: k2so4.feso4:6h2o  k2so4.feso4:
+Name and alias added: kalsilite(alpha)  kalsilite(al
+Name and alias added: kalsilite(beta)  kalsilite(be
+Name and alias added: kcl.mgcl2:6h2o  kcl.mgcl2:6h
+Name and alias added: larnite(alpha)  larnite(alph
+Name and alias added: larnite(beta)  larnite(beta
+Name and alias added: larnite(gamma)  larnite(gamm
+Name and alias added: lawsonite(alpha)  lawsonite(al
+Name and alias added: lepidocrocite  lepidocrocit
+Name and alias added: maghemite(disordered)  maghemite(di
+Name and alias added: magnesiochromite  magnesiochro
+Name and alias added: magnesioferrite  magnesioferr
+Name and alias added: magnesite(natur)  magnesite(na
+Name and alias added: magnetite(am)  magnetite(am
+Name and alias added: merlinoite(k)  merlinoite(k
+Name and alias added: merlinoite(na)  merlinoite(n
+Name and alias added: mg3(po4)2:22h2o  mg3(po4)2:22
+Name and alias added: mgcl2.fecl2:8h2o  mgcl2.fecl2:
+Name and alias added: monocarboaluminate  monocarboalu
+Name and alias added: monohydrocalcite  monohydrocal
+Name and alias added: monosulfate(fe)  monosulfa_fe
+Name and alias added: monosulfoaluminate  monosulfoalu
+Name and alias added: montmorillonite(hcca)  montmorill_a
+Name and alias added: montmorillonite(hck)  montmorill_b
+Name and alias added: montmorillonite(hcmg)  montmorill_c
+Name and alias added: montmorillonite(hcna)  montmorill_d
+Name and alias added: montmorillonite(mgca)  montmorill_e
+Name and alias added: montmorillonite(mgk)  montmorill_f
+Name and alias added: montmorillonite(mgmg)  montmorill_g
+Name and alias added: montmorillonite(mgna)  montmorill_h
+Name and alias added: mordeniteb(ca)  mordeniteb(c
+Name and alias added: muscovite(disordered)  muscovite(di
+Name and alias added: muscovite(ordered)  muscovite(or
+Name and alias added: na2so4.feso4:4h2o  na2so4.feso4
+Name and alias added: nesquehonite(alpha)  nesquehoni_a
+Name and alias added: nesquehonite(beta)  nesquehoni_b
+Name and alias added: nontronite(ca)  nontronite(c
+Name and alias added: nontronite(k)  nontronite(k
+Name and alias added: nontronite(mg)  nontronite(m
+Name and alias added: nontronite(na)  nontronite(n
+Name and alias added: philipsbornite  philipsborni
+Name and alias added: phillipsite(ca)  phillipsi_ca
+Name and alias added: phillipsite(k)  phillipsit_k
+Name and alias added: phillipsite(na)  phillipsi_na
+Name and alias added: phlogopite(na)  phlogopit_na
+Name and alias added: plumbogummite  plumbogummit
+Name and alias added: plumbonacrite  plumbonacrit
+Name and alias added: pseudomalachite  pseudomalach
+Name and alias added: pyromorphite(br)  pyromorph_br
+Name and alias added: pyromorphite(cl)  pyromorph_cl
+Name and alias added: pyromorphite(f)  pyromorphi_f
+Name and alias added: pyrope(alpha)  pyrope(alpha
+Name and alias added: pyroxene(caal)  pyroxene(caa
+Name and alias added: quartz(alpha)  quartz(alpha
+Name and alias added: rhodochrosite  rhodochrosit
+Name and alias added: rockbridgite(zn)  rockbridgite
+Name and alias added: saponite(feca)  saponite(fec
+Name and alias added: saponite(fek)  saponite(fek
+Name and alias added: saponite(femg)  saponite(fem
+Name and alias added: saponite(fena)  saponite(fen
+Name and alias added: schwertmannite  schwertmanni
+Name and alias added: scorodite(am)  scorodite(am
+Name and alias added: siderophyllite  siderophylli
+Name and alias added: smectite(mx80)  smectite(m_a
+Name and alias added: smectite(mx80:3.989h2o)  smectite(m_b
+Name and alias added: smectite(mx80:5.189h2o)  smectite(m_c
+Name and alias added: spessartine(alpha)  spessartin_a
+Name and alias added: sphaerocobaltite  sphaerocobal
+Name and alias added: spingcreekite  spingcreekit
+Name and alias added: sr5(po4)3(oh)  sr5(po4)3(oh
+Name and alias added: sterlinghillite  sterlinghill
+Name and alias added: straetlingite  straetlingit
+Name and alias added: thermonatrite  thermonatrit
+Name and alias added: tobermorite(11a)  tobermor_11a
+Name and alias added: tobermorite(14a)  tobermor_14a
+Name and alias added: vermiculite(ca)  vermiculi_ca
+Name and alias added: vermiculite(k)  vermiculit_k
+Name and alias added: vermiculite(mg)  vermiculi_mg
+Name and alias added: vermiculite(na)  vermiculi_na
+Name and alias added: westerveldite  westerveldit
+Name and alias added: whitlockite(high)  whitlockit_h
+Name and alias added: whitlockite(low)  whitlockit_l
+Name and alias added: zn3(po4)2:2h2o  zn3(po4)2:2h
+Name and alias added: zn3(po4)2:h2o  zn3(po4)2:h2
+Name and alias added: h(acetate)(aq)  h(acetate)(a
+Name and alias added: h(lactate)(aq)  h(lactate)(a
+Name and alias added: (uo2)11(co3)6(oh)12--  (uo2)11(co3)
+Name and alias added: (uo2)2(oh)2++  (uo2)2(oh)2+
+Name and alias added: (uo2)2co3(oh)3-  (uo2)2co3(oh
+Name and alias added: (uo2)3(co3)6(6-)  (uo2)3(co3)6
+Name and alias added: (uo2)3(oh)4++  (uo2)3(oh)4+
+Name and alias added: (uo2)3o(oh)2(hco3)+  (uo2)3o(oh)2
+Name and alias added: uo2(co3)3----  uo2(co3)3---
+Name and alias added: cauo2(co3)3--  cauo2(co3)3-
+Name and alias added: uo2(co3)3(5-)  uo2(co3)3(5-
+Name and alias added: antigorite(am)  antigorite(a
+Name and alias added: bellite (c2s)  bellite (c2s
+Name and alias added: boltwoodite-na  boltwoodite-
+Name and alias added: ca2cl2(oh)2:h2o  ca2cl2(oh)2:
+Name and alias added: ca4cl2(oh)6:13h2o  ca4cl2(oh)6:
+Name and alias added: caso4:0.5h2o(beta)  caso4:0.5h2o
+Name and alias added: compreignacite  compreignaci
+Name and alias added: cronstedtite-7a  cronstedtite
+Name and alias added: dicalcium_silicate  dicalcium_si
+Name and alias added: ferrite-dicalcium  ferrite-dica
+Name and alias added: ferroceladonite  ferroceladon
+Name and alias added: k8h4(co3)6:3h2o  k8h4(co3)6:3
+Name and alias added: na2uo4(alpha)  na2uo4(alpha
+Name and alias added: na4ca(so4)3:2h2o  na4ca(so4)3:
+Name and alias added: oxychloride-mg  oxychloride-
+Name and alias added: pseudowollastonite  pseudowollas
+Name and alias added: rutherfordine  rutherfordin
+Name and alias added: sepiolite(am)  sepiolite(am
+Name and alias added: sr(no3)2:4h2o  sr(no3)2:4h2
+Name and alias added: uo2(no3)2:2h2o  uo2(no3)2:2h
+Name and alias added: uo2(no3)2:3h2o  uo2(no3)2:3h
+Name and alias added: uo2(no3)2:6h2o  uo2(no3)2:6h
+Name and alias added: uo2(no3)2:h2o  uo2(no3)2:h2
+Name and alias added: uo2(oh)2(beta)  uo2(oh)2(bet
+Name and alias added: uo2so4:2.5h2o  uo2so4:2.5h2
+Name and alias added: uo2so4:3.5h2o  uo2so4:3.5h2
+Name and alias added: schoepite(dehyd,0.9)  schoepite0.9
+Name and alias added: schoepite(dehyd,1.0)  schoepite1.0
+Name and alias added: uranophane(alpha)  uranophane(a
+Name and alias added: un1.59(alpha)  un1.59(alpha
+Name and alias added: un1.73(alpha)  un1.73(alpha
+Name and alias added: uc1.94(alpha)  uc1.94(alpha
+Name and alias added: amesite_14a,alpha  amesit_14a_a
+Name and alias added: amesite_14a,beta  amesit_14a_b
+Name and alias added: anthophyllite,alpha  anthophyll_a
+Name and alias added: anthophyllite,beta  anthophyll_b
+Name and alias added: anthophyllite,gamma  anthophyll_c
+Name and alias added: chalcopyrite,alpha  chalcopyri,a
+Name and alias added: chalcopyrite,beta  chalcopyri,b
+Name and alias added: chalcopyrite,gamma  chalcopyri,c
+Name and alias added: co(oh)2,pink-pc  co(oh)2,p-pc
+Name and alias added: co(oh)2,pink-wc  co(oh)2,p-wc
+Name and alias added: cristobalite,alpha  cristobali,a
+Name and alias added: cristobalite,beta  cristobali,b
+Name and alias added: cronstedtite_7a,alpha  cronstedti,a
+Name and alias added: cronstedtite_7a,beta  cronstedti,b
+Name and alias added: cronstedtite_7a,gamma  cronstedti,c
+Name and alias added: ettringite_fe  ettringite_f
+Name and alias added: fe-montmorilloniteca  fe-montmo_ca
+Name and alias added: fe-montmorillonitek  fe-montmo_k
+Name and alias added: fe-montmorillonitemg  fe-montmo_mg
+Name and alias added: fe-montmorillonitena  fe-montmo_na
+Name and alias added: ferrosilite,alpha  ferrosilit,a
+Name and alias added: ferrosilite,beta  ferrosilit,b
+Name and alias added: hydroxichloride_ca:13h2o  hde_ca:13h2o
+Name and alias added: hydroxichloride_ca:h2o  hde_ca:h2o
+Name and alias added: hydroxichloride_mg:4h2o  hde_mg:4h2o
+Name and alias added: hydroxy_apatite(natur)  hydro_apa_na
+Name and alias added: hydroxy_apatite(pp)  hydro_apa_pp
+Name and alias added: hydroxy_apatite(synth)  hydro_apa_sy
+Name and alias added: whitlockite_high  whitloc_high
+Name and alias added: whitlockite_low  whitloc_low
+Name and alias added: tobermorite_11a  tobermo(11a)
+Name and alias added: tobermorite_14a  tobermo(14a)
+Name and alias added: spessartine,alpha  spessartin,a
+Name and alias added: spessartine,beta  spessartin,b
+Name and alias added: smectitemx80_4.183h2o  smectitemx_a
+Name and alias added: smectitemx80_5.441h2o  smectitemx_b
+Name and alias added: smectitemx80_des  smectitemx_c
+Name and alias added: phillipsitek,alpha  phillipsit,a
+Name and alias added: phillipsitek,beta  phillipsit,b
+Name and alias added: phillipsiteca,alpha  phillip_ca,a
+Name and alias added: phillipsiteca,beta  phillip_ca,b
+Name and alias added: nesquehonite,alpha  nesquehoni,a
+Name and alias added: nesquehonite,beta  nesquehoni,b
+Name and alias added: mg-montmorillonite-ca  mg-montmoril
+Name and alias added: mg-montmo-ca_b  mg-montmo-ca
+Name and alias added: mg-montmorillonite-k  mg-montmo-k
+Name and alias added: mg-montmorillonite-mg  mg-montmo-mg
+Name and alias added: mg-montmorillonite-na  mg-montmo-na
+Name and alias added: monosulfoaluminate_fe  monosulfo-fe
+Name and alias added: phillipsitena,alpha  phillip_na_a
+Name and alias added: phillipsitena,beta  phillip_na_b
+Name and alias added: cr3(oh)4+++++  cr3(oh)4+5
+Name and alias added: si3o5(oh)5---  si3o5(oh)5-3
+Name and alias added: si3o6(oh)3---  si3o6(oh)3-3
+Name and alias added: si4o7(oh)6----  si4o7(oh)6-4
+Name and alias added: si4o8(oh)4----  si4o8(oh)4-4
+Name and alias added: nontronite-na  nontronitena
+Name and alias added: nontronite-ca  nontroniteca
+Name and alias added: nontronite-k  nontronitek
+Name and alias added: nontronite-mg  nontronitemg
+Name and alias added: saponite-ca  saponiteca
+Name and alias added: saponite-k  saponitek
+Name and alias added: saponite-mg  saponitemg
+Name and alias added: saponite-na  saponitena
+End reading alias database: alias.dbs
+Open CRUNCHFLOW database success: base_crunchv8cc25k_sid.dbs
+Begin reading CRUNCHFLOW database
+Read temperature points success.
+Number of termperature points:
+           8
+Temperatures:
+  0.000000000000000E+000   25.0000000000000        60.0000000000000     
+   100.000000000000        150.000000000000        200.000000000000     
+   250.000000000000        300.000000000000     
+Read Debye-Huckel Parameters success.
+Number of Species:
+          93
+Read species success
+h2(aq) AKLOG
+   50.4436000000000        46.0719000000000        40.9400000000000     
+   36.1423000000000        31.2970000000000        27.3650000000000     
+   24.0854000000000        21.2681000000000     
+Number of aqueous species:
+         816
+Number of redox reactions:
+           0
+Read aqueous species success
+Number of gases:
+          22
+Read gases success
+Number of minerals:
+         559
+Read minerals success
+Number of surface complexes:
+           9
+Read surface complexes success
+End reading CRUNCHFLOW database
+Start converting species
+Convert species:h2o
+Alias used for : h+ to h+1
+Convert species:h+1
+Convert species:o2(aq)
+Convert species:ag+
+Convert species:al+++
+Convert species:ar(aq)
+Convert species:au+
+Convert species:b(oh)3(aq)
+Convert species:ba++
+Convert species:be++
+Convert species:bi+++
+Convert species:br-
+Alias used for : ca++ to ca+2
+Convert species:ca+2
+Convert species:cd++
+Convert species:ce+++
+Convert species:cl-
+Convert species:co++
+Convert species:cro4--
+Convert species:cs+
+Convert species:cu++
+Convert species:dy+++
+Convert species:er+++
+Convert species:eu+++
+Convert species:f-
+Convert species:fe++
+Convert species:fr+
+Convert species:ga+++
+Convert species:gd+++
+Convert species:ge(oh)4(aq)
+Convert species:h2aso4-
+Convert species:h2po4-
+Convert species:h4sio4(aq)
+Convert species:hco3-
+Convert species:he(aq)
+Convert species:hf++++
+Convert species:hg++
+Convert species:ho+++
+Convert species:i-
+Convert species:in+++
+Convert species:k+
+Convert species:kr(aq)
+Convert species:la+++
+Convert species:li+
+Convert species:lu+++
+Alias used for : mg++ to mg+2
+Convert species:mg+2
+Convert species:mn++
+Convert species:moo4--
+Convert species:na+
+Convert species:nbo3-
+Convert species:nd+++
+Convert species:ne(aq)
+Convert species:nh3(aq)
+Convert species:ni++
+Convert species:pb++
+Convert species:pd++
+Convert species:pm+++
+Convert species:pr+++
+Convert species:pt++
+Convert species:ra++
+Convert species:rb+
+Convert species:reo4-
+Convert species:rh++
+Convert species:rn(aq)
+Convert species:ruo4--
+Convert species:sb(oh)3(aq)
+Convert species:sc+++
+Convert species:seo3--
+Convert species:sm+++
+Convert species:sn++
+Convert species:so4--
+Convert species:sr++
+Convert species:tb+++
+Convert species:tco4-
+Convert species:th++++
+Convert species:ti(oh)4(aq)
+Convert species:tl+
+Convert species:tm+++
+Convert species:uo2++
+Convert species:vo++
+Convert species:wo4--
+Convert species:xe(aq)
+Convert species:y+++
+Convert species:yb+++
+Convert species:zn++
+Convert species:zro++
+Name truncation: acetic_acid(aq) to acetic_acid(
+New name and truncation added: acetic_acid(aq)  acetic_acid(
+Convert species:acetic_acid(
+Convert species:colloid-goe
+Convert species:colloid-beid
+Convert species:>feoh_strong
+Convert species:>feoh_weak
+Convert species:tracer
+Convert species:traceri
+Convert species:tracerv
+End converting species
+Start converting aqueous species: complexation reactions and redox reactions
+Alias used for : h+ to h+1
+Convert complexation reaction: ag++
+Convert complexation reaction: h2aso3-
+Alias used for : h+ to h+1
+Convert complexation reaction: ash3(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: au+++
+Alias used for : h+ to h+1
+Convert complexation reaction: br3-
+Convert complexation reaction: bro-
+Convert complexation reaction: bro3-
+Convert complexation reaction: bro4-
+Alias used for : h+ to h+1
+Convert complexation reaction: co(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: ch4(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: ce++
+Alias used for : h+ to h+1
+Convert complexation reaction: ce++++
+Convert complexation reaction: clo-
+Convert complexation reaction: clo2-
+Alias used for : h+ to h+1
+Convert complexation reaction: clo2(aq)
+Convert complexation reaction: clo3-
+Convert complexation reaction: clo4-
+Alias used for : h+ to h+1
+Convert complexation reaction: co+++
+Alias used for : h+ to h+1
+Convert complexation reaction: cr++
+Alias used for : h+ to h+1
+Convert complexation reaction: cr+++
+Alias used for : h+ to h+1
+Convert complexation reaction: cu+
+Alias used for : h+ to h+1
+Convert complexation reaction: dy++
+Alias used for : h+ to h+1
+Convert complexation reaction: dy++++
+Alias used for : h+ to h+1
+Convert complexation reaction: er++
+Alias used for : h+ to h+1
+Convert complexation reaction: er++++
+Alias used for : h+ to h+1
+Convert complexation reaction: eu++
+Alias used for : h+ to h+1
+Convert complexation reaction: eu++++
+Alias used for : h+ to h+1
+Convert complexation reaction: fe+++
+Alias used for : h+ to h+1
+Convert complexation reaction: gd++
+Alias used for : h+ to h+1
+Convert complexation reaction: gd++++
+Convert complexation reaction: h2(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: hg(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: hg2++
+Alias used for : h+ to h+1
+Convert complexation reaction: ho++
+Alias used for : h+ to h+1
+Convert complexation reaction: ho++++
+Alias used for : h+ to h+1
+Convert complexation reaction: i3-
+Convert complexation reaction: io-
+Convert complexation reaction: io3-
+Convert complexation reaction: io4-
+Alias used for : h+ to h+1
+Convert complexation reaction: la++
+Alias used for : h+ to h+1
+Convert complexation reaction: lu++++
+Alias used for : h+ to h+1
+Convert complexation reaction: mn+++
+Alias used for : h+ to h+1
+Convert complexation reaction: mno4--
+Alias used for : h+ to h+1
+Convert complexation reaction: mno4-
+Convert complexation reaction: n2(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: no2-
+Alias used for : h+ to h+1
+Convert complexation reaction: no3-
+Alias used for : h+ to h+1
+Convert complexation reaction: nd++
+Alias used for : h+ to h+1
+Convert complexation reaction: nd++++
+Alias used for : h+ to h+1
+Convert complexation reaction: ph3(aq)
+Convert complexation reaction: h2po2-
+Convert complexation reaction: h2po3-
+Alias used for : h+ to h+1
+Convert complexation reaction: pm++
+Alias used for : h+ to h+1
+Convert complexation reaction: pm++++
+Alias used for : h+ to h+1
+Convert complexation reaction: pr++
+Alias used for : h+ to h+1
+Convert complexation reaction: pr++++
+Alias used for : h+ to h+1
+Convert complexation reaction: rh+++
+Alias used for : h+ to h+1
+Convert complexation reaction: ru++
+Alias used for : h+ to h+1
+Convert complexation reaction: ru+++
+Alias used for : h+ to h+1
+Convert complexation reaction: s2o3--
+Alias used for : h+ to h+1
+Convert complexation reaction: hs-
+Alias used for : h+ to h+1
+Convert complexation reaction: s2o4--
+Convert complexation reaction: so3--
+Alias used for : h+ to h+1
+Convert complexation reaction: s2o6--
+Alias used for : h+ to h+1
+Convert complexation reaction: s2o8--
+Alias used for : h+ to h+1
+Convert complexation reaction: hso5-
+Alias used for : h+ to h+1
+Convert complexation reaction: hse-
+Convert complexation reaction: seo4--
+Alias used for : h+ to h+1
+Convert complexation reaction: sm++
+Alias used for : h+ to h+1
+Convert complexation reaction: sm++++
+Alias used for : h+ to h+1
+Convert complexation reaction: tb++
+Alias used for : h+ to h+1
+Convert complexation reaction: tb++++
+Alias used for : h+ to h+1
+Convert complexation reaction: tl+++
+Alias used for : h+ to h+1
+Convert complexation reaction: tm++
+Alias used for : h+ to h+1
+Convert complexation reaction: tm++++
+Alias used for : h+ to h+1
+Convert complexation reaction: u+++
+Alias used for : h+ to h+1
+Convert complexation reaction: u++++
+Alias used for : h+ to h+1
+Convert complexation reaction: uo2+
+Convert complexation reaction: v++
+Alias used for : h+ to h+1
+Convert complexation reaction: v+++
+Alias used for : h+ to h+1
+Convert complexation reaction: vo2+
+Alias used for : h+ to h+1
+Convert complexation reaction: yb++
+Alias used for : h+ to h+1
+Convert complexation reaction: yb++++
+Alias used for : h+ to h+1
+Convert complexation reaction: ag(co3)-
+Alias used for : h+ to h+1
+Convert complexation reaction: ag(co3)2---
+Convert complexation reaction: ag(hs)2-
+Alias used for : h+ to h+1
+Convert complexation reaction: ag(oh)2-
+Convert complexation reaction: agcl(aq)
+Convert complexation reaction: agcl2-
+Convert complexation reaction: agcl3--
+Convert complexation reaction: agcl4---
+Convert complexation reaction: agf(aq)
+Convert complexation reaction: aghs(aq)
+Convert complexation reaction: agno3(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: ago-
+Alias used for : h+ to h+1
+Convert complexation reaction: agoh(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: al(oh)2+
+Alias used for : h+ to h+1
+Convert complexation reaction: al(oh)2f(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: al(oh)2f2-
+Convert complexation reaction: alf++
+Convert complexation reaction: alf2+
+Convert complexation reaction: alf3(aq)
+Convert complexation reaction: alf4-
+Convert complexation reaction: alh2po4++
+Alias used for : h+ to h+1
+Convert complexation reaction: alh3sio4++
+Alias used for : h+ to h+1
+Convert complexation reaction: alhpo4+
+Alias used for : h+ to h+1
+Convert complexation reaction: alo2-
+Alias used for : h+ to h+1
+Convert complexation reaction: aloh++
+Alias used for : h+ to h+1
+Convert complexation reaction: alohf2(aq)
+Convert complexation reaction: also4+
+Alias used for : h+ to h+1
+Convert complexation reaction: as(oh)3(aq)
+Convert complexation reaction: au(hs)2-
+Alias used for : h+ to h+1
+Convert complexation reaction: au(oh)2-
+Convert complexation reaction: aucl(aq)
+Convert complexation reaction: aucl2-
+Convert complexation reaction: aucl3--
+Convert complexation reaction: aucl4-
+Convert complexation reaction: auhs(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: auoh(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: b(oh)4-
+Alias used for : h+ to h+1
+Convert complexation reaction: ba(co3)(aq)
+Convert complexation reaction: ba(hco3)+
+Convert complexation reaction: bacl+
+Alias used for : h+ to h+1
+Convert complexation reaction: baco3(aq)
+Convert complexation reaction: baf+
+Alias used for : h+ to h+1
+Convert complexation reaction: baoh+
+Convert complexation reaction: becl+
+Convert complexation reaction: becl2(aq)
+Convert complexation reaction: bef+
+Convert complexation reaction: bef2(aq)
+Convert complexation reaction: bef3-
+Convert complexation reaction: bef4--
+Alias used for : h+ to h+1
+Convert complexation reaction: beo(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: beo2--
+Alias used for : h+ to h+1
+Convert complexation reaction: beoh+
+Alias used for : h+ to h+1
+Convert complexation reaction: bf4-
+Alias used for : h+ to h+1
+Convert complexation reaction: bio+
+Alias used for : h+ to h+1
+Convert complexation reaction: bio2-
+Alias used for : h+ to h+1
+Convert complexation reaction: bioh++
+Alias used for : ca++ to ca+2
+Convert complexation reaction: ca(hco3)+
+Alias used for : ca++ to ca+2
+Convert complexation reaction: cacl+
+Alias used for : ca++ to ca+2
+Convert complexation reaction: cacl2(aq)
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert complexation reaction: caco3(aq)
+Alias used for : ca++ to ca+2
+Convert complexation reaction: caf+
+Alias used for : ca++ to ca+2
+Convert complexation reaction: cah2po4+
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert complexation reaction: cahpo4(aq)
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert complexation reaction: caoh+
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert complexation reaction: cap2o7--
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert complexation reaction: capo4-
+Alias used for : ca++ to ca+2
+Convert complexation reaction: caso4(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: cd(co3)2--
+Convert complexation reaction: cd(h2po4)+
+Convert complexation reaction: cd(hs)2
+Convert complexation reaction: cd(so4)2--
+Alias used for : h+ to h+1
+Convert complexation reaction: cd2oh+++
+Alias used for : h+ to h+1
+Convert complexation reaction: cd4(oh)4++++
+Convert complexation reaction: cdcl+
+Convert complexation reaction: cdcl2(aq)
+Convert complexation reaction: cdcl3-
+Convert complexation reaction: cdcl4--
+Alias used for : h+ to h+1
+Convert complexation reaction: cdco3(aq)
+Convert complexation reaction: cdf+
+Convert complexation reaction: cdf2(aq)
+Convert complexation reaction: cdhco3+
+Alias used for : h+ to h+1
+Convert complexation reaction: cdhpo4
+Convert complexation reaction: cdhs+
+Alias used for : h+ to h+1
+Convert complexation reaction: cdo(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: cdo2--
+Alias used for : h+ to h+1
+Convert complexation reaction: cdoh+
+Alias used for : h+ to h+1
+Convert complexation reaction: cdp2o7--
+Convert complexation reaction: cds2o3
+Convert complexation reaction: cdso4(aq)
+Convert complexation reaction: cebr++
+Convert complexation reaction: cecl++
+Convert complexation reaction: cecl2+
+Convert complexation reaction: cecl3(aq)
+Convert complexation reaction: cecl4-
+Convert complexation reaction: ceclo4++
+Alias used for : h+ to h+1
+Convert complexation reaction: ceco3+
+Convert complexation reaction: cef++
+Convert complexation reaction: cef2+
+Convert complexation reaction: cef3(aq)
+Convert complexation reaction: cef4-
+Convert complexation reaction: ceh2po4++
+Convert complexation reaction: cehco3++
+Convert complexation reaction: ceio3++
+Convert complexation reaction: ceno3++
+Alias used for : h+ to h+1
+Convert complexation reaction: ceo+
+Alias used for : h+ to h+1
+Convert complexation reaction: ceo2-
+Alias used for : h+ to h+1
+Convert complexation reaction: ceo2h(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: ceoh++
+Convert complexation reaction: ceso4+
+Alias used for : h+ to h+1
+Convert complexation reaction: cf4(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: cl2(aq)
+Convert complexation reaction: cn-
+Alias used for : h+ to h+1
+Convert complexation reaction: co2(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: co2oh+++
+Alias used for : h+ to h+1
+Convert complexation reaction: co3--
+Alias used for : h+ to h+1
+Convert complexation reaction: co4(oh)4++++
+Convert complexation reaction: cocl+
+Convert complexation reaction: cof+
+Alias used for : h+ to h+1
+Convert complexation reaction: coo(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: coo+
+Alias used for : h+ to h+1
+Convert complexation reaction: coo2--
+Alias used for : h+ to h+1
+Convert complexation reaction: cooh+
+Alias used for : h+ to h+1
+Convert complexation reaction: cr2(oh)2++++
+Alias used for : h+ to h+1
+Convert complexation reaction: cr2o7--
+Alias used for : cr3(oh)4+++++ to cr3(oh)4+5
+Alias used for : h+ to h+1
+Convert complexation reaction: cr3(oh)4+5
+Convert complexation reaction: crh2po4++
+Alias used for : h+ to h+1
+Convert complexation reaction: crhpo4+
+Alias used for : h+ to h+1
+Convert complexation reaction: cro+
+Alias used for : h+ to h+1
+Convert complexation reaction: cro2-
+Alias used for : h+ to h+1
+Convert complexation reaction: croh++
+Convert complexation reaction: csbr(aq)
+Convert complexation reaction: cscl(aq)
+Convert complexation reaction: csi(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: csoh(aq)
+Convert complexation reaction: cu(hs)2-
+Alias used for : h+ to h+1
+Convert complexation reaction: cu(oh)2-
+Convert complexation reaction: cucl(aq)
+Convert complexation reaction: cucl+
+Convert complexation reaction: cucl2-
+Convert complexation reaction: cucl2(aq)
+Convert complexation reaction: cucl3-
+Convert complexation reaction: cucl3--
+Convert complexation reaction: cucl4--
+Convert complexation reaction: cucl4---
+Convert complexation reaction: cuf+
+Convert complexation reaction: cuh2po4+
+Alias used for : h+ to h+1
+Convert complexation reaction: cuhpo4(aq)
+Convert complexation reaction: cuhs(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: cuo(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: cuo2--
+Alias used for : h+ to h+1
+Convert complexation reaction: cuoh(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: cuoh+
+Alias used for : h+ to h+1
+Convert complexation reaction: cupo4-
+Convert complexation reaction: dycl++
+Convert complexation reaction: dycl2+
+Convert complexation reaction: dycl3(aq)
+Convert complexation reaction: dycl4-
+Alias used for : h+ to h+1
+Convert complexation reaction: dyco3+
+Convert complexation reaction: dyf++
+Convert complexation reaction: dyf2+
+Convert complexation reaction: dyf3(aq)
+Convert complexation reaction: dyf4-
+Convert complexation reaction: dyh2po4++
+Convert complexation reaction: dyhco3++
+Convert complexation reaction: dyno3++
+Alias used for : h+ to h+1
+Convert complexation reaction: dyo+
+Alias used for : h+ to h+1
+Convert complexation reaction: dyo2-
+Alias used for : h+ to h+1
+Convert complexation reaction: dyo2h(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: dyoh++
+Convert complexation reaction: dyso4+
+Convert complexation reaction: ercl++
+Convert complexation reaction: ercl2+
+Convert complexation reaction: ercl3(aq)
+Convert complexation reaction: ercl4-
+Alias used for : h+ to h+1
+Convert complexation reaction: erco3+
+Convert complexation reaction: erf++
+Convert complexation reaction: erf2+
+Convert complexation reaction: erf3(aq)
+Convert complexation reaction: erf4-
+Convert complexation reaction: erh2po4++
+Convert complexation reaction: erhco3++
+Convert complexation reaction: erno3++
+Alias used for : h+ to h+1
+Convert complexation reaction: ero+
+Alias used for : h+ to h+1
+Convert complexation reaction: ero2-
+Alias used for : h+ to h+1
+Convert complexation reaction: ero2h(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: eroh++
+Convert complexation reaction: erso4+
+Convert complexation reaction: eucl+
+Convert complexation reaction: eucl++
+Convert complexation reaction: eucl2(aq)
+Convert complexation reaction: eucl2+
+Convert complexation reaction: eucl3-
+Convert complexation reaction: eucl3(aq)
+Convert complexation reaction: eucl4-
+Convert complexation reaction: eucl4--
+Alias used for : h+ to h+1
+Convert complexation reaction: euco3+
+Convert complexation reaction: euf+
+Convert complexation reaction: euf++
+Convert complexation reaction: euf2(aq)
+Convert complexation reaction: euf2+
+Convert complexation reaction: euf3-
+Convert complexation reaction: euf3(aq)
+Convert complexation reaction: euf4-
+Convert complexation reaction: euf4--
+Convert complexation reaction: euh2po4++
+Convert complexation reaction: euhco3++
+Convert complexation reaction: euno3++
+Alias used for : h+ to h+1
+Convert complexation reaction: euo+
+Alias used for : h+ to h+1
+Convert complexation reaction: euo2-
+Alias used for : h+ to h+1
+Convert complexation reaction: euo2h(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: euoh++
+Convert complexation reaction: euso4+
+Alias used for : h+ to h+1
+Convert complexation reaction: fe(co3)2-
+Alias used for : h+ to h+1
+Convert complexation reaction: fe(co3)2--
+Convert complexation reaction: fecl+
+Convert complexation reaction: fecl++
+Convert complexation reaction: fecl2(aq)
+Convert complexation reaction: fecl2+
+Alias used for : h+ to h+1
+Convert complexation reaction: feco3(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: feco3+
+Alias used for : h+ to h+1
+Convert complexation reaction: feco3oh-
+Convert complexation reaction: fef+
+Convert complexation reaction: fef++
+Convert complexation reaction: feh2po4+
+Convert complexation reaction: feh2po4++
+Convert complexation reaction: fehco3+
+Alias used for : h+ to h+1
+Convert complexation reaction: fehpo4(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: fehpo4+
+Alias used for : h+ to h+1
+Convert complexation reaction: feo
+Alias used for : h+ to h+1
+Convert complexation reaction: feo+
+Alias used for : h+ to h+1
+Convert complexation reaction: feo2-
+Alias used for : h+ to h+1
+Convert complexation reaction: feo2--
+Alias used for : h+ to h+1
+Convert complexation reaction: feoh+
+Alias used for : h+ to h+1
+Convert complexation reaction: feoh++
+Alias used for : h+ to h+1
+Convert complexation reaction: fepo4-
+Convert complexation reaction: feso4(aq)
+Convert complexation reaction: feso4+
+Alias used for : h+ to h+1
+Convert complexation reaction: ga(oh)2+
+Alias used for : h+ to h+1
+Convert complexation reaction: ga(oh)3(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: ga(oh)4-
+Alias used for : h+ to h+1
+Convert complexation reaction: gaoh++
+Convert complexation reaction: gdcl++
+Convert complexation reaction: gdcl2+
+Convert complexation reaction: gdcl3(aq)
+Convert complexation reaction: gdcl4-
+Alias used for : h+ to h+1
+Convert complexation reaction: gdco3+
+Convert complexation reaction: gdf++
+Convert complexation reaction: gdf2+
+Convert complexation reaction: gdf3(aq)
+Convert complexation reaction: gdf4-
+Convert complexation reaction: gdh2po4++
+Convert complexation reaction: gdhco3++
+Convert complexation reaction: gdno3++
+Alias used for : h+ to h+1
+Convert complexation reaction: gdo+
+Alias used for : h+ to h+1
+Convert complexation reaction: gdo2-
+Alias used for : h+ to h+1
+Convert complexation reaction: gdo2h(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: gdoh++
+Convert complexation reaction: gdso4+
+Alias used for : h+ to h+1
+Convert complexation reaction: geo(oh)3-
+Alias used for : h+ to h+1
+Convert complexation reaction: h2as3s6-
+Alias used for : h+ to h+1
+Convert complexation reaction: h2n2o2(aq)
+Convert complexation reaction: h2p2o7--
+Alias used for : h+ to h+1
+Convert complexation reaction: h2po3f(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: h2s(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: h2s2o3(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: h2s2o4(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: h2sb2s4(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: h2seo3(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: h2sio4--
+Alias used for : h+ to h+1
+Convert complexation reaction: h2so3(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: h2vo4-
+Alias used for : h+ to h+1
+Convert complexation reaction: h3as3s6(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: h3aso4(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: h3p2o7-
+Alias used for : h+ to h+1
+Convert complexation reaction: h3po2(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: h3po3(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: h3po4(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: h3vo4(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: h4p2o7(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: halo2(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: has3s6--
+Alias used for : h+ to h+1
+Convert complexation reaction: hbeo2-
+Alias used for : h+ to h+1
+Convert complexation reaction: hbio2(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: hbro(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: hcdo2-
+Alias used for : h+ to h+1
+Convert complexation reaction: hcl(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: hclo(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: hclo2(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: hcoo2-
+Alias used for : h+ to h+1
+Convert complexation reaction: hcoo2(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: hcro2(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: hcro4-
+Alias used for : h+ to h+1
+Convert complexation reaction: hcuo2-
+Alias used for : h+ to h+1
+Convert complexation reaction: hf(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: hf2-
+Alias used for : h+ to h+1
+Convert complexation reaction: hfeo2-
+Alias used for : h+ to h+1
+Convert complexation reaction: hfeo2(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: hfo++
+Alias used for : h+ to h+1
+Convert complexation reaction: hfo2(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: hfoh+++
+Convert complexation reaction: hg(hs)2(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: hgcl+
+Convert complexation reaction: hgcl2(aq)
+Convert complexation reaction: hgcl3-
+Convert complexation reaction: hgcl4--
+Convert complexation reaction: hgf+
+Alias used for : h+ to h+1
+Convert complexation reaction: hgo(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: hgoh+
+Alias used for : h+ to h+1
+Convert complexation reaction: hgs(hs)-
+Alias used for : h+ to h+1
+Convert complexation reaction: hhfo2+
+Alias used for : h+ to h+1
+Convert complexation reaction: hhfo3-
+Alias used for : h+ to h+1
+Convert complexation reaction: hhgo2-
+Alias used for : h+ to h+1
+Convert complexation reaction: hino2(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: hio(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: hio3(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: hmno2-
+Alias used for : h+ to h+1
+Convert complexation reaction: hmoo4-
+Alias used for : h+ to h+1
+Convert complexation reaction: hn2o2-
+Alias used for : h+ to h+1
+Convert complexation reaction: hnbo3(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: hnio2-
+Alias used for : h+ to h+1
+Convert complexation reaction: hno2(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: hno3(aq)
+Convert complexation reaction: hocl++
+Convert complexation reaction: hocl2+
+Convert complexation reaction: hocl3(aq)
+Convert complexation reaction: hocl4-
+Alias used for : h+ to h+1
+Convert complexation reaction: hoco3+
+Convert complexation reaction: hof++
+Convert complexation reaction: hof2+
+Convert complexation reaction: hof3(aq)
+Convert complexation reaction: hof4-
+Convert complexation reaction: hoh2po4++
+Convert complexation reaction: hohco3++
+Convert complexation reaction: hono3++
+Alias used for : h+ to h+1
+Convert complexation reaction: hoo+
+Alias used for : h+ to h+1
+Convert complexation reaction: hoo2-
+Alias used for : h+ to h+1
+Convert complexation reaction: hoo2h(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: hooh++
+Convert complexation reaction: hoso4+
+Alias used for : h+ to h+1
+Convert complexation reaction: hp2o7---
+Alias used for : h+ to h+1
+Convert complexation reaction: hpbo2-
+Alias used for : h+ to h+1
+Convert complexation reaction: hpo3--
+Alias used for : h+ to h+1
+Convert complexation reaction: hpo3f-
+Alias used for : h+ to h+1
+Convert complexation reaction: hpo4--
+Alias used for : h+ to h+1
+Convert complexation reaction: hs2o3-
+Alias used for : h+ to h+1
+Convert complexation reaction: hs2o4-
+Alias used for : h+ to h+1
+Convert complexation reaction: hsb2s4-
+Alias used for : h+ to h+1
+Convert complexation reaction: hsco2(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: hseo3-
+Alias used for : h+ to h+1
+Convert complexation reaction: hseo4-
+Alias used for : h+ to h+1
+Convert complexation reaction: hsio3-
+Alias used for : h+ to h+1
+Convert complexation reaction: hsno2-
+Alias used for : h+ to h+1
+Convert complexation reaction: hso3-
+Alias used for : h+ to h+1
+Convert complexation reaction: hso4-
+Alias used for : h+ to h+1
+Convert complexation reaction: htlo2(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: huo2(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: huo2+
+Alias used for : h+ to h+1
+Convert complexation reaction: huo3-
+Alias used for : h+ to h+1
+Convert complexation reaction: huo4-
+Alias used for : h+ to h+1
+Convert complexation reaction: hvo4--
+Alias used for : h+ to h+1
+Convert complexation reaction: hwo4-
+Alias used for : h+ to h+1
+Convert complexation reaction: hyo2(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: hzno2-
+Alias used for : h+ to h+1
+Convert complexation reaction: hzro2+
+Alias used for : h+ to h+1
+Convert complexation reaction: hzro3-
+Convert complexation reaction: incl++
+Convert complexation reaction: inf++
+Alias used for : h+ to h+1
+Convert complexation reaction: ino+
+Alias used for : h+ to h+1
+Convert complexation reaction: ino2-
+Alias used for : h+ to h+1
+Convert complexation reaction: inoh++
+Alias used for : h+ to h+1
+Convert complexation reaction: kalo2(aq)
+Convert complexation reaction: kbr(aq)
+Convert complexation reaction: kcl(aq)
+Convert complexation reaction: kh2po4(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: khpo4-
+Convert complexation reaction: ki(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: koh(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: kp2o7---
+Alias used for : h+ to h+1
+Convert complexation reaction: kpo4--
+Convert complexation reaction: kso4-
+Convert complexation reaction: lacl++
+Convert complexation reaction: lacl2+
+Convert complexation reaction: lacl3(aq)
+Convert complexation reaction: lacl4-
+Alias used for : h+ to h+1
+Convert complexation reaction: laco3+
+Convert complexation reaction: laf++
+Convert complexation reaction: laf2+
+Convert complexation reaction: laf3(aq)
+Convert complexation reaction: laf4-
+Convert complexation reaction: lah2po4++
+Convert complexation reaction: lahco3++
+Convert complexation reaction: lano3++
+Alias used for : h+ to h+1
+Convert complexation reaction: lao+
+Alias used for : h+ to h+1
+Convert complexation reaction: lao2-
+Alias used for : h+ to h+1
+Convert complexation reaction: lao2h(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: laoh++
+Convert complexation reaction: laso4+
+Convert complexation reaction: licl(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: lioh(aq)
+Convert complexation reaction: lucl++
+Convert complexation reaction: lucl2+
+Convert complexation reaction: lucl3(aq)
+Convert complexation reaction: lucl4-
+Alias used for : h+ to h+1
+Convert complexation reaction: luco3+
+Convert complexation reaction: luf++
+Convert complexation reaction: luf2+
+Convert complexation reaction: luf3(aq)
+Convert complexation reaction: luf4-
+Convert complexation reaction: luh2po4++
+Convert complexation reaction: luhco3++
+Convert complexation reaction: luno3++
+Alias used for : h+ to h+1
+Convert complexation reaction: luo+
+Alias used for : h+ to h+1
+Convert complexation reaction: luo2-
+Alias used for : h+ to h+1
+Convert complexation reaction: luo2h(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: luoh++
+Convert complexation reaction: luso4+
+Alias used for : mg++ to mg+2
+Convert complexation reaction: mg(hco3)+
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert complexation reaction: mg4(oh)4++++
+Alias used for : mg++ to mg+2
+Convert complexation reaction: mgcl+
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert complexation reaction: mgco3(aq)
+Alias used for : mg++ to mg+2
+Convert complexation reaction: mgf+
+Alias used for : mg++ to mg+2
+Convert complexation reaction: mgh2po4+
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert complexation reaction: mghpo4(aq)
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert complexation reaction: mgoh+
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert complexation reaction: mgp2o7--
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert complexation reaction: mgpo4-
+Alias used for : mg++ to mg+2
+Convert complexation reaction: mgs2o3(aq)
+Alias used for : mg++ to mg+2
+Convert complexation reaction: mgso4(aq)
+Convert complexation reaction: mncl+
+Convert complexation reaction: mnf+
+Alias used for : h+ to h+1
+Convert complexation reaction: mnh2po4+
+Alias used for : h+ to h+1
+Convert complexation reaction: mnhpo4(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: mno(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: mno2--
+Alias used for : h+ to h+1
+Convert complexation reaction: mnoh+
+Alias used for : h+ to h+1
+Convert complexation reaction: mnpo4-
+Convert complexation reaction: mnso4(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: n2h5+
+Alias used for : h+ to h+1
+Convert complexation reaction: n2h6++
+Alias used for : h+ to h+1
+Convert complexation reaction: n2o(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: n2o2--
+Alias used for : h+ to h+1
+Convert complexation reaction: na2p2o7--
+Name truncation: naal(oh)2f2(aq) to naal(oh)2f2(
+New name and truncation added: naal(oh)2f2(aq)  naal(oh)2f2(
+Alias used for : h+ to h+1
+Convert complexation reaction: naal(oh)2f2(
+Name truncation: naal(oh)3f(aq) to naal(oh)3f(a
+New name and truncation added: naal(oh)3f(aq)  naal(oh)3f(a
+Alias used for : h+ to h+1
+Convert complexation reaction: naal(oh)3f(a
+Alias used for : h+ to h+1
+Convert complexation reaction: naalo2(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: nab(oh)4(aq)
+Convert complexation reaction: nabr(aq)
+Convert complexation reaction: nacl(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: naco3-
+Convert complexation reaction: naf(aq)
+Convert complexation reaction: nah2po4(aq)
+Convert complexation reaction: nahco3(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: nahp2o7--
+Alias used for : h+ to h+1
+Convert complexation reaction: nahpo4-
+Convert complexation reaction: nai(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: naoh(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: nap2o7---
+Alias used for : h+ to h+1
+Convert complexation reaction: napo4--
+Convert complexation reaction: nas2o3-
+Convert complexation reaction: naso4-
+Convert complexation reaction: ndcl++
+Convert complexation reaction: ndcl2+
+Convert complexation reaction: ndcl3(aq)
+Convert complexation reaction: ndcl4-
+Alias used for : h+ to h+1
+Convert complexation reaction: ndco3+
+Convert complexation reaction: ndf++
+Convert complexation reaction: ndf2+
+Convert complexation reaction: ndf3(aq)
+Convert complexation reaction: ndf4-
+Convert complexation reaction: ndh2po4++
+Convert complexation reaction: ndhco3++
+Convert complexation reaction: ndno3++
+Alias used for : h+ to h+1
+Convert complexation reaction: ndo+
+Alias used for : h+ to h+1
+Convert complexation reaction: ndo2-
+Alias used for : h+ to h+1
+Convert complexation reaction: ndo2h(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: ndoh++
+Convert complexation reaction: ndso4+
+Alias used for : h+ to h+1
+Convert complexation reaction: nf3(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: nh4+
+Convert complexation reaction: nicl+
+Convert complexation reaction: nif+
+Alias used for : h+ to h+1
+Convert complexation reaction: nihp2o7-
+Alias used for : h+ to h+1
+Convert complexation reaction: nio(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: nio2--
+Alias used for : h+ to h+1
+Convert complexation reaction: nioh+
+Alias used for : h+ to h+1
+Convert complexation reaction: nip2o7--
+Alias used for : h+ to h+1
+Convert complexation reaction: no(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: oh-
+Alias used for : h+ to h+1
+Convert complexation reaction: p2o7----
+Alias used for : h+ to h+1
+Convert complexation reaction: pb(co3)(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: pb(co3)2-2
+Convert complexation reaction: pb(h2po4)+
+Convert complexation reaction: pb(hs)2(aq)
+Convert complexation reaction: pb(hs)3-
+Convert complexation reaction: pb(so4)2-2
+Convert complexation reaction: pbcl+
+Convert complexation reaction: pbcl2(aq)
+Convert complexation reaction: pbcl3-
+Convert complexation reaction: pbcl4--
+Convert complexation reaction: pbf+
+Convert complexation reaction: pbf2(aq)
+Convert complexation reaction: pbh2po4+
+Convert complexation reaction: pbhco3+
+Alias used for : h+ to h+1
+Convert complexation reaction: pbhpo4(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: pbo(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: pboh+
+Alias used for : h+ to h+1
+Convert complexation reaction: pbp2o7--
+Convert complexation reaction: pbso4(aq)
+Convert complexation reaction: pd(so4)2--
+Convert complexation reaction: pd(so4)3----
+Convert complexation reaction: pdcl+
+Convert complexation reaction: pdcl2(aq)
+Convert complexation reaction: pdcl3-
+Convert complexation reaction: pdcl4--
+Alias used for : h+ to h+1
+Convert complexation reaction: pdo(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: pdoh+
+Convert complexation reaction: pdso4(aq)
+Convert complexation reaction: po3f--
+Alias used for : h+ to h+1
+Convert complexation reaction: po4---
+Convert complexation reaction: prcl++
+Convert complexation reaction: prcl2+
+Convert complexation reaction: prcl3(aq)
+Convert complexation reaction: prcl4-
+Alias used for : h+ to h+1
+Convert complexation reaction: prco3+
+Convert complexation reaction: prf++
+Convert complexation reaction: prf2+
+Convert complexation reaction: prf3(aq)
+Convert complexation reaction: prf4-
+Convert complexation reaction: prh2po4++
+Convert complexation reaction: prhco3++
+Convert complexation reaction: prno3++
+Alias used for : h+ to h+1
+Convert complexation reaction: pro+
+Alias used for : h+ to h+1
+Convert complexation reaction: pro2-
+Alias used for : h+ to h+1
+Convert complexation reaction: pro2h(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: proh++
+Convert complexation reaction: prso4+
+Convert complexation reaction: pt(so4)2--
+Convert complexation reaction: pt(so4)3----
+Convert complexation reaction: ptcl+
+Convert complexation reaction: ptcl2(aq)
+Convert complexation reaction: ptcl3-
+Convert complexation reaction: ptcl4--
+Alias used for : h+ to h+1
+Convert complexation reaction: pto(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: ptoh+
+Convert complexation reaction: ptso4(aq)
+Convert complexation reaction: rbbr(aq)
+Convert complexation reaction: rbcl(aq)
+Convert complexation reaction: rbf(aq)
+Convert complexation reaction: rbi(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: rboh(aq)
+Convert complexation reaction: rh(so4)2-
+Convert complexation reaction: rh(so4)2--
+Convert complexation reaction: rh(so4)3---
+Convert complexation reaction: rh(so4)3----
+Convert complexation reaction: rhcl+
+Convert complexation reaction: rhcl++
+Convert complexation reaction: rhcl2(aq)
+Convert complexation reaction: rhcl2+
+Convert complexation reaction: rhcl3-
+Convert complexation reaction: rhcl3(aq)
+Convert complexation reaction: rhcl4-
+Convert complexation reaction: rhcl4--
+Alias used for : h+ to h+1
+Convert complexation reaction: rho(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: rho+
+Alias used for : h+ to h+1
+Convert complexation reaction: rhoh+
+Alias used for : h+ to h+1
+Convert complexation reaction: rhoh++
+Convert complexation reaction: rhso4(aq)
+Convert complexation reaction: rhso4+
+Convert complexation reaction: ru(so4)2-
+Convert complexation reaction: ru(so4)2--
+Convert complexation reaction: ru(so4)3---
+Convert complexation reaction: ru(so4)3----
+Convert complexation reaction: rucl+
+Convert complexation reaction: rucl++
+Convert complexation reaction: rucl2(aq)
+Convert complexation reaction: rucl2+
+Convert complexation reaction: rucl3-
+Convert complexation reaction: rucl3(aq)
+Convert complexation reaction: rucl4-
+Convert complexation reaction: rucl4--
+Convert complexation reaction: rucl5--
+Convert complexation reaction: rucl6---
+Alias used for : h+ to h+1
+Convert complexation reaction: ruo(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: ruo+
+Alias used for : h+ to h+1
+Convert complexation reaction: ruoh+
+Alias used for : h+ to h+1
+Convert complexation reaction: ruoh++
+Convert complexation reaction: ruso4(aq)
+Convert complexation reaction: ruso4+
+Alias used for : h+ to h+1
+Convert complexation reaction: s--
+Convert complexation reaction: s2--
+Alias used for : h+ to h+1
+Convert complexation reaction: s2o5--
+Alias used for : h+ to h+1
+Convert complexation reaction: s3--
+Alias used for : h+ to h+1
+Convert complexation reaction: s3o6--
+Alias used for : h+ to h+1
+Convert complexation reaction: s4--
+Alias used for : h+ to h+1
+Convert complexation reaction: s4o6--
+Alias used for : h+ to h+1
+Convert complexation reaction: s5--
+Alias used for : h+ to h+1
+Convert complexation reaction: s5o6--
+Alias used for : h+ to h+1
+Convert complexation reaction: sb2s4--
+Alias used for : h+ to h+1
+Convert complexation reaction: scn-
+Alias used for : h+ to h+1
+Convert complexation reaction: sco+
+Alias used for : h+ to h+1
+Convert complexation reaction: sco2-
+Alias used for : h+ to h+1
+Convert complexation reaction: scoh++
+Alias used for : h+ to h+1
+Convert complexation reaction: secn-
+Alias used for : h+ to h+1
+Convert complexation reaction: sf6(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: si2o2(oh)5-
+Alias used for : h+ to h+1
+Convert complexation reaction: si2o3(oh)4--
+Alias used for : si3o5(oh)5--- to si3o5(oh)5-3
+Alias used for : h+ to h+1
+Convert complexation reaction: si3o5(oh)5-3
+Alias used for : si3o6(oh)3--- to si3o6(oh)3-3
+Alias used for : h+ to h+1
+Convert complexation reaction: si3o6(oh)3-3
+Alias used for : h+ to h+1
+Convert complexation reaction: si4o12h4----
+Alias used for : h+ to h+1
+Convert complexation reaction: si4o6(oh)6--
+Alias used for : si4o7(oh)6---- to si4o7(oh)6-4
+Alias used for : h+ to h+1
+Convert complexation reaction: si4o7(oh)6-4
+Alias used for : si4o8(oh)4---- to si4o8(oh)4-4
+Alias used for : h+ to h+1
+Convert complexation reaction: si4o8(oh)4-4
+Alias used for : h+ to h+1
+Convert complexation reaction: si6o15------
+Alias used for : h+ to h+1
+Convert complexation reaction: sif6--
+Convert complexation reaction: smcl++
+Convert complexation reaction: smcl2+
+Convert complexation reaction: smcl3(aq)
+Convert complexation reaction: smcl4-
+Alias used for : h+ to h+1
+Convert complexation reaction: smco3+
+Convert complexation reaction: smf++
+Convert complexation reaction: smf2+
+Convert complexation reaction: smf3(aq)
+Convert complexation reaction: smf4-
+Convert complexation reaction: smh2po4++
+Convert complexation reaction: smhco3++
+Convert complexation reaction: smno3++
+Alias used for : h+ to h+1
+Convert complexation reaction: smo+
+Alias used for : h+ to h+1
+Convert complexation reaction: smo2-
+Alias used for : h+ to h+1
+Convert complexation reaction: smo2h(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: smoh++
+Convert complexation reaction: smso4+
+Alias used for : h+ to h+1
+Convert complexation reaction: sno(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: snoh+
+Alias used for : h+ to h+1
+Convert complexation reaction: so2(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: sr(co3)(aq)
+Convert complexation reaction: sr(hco3)+
+Convert complexation reaction: srcl+
+Convert complexation reaction: srf+
+Convert complexation reaction: srh2po4+
+Alias used for : h+ to h+1
+Convert complexation reaction: srhpo4(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: sroh+
+Alias used for : h+ to h+1
+Convert complexation reaction: srp2o7--
+Alias used for : h+ to h+1
+Convert complexation reaction: srpo4-
+Convert complexation reaction: srso4(aq)
+Convert complexation reaction: tbcl++
+Convert complexation reaction: tbcl2+
+Convert complexation reaction: tbcl3(aq)
+Convert complexation reaction: tbcl4-
+Alias used for : h+ to h+1
+Convert complexation reaction: tbco3+
+Convert complexation reaction: tbf++
+Convert complexation reaction: tbf2+
+Convert complexation reaction: tbf3(aq)
+Convert complexation reaction: tbf4-
+Convert complexation reaction: tbh2po4++
+Convert complexation reaction: tbhco3++
+Convert complexation reaction: tbno3++
+Alias used for : h+ to h+1
+Convert complexation reaction: tbo+
+Alias used for : h+ to h+1
+Convert complexation reaction: tbo2-
+Alias used for : h+ to h+1
+Convert complexation reaction: tbo2h(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: tboh++
+Convert complexation reaction: tbso4+
+Convert complexation reaction: tlcl(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: tlcl++
+Convert complexation reaction: tlf(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: tlo+
+Alias used for : h+ to h+1
+Convert complexation reaction: tlo2-
+Alias used for : h+ to h+1
+Convert complexation reaction: tloh(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: tloh++
+Convert complexation reaction: tmcl++
+Convert complexation reaction: tmcl2+
+Convert complexation reaction: tmcl3(aq)
+Convert complexation reaction: tmcl4-
+Alias used for : h+ to h+1
+Convert complexation reaction: tmco3+
+Convert complexation reaction: tmf++
+Convert complexation reaction: tmf2+
+Convert complexation reaction: tmf3(aq)
+Convert complexation reaction: tmf4-
+Convert complexation reaction: tmh2po4++
+Convert complexation reaction: tmhco3++
+Convert complexation reaction: tmno3++
+Alias used for : h+ to h+1
+Convert complexation reaction: tmo+
+Alias used for : h+ to h+1
+Convert complexation reaction: tmo2-
+Alias used for : h+ to h+1
+Convert complexation reaction: tmo2h(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: tmoh++
+Convert complexation reaction: tmso4+
+Alias used for : h+ to h+1
+Convert complexation reaction: u(oh)+++
+Alias used for : h+ to h+1
+Convert complexation reaction: uo+
+Alias used for : h+ to h+1
+Convert complexation reaction: uo++
+Alias used for : h+ to h+1
+Convert complexation reaction: uo2(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: uo2oh(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: uo2oh+
+Alias used for : h+ to h+1
+Convert complexation reaction: uo3-
+Alias used for : h+ to h+1
+Convert complexation reaction: uo3(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: uo4--
+Alias used for : h+ to h+1
+Convert complexation reaction: uoh++
+Alias used for : h+ to h+1
+Convert complexation reaction: vo+
+Alias used for : h+ to h+1
+Convert complexation reaction: vo4---
+Alias used for : h+ to h+1
+Convert complexation reaction: voh+
+Alias used for : h+ to h+1
+Convert complexation reaction: voh++
+Alias used for : h+ to h+1
+Convert complexation reaction: vooh+
+Convert complexation reaction: ybcl++
+Convert complexation reaction: ybcl2+
+Convert complexation reaction: ybcl3(aq)
+Convert complexation reaction: ybcl4-
+Alias used for : h+ to h+1
+Convert complexation reaction: ybco3+
+Convert complexation reaction: ybf++
+Convert complexation reaction: ybf2+
+Convert complexation reaction: ybf3(aq)
+Convert complexation reaction: ybf4-
+Convert complexation reaction: ybh2po4++
+Convert complexation reaction: ybhco3++
+Convert complexation reaction: ybno3++
+Alias used for : h+ to h+1
+Convert complexation reaction: ybo+
+Alias used for : h+ to h+1
+Convert complexation reaction: ybo2-
+Alias used for : h+ to h+1
+Convert complexation reaction: ybo2h(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: yboh++
+Convert complexation reaction: ybso4+
+Alias used for : h+ to h+1
+Convert complexation reaction: yo+
+Alias used for : h+ to h+1
+Convert complexation reaction: yo2-
+Alias used for : h+ to h+1
+Convert complexation reaction: yoh++
+Convert complexation reaction: zncl+
+Convert complexation reaction: zncl2(aq)
+Convert complexation reaction: zncl3-
+Convert complexation reaction: znf+
+Convert complexation reaction: znh2po4+
+Alias used for : h+ to h+1
+Convert complexation reaction: znhpo4(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: zno(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: zno2--
+Alias used for : h+ to h+1
+Convert complexation reaction: znoh+
+Alias used for : h+ to h+1
+Convert complexation reaction: znpo4-
+Alias used for : h+ to h+1
+Convert complexation reaction: zr++++
+Alias used for : h+ to h+1
+Convert complexation reaction: zro2(aq)
+Alias used for : h+ to h+1
+Convert complexation reaction: zroh+++
+End converting aqueous species: complexation reactions and redox reactions
+Start converting gases
+Convert gas: ar(g)
+Alias used for : h+ to h+1
+Convert gas: br2(g)
+Alias used for : h+ to h+1
+Convert gas: ch4(g)
+Alias used for : h+ to h+1
+Convert gas: cl2(g)
+Alias used for : h+ to h+1
+Convert gas: co(g)
+Alias used for : h+ to h+1
+Convert gas: co2(g)
+Alias used for : h+ to h+1
+Convert gas: f2(g)
+Convert gas: h2(g)
+Convert gas: h2o(g)
+Alias used for : h+ to h+1
+Convert gas: h2s(g)
+Alias used for : h+ to h+1
+Convert gas: hcl(g)
+Convert gas: he(g)
+Alias used for : h+ to h+1
+Convert gas: hg(g)
+Alias used for : h+ to h+1
+Convert gas: i2(g)
+Convert gas: kr(g)
+Convert gas: n2(g)
+Convert gas: ne(g)
+Convert gas: nh3(g)
+Convert gas: o2(g)
+Alias used for : h+ to h+1
+Convert gas: s2(g)
+Alias used for : h+ to h+1
+Convert gas: so2(g)
+Convert gas: xe(g)
+Start converting minerals
+Alias used for : 2k2so4.fe2(so4)3:14h2o to 2k2so4.fe2(s
+Alias used for : h+ to h+1
+Convert minerals: 2k2so4.fe2(s
+Alias used for : 2kcl.fecl3:h2o to 2kcl.fecl3:h
+Alias used for : h+ to h+1
+Convert minerals: 2kcl.fecl3:h
+Name truncation: acanthite,alpha to acanthite,al
+New name and truncation added: acanthite,alpha  acanthite,al
+Convert minerals: acanthite,al
+Name truncation: acanthite,beta to acanthite,be
+New name and truncation added: acanthite,beta  acanthite,be
+Convert minerals: acanthite,be
+Name truncation: acanthite,gamma to acanthite,ga
+New name and truncation added: acanthite,gamma  acanthite,ga
+Convert minerals: acanthite,ga
+Name truncation: aegerine,alpha to aegerine,alp
+New name and truncation added: aegerine,alpha  aegerine,alp
+Alias used for : h+ to h+1
+Convert minerals: aegerine,alp
+Name truncation: aegerine,beta to aegerine,bet
+New name and truncation added: aegerine,beta  aegerine,bet
+Alias used for : h+ to h+1
+Convert minerals: aegerine,bet
+Name truncation: aegerine,gamma to aegerine,gam
+New name and truncation added: aegerine,gamma  aegerine,gam
+Alias used for : h+ to h+1
+Convert minerals: aegerine,gam
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: afwillite
+Alias used for : h+ to h+1
+Convert minerals: ag,element
+Alias used for : h+ to h+1
+Convert minerals: ag2o
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Alias used for : mg++ to mg+2
+Convert minerals: akermanite
+Alias used for : h+ to h+1
+Convert minerals: al,element
+Alias used for : h+ to h+1
+Convert minerals: al2o3glass
+Convert minerals: alabandite
+Alias used for : h+ to h+1
+Convert minerals: albite_high
+Alias used for : h+ to h+1
+Convert minerals: albite_low
+Convert minerals: alf3
+Name truncation: almandine,alpha to almandine,al
+New name and truncation added: almandine,alpha  almandine,al
+Alias used for : h+ to h+1
+Convert minerals: almandine,al
+Name truncation: almandine,beta to almandine,be
+New name and truncation added: almandine,beta  almandine,be
+Alias used for : h+ to h+1
+Convert minerals: almandine,be
+Alias used for : h+ to h+1
+Convert minerals: alunite
+Alias used for : amesite_14a,alpha to amesit_14a_a
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: amesit_14a_a
+Alias used for : amesite_14a,beta to amesit_14a_b
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: amesit_14a_b
+Alias used for : amorphous_silica to amorphous_si
+Convert minerals: amorphous_si
+Alias used for : h+ to h+1
+Convert minerals: analcime
+Name truncation: analcime,dehydrated to analcime,deh
+New name and truncation added: analcime,dehydrated  analcime,deh
+Alias used for : h+ to h+1
+Convert minerals: analcime,deh
+Alias used for : h+ to h+1
+Convert minerals: andalusite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: andradite
+Convert minerals: anglesite
+Alias used for : ca++ to ca+2
+Convert minerals: anhydrite
+Alias used for : h+ to h+1
+Convert minerals: annite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: anorthite
+Alias used for : ca++ to ca+2
+Convert minerals: antarcticite
+Alias used for : anthophyllite,alpha to anthophyll_a
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: anthophyll_a
+Alias used for : anthophyllite,beta to anthophyll_b
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: anthophyll_b
+Alias used for : anthophyllite,gamma to anthophyll_c
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: anthophyll_c
+Name truncation: antigorite,alpha to antigorite,a
+New name and truncation added: antigorite,alpha  antigorite,a
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: antigorite,a
+Name truncation: antigorite,beta to antigorite,b
+New name and truncation added: antigorite,beta  antigorite,b
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: antigorite,b
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: aragonite
+Convert minerals: arcanite
+Name truncation: argutite,alpha to argutite,alp
+New name and truncation added: argutite,alpha  argutite,alp
+Convert minerals: argutite,alp
+Name truncation: argutite,beta to argutite,bet
+New name and truncation added: argutite,beta  argutite,bet
+Convert minerals: argutite,bet
+Alias used for : h+ to h+1
+Convert minerals: arsenic
+Alias used for : h+ to h+1
+Convert minerals: arsenolite
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: artinite
+Alias used for : h+ to h+1
+Convert minerals: augelite
+Alias used for : h+ to h+1
+Convert minerals: azurite
+Convert minerals: b(oh)3
+Convert minerals: b2o3
+Convert minerals: b2o3glass
+Alias used for : h+ to h+1
+Convert minerals: bahpo4
+Convert minerals: barite
+Alias used for : h+ to h+1
+Convert minerals: basio3glass
+Alias used for : ca++ to ca+2
+Convert minerals: bassanite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: beidelliteca
+Alias used for : h+ to h+1
+Convert minerals: beidellitek
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: beidellitemg
+Alias used for : h+ to h+1
+Convert minerals: beidellitena
+Alias used for : h+ to h+1
+Convert minerals: berlinite
+Alias used for : h+ to h+1
+Convert minerals: berndtite
+Alias used for : h+ to h+1
+Convert minerals: berthierite
+Alias used for : mg++ to mg+2
+Convert minerals: bischofite
+Alias used for : mg++ to mg+2
+Convert minerals: bloedite
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: bobbierite
+Alias used for : h+ to h+1
+Convert minerals: boehmite
+Name truncation: bornite,alpha to bornite,alph
+New name and truncation added: bornite,alpha  bornite,alph
+Alias used for : h+ to h+1
+Convert minerals: bornite,alph
+Alias used for : h+ to h+1
+Convert minerals: bornite,beta
+Name truncation: bornite,gamma to bornite,gamm
+New name and truncation added: bornite,gamma  bornite,gamm
+Alias used for : h+ to h+1
+Convert minerals: bornite,gamm
+Alias used for : h+ to h+1
+Convert minerals: bromellite
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: brucite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: brushite
+Name truncation: bunsenite,alpha to bunsenite,al
+New name and truncation added: bunsenite,alpha  bunsenite,al
+Alias used for : h+ to h+1
+Convert minerals: bunsenite,al
+Name truncation: bunsenite,beta to bunsenite,be
+New name and truncation added: bunsenite,beta  bunsenite,be
+Alias used for : h+ to h+1
+Convert minerals: bunsenite,be
+Name truncation: bunsenite,gamma to bunsenite,ga
+New name and truncation added: bunsenite,gamma  bunsenite,ga
+Alias used for : h+ to h+1
+Convert minerals: bunsenite,ga
+Alias used for : h+ to h+1
+Convert minerals: burkeite
+Alias used for : h+ to h+1
+Convert minerals: c,graphite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: c2sha
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: c3ah6
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: c3fh6
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: c4ah13
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: c4fh13
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: ca,element
+Alias used for : ca4h(po4)3:2.5h2o to ca4h(po4)3:2
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: ca4h(po4)3:2
+Name truncation: caal_pyroxene to caal_pyroxen
+New name and truncation added: caal_pyroxene  caal_pyroxen
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: caal_pyroxen
+Alias used for : caalh(po4)2:6h2o to caalh(po4)2:
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: caalh(po4)2:
+Alias used for : ca++ to ca+2
+Convert minerals: cacl2:2h2o
+Alias used for : ca++ to ca+2
+Convert minerals: cacl2:4h2o
+Alias used for : ca++ to ca+2
+Convert minerals: cacl2:h2o
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: calcite
+Alias used for : h+ to h+1
+Convert minerals: calomel
+Alias used for : h+ to h+1
+Convert minerals: carbox1
+Alias used for : mg++ to mg+2
+Convert minerals: carnallite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: casio3glass
+Alias used for : h+ to h+1
+Convert minerals: cassiterite
+Alias used for : h+ to h+1
+Convert minerals: cd(oh)2
+Alias used for : h+ to h+1
+Convert minerals: cd,element
+Alias used for : h+ to h+1
+Convert minerals: cd3(po4)2
+Alias used for : h+ to h+1
+Convert minerals: cd5(po4)3cl
+Alias used for : h+ to h+1
+Convert minerals: cd5(po4)3oh
+Convert minerals: cdcl2
+Convert minerals: cdcl2:2.5h2o
+Convert minerals: cdcl2:h2o
+Alias used for : h+ to h+1
+Convert minerals: cdsio3
+Alias used for : h+ to h+1
+Convert minerals: cdsio3glass
+Convert minerals: cdso4
+Convert minerals: cdso4:8/3h2o
+Alias used for : h+ to h+1
+Convert minerals: ce2o3glass
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: celadonite
+Convert minerals: celestite
+Alias used for : h+ to h+1
+Convert minerals: ceo2glass
+Alias used for : h+ to h+1
+Convert minerals: cerussite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: chabazite
+Convert minerals: chalcedony
+Name truncation: chalcocite,alpha to chalcocite,a
+New name and truncation added: chalcocite,alpha  chalcocite,a
+Alias used for : h+ to h+1
+Convert minerals: chalcocite,a
+Name truncation: chalcocite,beta to chalcocite,b
+New name and truncation added: chalcocite,beta  chalcocite,b
+Alias used for : h+ to h+1
+Convert minerals: chalcocite,b
+Name truncation: chalcocite,gamma to chalcocite,g
+New name and truncation added: chalcocite,gamma  chalcocite,g
+Alias used for : h+ to h+1
+Convert minerals: chalcocite,g
+Alias used for : chalcocyanite to chalcocyanit
+Convert minerals: chalcocyanit
+Alias used for : chalcopyrite,alpha to chalcopyri,a
+Convert minerals: chalcopyri,a
+Alias used for : chalcopyrite,beta to chalcopyri,b
+Convert minerals: chalcopyri,b
+Alias used for : chalcopyrite,gamma to chalcopyri,c
+Convert minerals: chalcopyri,c
+Alias used for : chlorapatite(synth) to chlorapat_th
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: chlorapat_th
+Alias used for : chlorargyrite to chlorargyrit
+Convert minerals: chlorargyrit
+Name truncation: chlorite_cca-- to chlorite_cca
+New name and truncation added: chlorite_cca--  chlorite_cca
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Alias used for : mg++ to mg+2
+Convert minerals: chlorite_cca
+Alias used for : h+ to h+1
+Convert minerals: chloritoid
+Alias used for : chloromagnesite to chloromagnes
+Alias used for : mg++ to mg+2
+Convert minerals: chloromagnes
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: chrysotile
+Convert minerals: cinnabar
+Alias used for : h+ to h+1
+Convert minerals: claudetite
+Name truncation: clinochlore_14a to clinochlore_
+New name and truncation added: clinochlore_14a  clinochlore_
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: clinochlore_
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: clinozoisite
+Alias used for : h+ to h+1
+Convert minerals: co(oh)2,blue
+Alias used for : co(oh)2,pink-pc to co(oh)2,p-pc
+Alias used for : h+ to h+1
+Convert minerals: co(oh)2,p-pc
+Alias used for : co(oh)2,pink-wc to co(oh)2,p-wc
+Alias used for : h+ to h+1
+Convert minerals: co(oh)2,p-wc
+Alias used for : h+ to h+1
+Convert minerals: co(oh)3
+Alias used for : h+ to h+1
+Convert minerals: co,element
+Alias used for : h+ to h+1
+Convert minerals: co2sio4glass
+Name truncation: coesite,alpha to coesite,alph
+New name and truncation added: coesite,alpha  coesite,alph
+Convert minerals: coesite,alph
+Convert minerals: coesite,beta
+Alias used for : h+ to h+1
+Convert minerals: cooglass
+Convert minerals: cooperite
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: cordierite
+Name truncation: cordierite,hydrous to cordierite,h
+New name and truncation added: cordierite,hydrous  cordierite,h
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: cordierite,h
+Alias used for : h+ to h+1
+Convert minerals: corkite
+Alias used for : h+ to h+1
+Convert minerals: cornetite
+Name truncation: corundum,alpha to corundum,alp
+New name and truncation added: corundum,alpha  corundum,alp
+Alias used for : h+ to h+1
+Convert minerals: corundum,alp
+Name truncation: corundum,gamma to corundum,gam
+New name and truncation added: corundum,gamma  corundum,gam
+Alias used for : h+ to h+1
+Convert minerals: corundum,gam
+Convert minerals: covellite
+Alias used for : h+ to h+1
+Convert minerals: cr2o3glass
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: crandallite
+Alias used for : cristobalite,alpha to cristobali,a
+Convert minerals: cristobali,a
+Alias used for : cristobalite,beta to cristobali,b
+Convert minerals: cristobali,b
+Alias used for : cronstedtite_7a,alpha to cronstedti,a
+Alias used for : h+ to h+1
+Convert minerals: cronstedti,a
+Alias used for : cronstedtite_7a,beta to cronstedti,b
+Alias used for : h+ to h+1
+Convert minerals: cronstedti,b
+Alias used for : cronstedtite_7a,gamma to cronstedti,c
+Alias used for : h+ to h+1
+Convert minerals: cronstedti,c
+Alias used for : h+ to h+1
+Convert minerals: crpo4(green)
+Alias used for : crpo4(purple) to crpo4(purple
+Alias used for : h+ to h+1
+Convert minerals: crpo4(purple
+Alias used for : h+ to h+1
+Convert minerals: cs2sio3glass
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: csh_0.8
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: csh_1.2
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: csh_1.6
+Alias used for : h+ to h+1
+Convert minerals: cu,element
+Alias used for : h+ to h+1
+Convert minerals: cu3(po4)2
+Alias used for : cu3(po4)2:3h2o to cu3(po4)2:3h
+Alias used for : h+ to h+1
+Convert minerals: cu3(po4)2:3h
+Alias used for : h+ to h+1
+Convert minerals: cu5(po4)3cl
+Alias used for : h+ to h+1
+Convert minerals: cu5(po4)3oh
+Alias used for : cummingtonite to cummingtonit
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: cummingtonit
+Alias used for : h+ to h+1
+Convert minerals: cuoglass
+Alias used for : h+ to h+1
+Convert minerals: cuprite
+Alias used for : h+ to h+1
+Convert minerals: daphnite_14a
+Alias used for : h+ to h+1
+Convert minerals: dawsonite
+Alias used for : h+ to h+1
+Convert minerals: diaspore
+Alias used for : h+ to h+1
+Convert minerals: dickite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Alias used for : mg++ to mg+2
+Convert minerals: diopside
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Alias used for : mg++ to mg+2
+Convert minerals: dolomite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Alias used for : mg++ to mg+2
+Convert minerals: dolomite_dis
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Alias used for : mg++ to mg+2
+Convert minerals: dolomite_ord
+Name truncation: edenite,alpha to edenite,alph
+New name and truncation added: edenite,alpha  edenite,alph
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Alias used for : mg++ to mg+2
+Convert minerals: edenite,alph
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Alias used for : mg++ to mg+2
+Convert minerals: edenite,beta
+Name truncation: enstatite,alpha to enstatite,al
+New name and truncation added: enstatite,alpha  enstatite,al
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: enstatite,al
+Name truncation: enstatite,beta to enstatite,be
+New name and truncation added: enstatite,beta  enstatite,be
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: enstatite,be
+Name truncation: enstatite,gamma to enstatite,ga
+New name and truncation added: enstatite,gamma  enstatite,ga
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: enstatite,ga
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: epidote
+Name truncation: epidote,ordered to epidote,orde
+New name and truncation added: epidote,ordered  epidote,orde
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: epidote,orde
+Alias used for : mg++ to mg+2
+Convert minerals: epsomite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: ettringite
+Alias used for : ettringite_fe to ettringite_f
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: ettringite_f
+Alias used for : farringtonite to farringtonit
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: farringtonit
+Alias used for : h+ to h+1
+Convert minerals: faustite
+Alias used for : h+ to h+1
+Convert minerals: fayalite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: fco3apatite
+Alias used for : h+ to h+1
+Convert minerals: fe(oh)2
+Alias used for : h+ to h+1
+Convert minerals: fe(oh)3
+Alias used for : h+ to h+1
+Convert minerals: fe2o3glass
+Convert minerals: fecl2:4h2o
+Alias used for : h+ to h+1
+Convert minerals: fecl3:6h2o
+Alias used for : fe-montmorilloniteca to fe-montmo_ca
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: fe-montmo_ca
+Alias used for : fe-montmorillonitek to fe-montmo_k
+Alias used for : h+ to h+1
+Convert minerals: fe-montmo_k
+Alias used for : fe-montmorillonitemg to fe-montmo_mg
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: fe-montmo_mg
+Alias used for : fe-montmorillonitena to fe-montmo_na
+Alias used for : h+ to h+1
+Convert minerals: fe-montmo_na
+Alias used for : h+ to h+1
+Convert minerals: ferrite_mn
+Alias used for : ferropargasite to ferropargasi
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: ferropargasi
+Alias used for : ferrosilite,alpha to ferrosilit,a
+Alias used for : h+ to h+1
+Convert minerals: ferrosilit,a
+Alias used for : ferrosilite,beta to ferrosilit,b
+Alias used for : h+ to h+1
+Convert minerals: ferrosilit,b
+Alias used for : ferrotremolite to ferrotremoli
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: ferrotremoli
+Name truncation: ferrous_oxide to ferrous_oxid
+New name and truncation added: ferrous_oxide  ferrous_oxid
+Alias used for : h+ to h+1
+Convert minerals: ferrous_oxid
+Name truncation: fe-saponiteca to fe-saponitec
+New name and truncation added: fe-saponiteca  fe-saponitec
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: fe-saponitec
+Alias used for : h+ to h+1
+Convert minerals: fe-saponitek
+Name truncation: fe-saponitemg to fe-saponitem
+New name and truncation added: fe-saponitemg  fe-saponitem
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: fe-saponitem
+Name truncation: fe-saponitena to fe-saponiten
+New name and truncation added: fe-saponitena  fe-saponiten
+Alias used for : h+ to h+1
+Convert minerals: fe-saponiten
+Alias used for : h+ to h+1
+Convert minerals: fesio3glass
+Convert minerals: feso4:7h2o
+Alias used for : fluorapatite(natur) to fluora_natur
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: fluora_natur
+Alias used for : fluorapatite(pp) to fluor(pp)
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: fluor(pp)
+Alias used for : fluorapatite(synth) to fluor(synth)
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: fluor(synth)
+Alias used for : ca++ to ca+2
+Convert minerals: fluorite
+Alias used for : fluorphlogopite to fluorphlogop
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: fluorphlogop
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: forsterite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: foshagite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: friedel_salt
+Convert minerals: galena
+Alias used for : h+ to h+1
+Convert minerals: gaooh
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: gaylussite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: gehlenite
+Alias used for : h+ to h+1
+Convert minerals: gibbsite
+Alias used for : h+ to h+1
+Convert minerals: gibbsite_am
+Alias used for : h+ to h+1
+Convert minerals: gibbsite_mc
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: gismondine
+Convert minerals: glaserite
+Alias used for : ca++ to ca+2
+Convert minerals: glauberite
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: glaucophane
+Alias used for : h+ to h+1
+Convert minerals: goethite_b
+Alias used for : h+ to h+1
+Convert minerals: goethite
+Alias used for : h+ to h+1
+Convert minerals: gold
+Alias used for : h+ to h+1
+Convert minerals: greenalite
+Convert minerals: greenockite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: grossular
+Alias used for : h+ to h+1
+Convert minerals: grunerite
+Alias used for : ca++ to ca+2
+Convert minerals: gypsum
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: gyrolite
+Convert minerals: halite
+Alias used for : h+ to h+1
+Convert minerals: halloysite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: hedenbergite
+Name truncation: hematite,alpha to hematite,alp
+New name and truncation added: hematite,alpha  hematite,alp
+Alias used for : h+ to h+1
+Convert minerals: hematite,alp
+Name truncation: hematite,beta to hematite,bet
+New name and truncation added: hematite,beta  hematite,bet
+Alias used for : h+ to h+1
+Convert minerals: hematite,bet
+Name truncation: hematite,gamma to hematite,gam
+New name and truncation added: hematite,gamma  hematite,gam
+Alias used for : h+ to h+1
+Convert minerals: hematite,gam
+Alias used for : hemicarboaluminate to hemicarboalu
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: hemicarboalu
+Name truncation: hemihydroxichloride_ca to hemihydroxic
+New name and truncation added: hemihydroxichloride_ca  hemihydroxic
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: hemihydroxic
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: heulandite
+Name truncation: heulandite_hatches to heulandite_h
+New name and truncation added: heulandite_hatches  heulandite_h
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: heulandite_h
+Alias used for : mg++ to mg+2
+Convert minerals: hexahydrite
+Alias used for : h+ to h+1
+Convert minerals: hg2so4
+Alias used for : hilgenstockite to hilgenstocki
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: hilgenstocki
+Alias used for : hillebrandite to hillebrandit
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: hillebrandit
+Alias used for : h+ to h+1
+Convert minerals: hinsdalite
+Name truncation: hopeite,alpha to hopeite,alph
+New name and truncation added: hopeite,alpha  hopeite,alph
+Alias used for : h+ to h+1
+Convert minerals: hopeite,alph
+Alias used for : h+ to h+1
+Convert minerals: hopeite,beta
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Alias used for : mg++ to mg+2
+Convert minerals: huntite
+Alias used for : hydrocerussite to hydrocerussi
+Alias used for : h+ to h+1
+Convert minerals: hydrocerussi
+Alias used for : hydromagnesite to hydromagnesi
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: hydromagnesi
+Alias used for : ca++ to ca+2
+Convert minerals: hydrophilite
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: hydrotalcite
+Name truncation: hydrotalcite-co3 to hydrotalcite
+New name and truncation added: hydrotalcite-co3  hydrotalcite
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: hydrotalcite
+Name truncation: hydroxichloride_ca to hydroxichlor
+New name and truncation added: hydroxichloride_ca  hydroxichlor
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: hydroxichlor
+Alias used for : hydroxichloride_ca:13h2o to hde_ca:13h2o
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: hde_ca:13h2o
+Alias used for : hydroxichloride_ca:h2o to hde_ca:h2o
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: hde_ca:h2o
+Alias used for : hydroxichloride_mg:4h2o to hde_mg:4h2o
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: hde_mg:4h2o
+Alias used for : hydroxy_apatite(natur) to hydro_apa_na
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: hydro_apa_na
+Alias used for : hydroxy_apatite(pp) to hydro_apa_pp
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: hydro_apa_pp
+Alias used for : hydroxy_apatite(synth) to hydro_apa_sy
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: hydro_apa_sy
+Name truncation: hydroxy_pyromorphite to hydroxy_pyro
+New name and truncation added: hydroxy_pyromorphite  hydroxy_pyro
+Alias used for : h+ to h+1
+Convert minerals: hydroxy_pyro
+Name truncation: i/s_iscz-1_2.966h2o to i/s_iscz-1_2
+New name and truncation added: i/s_iscz-1_2.966h2o  i/s_iscz-1_2
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: i/s_iscz-1_2
+Name truncation: i/s_iscz-1_des to i/s_iscz-1_d
+New name and truncation added: i/s_iscz-1_des  i/s_iscz-1_d
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: i/s_iscz-1_d
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: illite_imt--
+Alias used for : h+ to h+1
+Convert minerals: illite-al
+Alias used for : h+ to h+1
+Convert minerals: illite-feii
+Alias used for : h+ to h+1
+Convert minerals: illite-feiii
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: illite-mg
+Alias used for : h+ to h+1
+Convert minerals: imenite
+Alias used for : h+ to h+1
+Switch master variable to o2(aq) for iron
+aklog before converting:
+   12.9284500000000        12.9284500000000        12.9284500000000     
+   12.9284500000000        12.9284500000000        12.9284500000000     
+   12.9284500000000        12.9284500000000     
+aklog after converting:
+   63.3720500000000        59.0003500000000        53.8684500000000     
+   49.0707500000000        44.2254500000000        40.2934500000000     
+   37.0138500000000        34.1965500000000     
+Stoichiometry coefficient before converting:
+h2o        0.0000000000000000
+h2(aq)        1.0000000000000000
+o2(aq)        0.0000000000000000
+Stoichiometry coefficient after converting:
+h2o       -0.5000000000000000
+h2(aq)        0.0000000000000000
+o2(aq)       -0.5000000000000000
+Convert minerals: iron
+Alias used for : h+ to h+1
+Convert minerals: jacobsite
+Alias used for : h+ to h+1
+Convert minerals: jadeite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: jaffeite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: jennite
+Alias used for : h+ to h+1
+Convert minerals: k,element
+Alias used for : h+ to h+1
+Convert minerals: k_feldspar
+Alias used for : h+ to h+1
+Convert minerals: k2co3
+Alias used for : h+ to h+1
+Convert minerals: k2o
+Alias used for : h+ to h+1
+Convert minerals: k2sio3glass
+Alias used for : k2so4.feso4:6h2o to k2so4.feso4:
+Convert minerals: k2so4.feso4:
+Alias used for : mg++ to mg+2
+Convert minerals: kainite
+Convert minerals: kalicinite
+Name truncation: kalsilite,alpha to kalsilite,al
+New name and truncation added: kalsilite,alpha  kalsilite,al
+Alias used for : h+ to h+1
+Convert minerals: kalsilite,al
+Name truncation: kalsilite,beta to kalsilite,be
+New name and truncation added: kalsilite,beta  kalsilite,be
+Alias used for : h+ to h+1
+Convert minerals: kalsilite,be
+Alias used for : h+ to h+1
+Convert minerals: kaolinite
+Alias used for : h+ to h+1
+Convert minerals: kaolinite_b
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: katoitesi1
+Alias used for : h+ to h+1
+Convert minerals: k-carbonate
+Name truncation: kcl.mgcl2.6h2o to kcl.mgcl2.6h
+New name and truncation added: kcl.mgcl2.6h2o  kcl.mgcl2.6h
+Alias used for : mg++ to mg+2
+Convert minerals: kcl.mgcl2.6h
+Convert minerals: kh2po4
+Alias used for : mg++ to mg+2
+Convert minerals: kieserite
+Alias used for : h+ to h+1
+Convert minerals: k-trona
+Alias used for : h+ to h+1
+Convert minerals: kyanite
+Alias used for : h+ to h+1
+Convert minerals: la2o3glass
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: lansfordite
+Name truncation: larnite,alpha to larnite,alph
+New name and truncation added: larnite,alpha  larnite,alph
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: larnite,alph
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: larnite,beta
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: larnite_l
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: laumontite
+Alias used for : h+ to h+1
+Convert minerals: laurite
+Name truncation: lawsonite,alpha to lawsonite,al
+New name and truncation added: lawsonite,alpha  lawsonite,al
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: lawsonite,al
+Name truncation: lawsonite,beta to lawsonite,be
+New name and truncation added: lawsonite,beta  lawsonite,be
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: lawsonite,be
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: leonhardite
+Alias used for : mg++ to mg+2
+Convert minerals: leonhardtite
+Alias used for : mg++ to mg+2
+Convert minerals: leonite
+Alias used for : lepidocrocite to lepidocrocit
+Alias used for : h+ to h+1
+Convert minerals: lepidocrocit
+Alias used for : h+ to h+1
+Convert minerals: li2sio3glass
+Alias used for : h+ to h+1
+Convert minerals: libenthenite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: lime
+Alias used for : h+ to h+1
+Convert minerals: litharge
+Name truncation: maghemite_disordered to maghemite_di
+New name and truncation added: maghemite_disordered  maghemite_di
+Alias used for : h+ to h+1
+Convert minerals: maghemite_di
+Name truncation: maghemite_ordered to maghemite_or
+New name and truncation added: maghemite_ordered  maghemite_or
+Alias used for : h+ to h+1
+Convert minerals: maghemite_or
+Alias used for : magnesioferrite to magnesioferr
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: magnesioferr
+Alias used for : magnesite(natur) to magnesite(na
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: magnesite(na
+Alias used for : magnesite(synth) to magnesite(sy
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: magnesite(sy
+Name truncation: magnetite,alpha to magnetite,al
+New name and truncation added: magnetite,alpha  magnetite,al
+Alias used for : h+ to h+1
+Convert minerals: magnetite,al
+Name truncation: magnetite,beta to magnetite,be
+New name and truncation added: magnetite,beta  magnetite,be
+Alias used for : h+ to h+1
+Convert minerals: magnetite,be
+Alias used for : h+ to h+1
+Convert minerals: malachite
+Alias used for : h+ to h+1
+Convert minerals: manganosite
+Name truncation: margarite,alpha to margarite,al
+New name and truncation added: margarite,alpha  margarite,al
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: margarite,al
+Name truncation: margarite,beta to margarite,be
+New name and truncation added: margarite,beta  margarite,be
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: margarite,be
+Alias used for : h+ to h+1
+Convert minerals: mercallite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Alias used for : mg++ to mg+2
+Convert minerals: merwinite
+Convert minerals: metacinnabar
+Alias used for : mg++ to mg+2
+Convert minerals: mg(so3):6h2o
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: mg,element
+Alias used for : mg3(po4)2:22h2o to mg3(po4)2:22
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: mg3(po4)2:22
+Alias used for : mgcl2.fecl2:8h2o to mgcl2.fecl2:
+Alias used for : mg++ to mg+2
+Convert minerals: mgcl2.fecl2:
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: mghpo4
+Alias used for : mg-montmorillonite-ca to mg-montmoril
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Alias used for : mg++ to mg+2
+Convert minerals: mg-montmoril
+Alias used for : mg-montmo-ca_b to mg-montmo-ca
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Alias used for : mg++ to mg+2
+Convert minerals: mg-montmo-ca
+Alias used for : mg-montmorillonite-k to mg-montmo-k
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: mg-montmo-k
+Alias used for : mg-montmorillonite-mg to mg-montmo-mg
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: mg-montmo-mg
+Alias used for : mg-montmorillonite-na to mg-montmo-na
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: mg-montmo-na
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: mgsio3glass
+Alias used for : mg++ to mg+2
+Convert minerals: mgso4
+Alias used for : h+ to h+1
+Convert minerals: microcline
+Alias used for : h+ to h+1
+Convert minerals: mineralch4
+Name truncation: mineralh2_45b to mineralh2_45
+New name and truncation added: mineralh2_45b  mineralh2_45
+Convert minerals: mineralh2_45
+Name truncation: mineralh2_15b to mineralh2_15
+New name and truncation added: mineralh2_15b  mineralh2_15
+Convert minerals: mineralh2_15
+Name truncation: mineralh2_10b to mineralh2_10
+New name and truncation added: mineralh2_10b  mineralh2_10
+Convert minerals: mineralh2_10
+Convert minerals: mineralh2_5b
+Alias used for : h+ to h+1
+Convert minerals: minnesotaite
+Convert minerals: mirabilite
+Alias used for : h+ to h+1
+Convert minerals: mn3(po4)2
+Alias used for : h+ to h+1
+Convert minerals: mnhpo4
+Alias used for : h+ to h+1
+Convert minerals: mnsio3glass
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: monetite
+Alias used for : monocarboaluminate to monocarboalu
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: monocarboalu
+Alias used for : monohydrocalcite to monohydrocal
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: monohydrocal
+Alias used for : monosulfoaluminate to monosulfoalu
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: monosulfoalu
+Name truncation: monosulfoalu-fe to monosulfoalu
+New name and truncation added: monosulfoalu-fe  monosulfoalu
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: monosulfoalu
+Alias used for : h+ to h+1
+Convert minerals: monteponite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Alias used for : mg++ to mg+2
+Convert minerals: monticellite
+Alias used for : h+ to h+1
+Convert minerals: montroydite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: mordenite
+Alias used for : h+ to h+1
+Convert minerals: moo3glass
+Alias used for : h+ to h+1
+Convert minerals: mullite
+Name truncation: muscovite_desord to muscovite_de
+New name and truncation added: muscovite_desord  muscovite_de
+Alias used for : h+ to h+1
+Convert minerals: muscovite_de
+Name truncation: muscovite_ord to muscovite_or
+New name and truncation added: muscovite_ord  muscovite_or
+Alias used for : h+ to h+1
+Convert minerals: muscovite_or
+Alias used for : h+ to h+1
+Convert minerals: na,element
+Alias used for : h+ to h+1
+Convert minerals: na2co3
+Alias used for : h+ to h+1
+Convert minerals: na2co3:7h2o
+Alias used for : h+ to h+1
+Convert minerals: na2hpo4
+Alias used for : h+ to h+1
+Convert minerals: na2o
+Alias used for : h+ to h+1
+Convert minerals: na2sio3glass
+Alias used for : na2so4.feso4:4h2o to na2so4.feso4
+Convert minerals: na2so4.feso4
+Alias used for : h+ to h+1
+Convert minerals: na3po4
+Convert minerals: nah2po4
+Convert minerals: nahcolite
+Name truncation: natrolite,alpha to natrolite,al
+New name and truncation added: natrolite,alpha  natrolite,al
+Alias used for : h+ to h+1
+Convert minerals: natrolite,al
+Name truncation: natrolite,beta to natrolite,be
+New name and truncation added: natrolite,beta  natrolite,be
+Alias used for : h+ to h+1
+Convert minerals: natrolite,be
+Alias used for : h+ to h+1
+Convert minerals: natron
+Alias used for : h+ to h+1
+Convert minerals: nd2o3glass
+Alias used for : h+ to h+1
+Convert minerals: nepheline
+Alias used for : nesquehonite,alpha to nesquehoni,a
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: nesquehoni,a
+Alias used for : nesquehonite,beta to nesquehoni,b
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: nesquehoni,b
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: newberyite
+Alias used for : h+ to h+1
+Convert minerals: ni3(po4)2
+Alias used for : h+ to h+1
+Convert minerals: nickel,alpha
+Alias used for : h+ to h+1
+Convert minerals: nickel,beta
+Alias used for : h+ to h+1
+Convert minerals: nisio3glass
+Alias used for : nontronite-ca to nontroniteca
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: nontroniteca
+Alias used for : nontronite-k to nontronitek
+Alias used for : h+ to h+1
+Convert minerals: nontronitek
+Alias used for : nontronite-mg to nontronitemg
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: nontronitemg
+Alias used for : nontronite-na to nontronitena
+Alias used for : h+ to h+1
+Convert minerals: nontronitena
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: okenite
+Alias used for : h+ to h+1
+Convert minerals: orpiment
+Alias used for : h+ to h+1
+Convert minerals: otavite
+Alias used for : h+ to h+1
+Convert minerals: p,element
+Alias used for : h+ to h+1
+Convert minerals: p4o10glass
+Alias used for : h+ to h+1
+Convert minerals: palladium
+Alias used for : h+ to h+1
+Convert minerals: paragonite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Alias used for : mg++ to mg+2
+Convert minerals: pargasite
+Alias used for : h+ to h+1
+Convert minerals: pb,element
+Alias used for : h+ to h+1
+Convert minerals: pb3(po4)2
+Alias used for : h+ to h+1
+Convert minerals: pb4o(po4)2
+Alias used for : h+ to h+1
+Convert minerals: pbhpo4
+Alias used for : h+ to h+1
+Convert minerals: pboglass
+Alias used for : h+ to h+1
+Convert minerals: pbsio3glass
+Alias used for : h+ to h+1
+Convert minerals: pd(oh)2(s)
+Alias used for : h+ to h+1
+Convert minerals: pd4s(s)
+Alias used for : h+ to h+1
+Convert minerals: pdo(s)
+Alias used for : h+ to h+1
+Convert minerals: pds2
+Alias used for : mg++ to mg+2
+Convert minerals: pentahydrite
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: periclase
+Alias used for : phillipsiteca,alpha to phillip_ca,a
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: phillip_ca,a
+Alias used for : phillipsiteca,beta to phillip_ca,b
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: phillip_ca,b
+Alias used for : phillipsitek,alpha to phillipsit,a
+Alias used for : h+ to h+1
+Convert minerals: phillipsit,a
+Alias used for : phillipsitek,beta to phillipsit,b
+Alias used for : h+ to h+1
+Convert minerals: phillipsit,b
+Alias used for : phillipsitena,alpha to phillip_na_a
+Alias used for : h+ to h+1
+Convert minerals: phillip_na_a
+Alias used for : phillipsitena,beta to phillip_na_b
+Alias used for : h+ to h+1
+Convert minerals: phillip_na_b
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: phlogopite
+Alias used for : mg++ to mg+2
+Convert minerals: picromerite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: pirssonite
+Alias used for : h+ to h+1
+Convert minerals: platinum
+Alias used for : plumbogummite to plumbogummit
+Alias used for : h+ to h+1
+Convert minerals: plumbogummit
+Alias used for : ca++ to ca+2
+Alias used for : mg++ to mg+2
+Convert minerals: polyhalite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: portlandite
+Name truncation: potassium_oxide to potassium_ox
+New name and truncation added: potassium_oxide  potassium_ox
+Alias used for : h+ to h+1
+Convert minerals: potassium_ox
+Name truncation: prehnite,alpha to prehnite,alp
+New name and truncation added: prehnite,alpha  prehnite,alp
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: prehnite,alp
+Name truncation: prehnite,beta to prehnite,bet
+New name and truncation added: prehnite,beta  prehnite,bet
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: prehnite,bet
+Alias used for : pseudomalachite to pseudomalach
+Alias used for : h+ to h+1
+Convert minerals: pseudomalach
+Alias used for : h+ to h+1
+Convert minerals: pts2(s)
+Alias used for : h+ to h+1
+Convert minerals: pyrite
+Alias used for : h+ to h+1
+Convert minerals: pyromorphite
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: pyrope,alpha
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: pyrope,beta
+Alias used for : h+ to h+1
+Convert minerals: pyrophyllite
+Name truncation: pyrrhotite,alpha to pyrrhotite,a
+New name and truncation added: pyrrhotite,alpha  pyrrhotite,a
+Convert minerals: pyrrhotite,a
+Name truncation: pyrrhotite,beta to pyrrhotite,b
+New name and truncation added: pyrrhotite,beta  pyrrhotite,b
+Convert minerals: pyrrhotite,b
+Name truncation: pyrrhotite,gamma to pyrrhotite,g
+New name and truncation added: pyrrhotite,gamma  pyrrhotite,g
+Convert minerals: pyrrhotite,g
+Convert minerals: quartz_alpha
+Convert minerals: quartz,beta
+Alias used for : h+ to h+1
+Convert minerals: rb2sio3glass
+Alias used for : h+ to h+1
+Convert minerals: realgar
+Alias used for : h+ to h+1
+Convert minerals: rh2o(s)
+Alias used for : h+ to h+1
+Convert minerals: rh2o3(s)
+Alias used for : h+ to h+1
+Convert minerals: rhodium
+Alias used for : rhodochrosite to rhodochrosit
+Alias used for : h+ to h+1
+Convert minerals: rhodochrosit
+Name truncation: riebeckite,alpha to riebeckite,a
+New name and truncation added: riebeckite,alpha  riebeckite,a
+Alias used for : h+ to h+1
+Convert minerals: riebeckite,a
+Name truncation: riebeckite,beta to riebeckite,b
+New name and truncation added: riebeckite,beta  riebeckite,b
+Alias used for : h+ to h+1
+Convert minerals: riebeckite,b
+Name truncation: riebeckite,gamma to riebeckite,g
+New name and truncation added: riebeckite,gamma  riebeckite,g
+Alias used for : h+ to h+1
+Convert minerals: riebeckite,g
+Alias used for : h+ to h+1
+Convert minerals: romarchite
+Alias used for : h+ to h+1
+Convert minerals: ruo2(s)
+Alias used for : h+ to h+1
+Convert minerals: ruthenium
+Convert minerals: rutile
+Alias used for : h+ to h+1
+Convert minerals: s,alpha
+Alias used for : h+ to h+1
+Convert minerals: s,beta
+Alias used for : h+ to h+1
+Convert minerals: sanidine
+Alias used for : saponite-ca to saponiteca
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Alias used for : mg++ to mg+2
+Convert minerals: saponiteca
+Alias used for : saponite-k to saponitek
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: saponitek
+Alias used for : saponite-mg to saponitemg
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: saponitemg
+Alias used for : saponite-na to saponitena
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: saponitena
+Convert minerals: sb,element
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: scholzite
+Alias used for : mg++ to mg+2
+Convert minerals: sellaite
+Convert minerals: senarmontite
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: sepiolite
+Alias used for : h+ to h+1
+Convert minerals: siderite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: sideritelt
+Alias used for : h+ to h+1
+Convert minerals: sillimanite
+Convert minerals: sio2glass
+Alias used for : smectitemx80_4.183h2o to smectitemx_a
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Alias used for : mg++ to mg+2
+Convert minerals: smectitemx_a
+Alias used for : smectitemx80_5.441h2o to smectitemx_b
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Alias used for : mg++ to mg+2
+Convert minerals: smectitemx_b
+Alias used for : smectitemx80_des to smectitemx_c
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Alias used for : mg++ to mg+2
+Convert minerals: smectitemx_c
+Alias used for : h+ to h+1
+Convert minerals: smithsonite
+Alias used for : h+ to h+1
+Convert minerals: snoglass
+Alias used for : h+ to h+1
+Convert minerals: sodium_oxide
+Alias used for : h+ to h+1
+Convert minerals: spencerite
+Alias used for : spessartine,alpha to spessartin,a
+Alias used for : h+ to h+1
+Convert minerals: spessartin,a
+Alias used for : spessartine,beta to spessartin,b
+Alias used for : h+ to h+1
+Convert minerals: spessartin,b
+Convert minerals: sphalerite
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: spinel
+Alias used for : h+ to h+1
+Convert minerals: sr(oh)2
+Alias used for : h+ to h+1
+Convert minerals: sr(oh)2:8h2o
+Alias used for : h+ to h+1
+Convert minerals: sr,element
+Alias used for : h+ to h+1
+Convert minerals: sr2sio4
+Alias used for : h+ to h+1
+Convert minerals: sr3(po4)2
+Alias used for : h+ to h+1
+Convert minerals: sr5(p4)3(oh)
+Convert minerals: srcl2
+Convert minerals: srcl2:2h2o
+Convert minerals: srcl2:6h2o
+Convert minerals: srcl2:h2o
+Convert minerals: srcro4
+Alias used for : h+ to h+1
+Convert minerals: srhpo4
+Alias used for : h+ to h+1
+Convert minerals: sro
+Convert minerals: srs
+Alias used for : h+ to h+1
+Convert minerals: srsio3
+Alias used for : h+ to h+1
+Convert minerals: srsio3glass
+Alias used for : h+ to h+1
+Convert minerals: staurolite
+Alias used for : h+ to h+1
+Convert minerals: stibnite
+Name truncation: stilbite,alpha to stilbite,alp
+New name and truncation added: stilbite,alpha  stilbite,alp
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: stilbite,alp
+Name truncation: stilbite,beta to stilbite,bet
+New name and truncation added: stilbite,beta  stilbite,bet
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: stilbite,bet
+Alias used for : straetlingite to straetlingit
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: straetlingit
+Alias used for : h+ to h+1
+Convert minerals: strengite
+Alias used for : h+ to h+1
+Convert minerals: strontianite
+Convert minerals: sylvite
+Alias used for : ca++ to ca+2
+Convert minerals: syngenite
+Alias used for : ca++ to ca+2
+Alias used for : mg++ to mg+2
+Convert minerals: tachyhydrite
+Alias used for : h+ to h+1
+Alias used for : mg++ to mg+2
+Convert minerals: talc
+Alias used for : h+ to h+1
+Convert minerals: tarbuttite
+Alias used for : h+ to h+1
+Convert minerals: tenorite
+Convert minerals: thenardite
+Alias used for : thermonatrite to thermonatrit
+Alias used for : h+ to h+1
+Convert minerals: thermonatrit
+Alias used for : h+ to h+1
+Convert minerals: tho2glass
+Alias used for : h+ to h+1
+Convert minerals: thorianite
+Alias used for : h+ to h+1
+Convert minerals: tin,alpha
+Alias used for : h+ to h+1
+Convert minerals: tin,beta
+Convert minerals: tio2glass
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: titanite
+Alias used for : tobermorite_11a to tobermo(11a)
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: tobermo(11a)
+Alias used for : tobermorite_14a to tobermo(14a)
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: tobermo(14a)
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Alias used for : mg++ to mg+2
+Convert minerals: tremolite
+Convert minerals: troilite
+Alias used for : h+ to h+1
+Convert minerals: trona
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: truscottite
+Alias used for : h+ to h+1
+Convert minerals: tsumebite
+Alias used for : h+ to h+1
+Convert minerals: u3o8
+Alias used for : h+ to h+1
+Convert minerals: ulvospinel
+Alias used for : h+ to h+1
+Convert minerals: uo3,gamma
+Alias used for : h+ to h+1
+Convert minerals: uo3glass
+Alias used for : h+ to h+1
+Convert minerals: uraninite
+Alias used for : h+ to h+1
+Convert minerals: usio4glass
+Convert minerals: valentinite
+Alias used for : h+ to h+1
+Convert minerals: variscite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: vaterite
+Alias used for : h+ to h+1
+Convert minerals: vivianite
+Convert minerals: vysotskite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: wairakite
+Alias used for : h+ to h+1
+Convert minerals: wavellite
+Alias used for : whitlockite_high to whitloc_high
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: whitloc_high
+Alias used for : whitlockite_low to whitloc_low
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: whitloc_low
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: wollastonite
+Convert minerals: wurtzite
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: xonotlite
+Alias used for : h+ to h+1
+Convert minerals: zincite
+Name truncation: zn_rockbridgite to zn_rockbridg
+New name and truncation added: zn_rockbridgite  zn_rockbridg
+Alias used for : h+ to h+1
+Convert minerals: zn_rockbridg
+Alias used for : h+ to h+1
+Convert minerals: zn3(po4)2
+Alias used for : zn3(po4)2:2h2o to zn3(po4)2:2h
+Alias used for : h+ to h+1
+Convert minerals: zn3(po4)2:2h
+Alias used for : zn3(po4)2:h2o to zn3(po4)2:h2
+Alias used for : h+ to h+1
+Convert minerals: zn3(po4)2:h2
+Alias used for : h+ to h+1
+Convert minerals: zn5(po4)3cl
+Alias used for : h+ to h+1
+Convert minerals: zn5(po4)3oh
+Alias used for : h+ to h+1
+Convert minerals: znhpo4
+Alias used for : h+ to h+1
+Convert minerals: znsio3glass
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: zoisite
+Alias used for : h+ to h+1
+Convert minerals: hg,l
+Name truncation: cj4-glass-fe3 to cj4-glass-fe
+New name and truncation added: cj4-glass-fe3  cj4-glass-fe
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: cj4-glass-fe
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: cj4-glass
+Alias used for : h+ to h+1
+Alias used for : ca++ to ca+2
+Convert minerals: cj3-glass
+Sort data by ascending lexical order.
+Sort min3p species data...
+End of sorting min3p species data.
+Sort min3p complexation reaction data...
+Sort components for ag(co3)-
+Sort components for ag(co3)2---
+Sort components for ag(hs)2-
+Sort components for ag(oh)2-
+Sort components for ag++
+Sort components for agcl(aq)
+Sort components for agcl2-
+Sort components for agcl3--
+Sort components for agcl4---
+Sort components for agf(aq)
+Sort components for aghs(aq)
+Sort components for agno3(aq)
+Sort components for ago-
+Sort components for agoh(aq)
+Sort components for al(oh)2+
+Sort components for al(oh)2f(aq)
+Sort components for al(oh)2f2-
+Sort components for alf++
+Sort components for alf2+
+Sort components for alf3(aq)
+Sort components for alf4-
+Sort components for alh2po4++
+Sort components for alh3sio4++
+Sort components for alhpo4+
+Sort components for alo2-
+Sort components for aloh++
+Sort components for alohf2(aq)
+Sort components for also4+
+Sort components for as(oh)3(aq)
+Sort components for ash3(aq)
+Sort components for au(hs)2-
+Sort components for au(oh)2-
+Sort components for au+++
+Sort components for aucl(aq)
+Sort components for aucl2-
+Sort components for aucl3--
+Sort components for aucl4-
+Sort components for auhs(aq)
+Sort components for auoh(aq)
+Sort components for b(oh)4-
+Sort components for ba(co3)(aq)
+Sort components for ba(hco3)+
+Sort components for bacl+
+Sort components for baco3(aq)
+Sort components for baf+
+Sort components for baoh+
+Sort components for becl+
+Sort components for becl2(aq)
+Sort components for bef+
+Sort components for bef2(aq)
+Sort components for bef3-
+Sort components for bef4--
+Sort components for beo(aq)
+Sort components for beo2--
+Sort components for beoh+
+Sort components for bf4-
+Sort components for bio+
+Sort components for bio2-
+Sort components for bioh++
+Sort components for br3-
+Sort components for bro-
+Sort components for bro3-
+Sort components for bro4-
+Sort components for ca(hco3)+
+Sort components for cacl+
+Sort components for cacl2(aq)
+Sort components for caco3(aq)
+Sort components for caf+
+Sort components for cah2po4+
+Sort components for cahpo4(aq)
+Sort components for caoh+
+Sort components for cap2o7--
+Sort components for capo4-
+Sort components for caso4(aq)
+Sort components for cd(co3)2--
+Sort components for cd(h2po4)+
+Sort components for cd(hs)2
+Sort components for cd(so4)2--
+Sort components for cd2oh+++
+Sort components for cd4(oh)4++++
+Sort components for cdcl+
+Sort components for cdcl2(aq)
+Sort components for cdcl3-
+Sort components for cdcl4--
+Sort components for cdco3(aq)
+Sort components for cdf+
+Sort components for cdf2(aq)
+Sort components for cdhco3+
+Sort components for cdhpo4
+Sort components for cdhs+
+Sort components for cdo(aq)
+Sort components for cdo2--
+Sort components for cdoh+
+Sort components for cdp2o7--
+Sort components for cds2o3
+Sort components for cdso4(aq)
+Sort components for ce++
+Sort components for ce++++
+Sort components for cebr++
+Sort components for cecl++
+Sort components for cecl2+
+Sort components for cecl3(aq)
+Sort components for cecl4-
+Sort components for ceclo4++
+Sort components for ceco3+
+Sort components for cef++
+Sort components for cef2+
+Sort components for cef3(aq)
+Sort components for cef4-
+Sort components for ceh2po4++
+Sort components for cehco3++
+Sort components for ceio3++
+Sort components for ceno3++
+Sort components for ceo+
+Sort components for ceo2-
+Sort components for ceo2h(aq)
+Sort components for ceoh++
+Sort components for ceso4+
+Sort components for cf4(aq)
+Sort components for ch4(aq)
+Sort components for cl2(aq)
+Sort components for clo-
+Sort components for clo2(aq)
+Sort components for clo2-
+Sort components for clo3-
+Sort components for clo4-
+Sort components for cn-
+Sort components for co(aq)
+Sort components for co+++
+Sort components for co2(aq)
+Sort components for co2oh+++
+Sort components for co3--
+Sort components for co4(oh)4++++
+Sort components for cocl+
+Sort components for cof+
+Sort components for coo(aq)
+Sort components for coo+
+Sort components for coo2--
+Sort components for cooh+
+Sort components for cr++
+Sort components for cr+++
+Sort components for cr2(oh)2++++
+Sort components for cr2o7--
+Sort components for cr3(oh)4+5
+Sort components for crh2po4++
+Sort components for crhpo4+
+Sort components for cro+
+Sort components for cro2-
+Sort components for croh++
+Sort components for csbr(aq)
+Sort components for cscl(aq)
+Sort components for csi(aq)
+Sort components for csoh(aq)
+Sort components for cu(hs)2-
+Sort components for cu(oh)2-
+Sort components for cu+
+Sort components for cucl(aq)
+Sort components for cucl+
+Sort components for cucl2(aq)
+Sort components for cucl2-
+Sort components for cucl3-
+Sort components for cucl3--
+Sort components for cucl4--
+Sort components for cucl4---
+Sort components for cuf+
+Sort components for cuh2po4+
+Sort components for cuhpo4(aq)
+Sort components for cuhs(aq)
+Sort components for cuo(aq)
+Sort components for cuo2--
+Sort components for cuoh(aq)
+Sort components for cuoh+
+Sort components for cupo4-
+Sort components for dy++
+Sort components for dy++++
+Sort components for dycl++
+Sort components for dycl2+
+Sort components for dycl3(aq)
+Sort components for dycl4-
+Sort components for dyco3+
+Sort components for dyf++
+Sort components for dyf2+
+Sort components for dyf3(aq)
+Sort components for dyf4-
+Sort components for dyh2po4++
+Sort components for dyhco3++
+Sort components for dyno3++
+Sort components for dyo+
+Sort components for dyo2-
+Sort components for dyo2h(aq)
+Sort components for dyoh++
+Sort components for dyso4+
+Sort components for er++
+Sort components for er++++
+Sort components for ercl++
+Sort components for ercl2+
+Sort components for ercl3(aq)
+Sort components for ercl4-
+Sort components for erco3+
+Sort components for erf++
+Sort components for erf2+
+Sort components for erf3(aq)
+Sort components for erf4-
+Sort components for erh2po4++
+Sort components for erhco3++
+Sort components for erno3++
+Sort components for ero+
+Sort components for ero2-
+Sort components for ero2h(aq)
+Sort components for eroh++
+Sort components for erso4+
+Sort components for eu++
+Sort components for eu++++
+Sort components for eucl+
+Sort components for eucl++
+Sort components for eucl2(aq)
+Sort components for eucl2+
+Sort components for eucl3(aq)
+Sort components for eucl3-
+Sort components for eucl4-
+Sort components for eucl4--
+Sort components for euco3+
+Sort components for euf+
+Sort components for euf++
+Sort components for euf2(aq)
+Sort components for euf2+
+Sort components for euf3(aq)
+Sort components for euf3-
+Sort components for euf4-
+Sort components for euf4--
+Sort components for euh2po4++
+Sort components for euhco3++
+Sort components for euno3++
+Sort components for euo+
+Sort components for euo2-
+Sort components for euo2h(aq)
+Sort components for euoh++
+Sort components for euso4+
+Sort components for fe(co3)2-
+Sort components for fe(co3)2--
+Sort components for fe+++
+Sort components for fecl+
+Sort components for fecl++
+Sort components for fecl2(aq)
+Sort components for fecl2+
+Sort components for feco3(aq)
+Sort components for feco3+
+Sort components for feco3oh-
+Sort components for fef+
+Sort components for fef++
+Sort components for feh2po4+
+Sort components for feh2po4++
+Sort components for fehco3+
+Sort components for fehpo4(aq)
+Sort components for fehpo4+
+Sort components for feo
+Sort components for feo+
+Sort components for feo2-
+Sort components for feo2--
+Sort components for feoh+
+Sort components for feoh++
+Sort components for fepo4-
+Sort components for feso4(aq)
+Sort components for feso4+
+Sort components for ga(oh)2+
+Sort components for ga(oh)3(aq)
+Sort components for ga(oh)4-
+Sort components for gaoh++
+Sort components for gd++
+Sort components for gd++++
+Sort components for gdcl++
+Sort components for gdcl2+
+Sort components for gdcl3(aq)
+Sort components for gdcl4-
+Sort components for gdco3+
+Sort components for gdf++
+Sort components for gdf2+
+Sort components for gdf3(aq)
+Sort components for gdf4-
+Sort components for gdh2po4++
+Sort components for gdhco3++
+Sort components for gdno3++
+Sort components for gdo+
+Sort components for gdo2-
+Sort components for gdo2h(aq)
+Sort components for gdoh++
+Sort components for gdso4+
+Sort components for geo(oh)3-
+Sort components for h2(aq)
+Sort components for h2as3s6-
+Sort components for h2aso3-
+Sort components for h2n2o2(aq)
+Sort components for h2p2o7--
+Sort components for h2po2-
+Sort components for h2po3-
+Sort components for h2po3f(aq)
+Sort components for h2s(aq)
+Sort components for h2s2o3(aq)
+Sort components for h2s2o4(aq)
+Sort components for h2sb2s4(aq)
+Sort components for h2seo3(aq)
+Sort components for h2sio4--
+Sort components for h2so3(aq)
+Sort components for h2vo4-
+Sort components for h3as3s6(aq)
+Sort components for h3aso4(aq)
+Sort components for h3p2o7-
+Sort components for h3po2(aq)
+Sort components for h3po3(aq)
+Sort components for h3po4(aq)
+Sort components for h3vo4(aq)
+Sort components for h4p2o7(aq)
+Sort components for halo2(aq)
+Sort components for has3s6--
+Sort components for hbeo2-
+Sort components for hbio2(aq)
+Sort components for hbro(aq)
+Sort components for hcdo2-
+Sort components for hcl(aq)
+Sort components for hclo(aq)
+Sort components for hclo2(aq)
+Sort components for hcoo2(aq)
+Sort components for hcoo2-
+Sort components for hcro2(aq)
+Sort components for hcro4-
+Sort components for hcuo2-
+Sort components for hf(aq)
+Sort components for hf2-
+Sort components for hfeo2(aq)
+Sort components for hfeo2-
+Sort components for hfo++
+Sort components for hfo2(aq)
+Sort components for hfoh+++
+Sort components for hg(aq)
+Sort components for hg(hs)2(aq)
+Sort components for hg2++
+Sort components for hgcl+
+Sort components for hgcl2(aq)
+Sort components for hgcl3-
+Sort components for hgcl4--
+Sort components for hgf+
+Sort components for hgo(aq)
+Sort components for hgoh+
+Sort components for hgs(hs)-
+Sort components for hhfo2+
+Sort components for hhfo3-
+Sort components for hhgo2-
+Sort components for hino2(aq)
+Sort components for hio(aq)
+Sort components for hio3(aq)
+Sort components for hmno2-
+Sort components for hmoo4-
+Sort components for hn2o2-
+Sort components for hnbo3(aq)
+Sort components for hnio2-
+Sort components for hno2(aq)
+Sort components for hno3(aq)
+Sort components for ho++
+Sort components for ho++++
+Sort components for hocl++
+Sort components for hocl2+
+Sort components for hocl3(aq)
+Sort components for hocl4-
+Sort components for hoco3+
+Sort components for hof++
+Sort components for hof2+
+Sort components for hof3(aq)
+Sort components for hof4-
+Sort components for hoh2po4++
+Sort components for hohco3++
+Sort components for hono3++
+Sort components for hoo+
+Sort components for hoo2-
+Sort components for hoo2h(aq)
+Sort components for hooh++
+Sort components for hoso4+
+Sort components for hp2o7---
+Sort components for hpbo2-
+Sort components for hpo3--
+Sort components for hpo3f-
+Sort components for hpo4--
+Sort components for hs-
+Sort components for hs2o3-
+Sort components for hs2o4-
+Sort components for hsb2s4-
+Sort components for hsco2(aq)
+Sort components for hse-
+Sort components for hseo3-
+Sort components for hseo4-
+Sort components for hsio3-
+Sort components for hsno2-
+Sort components for hso3-
+Sort components for hso4-
+Sort components for hso5-
+Sort components for htlo2(aq)
+Sort components for huo2(aq)
+Sort components for huo2+
+Sort components for huo3-
+Sort components for huo4-
+Sort components for hvo4--
+Sort components for hwo4-
+Sort components for hyo2(aq)
+Sort components for hzno2-
+Sort components for hzro2+
+Sort components for hzro3-
+Sort components for i3-
+Sort components for incl++
+Sort components for inf++
+Sort components for ino+
+Sort components for ino2-
+Sort components for inoh++
+Sort components for io-
+Sort components for io3-
+Sort components for io4-
+Sort components for kalo2(aq)
+Sort components for kbr(aq)
+Sort components for kcl(aq)
+Sort components for kh2po4(aq)
+Sort components for khpo4-
+Sort components for ki(aq)
+Sort components for koh(aq)
+Sort components for kp2o7---
+Sort components for kpo4--
+Sort components for kso4-
+Sort components for la++
+Sort components for lacl++
+Sort components for lacl2+
+Sort components for lacl3(aq)
+Sort components for lacl4-
+Sort components for laco3+
+Sort components for laf++
+Sort components for laf2+
+Sort components for laf3(aq)
+Sort components for laf4-
+Sort components for lah2po4++
+Sort components for lahco3++
+Sort components for lano3++
+Sort components for lao+
+Sort components for lao2-
+Sort components for lao2h(aq)
+Sort components for laoh++
+Sort components for laso4+
+Sort components for licl(aq)
+Sort components for lioh(aq)
+Sort components for lu++++
+Sort components for lucl++
+Sort components for lucl2+
+Sort components for lucl3(aq)
+Sort components for lucl4-
+Sort components for luco3+
+Sort components for luf++
+Sort components for luf2+
+Sort components for luf3(aq)
+Sort components for luf4-
+Sort components for luh2po4++
+Sort components for luhco3++
+Sort components for luno3++
+Sort components for luo+
+Sort components for luo2-
+Sort components for luo2h(aq)
+Sort components for luoh++
+Sort components for luso4+
+Sort components for mg(hco3)+
+Sort components for mg4(oh)4++++
+Sort components for mgcl+
+Sort components for mgco3(aq)
+Sort components for mgf+
+Sort components for mgh2po4+
+Sort components for mghpo4(aq)
+Sort components for mgoh+
+Sort components for mgp2o7--
+Sort components for mgpo4-
+Sort components for mgs2o3(aq)
+Sort components for mgso4(aq)
+Sort components for mn+++
+Sort components for mncl+
+Sort components for mnf+
+Sort components for mnh2po4+
+Sort components for mnhpo4(aq)
+Sort components for mno(aq)
+Sort components for mno2--
+Sort components for mno4-
+Sort components for mno4--
+Sort components for mnoh+
+Sort components for mnpo4-
+Sort components for mnso4(aq)
+Sort components for n2(aq)
+Sort components for n2h5+
+Sort components for n2h6++
+Sort components for n2o(aq)
+Sort components for n2o2--
+Sort components for na2p2o7--
+Sort components for naal(oh)2f2(
+Sort components for naal(oh)3f(a
+Sort components for naalo2(aq)
+Sort components for nab(oh)4(aq)
+Sort components for nabr(aq)
+Sort components for nacl(aq)
+Sort components for naco3-
+Sort components for naf(aq)
+Sort components for nah2po4(aq)
+Sort components for nahco3(aq)
+Sort components for nahp2o7--
+Sort components for nahpo4-
+Sort components for nai(aq)
+Sort components for naoh(aq)
+Sort components for nap2o7---
+Sort components for napo4--
+Sort components for nas2o3-
+Sort components for naso4-
+Sort components for nd++
+Sort components for nd++++
+Sort components for ndcl++
+Sort components for ndcl2+
+Sort components for ndcl3(aq)
+Sort components for ndcl4-
+Sort components for ndco3+
+Sort components for ndf++
+Sort components for ndf2+
+Sort components for ndf3(aq)
+Sort components for ndf4-
+Sort components for ndh2po4++
+Sort components for ndhco3++
+Sort components for ndno3++
+Sort components for ndo+
+Sort components for ndo2-
+Sort components for ndo2h(aq)
+Sort components for ndoh++
+Sort components for ndso4+
+Sort components for nf3(aq)
+Sort components for nh4+
+Sort components for nicl+
+Sort components for nif+
+Sort components for nihp2o7-
+Sort components for nio(aq)
+Sort components for nio2--
+Sort components for nioh+
+Sort components for nip2o7--
+Sort components for no(aq)
+Sort components for no2-
+Sort components for no3-
+Sort components for oh-
+Sort components for p2o7----
+Sort components for pb(co3)(aq)
+Sort components for pb(co3)2-2
+Sort components for pb(h2po4)+
+Sort components for pb(hs)2(aq)
+Sort components for pb(hs)3-
+Sort components for pb(so4)2-2
+Sort components for pbcl+
+Sort components for pbcl2(aq)
+Sort components for pbcl3-
+Sort components for pbcl4--
+Sort components for pbf+
+Sort components for pbf2(aq)
+Sort components for pbh2po4+
+Sort components for pbhco3+
+Sort components for pbhpo4(aq)
+Sort components for pbo(aq)
+Sort components for pboh+
+Sort components for pbp2o7--
+Sort components for pbso4(aq)
+Sort components for pd(so4)2--
+Sort components for pd(so4)3----
+Sort components for pdcl+
+Sort components for pdcl2(aq)
+Sort components for pdcl3-
+Sort components for pdcl4--
+Sort components for pdo(aq)
+Sort components for pdoh+
+Sort components for pdso4(aq)
+Sort components for ph3(aq)
+Sort components for pm++
+Sort components for pm++++
+Sort components for po3f--
+Sort components for po4---
+Sort components for pr++
+Sort components for pr++++
+Sort components for prcl++
+Sort components for prcl2+
+Sort components for prcl3(aq)
+Sort components for prcl4-
+Sort components for prco3+
+Sort components for prf++
+Sort components for prf2+
+Sort components for prf3(aq)
+Sort components for prf4-
+Sort components for prh2po4++
+Sort components for prhco3++
+Sort components for prno3++
+Sort components for pro+
+Sort components for pro2-
+Sort components for pro2h(aq)
+Sort components for proh++
+Sort components for prso4+
+Sort components for pt(so4)2--
+Sort components for pt(so4)3----
+Sort components for ptcl+
+Sort components for ptcl2(aq)
+Sort components for ptcl3-
+Sort components for ptcl4--
+Sort components for pto(aq)
+Sort components for ptoh+
+Sort components for ptso4(aq)
+Sort components for rbbr(aq)
+Sort components for rbcl(aq)
+Sort components for rbf(aq)
+Sort components for rbi(aq)
+Sort components for rboh(aq)
+Sort components for rh(so4)2-
+Sort components for rh(so4)2--
+Sort components for rh(so4)3---
+Sort components for rh(so4)3----
+Sort components for rh+++
+Sort components for rhcl+
+Sort components for rhcl++
+Sort components for rhcl2(aq)
+Sort components for rhcl2+
+Sort components for rhcl3(aq)
+Sort components for rhcl3-
+Sort components for rhcl4-
+Sort components for rhcl4--
+Sort components for rho(aq)
+Sort components for rho+
+Sort components for rhoh+
+Sort components for rhoh++
+Sort components for rhso4(aq)
+Sort components for rhso4+
+Sort components for ru(so4)2-
+Sort components for ru(so4)2--
+Sort components for ru(so4)3---
+Sort components for ru(so4)3----
+Sort components for ru++
+Sort components for ru+++
+Sort components for rucl+
+Sort components for rucl++
+Sort components for rucl2(aq)
+Sort components for rucl2+
+Sort components for rucl3(aq)
+Sort components for rucl3-
+Sort components for rucl4-
+Sort components for rucl4--
+Sort components for rucl5--
+Sort components for rucl6---
+Sort components for ruo(aq)
+Sort components for ruo+
+Sort components for ruoh+
+Sort components for ruoh++
+Sort components for ruso4(aq)
+Sort components for ruso4+
+Sort components for s--
+Sort components for s2--
+Sort components for s2o3--
+Sort components for s2o4--
+Sort components for s2o5--
+Sort components for s2o6--
+Sort components for s2o8--
+Sort components for s3--
+Sort components for s3o6--
+Sort components for s4--
+Sort components for s4o6--
+Sort components for s5--
+Sort components for s5o6--
+Sort components for sb2s4--
+Sort components for scn-
+Sort components for sco+
+Sort components for sco2-
+Sort components for scoh++
+Sort components for secn-
+Sort components for seo4--
+Sort components for sf6(aq)
+Sort components for si2o2(oh)5-
+Sort components for si2o3(oh)4--
+Sort components for si3o5(oh)5-3
+Sort components for si3o6(oh)3-3
+Sort components for si4o12h4----
+Sort components for si4o6(oh)6--
+Sort components for si4o7(oh)6-4
+Sort components for si4o8(oh)4-4
+Sort components for si6o15------
+Sort components for sif6--
+Sort components for sm++
+Sort components for sm++++
+Sort components for smcl++
+Sort components for smcl2+
+Sort components for smcl3(aq)
+Sort components for smcl4-
+Sort components for smco3+
+Sort components for smf++
+Sort components for smf2+
+Sort components for smf3(aq)
+Sort components for smf4-
+Sort components for smh2po4++
+Sort components for smhco3++
+Sort components for smno3++
+Sort components for smo+
+Sort components for smo2-
+Sort components for smo2h(aq)
+Sort components for smoh++
+Sort components for smso4+
+Sort components for sno(aq)
+Sort components for snoh+
+Sort components for so2(aq)
+Sort components for so3--
+Sort components for sr(co3)(aq)
+Sort components for sr(hco3)+
+Sort components for srcl+
+Sort components for srf+
+Sort components for srh2po4+
+Sort components for srhpo4(aq)
+Sort components for sroh+
+Sort components for srp2o7--
+Sort components for srpo4-
+Sort components for srso4(aq)
+Sort components for tb++
+Sort components for tb++++
+Sort components for tbcl++
+Sort components for tbcl2+
+Sort components for tbcl3(aq)
+Sort components for tbcl4-
+Sort components for tbco3+
+Sort components for tbf++
+Sort components for tbf2+
+Sort components for tbf3(aq)
+Sort components for tbf4-
+Sort components for tbh2po4++
+Sort components for tbhco3++
+Sort components for tbno3++
+Sort components for tbo+
+Sort components for tbo2-
+Sort components for tbo2h(aq)
+Sort components for tboh++
+Sort components for tbso4+
+Sort components for tl+++
+Sort components for tlcl(aq)
+Sort components for tlcl++
+Sort components for tlf(aq)
+Sort components for tlo+
+Sort components for tlo2-
+Sort components for tloh(aq)
+Sort components for tloh++
+Sort components for tm++
+Sort components for tm++++
+Sort components for tmcl++
+Sort components for tmcl2+
+Sort components for tmcl3(aq)
+Sort components for tmcl4-
+Sort components for tmco3+
+Sort components for tmf++
+Sort components for tmf2+
+Sort components for tmf3(aq)
+Sort components for tmf4-
+Sort components for tmh2po4++
+Sort components for tmhco3++
+Sort components for tmno3++
+Sort components for tmo+
+Sort components for tmo2-
+Sort components for tmo2h(aq)
+Sort components for tmoh++
+Sort components for tmso4+
+Sort components for u(oh)+++
+Sort components for u+++
+Sort components for u++++
+Sort components for uo+
+Sort components for uo++
+Sort components for uo2(aq)
+Sort components for uo2+
+Sort components for uo2oh(aq)
+Sort components for uo2oh+
+Sort components for uo3(aq)
+Sort components for uo3-
+Sort components for uo4--
+Sort components for uoh++
+Sort components for v++
+Sort components for v+++
+Sort components for vo+
+Sort components for vo2+
+Sort components for vo4---
+Sort components for voh+
+Sort components for voh++
+Sort components for vooh+
+Sort components for yb++
+Sort components for yb++++
+Sort components for ybcl++
+Sort components for ybcl2+
+Sort components for ybcl3(aq)
+Sort components for ybcl4-
+Sort components for ybco3+
+Sort components for ybf++
+Sort components for ybf2+
+Sort components for ybf3(aq)
+Sort components for ybf4-
+Sort components for ybh2po4++
+Sort components for ybhco3++
+Sort components for ybno3++
+Sort components for ybo+
+Sort components for ybo2-
+Sort components for ybo2h(aq)
+Sort components for yboh++
+Sort components for ybso4+
+Sort components for yo+
+Sort components for yo2-
+Sort components for yoh++
+Sort components for zncl+
+Sort components for zncl2(aq)
+Sort components for zncl3-
+Sort components for znf+
+Sort components for znh2po4+
+Sort components for znhpo4(aq)
+Sort components for zno(aq)
+Sort components for zno2--
+Sort components for znoh+
+Sort components for znpo4-
+Sort components for zr++++
+Sort components for zro2(aq)
+Sort components for zroh+++
+End of sorting min3p complexation reaction data.
+Sort min3p redox reaction data...
+End of sorting min3p redox reaction data.
+Sort min3p gases data...
+Sort components for ar(g)
+Sort components for br2(g)
+Sort components for ch4(g)
+Sort components for cl2(g)
+Sort components for co(g)
+Sort components for co2(g)
+Sort components for f2(g)
+Sort components for h2(g)
+Sort components for h2o(g)
+Sort components for h2s(g)
+Sort components for hcl(g)
+Sort components for he(g)
+Sort components for hg(g)
+Sort components for i2(g)
+Sort components for kr(g)
+Sort components for n2(g)
+Sort components for ne(g)
+Sort components for nh3(g)
+Sort components for o2(g)
+Sort components for s2(g)
+Sort components for so2(g)
+Sort components for xe(g)
+End of sorting min3p gases data.
+Sort min3p minerals data...
+Sort components for 2k2so4.fe2(s
+Sort components for 2kcl.fecl3:h
+Sort components for acanthite,al
+Sort components for acanthite,be
+Sort components for acanthite,ga
+Sort components for aegerine,alp
+Sort components for aegerine,bet
+Sort components for aegerine,gam
+Sort components for afwillite
+Sort components for ag,element
+Sort components for ag2o
+Sort components for akermanite
+Sort components for al,element
+Sort components for al2o3glass
+Sort components for alabandite
+Sort components for albite_high
+Sort components for albite_low
+Sort components for alf3
+Sort components for almandine,al
+Sort components for almandine,be
+Sort components for alunite
+Sort components for amesit_14a_a
+Sort components for amesit_14a_b
+Sort components for amorphous_si
+Sort components for analcime
+Sort components for analcime,deh
+Sort components for andalusite
+Sort components for andradite
+Sort components for anglesite
+Sort components for anhydrite
+Sort components for annite
+Sort components for anorthite
+Sort components for antarcticite
+Sort components for anthophyll_a
+Sort components for anthophyll_b
+Sort components for anthophyll_c
+Sort components for antigorite,a
+Sort components for antigorite,b
+Sort components for aragonite
+Sort components for arcanite
+Sort components for argutite,alp
+Sort components for argutite,bet
+Sort components for arsenic
+Sort components for arsenolite
+Sort components for artinite
+Sort components for augelite
+Sort components for azurite
+Sort components for b(oh)3
+Sort components for b2o3
+Sort components for b2o3glass
+Sort components for bahpo4
+Sort components for barite
+Sort components for basio3glass
+Sort components for bassanite
+Sort components for beidelliteca
+Sort components for beidellitek
+Sort components for beidellitemg
+Sort components for beidellitena
+Sort components for berlinite
+Sort components for berndtite
+Sort components for berthierite
+Sort components for bischofite
+Sort components for bloedite
+Sort components for bobbierite
+Sort components for boehmite
+Sort components for bornite,alph
+Sort components for bornite,beta
+Sort components for bornite,gamm
+Sort components for bromellite
+Sort components for brucite
+Sort components for brushite
+Sort components for bunsenite,al
+Sort components for bunsenite,be
+Sort components for bunsenite,ga
+Sort components for burkeite
+Sort components for c,graphite
+Sort components for c2sha
+Sort components for c3ah6
+Sort components for c3fh6
+Sort components for c4ah13
+Sort components for c4fh13
+Sort components for ca,element
+Sort components for ca4h(po4)3:2
+Sort components for caalh(po4)2:
+Sort components for caal_pyroxen
+Sort components for cacl2:2h2o
+Sort components for cacl2:4h2o
+Sort components for cacl2:h2o
+Sort components for calcite
+Sort components for calomel
+Sort components for carbox1
+Sort components for carnallite
+Sort components for casio3glass
+Sort components for cassiterite
+Sort components for cd(oh)2
+Sort components for cd,element
+Sort components for cd3(po4)2
+Sort components for cd5(po4)3cl
+Sort components for cd5(po4)3oh
+Sort components for cdcl2
+Sort components for cdcl2:2.5h2o
+Sort components for cdcl2:h2o
+Sort components for cdsio3
+Sort components for cdsio3glass
+Sort components for cdso4
+Sort components for cdso4:8/3h2o
+Sort components for ce2o3glass
+Sort components for celadonite
+Sort components for celestite
+Sort components for ceo2glass
+Sort components for cerussite
+Sort components for chabazite
+Sort components for chalcedony
+Sort components for chalcocite,a
+Sort components for chalcocite,b
+Sort components for chalcocite,g
+Sort components for chalcocyanit
+Sort components for chalcopyri,a
+Sort components for chalcopyri,b
+Sort components for chalcopyri,c
+Sort components for chlorapat_th
+Sort components for chlorargyrit
+Sort components for chlorite_cca
+Sort components for chloritoid
+Sort components for chloromagnes
+Sort components for chrysotile
+Sort components for cinnabar
+Sort components for cj3-glass
+Sort components for cj4-glass
+Sort components for cj4-glass-fe
+Sort components for claudetite
+Sort components for clinochlore_
+Sort components for clinozoisite
+Sort components for co(oh)2,blue
+Sort components for co(oh)2,p-pc
+Sort components for co(oh)2,p-wc
+Sort components for co(oh)3
+Sort components for co,element
+Sort components for co2sio4glass
+Sort components for coesite,alph
+Sort components for coesite,beta
+Sort components for cooglass
+Sort components for cooperite
+Sort components for cordierite
+Sort components for cordierite,h
+Sort components for corkite
+Sort components for cornetite
+Sort components for corundum,alp
+Sort components for corundum,gam
+Sort components for covellite
+Sort components for cr2o3glass
+Sort components for crandallite
+Sort components for cristobali,a
+Sort components for cristobali,b
+Sort components for cronstedti,a
+Sort components for cronstedti,b
+Sort components for cronstedti,c
+Sort components for crpo4(green)
+Sort components for crpo4(purple
+Sort components for cs2sio3glass
+Sort components for csh_0.8
+Sort components for csh_1.2
+Sort components for csh_1.6
+Sort components for cu,element
+Sort components for cu3(po4)2
+Sort components for cu3(po4)2:3h
+Sort components for cu5(po4)3cl
+Sort components for cu5(po4)3oh
+Sort components for cummingtonit
+Sort components for cuoglass
+Sort components for cuprite
+Sort components for daphnite_14a
+Sort components for dawsonite
+Sort components for diaspore
+Sort components for dickite
+Sort components for diopside
+Sort components for dolomite
+Sort components for dolomite_dis
+Sort components for dolomite_ord
+Sort components for edenite,alph
+Sort components for edenite,beta
+Sort components for enstatite,al
+Sort components for enstatite,be
+Sort components for enstatite,ga
+Sort components for epidote
+Sort components for epidote,orde
+Sort components for epsomite
+Sort components for ettringite
+Sort components for ettringite_f
+Sort components for farringtonit
+Sort components for faustite
+Sort components for fayalite
+Sort components for fco3apatite
+Sort components for fe(oh)2
+Sort components for fe(oh)3
+Sort components for fe-montmo_ca
+Sort components for fe-montmo_k
+Sort components for fe-montmo_mg
+Sort components for fe-montmo_na
+Sort components for fe-saponitec
+Sort components for fe-saponitek
+Sort components for fe-saponitem
+Sort components for fe-saponiten
+Sort components for fe2o3glass
+Sort components for fecl2:4h2o
+Sort components for fecl3:6h2o
+Sort components for ferrite_mn
+Sort components for ferropargasi
+Sort components for ferrosilit,a
+Sort components for ferrosilit,b
+Sort components for ferrotremoli
+Sort components for ferrous_oxid
+Sort components for fesio3glass
+Sort components for feso4:7h2o
+Sort components for fluor(pp)
+Sort components for fluor(synth)
+Sort components for fluora_natur
+Sort components for fluorite
+Sort components for fluorphlogop
+Sort components for forsterite
+Sort components for foshagite
+Sort components for friedel_salt
+Sort components for galena
+Sort components for gaooh
+Sort components for gaylussite
+Sort components for gehlenite
+Sort components for gibbsite
+Sort components for gibbsite_am
+Sort components for gibbsite_mc
+Sort components for gismondine
+Sort components for glaserite
+Sort components for glauberite
+Sort components for glaucophane
+Sort components for goethite
+Sort components for goethite_b
+Sort components for gold
+Sort components for greenalite
+Sort components for greenockite
+Sort components for grossular
+Sort components for grunerite
+Sort components for gypsum
+Sort components for gyrolite
+Sort components for halite
+Sort components for halloysite
+Sort components for hde_ca:13h2o
+Sort components for hde_ca:h2o
+Sort components for hde_mg:4h2o
+Sort components for hedenbergite
+Sort components for hematite,alp
+Sort components for hematite,bet
+Sort components for hematite,gam
+Sort components for hemicarboalu
+Sort components for hemihydroxic
+Sort components for heulandite
+Sort components for heulandite_h
+Sort components for hexahydrite
+Sort components for hg,l
+Sort components for hg2so4
+Sort components for hilgenstocki
+Sort components for hillebrandit
+Sort components for hinsdalite
+Sort components for hopeite,alph
+Sort components for hopeite,beta
+Sort components for huntite
+Sort components for hydrocerussi
+Sort components for hydromagnesi
+Sort components for hydrophilite
+Sort components for hydrotalcite
+Sort components for hydrotalcite
+Sort components for hydroxichlor
+Sort components for hydroxy_pyro
+Sort components for hydro_apa_na
+Sort components for hydro_apa_pp
+Sort components for hydro_apa_sy
+Sort components for i/s_iscz-1_2
+Sort components for i/s_iscz-1_d
+Sort components for illite-al
+Sort components for illite-feii
+Sort components for illite-feiii
+Sort components for illite-mg
+Sort components for illite_imt--
+Sort components for imenite
+Sort components for iron
+Sort components for jacobsite
+Sort components for jadeite
+Sort components for jaffeite
+Sort components for jennite
+Sort components for k,element
+Sort components for k-carbonate
+Sort components for k-trona
+Sort components for k2co3
+Sort components for k2o
+Sort components for k2sio3glass
+Sort components for k2so4.feso4:
+Sort components for kainite
+Sort components for kalicinite
+Sort components for kalsilite,al
+Sort components for kalsilite,be
+Sort components for kaolinite
+Sort components for kaolinite_b
+Sort components for katoitesi1
+Sort components for kcl.mgcl2.6h
+Sort components for kh2po4
+Sort components for kieserite
+Sort components for kyanite
+Sort components for k_feldspar
+Sort components for la2o3glass
+Sort components for lansfordite
+Sort components for larnite,alph
+Sort components for larnite,beta
+Sort components for larnite_l
+Sort components for laumontite
+Sort components for laurite
+Sort components for lawsonite,al
+Sort components for lawsonite,be
+Sort components for leonhardite
+Sort components for leonhardtite
+Sort components for leonite
+Sort components for lepidocrocit
+Sort components for li2sio3glass
+Sort components for libenthenite
+Sort components for lime
+Sort components for litharge
+Sort components for maghemite_di
+Sort components for maghemite_or
+Sort components for magnesioferr
+Sort components for magnesite(na
+Sort components for magnesite(sy
+Sort components for magnetite,al
+Sort components for magnetite,be
+Sort components for malachite
+Sort components for manganosite
+Sort components for margarite,al
+Sort components for margarite,be
+Sort components for mercallite
+Sort components for merwinite
+Sort components for metacinnabar
+Sort components for mg(so3):6h2o
+Sort components for mg,element
+Sort components for mg-montmo-ca
+Sort components for mg-montmo-k
+Sort components for mg-montmo-mg
+Sort components for mg-montmo-na
+Sort components for mg-montmoril
+Sort components for mg3(po4)2:22
+Sort components for mgcl2.fecl2:
+Sort components for mghpo4
+Sort components for mgsio3glass
+Sort components for mgso4
+Sort components for microcline
+Sort components for mineralch4
+Sort components for mineralh2_10
+Sort components for mineralh2_15
+Sort components for mineralh2_45
+Sort components for mineralh2_5b
+Sort components for minnesotaite
+Sort components for mirabilite
+Sort components for mn3(po4)2
+Sort components for mnhpo4
+Sort components for mnsio3glass
+Sort components for monetite
+Sort components for monocarboalu
+Sort components for monohydrocal
+Sort components for monosulfoalu
+Sort components for monosulfoalu
+Sort components for monteponite
+Sort components for monticellite
+Sort components for montroydite
+Sort components for moo3glass
+Sort components for mordenite
+Sort components for mullite
+Sort components for muscovite_de
+Sort components for muscovite_or
+Sort components for na,element
+Sort components for na2co3
+Sort components for na2co3:7h2o
+Sort components for na2hpo4
+Sort components for na2o
+Sort components for na2sio3glass
+Sort components for na2so4.feso4
+Sort components for na3po4
+Sort components for nah2po4
+Sort components for nahcolite
+Sort components for natrolite,al
+Sort components for natrolite,be
+Sort components for natron
+Sort components for nd2o3glass
+Sort components for nepheline
+Sort components for nesquehoni,a
+Sort components for nesquehoni,b
+Sort components for newberyite
+Sort components for ni3(po4)2
+Sort components for nickel,alpha
+Sort components for nickel,beta
+Sort components for nisio3glass
+Sort components for nontroniteca
+Sort components for nontronitek
+Sort components for nontronitemg
+Sort components for nontronitena
+Sort components for okenite
+Sort components for orpiment
+Sort components for otavite
+Sort components for p,element
+Sort components for p4o10glass
+Sort components for palladium
+Sort components for paragonite
+Sort components for pargasite
+Sort components for pb,element
+Sort components for pb3(po4)2
+Sort components for pb4o(po4)2
+Sort components for pbhpo4
+Sort components for pboglass
+Sort components for pbsio3glass
+Sort components for pd(oh)2(s)
+Sort components for pd4s(s)
+Sort components for pdo(s)
+Sort components for pds2
+Sort components for pentahydrite
+Sort components for periclase
+Sort components for phillipsit,a
+Sort components for phillipsit,b
+Sort components for phillip_ca,a
+Sort components for phillip_ca,b
+Sort components for phillip_na_a
+Sort components for phillip_na_b
+Sort components for phlogopite
+Sort components for picromerite
+Sort components for pirssonite
+Sort components for platinum
+Sort components for plumbogummit
+Sort components for polyhalite
+Sort components for portlandite
+Sort components for potassium_ox
+Sort components for prehnite,alp
+Sort components for prehnite,bet
+Sort components for pseudomalach
+Sort components for pts2(s)
+Sort components for pyrite
+Sort components for pyromorphite
+Sort components for pyrope,alpha
+Sort components for pyrope,beta
+Sort components for pyrophyllite
+Sort components for pyrrhotite,a
+Sort components for pyrrhotite,b
+Sort components for pyrrhotite,g
+Sort components for quartz,beta
+Sort components for quartz_alpha
+Sort components for rb2sio3glass
+Sort components for realgar
+Sort components for rh2o(s)
+Sort components for rh2o3(s)
+Sort components for rhodium
+Sort components for rhodochrosit
+Sort components for riebeckite,a
+Sort components for riebeckite,b
+Sort components for riebeckite,g
+Sort components for romarchite
+Sort components for ruo2(s)
+Sort components for ruthenium
+Sort components for rutile
+Sort components for s,alpha
+Sort components for s,beta
+Sort components for sanidine
+Sort components for saponiteca
+Sort components for saponitek
+Sort components for saponitemg
+Sort components for saponitena
+Sort components for sb,element
+Sort components for scholzite
+Sort components for sellaite
+Sort components for senarmontite
+Sort components for sepiolite
+Sort components for siderite
+Sort components for sideritelt
+Sort components for sillimanite
+Sort components for sio2glass
+Sort components for smectitemx_a
+Sort components for smectitemx_b
+Sort components for smectitemx_c
+Sort components for smithsonite
+Sort components for snoglass
+Sort components for sodium_oxide
+Sort components for spencerite
+Sort components for spessartin,a
+Sort components for spessartin,b
+Sort components for sphalerite
+Sort components for spinel
+Sort components for sr(oh)2
+Sort components for sr(oh)2:8h2o
+Sort components for sr,element
+Sort components for sr2sio4
+Sort components for sr3(po4)2
+Sort components for sr5(p4)3(oh)
+Sort components for srcl2
+Sort components for srcl2:2h2o
+Sort components for srcl2:6h2o
+Sort components for srcl2:h2o
+Sort components for srcro4
+Sort components for srhpo4
+Sort components for sro
+Sort components for srs
+Sort components for srsio3
+Sort components for srsio3glass
+Sort components for staurolite
+Sort components for stibnite
+Sort components for stilbite,alp
+Sort components for stilbite,bet
+Sort components for straetlingit
+Sort components for strengite
+Sort components for strontianite
+Sort components for sylvite
+Sort components for syngenite
+Sort components for tachyhydrite
+Sort components for talc
+Sort components for tarbuttite
+Sort components for tenorite
+Sort components for thenardite
+Sort components for thermonatrit
+Sort components for tho2glass
+Sort components for thorianite
+Sort components for tin,alpha
+Sort components for tin,beta
+Sort components for tio2glass
+Sort components for titanite
+Sort components for tobermo(11a)
+Sort components for tobermo(14a)
+Sort components for tremolite
+Sort components for troilite
+Sort components for trona
+Sort components for truscottite
+Sort components for tsumebite
+Sort components for u3o8
+Sort components for ulvospinel
+Sort components for uo3,gamma
+Sort components for uo3glass
+Sort components for uraninite
+Sort components for usio4glass
+Sort components for valentinite
+Sort components for variscite
+Sort components for vaterite
+Sort components for vivianite
+Sort components for vysotskite
+Sort components for wairakite
+Sort components for wavellite
+Sort components for whitloc_high
+Sort components for whitloc_low
+Sort components for wollastonite
+Sort components for wurtzite
+Sort components for xonotlite
+Sort components for zincite
+Sort components for zn3(po4)2
+Sort components for zn3(po4)2:2h
+Sort components for zn3(po4)2:h2
+Sort components for zn5(po4)3cl
+Sort components for zn5(po4)3oh
+Sort components for znhpo4
+Sort components for znsio3glass
+Sort components for zn_rockbridg
+Sort components for zoisite
+End of sorting min3p minerals data.
+Open min3p database success: crunch2min3p_o2aq\comp.dbs
+Open min3p database success: crunch2min3p_o2aq\complex.dbs
+Open min3p database success: crunch2min3p_o2aq\redox.dbs
+Open min3p database success: crunch2min3p_o2aq\gases.dbs
+Open min3p database success: crunch2min3p_o2aq\mineral.dbs
+Write min3p database success: comp.dbs
+Write min3p database success: complex.dbs
+Write min3p database success: redox.dbs
+Write min3p database success: gases.dbs
+Write min3p database success: mineral.dbs
+Open/Create name truncation file success:name_truncation.txt
+Write name truncation: name_truncation.txt
+End writing name truncation.
+Number of truncated names:
+          84
+Warnings:           0
+Errors:             0

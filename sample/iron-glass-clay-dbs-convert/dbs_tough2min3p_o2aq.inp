@@ -1,0 +1,240 @@
+!
+!This input file contains parameters used in database conversion.
+!Current support database conversion from toughreact to min3p
+
+!--------------------------------
+!Block 1: Database settings
+!--------------------------------
+
+!set source database type, required
+source database type
+toughreact
+
+!set source database path, required
+!for toughreact or crunchflow database, this is a file path
+!for min3p, this is a folder
+source database path
+TR_FeII-H2-mod3.dat
+
+!--------------------------------
+!Block 2: Conversion settings
+!--------------------------------
+
+!set target database temperature, required
+target database temperature 
+90
+
+!set target master variable, optional
+!can be h2(aq), o2(aq) or 'same as source database'
+!if not provided, use the master variable in the source database
+!note: if the target master variable is the same as the 
+!the master varialbe in the source database, you can comment out 
+!the command or provide same as source database.
+target database master variable
+o2(aq)
+
+!--------------------------------
+!Block 3: Output settings
+!--------------------------------
+
+!set target database type, required
+target database type
+min3p
+
+!set targer database path, optional
+!if not provided, use the path of the program
+!for toughreact or crunchflow database, this is a file path
+!for min3p, this is a folder
+target database path
+tough2min3p_o2aq
+
+!Sort components by ascending lexical order.
+!This is useful when you need to compare the databases converted
+!from different database
+sort data by lexical order
+
+
+!Export the following species only
+!This is useful when you need to compare the databases converted
+!from different database.
+!
+export following species only
+156
+
+!'define redox master variable'
+'h2(aq)'
+
+!'components'
+!16                           ;number of components (nc-1)
+'h+1'
+'na+'
+'cl-'
+'so4--'
+'hco3-'
+'al+++'
+'h4sio4(aq)'
+'k+'
+'mg+2'
+'sr++'
+'ca+2'
+'fe++'
+'b(oh)3(aq)'	
+'h2(aq)'	
+'traceri'					;!!!tracers are not found
+'tracerv' 
+
+!'redox couples'
+!0                             ;number of redox couples (nr)
+
+!'secondary aqueous species'
+!76                          ;number of secondary aqueous species
+'fe+++'                        ;program give out that it is missing after manually added
+'o2(aq)'
+'hs-'
+'h2s(aq)'
+'ch4(aq)'
+'oh-'
+'co3--'
+'co2(aq)'
+'b(oh)4-'
+'nab(oh)4(aq)'
+'al(oh)2+'
+'alh3sio4++'
+'alo2-'
+'aloh++'
+'also4+'
+'ca(hco3)+'
+'cacl+'
+'cacl2(aq)'
+'caco3(aq)'
+'caoh+'
+'caso4(aq)'
+'fe(co3)2--'
+'fecl+'
+'fecl2(aq)'
+'feco3(aq)'
+'feco3oh-'
+'fehco3+'
+'feo'
+'feo2--'
+'feoh+'
+'feso4(aq)'
+'h2sio4--'
+'halo2(aq)'
+'hcl(aq)'
+'hfeo2-'
+'hsio3-'
+'hso4-'
+'kalo2(aq)'
+'kcl(aq)'
+'koh(aq)'
+'kso4-'
+'mg(hco3)+'
+'mg4(oh)4++++'
+'mgcl+'
+'mgco3(aq)'
+'mgoh+'
+'mgso4(aq)'
+'naalo2(aq)'
+'nacl(aq)'
+'naco3-'
+'nahco3(aq)'
+'naoh(aq)'
+'naso4-'
+'si2o2(oh)5-'
+'si2o3(oh)4--'
+'si3o5(oh)5-3'
+'si3o6(oh)3-3'
+'si4o12h4----'
+'si4o6(oh)6--'
+'si4o7(oh)6-4'
+'si4o8(oh)4-4'
+'si6o15------'
+'sr(co3)(aq)'
+'sr(hco3)+'
+'srcl+'
+'sroh+'
+'srso4(aq)'
+'fe(co3)2-'
+'fecl++'
+'fecl2+'
+'feco3+'
+'feo+'
+'feo2-'
+'feoh++'
+'feso4+'
+'hfeo2(aq)'			
+
+!'gases'
+!4                              ;number of gases
+'co2(g)'					   ;names of gases
+'h2(g)'
+'o2(g)'
+'h2s(g)'
+
+!'sorbed species'
+!4
+'na-x(na)'
+'ca-x(na)'
+'mg-x(na)'
+'k-x(na)'
+
+!'minerals'
+!55                            ;number of minerals
+'amorphous_si'                 ;-label prec
+'anhydrite'         
+'calcite'                      ;-label neutre, h+
+'celestite'
+'chalcedony'                   ;-label prec
+'clinochlore_'                
+'cronstedti,a'      
+'cj4-glass'                    ;-label residual 
+'daphnite_14a'                 
+'dolomite'                     ;-label neutre, h+
+'ettringite'
+'ettringite_f'
+'fe-saponitec'
+'fe-saponiten'
+'fe-saponitek'
+'fe-saponitem'
+'fe-montmo_ca'
+'fe-montmo_na'
+'fe-montmo_mg'
+'fe-montmo_k'
+'greenalite'
+'goethite_b'  
+'gypsum'
+'illite-feii'
+'illite-feiii'
+'illite-mg'
+'iron'                        ;-label monod 
+'kaolinite_b'                 ;-label neutre, oh-, h+
+'magnetite,be'    
+'microcline'                  ;-label neutre     
+'mg-montmo-na'                ;-label neutre, h+, oh-
+'mg-montmo-k'
+'mg-montmo-mg'
+'mg-montmo-ca'                ;-label neutre, h+, oh-
+'nontroniteca'
+'nontronitek'
+'nontronitemg'
+'nontronitena'
+'pyrite'                      ;-label oxygen, ferric
+'pyrrhotite,a'               
+'quartz_alpha'                   
+'saponitemg'        
+'saponitena'        
+'saponitek'       
+'saponiteca'       
+'sideritelt'                
+'siderite'
+'huntite'
+'sepiolite'
+'minnesotaite'
+'brucite'
+'csh_0.8'						
+'maghemite_di'
+'gyrolite'
+'mineralh2_45'                 ;-rate -5.  
+
+

@@ -1,0 +1,4496 @@
+! 
+! cj4-glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cj4-glass'
+'surface'
+  107.8874      2.7607
+10  'h+1'  -1.108 'h2o'  -2.245 'b(oh)3(aq)'   0.532 'h4sio4(aq)'   1.000 'na+'   0.432 'al+++'   0.129 'ca+2'   0.095 'fe++'   0.050 'o2(aq)'   0.012 'tracerv'   1.000
+'reversible'      -98.9996     0.0000
+! 
+! mineralh2_45
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'mineralh2_45'
+'surface'
+    2.0160   2016.0000
+ 2  'o2(aq)'  -0.500 'h2o'   1.000
+'reversible'      -35.9167     0.0000
+! 
+! csh_0.8
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'csh_0.8'
+'surface'
+  132.6900      2.2380
+ 4  'h+1'  -1.600 'ca+2'   0.800 'h2o'   0.340 'h4sio4(aq)'   1.000
+'reversible'       -9.6402     0.0000
+! 
+! maghemite_di
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'maghemite_di'
+'surface'
+  159.6920      5.4902
+ 4  'h+1'  -4.000 'o2(aq)'   0.500 'fe++'   2.000 'h2o'   2.000
+'reversible'       12.0604     0.0000
+! 
+! iron
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'iron'
+'surface'
+   55.8470      7.8404
+ 5  'h+1'  -2.000 'fe++'   1.000 'o2(aq)'  -0.500 'traceri'   1.000 'h2o'   1.000
+'reversible'      -50.2702     0.0000
+! 
+! quartz_alpha
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'quartz_alpha'
+'surface'
+   60.0850      2.6481
+ 2  'h2o'  -2.000 'h4sio4(aq)'   1.000
+'reversible'        3.0803     0.0000
+! 
+! sideritelt
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'sideritelt'
+'surface'
+  113.3910      3.8597
+ 4  'h+1'  -1.000 'hco3-'   1.000 'fe++'   0.850 'ca+2'   0.150
+'reversible'        1.5019     0.0000
+! 
+! 2k2so4.fe2(s
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'2k2so4.fe2(s'
+'surface'
+ 1000.6200    Infinity
+ 6  'k+'   4.000 'h2o'  13.000 'h+1'   2.000 'fe++'   2.000 'so4--'   5.000 'o2(aq)'   0.500
+'reversible'       13.0501     0.0000
+! 
+! 2kcl.fecl3:h
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'2kcl.fecl3:h'
+'surface'
+  329.3310    Infinity
+ 6  'cl-'   5.000 'k+'   2.000 'h2o'   0.500 'h+1'   1.000 'fe++'   1.000 'o2(aq)'   0.250
+'reversible'       -5.6300     0.0000
+! 
+! acanthite,al
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'acanthite,al'
+'surface'
+  247.8040      7.2457
+ 3  'ag+'   2.000 'so4--'   1.000 'o2(aq)'  -2.000
+'reversible'      -81.6866     0.0000
+! 
+! acanthite,be
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'acanthite,be'
+'surface'
+  247.8040      7.2457
+ 3  'ag+'   2.000 'so4--'   1.000 'o2(aq)'  -2.000
+'reversible'      -78.3499     0.0000
+! 
+! acanthite,ga
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'acanthite,ga'
+'surface'
+  247.8040      7.2457
+ 3  'ag+'   2.000 'so4--'   1.000 'o2(aq)'  -2.000
+'reversible'      -79.3134     0.0000
+! 
+! aegerine,alp
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'aegerine,alp'
+'surface'
+  231.0050      3.5887
+ 6  'h+1'  -3.000 'h2o'  -2.500 'na+'   1.000 'h4sio4(aq)'   2.000 'fe++'   1.000 'o2(aq)'   0.250
+'reversible'        6.1277     0.0000
+! 
+! aegerine,bet
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'aegerine,bet'
+'surface'
+  231.0050      3.5887
+ 6  'h+1'  -3.000 'h2o'  -2.500 'na+'   1.000 'h4sio4(aq)'   2.000 'fe++'   1.000 'o2(aq)'   0.250
+'reversible'       23.4514     0.0000
+! 
+! aegerine,gam
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'aegerine,gam'
+'surface'
+  231.0050      3.5887
+ 6  'h+1'  -3.000 'h2o'  -2.500 'na+'   1.000 'h4sio4(aq)'   2.000 'fe++'   1.000 'o2(aq)'   0.250
+'reversible'       36.8446     0.0000
+! 
+! afwillite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'afwillite'
+'surface'
+  342.4480      2.6438
+ 4  'h+1'  -6.000 'ca+2'   3.000 'h2o'   2.000 'h4sio4(aq)'   2.000
+'reversible'      -41.2385     0.0000
+! 
+! ag,element
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'ag,element'
+'surface'
+  107.8700     10.5014
+ 4  'h+1'  -1.000 'ag+'   1.000 'o2(aq)'  -0.250 'h2o'   0.500
+'reversible'       -6.9401     0.0000
+! 
+! ag2o
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'ag2o'
+'surface'
+  231.7390      7.7246
+ 3  'h+1'  -2.000 'ag+'   2.000 'h2o'   1.000
+'reversible'      -11.3280     0.0000
+! 
+! akermanite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'akermanite'
+'surface'
+  272.6360      2.9376
+ 5  'h+1'  -6.000 'h2o'  -1.000 'ca+2'   2.000 'mg+2'   1.000 'h4sio4(aq)'   2.000
+'reversible'      -36.4233     0.0000
+! 
+! al,element
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'al,element'
+'surface'
+   26.9820      2.6985
+ 4  'h+1'  -3.000 'al+++'   1.000 'o2(aq)'  -0.750 'h2o'   1.500
+'reversible'     -120.0318     0.0000
+! 
+! al2o3glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'al2o3glass'
+'surface'
+  101.9610    Infinity
+ 3  'h+1'  -6.000 'al+++'   2.000 'h2o'   3.000
+'reversible'      -31.8731     0.0000
+! 
+! alabandite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'alabandite'
+'surface'
+   87.0020      4.0541
+ 3  'mn++'   1.000 'so4--'   1.000 'o2(aq)'  -2.000
+'reversible'     -109.9056     0.0000
+! 
+! albite_high
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'albite_high'
+'surface'
+  262.2250      2.6110
+ 5  'h+1'  -4.000 'h2o'  -4.000 'al+++'   1.000 'na+'   1.000 'h4sio4(aq)'   3.000
+'reversible'       -1.1889     0.0000
+! 
+! albite_low
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'albite_low'
+'surface'
+  262.2250      2.6110
+ 5  'h+1'  -4.000 'h2o'  -4.000 'al+++'   1.000 'na+'   1.000 'h4sio4(aq)'   3.000
+'reversible'       -0.1285     0.0000
+! 
+! alf3
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'alf3'
+'surface'
+   83.9770      3.0999
+ 2  'al+++'   1.000 'f-'   3.000
+'reversible'       18.8592     0.0000
+! 
+! almandine,al
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'almandine,al'
+'surface'
+  497.7550      4.3178
+ 4  'h+1' -12.000 'al+++'   2.000 'h4sio4(aq)'   3.000 'fe++'   3.000
+'reversible'      -27.6426     0.0000
+! 
+! almandine,be
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'almandine,be'
+'surface'
+  497.7550      4.3178
+ 4  'h+1' -12.000 'al+++'   2.000 'h4sio4(aq)'   3.000 'fe++'   3.000
+'reversible'      -27.7299     0.0000
+! 
+! alunite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'alunite'
+'surface'
+  414.2140      1.4108
+ 5  'h+1'  -6.000 'al+++'   3.000 'k+'   1.000 'h2o'   6.000 'so4--'   2.000
+'reversible'        8.4182     0.0000
+! 
+! amesit_14a_a
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'amesit_14a_a'
+'surface'
+  557.3990      2.7137
+ 5  'h+1' -20.000 'al+++'   4.000 'mg+2'   4.000 'h2o'  10.000 'h4sio4(aq)'   2.000
+'reversible'     -131.4155     0.0000
+! 
+! amesit_14a_b
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'amesit_14a_b'
+'surface'
+  557.3990      2.7137
+ 5  'h+1' -20.000 'al+++'   4.000 'mg+2'   4.000 'h2o'  10.000 'h4sio4(aq)'   2.000
+'reversible'     -131.3865     0.0000
+! 
+! amorphous_si
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'amorphous_si'
+'surface'
+   60.0850      2.0719
+ 2  'h2o'  -2.000 'h4sio4(aq)'   1.000
+'reversible'        2.2874     0.0000
+! 
+! analcime
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'analcime'
+'surface'
+  220.1550      2.2673
+ 5  'h+1'  -4.000 'h2o'  -1.000 'al+++'   1.000 'na+'   1.000 'h4sio4(aq)'   2.000
+'reversible'       -4.1359     0.0000
+! 
+! analcime,deh
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'analcime,deh'
+'surface'
+  202.1400      2.2687
+ 5  'h+1'  -4.000 'h2o'  -2.000 'al+++'   1.000 'na+'   1.000 'h4sio4(aq)'   2.000
+'reversible'       -7.8858     0.0000
+! 
+! andalusite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'andalusite'
+'surface'
+  162.0460      3.1447
+ 4  'h+1'  -6.000 'al+++'   2.000 'h2o'   1.000 'h4sio4(aq)'   1.000
+'reversible'       -8.4539     0.0000
+! 
+! andradite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'andradite'
+'surface'
+  508.1790      3.8542
+ 6  'h+1' -10.000 'ca+2'   3.000 'h4sio4(aq)'   3.000 'fe++'   2.000 'o2(aq)'   0.500 'h2o'  -1.000
+'reversible'      -12.6701     0.0000
+! 
+! anglesite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'anglesite'
+'surface'
+  303.2520      6.3243
+ 2  'pb++'   1.000 'so4--'   1.000
+'reversible'        7.8498     0.0000
+! 
+! anhydrite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'anhydrite'
+'surface'
+  136.1400      2.9589
+ 2  'ca+2'   1.000 'so4--'   1.000
+'reversible'        5.3423     0.0000
+! 
+! annite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'annite'
+'surface'
+  511.8910      3.3171
+ 5  'h+1' -10.000 'al+++'   1.000 'k+'   1.000 'h4sio4(aq)'   3.000 'fe++'   3.000
+'reversible'      -23.0646     0.0000
+! 
+! anorthite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'anorthite'
+'surface'
+  278.2080      2.7603
+ 4  'h+1'  -8.000 'al+++'   2.000 'ca+2'   1.000 'h4sio4(aq)'   2.000
+'reversible'      -15.6345     0.0000
+! 
+! antarcticite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'antarcticite'
+'surface'
+  219.0760      1.7006
+ 3  'ca+2'   1.000 'cl-'   2.000 'h2o'   6.000
+'reversible'       -4.5851     0.0000
+! 
+! anthophyll_a
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'anthophyll_a'
+'surface'
+  780.8740      2.9423
+ 4  'h+1' -14.000 'h2o'  -8.000 'mg+2'   7.000 'h4sio4(aq)'   8.000
+'reversible'      -55.3376     0.0000
+! 
+! anthophyll_b
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'anthophyll_b'
+'surface'
+  780.8740      2.9423
+ 4  'h+1' -14.000 'h2o'  -8.000 'mg+2'   7.000 'h4sio4(aq)'   8.000
+'reversible'        7.4313     0.0000
+! 
+! anthophyll_c
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'anthophyll_c'
+'surface'
+  780.8740      2.9423
+ 4  'h+1' -14.000 'h2o'  -8.000 'mg+2'   7.000 'h4sio4(aq)'   8.000
+'reversible'       78.7637     0.0000
+! 
+! antigorite,a
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'antigorite,a'
+'surface'
+ 4536.3000      2.5935
+ 4  'h+1' -96.000 'mg+2'  48.000 'h2o'  11.000 'h4sio4(aq)'  34.000
+'reversible'     -382.2996     0.0000
+! 
+! antigorite,b
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'antigorite,b'
+'surface'
+ 4536.3000      2.5935
+ 4  'h+1' -96.000 'mg+2'  48.000 'h2o'  11.000 'h4sio4(aq)'  34.000
+'reversible'     -382.3578     0.0000
+! 
+! aragonite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'aragonite'
+'surface'
+  100.0870      2.9308
+ 3  'h+1'  -1.000 'hco3-'   1.000 'ca+2'   1.000
+'reversible'       -1.1016     0.0000
+! 
+! arcanite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'arcanite'
+'surface'
+  174.2660      2.6605
+ 2  'k+'   2.000 'so4--'   1.000
+'reversible'        1.4244     0.0000
+! 
+! argutite,alp
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'argutite,alp'
+'surface'
+  104.5890      6.0040
+ 2  'h2o'  -2.000 'ge(oh)4(aq)'   1.000
+'reversible'        3.9265     0.0000
+! 
+! argutite,bet
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'argutite,bet'
+'surface'
+  104.5890      4.2794
+ 2  'h2o'  -2.000 'ge(oh)4(aq)'   1.000
+'reversible'        1.5913     0.0000
+! 
+! arsenic
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'arsenic'
+'surface'
+   74.9220      5.7810
+ 4  'h2o'  -1.500 'h2aso4-'   1.000 'h+1'   1.000 'o2(aq)'  -1.250
+'reversible'      -58.4256     0.0000
+! 
+! arsenolite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'arsenolite'
+'surface'
+  197.8410      3.8701
+ 4  'h2o'  -3.000 'h2aso4-'   2.000 'h+1'   2.000 'o2(aq)'  -1.000
+'reversible'      -31.6651     0.0000
+! 
+! artinite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'artinite'
+'surface'
+  196.6940      2.0299
+ 4  'h+1'  -3.000 'hco3-'   1.000 'mg+2'   2.000 'h2o'   5.000
+'reversible'      -16.0668     0.0000
+! 
+! augelite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'augelite'
+'surface'
+  199.9570      2.6960
+ 4  'h+1'  -5.000 'al+++'   2.000 'h2o'   3.000 'h2po4-'   1.000
+'reversible'      -10.2739     0.0000
+! 
+! azurite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'azurite'
+'surface'
+  344.6530      3.7870
+ 4  'h+1'  -4.000 'hco3-'   2.000 'cu++'   3.000 'h2o'   2.000
+'reversible'       -5.1810     0.0000
+! 
+! b(oh)3
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'b(oh)3'
+'surface'
+   61.8330      1.4351
+ 1  'b(oh)3(aq)'   1.000
+'reversible'       -0.5754     0.0000
+! 
+! b2o3
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'b2o3'
+'surface'
+   69.6200      2.5539
+ 2  'h2o'  -3.000 'b(oh)3(aq)'   2.000
+'reversible'       -5.1074     0.0000
+! 
+! b2o3glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'b2o3glass'
+'surface'
+   69.6200    Infinity
+ 2  'h2o'  -3.000 'b(oh)3(aq)'   2.000
+'reversible'       -7.2788     0.0000
+! 
+! bahpo4
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'bahpo4'
+'surface'
+  233.3190    Infinity
+ 3  'h+1'  -1.000 'ba++'   1.000 'h2po4-'   1.000
+'reversible'        8.2652     0.0000
+! 
+! barite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'barite'
+'surface'
+  233.4020      4.4799
+ 2  'ba++'   1.000 'so4--'   1.000
+'reversible'        9.6016     0.0000
+! 
+! basio3glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'basio3glass'
+'surface'
+  213.4240    Infinity
+ 4  'h+1'  -2.000 'h2o'  -1.000 'ba++'   1.000 'h4sio4(aq)'   1.000
+'reversible'      -22.4080     0.0000
+! 
+! bassanite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'bassanite'
+'surface'
+  145.1470      1.3683
+ 3  'ca+2'   1.000 'h2o'   0.500 'so4--'   1.000
+'reversible'        4.7843     0.0000
+! 
+! beidelliteca
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'beidelliteca'
+'surface'
+  366.7530      2.7979
+ 5  'h+1'  -7.360 'h2o'  -2.640 'al+++'   2.340 'ca+2'   0.170 'h4sio4(aq)'   3.660
+'reversible'        0.6484     0.0000
+! 
+! beidellitek
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'beidellitek'
+'surface'
+  372.8550      2.8445
+ 5  'h+1'  -7.320 'h2o'  -2.680 'al+++'   2.330 'k+'   0.330 'h4sio4(aq)'   3.670
+'reversible'        2.0497     0.0000
+! 
+! beidellitemg
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'beidellitemg'
+'surface'
+  364.0730      2.7775
+ 5  'h+1'  -7.360 'h2o'  -2.640 'al+++'   2.340 'mg+2'   0.170 'h4sio4(aq)'   3.660
+'reversible'        1.2945     0.0000
+! 
+! beidellitena
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'beidellitena'
+'surface'
+  367.5380      2.8039
+ 5  'h+1'  -7.320 'h2o'  -2.680 'al+++'   2.330 'na+'   0.330 'h4sio4(aq)'   3.670
+'reversible'        1.8273     0.0000
+! 
+! berlinite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'berlinite'
+'surface'
+  121.9530      2.6181
+ 3  'h+1'  -2.000 'al+++'   1.000 'h2po4-'   1.000
+'reversible'        2.3437     0.0000
+! 
+! berndtite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'berndtite'
+'surface'
+  182.8180      4.4633
+ 5  'sn++'   1.000 'h2o'  -1.000 'h+1'   2.000 'so4--'   2.000 'o2(aq)'  -3.500
+'reversible'     -165.5606     0.0000
+! 
+! berthierite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'berthierite'
+'surface'
+  427.6030      4.7197
+ 6  'h2o'  -6.000 'h+1'   6.000 'sb(oh)3(aq)'   2.000 'fe++'   1.000 'so4--'   4.000 'o2(aq)'  -8.000
+'reversible'     -391.1899     0.0000
+! 
+! bischofite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'bischofite'
+'surface'
+  203.3100      1.5701
+ 3  'cl-'   2.000 'mg+2'   1.000 'h2o'   6.000
+'reversible'       -4.1749     0.0000
+! 
+! bloedite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'bloedite'
+'surface'
+  334.4760      2.2102
+ 4  'mg+2'   1.000 'na+'   2.000 'h2o'   4.000 'so4--'   2.000
+'reversible'        2.3500     0.0000
+! 
+! bobbierite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'bobbierite'
+'surface'
+  407.0020      2.1950
+ 4  'h+1'  -4.000 'mg+2'   3.000 'h2o'   8.000 'h2po4-'   2.000
+'reversible'      -13.9200     0.0000
+! 
+! boehmite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'boehmite'
+'surface'
+   59.9880      3.0700
+ 3  'h+1'  -3.000 'al+++'   1.000 'h2o'   2.000
+'reversible'       -4.0763     0.0000
+! 
+! bornite,alph
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'bornite,alph'
+'surface'
+  501.8030      5.0893
+ 6  'h+1'  -4.000 'cu++'   5.000 'h2o'   2.000 'fe++'   1.000 'so4--'   4.000 'o2(aq)'  -9.000
+'reversible'     -413.2148     0.0000
+! 
+! bornite,beta
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'bornite,beta'
+'surface'
+  501.8030      5.0893
+ 6  'h+1'  -4.000 'cu++'   5.000 'h2o'   2.000 'fe++'   1.000 'so4--'   4.000 'o2(aq)'  -9.000
+'reversible'     -402.2108     0.0000
+! 
+! bornite,gamm
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'bornite,gamm'
+'surface'
+  501.8030      5.0893
+ 6  'h+1'  -4.000 'cu++'   5.000 'h2o'   2.000 'fe++'   1.000 'so4--'   4.000 'o2(aq)'  -9.000
+'reversible'     -411.5029     0.0000
+! 
+! bromellite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'bromellite'
+'surface'
+   25.0120      3.0099
+ 3  'h+1'  -2.000 'be++'   1.000 'h2o'   1.000
+'reversible'       -4.4881     0.0000
+! 
+! brucite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'brucite'
+'surface'
+   58.3270      2.3681
+ 3  'h+1'  -2.000 'mg+2'   1.000 'h2o'   2.000
+'reversible'      -13.6223     0.0000
+! 
+! brushite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'brushite'
+'surface'
+  172.0880      2.3280
+ 4  'h+1'  -1.000 'ca+2'   1.000 'h2o'   2.000 'h2po4-'   1.000
+'reversible'       -0.2644     0.0000
+! 
+! bunsenite,al
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'bunsenite,al'
+'surface'
+   74.7090      6.8103
+ 3  'h+1'  -2.000 'ni++'   1.000 'h2o'   1.000
+'reversible'       -9.3568     0.0000
+! 
+! bunsenite,be
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'bunsenite,be'
+'surface'
+   74.7090      6.8103
+ 3  'h+1'  -2.000 'ni++'   1.000 'h2o'   1.000
+'reversible'      -10.5207     0.0000
+! 
+! bunsenite,ga
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'bunsenite,ga'
+'surface'
+   74.7090      6.8103
+ 3  'h+1'  -2.000 'ni++'   1.000 'h2o'   1.000
+'reversible'       -7.3961     0.0000
+! 
+! burkeite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'burkeite'
+'surface'
+  390.0710      2.5799
+ 4  'h+1'  -1.000 'hco3-'   1.000 'na+'   6.000 'so4--'   2.000
+'reversible'        0.7701     0.0000
+! 
+! c,graphite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'c,graphite'
+'surface'
+   12.0110      2.2671
+ 4  'h2o'  -1.000 'hco3-'   1.000 'h+1'   1.000 'o2(aq)'  -1.000
+'reversible'      -51.6952     0.0000
+! 
+! carbox1
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'carbox1'
+'surface'
+   44.0100    440.1000
+ 3  'h2o'  -1.000 'hco3-'   1.000 'h+1'   1.000
+'reversible'       11.2000     0.0000
+! 
+! carbox2
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'carbox2'
+'surface'
+   44.0100    440.1000
+ 3  'h2o'  -1.000 'hco3-'   1.000 'h+1'   1.000
+'reversible'       10.0260     0.0000
+! 
+! c2sha
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'c2sha'
+'surface'
+  190.2550      2.6751
+ 4  'h+1'  -4.000 'ca+2'   2.000 'h2o'   1.000 'h4sio4(aq)'   1.000
+'reversible'      -29.5052     0.0000
+! 
+! c3ah6
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'c3ah6'
+'surface'
+  378.2850      2.5300
+ 4  'h+1' -12.000 'al+++'   2.000 'ca+2'   3.000 'h2o'  12.000
+'reversible'      -62.3271     0.0000
+! 
+! c3fh6
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'c3fh6'
+'surface'
+  436.0160      2.8221
+ 5  'h+1' -10.000 'ca+2'   3.000 'h2o'  11.000 'fe++'   2.000 'o2(aq)'   0.500
+'reversible'      -45.5531     0.0000
+! 
+! c4ah13
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'c4ah13'
+'surface'
+  560.4700      2.0820
+ 4  'h+1' -14.000 'al+++'   2.000 'ca+2'   4.000 'h2o'  20.000
+'reversible'      -83.9537     0.0000
+! 
+! c4fh13
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'c4fh13'
+'surface'
+  618.2010      2.2562
+ 5  'h+1' -12.000 'ca+2'   4.000 'h2o'  19.000 'fe++'   2.000 'o2(aq)'   0.500
+'reversible'      -67.6577     0.0000
+! 
+! ca,element
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'ca,element'
+'surface'
+   40.0780      1.5303
+ 4  'h+1'  -2.000 'ca+2'   1.000 'o2(aq)'  -0.500 'h2o'   1.000
+'reversible'     -114.2480     0.0000
+! 
+! ca4h(po4)3:2
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'ca4h(po4)3:2'
+'surface'
+  491.2730    Infinity
+ 4  'h+1'  -5.000 'ca+2'   4.000 'h2o'   2.500 'h2po4-'   3.000
+'reversible'      -11.8100     0.0000
+! 
+! caal_pyroxen
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'caal_pyroxen'
+'surface'
+  218.1230      3.4350
+ 5  'h+1'  -8.000 'al+++'   2.000 'ca+2'   1.000 'h2o'   2.000 'h4sio4(aq)'   1.000
+'reversible'      -24.5733     0.0000
+! 
+! caalh(po4)2:
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'caalh(po4)2:'
+'surface'
+  366.1020    Infinity
+ 5  'h+1'  -3.000 'al+++'   1.000 'ca+2'   1.000 'h2o'   6.000 'h2po4-'   2.000
+'reversible'       14.3100     0.0000
+! 
+! cacl2:2h2o
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cacl2:2h2o'
+'surface'
+  147.0150      1.6002
+ 3  'ca+2'   1.000 'cl-'   2.000 'h2o'   2.000
+'reversible'       -6.4680     0.0000
+! 
+! cacl2:4h2o
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cacl2:4h2o'
+'surface'
+  183.0450    Infinity
+ 3  'ca+2'   1.000 'cl-'   2.000 'h2o'   4.000
+'reversible'       -5.0627     0.0000
+! 
+! cacl2:h2o
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cacl2:h2o'
+'surface'
+  128.9990    Infinity
+ 3  'ca+2'   1.000 'cl-'   2.000 'h2o'   1.000
+'reversible'       -6.0618     0.0000
+! 
+! calcite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'calcite'
+'surface'
+  100.0870      2.7099
+ 3  'h+1'  -1.000 'hco3-'   1.000 'ca+2'   1.000
+'reversible'       -0.9239     0.0000
+! 
+! calcite2
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'calcite2'
+'surface'
+  100.0870      2.7099
+ 3  'h+1'  -1.000 'hco3-'   1.000 'ca+2'   1.000
+'reversible'       -0.9239     0.0000
+! 
+! calomel
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'calomel'
+'surface'
+  472.0860     14.3317
+ 5  'h+1'  -2.000 'cl-'   2.000 'hg++'   2.000 'o2(aq)'  -0.500 'h2o'   1.000
+'reversible'        6.2205     0.0000
+! 
+! carnallite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'carnallite'
+'surface'
+  277.8650      1.6000
+ 4  'cl-'   3.000 'k+'   1.000 'mg+2'   1.000 'h2o'   6.000
+'reversible'       -4.7537     0.0000
+! 
+! casio3glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'casio3glass'
+'surface'
+  116.1620    Infinity
+ 4  'h+1'  -2.000 'h2o'  -1.000 'ca+2'   1.000 'h4sio4(aq)'   1.000
+'reversible'      -11.8131     0.0000
+! 
+! cassiterite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cassiterite'
+'surface'
+  150.6890      5.2142
+ 4  'h+1'  -2.000 'h2o'   1.000 'sn++'   1.000 'o2(aq)'   0.500
+'reversible'       36.7947     0.0000
+! 
+! cd(oh)2
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cd(oh)2'
+'surface'
+  146.4150    Infinity
+ 3  'h+1'  -2.000 'cd++'   1.000 'h2o'   2.000
+'reversible'      -11.2017     0.0000
+! 
+! cd,element
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cd,element'
+'surface'
+  112.4000      8.6395
+ 4  'h+1'  -2.000 'cd++'   1.000 'o2(aq)'  -0.500 'h2o'   1.000
+'reversible'      -45.5237     0.0000
+! 
+! cd3(po4)2
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cd3(po4)2'
+'surface'
+  527.1430    Infinity
+ 3  'h+1'  -4.000 'cd++'   3.000 'h2po4-'   2.000
+'reversible'       -2.4951     0.0000
+! 
+! cd5(po4)3cl
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cd5(po4)3cl'
+'surface'
+  882.3670    Infinity
+ 4  'h+1'  -6.000 'cd++'   5.000 'cl-'   1.000 'h2po4-'   3.000
+'reversible'      -12.6733     0.0000
+! 
+! cd5(po4)3oh
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cd5(po4)3oh'
+'surface'
+  863.9220    Infinity
+ 4  'h+1'  -7.000 'cd++'   5.000 'h2o'   1.000 'h2po4-'   3.000
+'reversible'      -19.8425     0.0000
+! 
+! cdcl2
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cdcl2'
+'surface'
+  183.3060    Infinity
+ 2  'cd++'   1.000 'cl-'   2.000
+'reversible'        1.5294     0.0000
+! 
+! cdcl2:2.5h2o
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cdcl2:2.5h2o'
+'surface'
+  228.3440    Infinity
+ 3  'cd++'   1.000 'cl-'   2.000 'h2o'   2.500
+'reversible'        1.7076     0.0000
+! 
+! cdcl2:h2o
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cdcl2:h2o'
+'surface'
+  201.3210    Infinity
+ 3  'cd++'   1.000 'cl-'   2.000 'h2o'   1.000
+'reversible'        2.0718     0.0000
+! 
+! cdsio3
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cdsio3'
+'surface'
+  188.4840    Infinity
+ 4  'h+1'  -2.000 'h2o'  -1.000 'cd++'   1.000 'h4sio4(aq)'   1.000
+'reversible'       -5.8870     0.0000
+! 
+! cdsio3glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cdsio3glass'
+'surface'
+  188.4840    Infinity
+ 4  'h+1'  -2.000 'h2o'  -1.000 'cd++'   1.000 'h4sio4(aq)'   1.000
+'reversible'       -9.0490     0.0000
+! 
+! cdso4
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cdso4'
+'surface'
+  208.4620    Infinity
+ 2  'cd++'   1.000 'so4--'   1.000
+'reversible'        2.0947     0.0000
+! 
+! cdso4:8/3h2o
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cdso4:8/3h2o'
+'surface'
+  256.5630      3.0899
+ 3  'cd++'   1.000 'h2o'   2.670 'so4--'   1.000
+'reversible'        2.5646     0.0000
+! 
+! ce2o3glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'ce2o3glass'
+'surface'
+  328.2380    Infinity
+ 3  'h+1'  -6.000 'ce+++'   2.000 'h2o'   3.000
+'reversible'      -71.6156     0.0000
+! 
+! celadonite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'celadonite'
+'surface'
+  396.7480      2.5254
+ 6  'h+1'  -6.000 'h2o'  -4.000 'al+++'   1.000 'k+'   1.000 'mg+2'   1.000 'h4sio4(aq)'   4.000
+'reversible'       -3.8633     0.0000
+! 
+! celestite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'celestite'
+'surface'
+  183.6820      3.9715
+ 2  'sr++'   1.000 'so4--'   1.000
+'reversible'        7.0504     0.0000
+! 
+! ceo2glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'ceo2glass'
+'surface'
+  172.1190    Infinity
+ 4  'h+1'  -3.000 'ce+++'   1.000 'h2o'   1.500 'o2(aq)'   0.250
+'reversible'        0.2732     0.0000
+! 
+! cerussite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cerussite'
+'surface'
+  267.1990      6.5829
+ 3  'h+1'  -1.000 'hco3-'   1.000 'pb++'   1.000
+'reversible'        2.8865     0.0000
+! 
+! chabazite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'chabazite'
+'surface'
+  506.4700      2.0165
+ 5  'h+1'  -8.000 'al+++'   2.000 'ca+2'   1.000 'h2o'   2.000 'h4sio4(aq)'   4.000
+'reversible'       -7.1131     0.0000
+! 
+! chalcedony
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'chalcedony'
+'surface'
+   60.0850      2.6483
+ 2  'h2o'  -2.000 'h4sio4(aq)'   1.000
+'reversible'        2.8455     0.0000
+! 
+! chalcocite,a
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'chalcocite,a'
+'surface'
+  159.1440      5.7913
+ 5  'h+1'  -2.000 'cu++'   2.000 'h2o'   1.000 'so4--'   1.000 'o2(aq)'  -2.500
+'reversible'     -110.7266     0.0000
+! 
+! chalcocite,b
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'chalcocite,b'
+'surface'
+  159.1440      5.7913
+ 5  'h+1'  -2.000 'cu++'   2.000 'h2o'   1.000 'so4--'   1.000 'o2(aq)'  -2.500
+'reversible'     -108.0502     0.0000
+! 
+! chalcocite,g
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'chalcocite,g'
+'surface'
+  159.1440      5.7913
+ 5  'h+1'  -2.000 'cu++'   2.000 'h2o'   1.000 'so4--'   1.000 'o2(aq)'  -2.500
+'reversible'     -100.4505     0.0000
+! 
+! chalcocyanit
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'chalcocyanit'
+'surface'
+  159.6020      3.9042
+ 2  'cu++'   1.000 'so4--'   1.000
+'reversible'       -0.2843     0.0000
+! 
+! chalcopyri,a
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'chalcopyri,a'
+'surface'
+  183.5150      4.2847
+ 4  'cu++'   1.000 'fe++'   1.000 'so4--'   2.000 'o2(aq)'  -4.000
+'reversible'     -192.4898     0.0000
+! 
+! chalcopyri,b
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'chalcopyri,b'
+'surface'
+  183.5150      4.2847
+ 4  'cu++'   1.000 'fe++'   1.000 'so4--'   2.000 'o2(aq)'  -4.000
+'reversible'     -190.1346     0.0000
+! 
+! chalcopyri,c
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'chalcopyri,c'
+'surface'
+  183.5150      4.2847
+ 4  'cu++'   1.000 'fe++'   1.000 'so4--'   2.000 'o2(aq)'  -4.000
+'reversible'     -227.8643     0.0000
+! 
+! chlorapat_pp
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'chlorapat_pp'
+'surface'
+  520.7570      3.1777
+ 4  'h+1'  -6.000 'ca+2'   5.000 'cl-'   1.000 'h2po4-'   3.000
+'reversible'      -14.5333     0.0000
+! 
+! chlorapat_th
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'chlorapat_th'
+'surface'
+  520.7570      3.1777
+ 4  'h+1'  -6.000 'ca+2'   5.000 'cl-'   1.000 'h2po4-'   3.000
+'reversible'       -0.4024     0.0000
+! 
+! chlorargyrit
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'chlorargyrit'
+'surface'
+  143.3230      5.5703
+ 2  'ag+'   1.000 'cl-'   1.000
+'reversible'        7.8257     0.0000
+! 
+! chlorite_cca
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'chlorite_cca'
+'surface'
+  617.1170      2.9120
+ 8  'h+1' -17.253 'al+++'   2.483 'ca+2'   0.011 'mg+2'   2.964 'h2o'   7.361 'h4sio4(aq)'   2.633 'fe++'   1.927 'o2(aq)'   0.054
+'reversible'      -40.6326     0.0000
+! 
+! chloritoid
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'chloritoid'
+'surface'
+  251.9080      3.6090
+ 5  'h+1'  -8.000 'al+++'   2.000 'h2o'   3.000 'h4sio4(aq)'   1.000 'fe++'   1.000
+'reversible'      -12.6676     0.0000
+! 
+! chloromagnes
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'chloromagnes'
+'surface'
+   95.2180      2.3332
+ 2  'cl-'   2.000 'mg+2'   1.000
+'reversible'      -16.7814     0.0000
+! 
+! chrysotile
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'chrysotile'
+'surface'
+  277.1340      2.5542
+ 4  'h+1'  -6.000 'mg+2'   3.000 'h2o'   1.000 'h4sio4(aq)'   2.000
+'reversible'      -24.9369     0.0000
+! 
+! cinnabar
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cinnabar'
+'surface'
+  232.6540      8.1874
+ 3  'hg++'   1.000 'so4--'   1.000 'o2(aq)'  -2.000
+'reversible'      -78.0949     0.0000
+! 
+! claudetite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'claudetite'
+'surface'
+  197.8410      4.1862
+ 4  'h2o'  -3.000 'h2aso4-'   2.000 'h+1'   2.000 'o2(aq)'  -1.000
+'reversible'      -31.5559     0.0000
+! 
+! clinochlore_
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'clinochlore_'
+'surface'
+  555.8340      2.6838
+ 5  'h+1' -16.000 'al+++'   2.000 'mg+2'   5.000 'h2o'   6.000 'h4sio4(aq)'   3.000
+'reversible'      -49.1307     0.0000
+! 
+! clinozoisite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'clinozoisite'
+'surface'
+  454.3590      3.3360
+ 5  'h+1' -13.000 'al+++'   3.000 'ca+2'   2.000 'h2o'   1.000 'h4sio4(aq)'   3.000
+'reversible'      -28.6562     0.0000
+! 
+! co(oh)2,blue
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'co(oh)2,blue'
+'surface'
+   92.9480    Infinity
+ 3  'h+1'  -2.000 'co++'   1.000 'h2o'   2.000
+'reversible'      -13.8018     0.0000
+! 
+! co(oh)2,p-pc
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'co(oh)2,p-pc'
+'surface'
+   92.9480    Infinity
+ 3  'h+1'  -2.000 'co++'   1.000 'h2o'   2.000
+'reversible'      -10.4299     0.0000
+! 
+! co(oh)2,p-wc
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'co(oh)2,p-wc'
+'surface'
+   92.9480    Infinity
+ 3  'h+1'  -2.000 'co++'   1.000 'h2o'   2.000
+'reversible'       -9.5895     0.0000
+! 
+! co(oh)3
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'co(oh)3'
+'surface'
+  109.9550    Infinity
+ 4  'h+1'  -2.000 'co++'   1.000 'h2o'   2.500 'o2(aq)'   0.250
+'reversible'       -6.4722     0.0000
+! 
+! co,element
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'co,element'
+'surface'
+   58.9330      8.8369
+ 4  'h+1'  -2.000 'co++'   1.000 'o2(aq)'  -0.500 'h2o'   1.000
+'reversible'      -42.1963     0.0000
+! 
+! co2sio4glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'co2sio4glass'
+'surface'
+  209.9500    Infinity
+ 3  'h+1'  -4.000 'co++'   2.000 'h4sio4(aq)'   1.000
+'reversible'      -34.3194     0.0000
+! 
+! coesite,alph
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'coesite,alph'
+'surface'
+   60.0850      2.9110
+ 2  'h2o'  -2.000 'h4sio4(aq)'   1.000
+'reversible'        2.3914     0.0000
+! 
+! coesite,beta
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'coesite,beta'
+'surface'
+   60.0850      2.9110
+ 2  'h2o'  -2.000 'h4sio4(aq)'   1.000
+'reversible'        2.3622     0.0000
+! 
+! cooglass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cooglass'
+'surface'
+   74.9330    Infinity
+ 3  'h+1'  -2.000 'co++'   1.000 'h2o'   1.000
+'reversible'      -21.4599     0.0000
+! 
+! cooperite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cooperite'
+'surface'
+  227.1540     10.2553
+ 3  'pt++'   1.000 'so4--'   1.000 'o2(aq)'  -2.000
+'reversible'      -59.7041     0.0000
+! 
+! cordierite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cordierite'
+'surface'
+  584.9690      2.8134
+ 5  'h+1' -16.000 'h2o'  -2.000 'al+++'   4.000 'mg+2'   2.000 'h4sio4(aq)'   5.000
+'reversible'      -28.8254     0.0000
+! 
+! cordierite,h
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cordierite,h'
+'surface'
+  602.9850      2.4997
+ 5  'h+1' -16.000 'h2o'  -1.000 'al+++'   4.000 'mg+2'   2.000 'h4sio4(aq)'   5.000
+'reversible'      -30.7528     0.0000
+! 
+! corkite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'corkite'
+'surface'
+  667.8080      4.4201
+ 7  'h+1'  -5.000 'h2o'   4.500 'h2po4-'   1.000 'pb++'   1.000 'fe++'   3.000 'so4--'   1.000 'o2(aq)'   0.750
+'reversible'       27.4201     0.0000
+! 
+! cornetite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cornetite'
+'surface'
+  336.6140      4.1001
+ 4  'h+1'  -5.000 'cu++'   3.000 'h2o'   3.000 'h2po4-'   1.000
+'reversible'      -14.7295     0.0000
+! 
+! corundum,alp
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'corundum,alp'
+'surface'
+  101.9610      3.9860
+ 3  'h+1'  -6.000 'al+++'   2.000 'h2o'   3.000
+'reversible'      -10.1890     0.0000
+! 
+! corundum,gam
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'corundum,gam'
+'surface'
+  101.9610      3.9860
+ 3  'h+1'  -6.000 'al+++'   2.000 'h2o'   3.000
+'reversible'      -12.8237     0.0000
+! 
+! covellite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'covellite'
+'surface'
+   95.6040      4.6819
+ 3  'cu++'   1.000 'so4--'   1.000 'o2(aq)'  -2.000
+'reversible'      -90.9576     0.0000
+! 
+! cr2o3glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cr2o3glass'
+'surface'
+  151.9900    Infinity
+ 4  'h2o'  -2.000 'cro4--'   2.000 'h+1'   4.000 'o2(aq)'  -1.500
+'reversible'       10.7789     0.0000
+! 
+! crandallite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'crandallite'
+'surface'
+  414.0170      3.0001
+ 5  'h+1'  -9.000 'al+++'   3.000 'ca+2'   1.000 'h2o'   6.000 'h2po4-'   2.000
+'reversible'      -21.0446     0.0000
+! 
+! cristobali,a
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cristobali,a'
+'surface'
+   60.0850      2.3343
+ 2  'h2o'  -2.000 'h4sio4(aq)'   1.000
+'reversible'        2.6474     0.0000
+! 
+! cristobali,b
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cristobali,b'
+'surface'
+   60.0850      2.1897
+ 2  'h2o'  -2.000 'h4sio4(aq)'   1.000
+'reversible'        2.5992     0.0000
+! 
+! cronstedti,a
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cronstedti,a'
+'surface'
+  399.5000      3.6023
+ 5  'h+1'  -8.000 'h2o'   4.000 'h4sio4(aq)'   1.000 'fe++'   4.000 'o2(aq)'   0.500
+'reversible'        2.6436     0.0000
+! 
+! cronstedti,b
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cronstedti,b'
+'surface'
+  399.5000      3.6023
+ 5  'h+1'  -8.000 'h2o'   4.000 'h4sio4(aq)'   1.000 'fe++'   4.000 'o2(aq)'   0.500
+'reversible'       32.9680     0.0000
+! 
+! cronstedti,c
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cronstedti,c'
+'surface'
+  399.5000      3.6023
+ 5  'h+1'  -8.000 'h2o'   4.000 'h4sio4(aq)'   1.000 'fe++'   4.000 'o2(aq)'   0.500
+'reversible'       57.8216     0.0000
+! 
+! crpo4(green)
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'crpo4(green)'
+'surface'
+  146.9670    Infinity
+ 5  'h2o'  -2.500 'cro4--'   1.000 'h+1'   3.000 'h2po4-'   1.000 'o2(aq)'  -0.750
+'reversible'       10.2755     0.0000
+! 
+! crpo4(purple
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'crpo4(purple'
+'surface'
+  146.9670    Infinity
+ 5  'h2o'  -2.500 'cro4--'   1.000 'h+1'   3.000 'h2po4-'   1.000 'o2(aq)'  -0.750
+'reversible'        4.6555     0.0000
+! 
+! cs2sio3glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cs2sio3glass'
+'surface'
+  341.8940    Infinity
+ 4  'h+1'  -2.000 'h2o'  -1.000 'cs+'   2.000 'h4sio4(aq)'   1.000
+'reversible'      -34.3194     0.0000
+! 
+! csh_0.8
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'csh_0.8'
+'surface'
+  132.6900      2.2380
+ 4  'h+1'  -1.600 'ca+2'   0.800 'h2o'   0.340 'h4sio4(aq)'   1.000
+'reversible'       -9.6402     0.0000
+! 
+! csh_1.2
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'csh_1.2'
+'surface'
+  164.4890      2.2862
+ 4  'h+1'  -2.400 'ca+2'   1.200 'h2o'   1.260 'h4sio4(aq)'   1.000
+'reversible'      -16.6458     0.0000
+! 
+! csh_1.6
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'csh_1.6'
+'surface'
+  196.2880      2.3180
+ 4  'h+1'  -3.200 'ca+2'   1.600 'h2o'   2.180 'h4sio4(aq)'   1.000
+'reversible'      -23.9971     0.0000
+! 
+! cu,element
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cu,element'
+'surface'
+   63.5400      8.9329
+ 4  'h+1'  -2.000 'cu++'   1.000 'o2(aq)'  -0.500 'h2o'   1.000
+'reversible'      -24.8160     0.0000
+! 
+! cu3(po4)2
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cu3(po4)2'
+'surface'
+  380.5630    Infinity
+ 3  'h+1'  -4.000 'cu++'   3.000 'h2po4-'   2.000
+'reversible'       17.7150     0.0000
+! 
+! cu3(po4)2:3h
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cu3(po4)2:3h'
+'surface'
+  434.6090    Infinity
+ 4  'h+1'  -4.000 'cu++'   3.000 'h2o'   3.000 'h2po4-'   2.000
+'reversible'       14.1429     0.0000
+! 
+! cu5(po4)3cl
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cu5(po4)3cl'
+'surface'
+  638.0670    Infinity
+ 4  'h+1'  -6.000 'cl-'   1.000 'cu++'   5.000 'h2po4-'   3.000
+'reversible'       -8.1910     0.0000
+! 
+! cu5(po4)3oh
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cu5(po4)3oh'
+'surface'
+  619.6220    Infinity
+ 4  'h+1'  -7.000 'cu++'   5.000 'h2o'   1.000 'h2po4-'   3.000
+'reversible'      -10.5265     0.0000
+! 
+! cummingtonit
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cummingtonit'
+'surface'
+  780.8740      2.8719
+ 4  'h+1' -14.000 'h2o'  -8.000 'mg+2'   7.000 'h4sio4(aq)'   8.000
+'reversible'      -57.3054     0.0000
+! 
+! cuoglass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cuoglass'
+'surface'
+   79.5390    Infinity
+ 3  'h+1'  -2.000 'cu++'   1.000 'h2o'   1.000
+'reversible'      -13.4967     0.0000
+! 
+! cuprite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'cuprite'
+'surface'
+  143.0790      6.1048
+ 4  'h+1'  -4.000 'cu++'   2.000 'h2o'   2.000 'o2(aq)'  -0.500
+'reversible'      -27.4444     0.0000
+! 
+! daphnite_14a
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'daphnite_14a'
+'surface'
+  713.5090      3.3432
+ 5  'h+1' -16.000 'al+++'   2.000 'h2o'   6.000 'h4sio4(aq)'   3.000 'fe++'   5.000
+'reversible'      -34.4750     0.0000
+! 
+! dawsonite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'dawsonite'
+'surface'
+  143.9950      2.4282
+ 5  'h+1'  -3.000 'al+++'   1.000 'hco3-'   1.000 'na+'   1.000 'h2o'   2.000
+'reversible'       -1.8728     0.0000
+! 
+! diaspore
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'diaspore'
+'surface'
+   59.9880      3.3777
+ 3  'h+1'  -3.000 'al+++'   1.000 'h2o'   2.000
+'reversible'       -3.4732     0.0000
+! 
+! dickite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'dickite'
+'surface'
+  258.1610      2.5998
+ 4  'h+1'  -6.000 'al+++'   2.000 'h2o'   1.000 'h4sio4(aq)'   2.000
+'reversible'       -3.6312     0.0000
+! 
+! diopside
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'diopside'
+'surface'
+  216.5580      3.2767
+ 5  'h+1'  -4.000 'h2o'  -2.000 'ca+2'   1.000 'mg+2'   1.000 'h4sio4(aq)'   2.000
+'reversible'      -16.8722     0.0000
+! 
+! dolomite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'dolomite'
+'surface'
+  184.4090      2.8651
+ 4  'h+1'  -2.000 'hco3-'   2.000 'ca+2'   1.000 'mg+2'   1.000
+'reversible'       -1.2595     0.0000
+! 
+! dolomite,dis
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'dolomite,dis'
+'surface'
+  184.4090      2.8639
+ 4  'h+1'  -2.000 'hco3-'   2.000 'ca+2'   1.000 'mg+2'   1.000
+'reversible'       -1.7815     0.0000
+! 
+! dolomite,ord
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'dolomite,ord'
+'surface'
+  184.4090      2.8662
+ 4  'h+1'  -2.000 'hco3-'   2.000 'ca+2'   1.000 'mg+2'   1.000
+'reversible'       -0.6187     0.0000
+! 
+! edenite,alph
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'edenite,alph'
+'surface'
+  818.2910      3.0195
+ 8  'h+1' -18.000 'h2o'  -4.000 'al+++'   1.000 'ca+2'   2.000 'mg+2'   5.000 'na+'   1.000 'h4sio4(aq)'   7.000 'o2(aq)'  -0.500
+'reversible'      -56.7359     0.0000
+! 
+! edenite,beta
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'edenite,beta'
+'surface'
+  818.2910      3.0195
+ 8  'h+1' -18.000 'h2o'  -4.000 'al+++'   1.000 'ca+2'   2.000 'mg+2'   5.000 'na+'   1.000 'h4sio4(aq)'   7.000 'o2(aq)'  -0.500
+'reversible'      -56.7649     0.0000
+! 
+! enstatite,al
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'enstatite,al'
+'surface'
+  100.3960      3.2100
+ 4  'h+1'  -2.000 'h2o'  -1.000 'mg+2'   1.000 'h4sio4(aq)'   1.000
+'reversible'       -8.9014     0.0000
+! 
+! enstatite,be
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'enstatite,be'
+'surface'
+  100.3960      3.2079
+ 4  'h+1'  -2.000 'h2o'  -1.000 'mg+2'   1.000 'h4sio4(aq)'   1.000
+'reversible'       -0.3001     0.0000
+! 
+! enstatite,ga
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'enstatite,ga'
+'surface'
+  100.3960      3.2079
+ 4  'h+1'  -2.000 'h2o'  -1.000 'mg+2'   1.000 'h4sio4(aq)'   1.000
+'reversible'        9.9496     0.0000
+! 
+! epidote
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'epidote'
+'surface'
+  483.2240      3.4714
+ 7  'h+1' -12.000 'al+++'   2.000 'ca+2'   2.000 'h2o'   0.500 'h4sio4(aq)'   3.000 'fe++'   1.000 'o2(aq)'   0.250
+'reversible'      -15.0580     0.0000
+! 
+! epidote,orde
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'epidote,orde'
+'surface'
+  483.2240      3.4714
+ 7  'h+1' -12.000 'al+++'   2.000 'ca+2'   2.000 'h2o'   0.500 'h4sio4(aq)'   3.000 'fe++'   1.000 'o2(aq)'   0.250
+'reversible'      -15.0626     0.0000
+! 
+! epsomite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'epsomite'
+'surface'
+  246.4810      1.6790
+ 3  'mg+2'   1.000 'h2o'   7.000 'so4--'   1.000
+'reversible'        1.6054     0.0000
+! 
+! ettringite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'ettringite'
+'surface'
+ 1255.1000      1.7670
+ 5  'h+1' -12.000 'al+++'   2.000 'ca+2'   6.000 'h2o'  38.000 'so4--'   3.000
+'reversible'      -44.8417     0.0000
+! 
+! ettringite_f
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'ettringite_f'
+'surface'
+ 1312.8300      1.8444
+ 6  'h+1' -10.000 'ca+2'   6.000 'h2o'  37.000 'fe++'   2.000 'so4--'   3.000 'o2(aq)'   0.500
+'reversible'      -32.9814     0.0000
+! 
+! farringtonit
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'farringtonit'
+'surface'
+  262.8790      2.7599
+ 3  'h+1'  -4.000 'mg+2'   3.000 'h2po4-'   2.000
+'reversible'       -8.8955     0.0000
+! 
+! faustite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'faustite'
+'surface'
+  815.2650      2.9999
+ 5  'h+1' -16.000 'al+++'   6.000 'h2o'  12.000 'h2po4-'   4.000 'zn++'   1.000
+'reversible'      -19.6233     0.0000
+! 
+! fayalite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'fayalite'
+'surface'
+  203.7780      4.3927
+ 3  'h+1'  -4.000 'h4sio4(aq)'   1.000 'fe++'   2.000
+'reversible'      -14.0938     0.0000
+! 
+! fco3apatite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'fco3apatite'
+'surface'
+  992.6420    Infinity
+ 5  'h+1' -11.000 'hco3-'   1.000 'ca+2'  10.000 'f-'   3.000 'h2po4-'   5.000
+'reversible'       42.0712     0.0000
+! 
+! fe(oh)2
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'fe(oh)2'
+'surface'
+   89.8620    Infinity
+ 3  'h+1'  -2.000 'h2o'   2.000 'fe++'   1.000
+'reversible'      -10.0769     0.0000
+! 
+! fe(oh)3
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'fe(oh)3'
+'surface'
+  106.8690      3.1103
+ 4  'h+1'  -2.000 'h2o'   2.500 'fe++'   1.000 'o2(aq)'   0.250
+'reversible'        3.7024     0.0000
+! 
+! fe2o3glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'fe2o3glass'
+'surface'
+  159.6920    Infinity
+ 4  'h+1'  -4.000 'h2o'   2.000 'fe++'   2.000 'o2(aq)'   0.500
+'reversible'        4.6708     0.0000
+! 
+! fecl2:4h2o
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'fecl2:4h2o'
+'surface'
+  198.8140    Infinity
+ 3  'cl-'   2.000 'h2o'   4.000 'fe++'   1.000
+'reversible'       -3.0300     0.0000
+! 
+! fecl3:6h2o
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'fecl3:6h2o'
+'surface'
+  270.2980    Infinity
+ 5  'cl-'   3.000 'h2o'   5.500 'h+1'   1.000 'fe++'   1.000 'o2(aq)'   0.250
+'reversible'       -2.8800     0.0000
+! 
+! fe-montmo_ca
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'fe-montmo_ca'
+'surface'
+  376.6440      2.8503
+ 6  'h+1'  -6.040 'h2o'  -3.960 'al+++'   1.680 'ca+2'   0.170 'h4sio4(aq)'   3.990 'fe++'   0.330
+'reversible'        0.9268     0.0000
+! 
+! fe-montmo_k
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'fe-montmo_k'
+'surface'
+  382.7450      2.8965
+ 6  'h+1'  -6.000 'h2o'  -4.000 'al+++'   1.670 'k+'   0.330 'h4sio4(aq)'   4.000 'fe++'   0.330
+'reversible'        2.5296     0.0000
+! 
+! fe-montmo_mg
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'fe-montmo_mg'
+'surface'
+  373.9630      2.8301
+ 6  'h+1'  -6.040 'h2o'  -3.960 'al+++'   1.680 'mg+2'   0.170 'h4sio4(aq)'   3.990 'fe++'   0.330
+'reversible'        1.5480     0.0000
+! 
+! fe-montmo_na
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'fe-montmo_na'
+'surface'
+  377.4280      2.8563
+ 6  'h+1'  -6.000 'h2o'  -4.000 'al+++'   1.670 'na+'   0.330 'h4sio4(aq)'   4.000 'fe++'   0.330
+'reversible'        2.2439     0.0000
+! 
+! ferrite_mn
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'ferrite_mn'
+'surface'
+  230.6300    Infinity
+ 5  'h+1'  -6.000 'mn++'   1.000 'h2o'   3.000 'fe++'   2.000 'o2(aq)'   0.500
+'reversible'        2.9170     0.0000
+! 
+! ferropargasi
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'ferropargasi'
+'surface'
+  961.9960      3.4371
+ 6  'h+1' -22.000 'al+++'   3.000 'ca+2'   2.000 'na+'   1.000 'h4sio4(aq)'   6.000 'fe++'   4.000
+'reversible'      -58.1884     0.0000
+! 
+! ferrosilit,a
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'ferrosilit,a'
+'surface'
+  131.9310      4.0037
+ 4  'h+1'  -2.000 'h2o'  -1.000 'h4sio4(aq)'   1.000 'fe++'   1.000
+'reversible'       -5.4581     0.0000
+! 
+! ferrosilit,b
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'ferrosilit,b'
+'surface'
+  131.9310      3.9969
+ 4  'h+1'  -2.000 'h2o'  -1.000 'h4sio4(aq)'   1.000 'fe++'   1.000
+'reversible'       -5.8826     0.0000
+! 
+! ferrotremoli
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'ferrotremoli'
+'surface'
+  970.0810      3.4303
+ 5  'h+1' -14.000 'h2o'  -8.000 'ca+2'   2.000 'h4sio4(aq)'   8.000 'fe++'   5.000
+'reversible'      -40.3840     0.0000
+! 
+! ferrous_oxid
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'ferrous_oxid'
+'surface'
+   71.8460      5.9872
+ 3  'h+1'  -2.000 'h2o'   1.000 'fe++'   1.000
+'reversible'      -10.1408     0.0000
+! 
+! fes_am
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'fes_am'
+'surface'
+   87.9110    Infinity
+ 3  'fe++'   1.000 'so4--'   1.000 'o2(aq)'  -2.000
+'reversible'     -135.3651     0.0000
+! 
+! fe-saponitec
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'fe-saponitec'
+'surface'
+  480.3310      3.3943
+ 6  'h+1'  -7.360 'h2o'  -2.640 'al+++'   0.340 'ca+2'   0.170 'h4sio4(aq)'   3.660 'fe++'   3.000
+'reversible'      -13.7232     0.0000
+! 
+! fe-saponitek
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'fe-saponitek'
+'surface'
+  486.4330      3.4374
+ 6  'h+1'  -7.320 'h2o'  -2.680 'al+++'   0.330 'k+'   0.330 'h4sio4(aq)'   3.670 'fe++'   3.000
+'reversible'      -12.3182     0.0000
+! 
+! fe-saponitem
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'fe-saponitem'
+'surface'
+  477.6510      3.3754
+ 6  'h+1'  -7.360 'h2o'  -2.640 'al+++'   0.340 'mg+2'   0.170 'h4sio4(aq)'   3.660 'fe++'   3.000
+'reversible'      -13.0771     0.0000
+! 
+! fe-saponiten
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'fe-saponiten'
+'surface'
+  481.1160      3.3999
+ 6  'h+1'  -7.320 'h2o'  -2.680 'al+++'   0.330 'na+'   0.330 'h4sio4(aq)'   3.670 'fe++'   3.000
+'reversible'      -12.5409     0.0000
+! 
+! fesio3glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'fesio3glass'
+'surface'
+  131.9310    Infinity
+ 4  'h+1'  -2.000 'h2o'  -1.000 'h4sio4(aq)'   1.000 'fe++'   1.000
+'reversible'      -10.7085     0.0000
+! 
+! feso4:7h2o
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'feso4:7h2o'
+'surface'
+  278.0160      1.8977
+ 3  'h2o'   7.000 'fe++'   1.000 'so4--'   1.000
+'reversible'        2.2300     0.0000
+! 
+! fluora_natur
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'fluora_natur'
+'surface'
+  504.3030      3.2007
+ 4  'h+1'  -6.000 'ca+2'   5.000 'f-'   1.000 'h2po4-'   3.000
+'reversible'        5.1719     0.0000
+! 
+! fluor(pp)
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'fluor(pp)'
+'surface'
+  504.3030      3.2007
+ 4  'h+1'  -6.000 'ca+2'   5.000 'f-'   1.000 'h2po4-'   3.000
+'reversible'      -11.0128     0.0000
+! 
+! fluor(synth)
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'fluor(synth)'
+'surface'
+  504.3030      3.2007
+ 4  'h+1'  -6.000 'ca+2'   5.000 'f-'   1.000 'h2po4-'   3.000
+'reversible'        0.9500     0.0000
+! 
+! fluorite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'fluorite'
+'surface'
+   78.0750      3.1813
+ 2  'ca+2'   1.000 'f-'   2.000
+'reversible'       10.0203     0.0000
+! 
+! fluorphlogop
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'fluorphlogop'
+'surface'
+  421.2680      2.8781
+ 7  'h+1'  -8.000 'h2o'  -2.000 'al+++'   1.000 'f-'   2.000 'k+'   1.000 'mg+2'   3.000 'h4sio4(aq)'   3.000
+'reversible'      -13.8972     0.0000
+! 
+! forsterite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'forsterite'
+'surface'
+  140.7080      3.2132
+ 3  'h+1'  -4.000 'mg+2'   2.000 'h4sio4(aq)'   1.000
+'reversible'      -21.8589     0.0000
+! 
+! foshagite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'foshagite'
+'surface'
+  431.5870      2.6863
+ 4  'h+1'  -8.000 'h2o'  -0.500 'ca+2'   4.000 'h4sio4(aq)'   3.000
+'reversible'      -54.3129     0.0000
+! 
+! friedel_salt
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'friedel_salt'
+'surface'
+  561.3310      2.0320
+ 5  'h+1' -12.000 'al+++'   2.000 'ca+2'   4.000 'cl-'   2.000 'h2o'  16.000
+'reversible'      -59.8175     0.0000
+! 
+! galena
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'galena'
+'surface'
+  239.2540      7.5978
+ 3  'pb++'   1.000 'so4--'   1.000 'o2(aq)'  -2.000
+'reversible'      -98.3618     0.0000
+! 
+! gaooh
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'gaooh'
+'surface'
+  102.7270      5.2146
+ 3  'h+1'  -3.000 'ga+++'   1.000 'h2o'   2.000
+'reversible'       -0.3868     0.0000
+! 
+! gaylussite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'gaylussite'
+'surface'
+  296.1530      1.9900
+ 5  'h+1'  -2.000 'hco3-'   2.000 'ca+2'   1.000 'na+'   2.000 'h2o'   5.000
+'reversible'      -11.6731     0.0000
+! 
+! gehlenite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'gehlenite'
+'surface'
+  274.2010      3.0416
+ 5  'h+1' -10.000 'al+++'   2.000 'ca+2'   2.000 'h2o'   3.000 'h4sio4(aq)'   1.000
+'reversible'      -39.7609     0.0000
+! 
+! gibbsite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'gibbsite'
+'surface'
+   78.0040      2.4410
+ 3  'h+1'  -3.000 'al+++'   1.000 'h2o'   3.000
+'reversible'       -4.5621     0.0000
+! 
+! gibbsite_am
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'gibbsite_am'
+'surface'
+   78.0040      2.4410
+ 3  'h+1'  -3.000 'al+++'   1.000 'h2o'   3.000
+'reversible'       -6.9717     0.0000
+! 
+! gibbsite_mc
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'gibbsite_mc'
+'surface'
+   78.0040      2.4410
+ 3  'h+1'  -3.000 'al+++'   1.000 'h2o'   3.000
+'reversible'       -6.2817     0.0000
+! 
+! gismondine
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'gismondine'
+'surface'
+  718.5540      2.2806
+ 5  'h+1' -16.000 'al+++'   4.000 'ca+2'   2.000 'h2o'   9.000 'h4sio4(aq)'   4.000
+'reversible'      -22.7092     0.0000
+! 
+! glaserite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'glaserite'
+'surface'
+  664.8380      2.6400
+ 3  'k+'   6.000 'na+'   2.000 'so4--'   4.000
+'reversible'        5.8797     0.0000
+! 
+! glauberite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'glauberite'
+'surface'
+  278.1810      2.7800
+ 3  'ca+2'   1.000 'na+'   2.000 'so4--'   2.000
+'reversible'       -1.1911     0.0000
+! 
+! glaucophane
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'glaucophane'
+'surface'
+  783.5680      2.9896
+ 6  'h+1' -14.000 'h2o'  -8.000 'al+++'   2.000 'mg+2'   3.000 'na+'   2.000 'h4sio4(aq)'   8.000
+'reversible'      -24.8224     0.0000
+! 
+! goethite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'goethite'
+'surface'
+   88.8540      4.2677
+ 4  'h+1'  -2.000 'h2o'   1.500 'fe++'   1.000 'o2(aq)'   0.250
+'reversible'        7.4178     0.0000
+! 
+! goethite_b
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'goethite_b'
+'surface'
+   88.8540      4.2677
+ 4  'h+1'  -2.000 'h2o'   1.500 'fe++'   1.000 'o2(aq)'   0.250
+'reversible'        7.0678     0.0000
+! 
+! gold
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'gold'
+'surface'
+  196.9670     19.2821
+ 4  'h+1'  -1.000 'au+'   1.000 'o2(aq)'  -0.250 'h2o'   0.500
+'reversible'        5.5914     0.0000
+! 
+! greenalite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'greenalite'
+'surface'
+  371.7390      3.2325
+ 4  'h+1'  -6.000 'h2o'   1.000 'h4sio4(aq)'   2.000 'fe++'   3.000
+'reversible'      -17.7961     0.0000
+! 
+! greenockite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'greenockite'
+'surface'
+  144.4640      4.8267
+ 3  'cd++'   1.000 'so4--'   1.000 'o2(aq)'  -2.000
+'reversible'      -97.5971     0.0000
+! 
+! grossular
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'grossular'
+'surface'
+  450.4480      3.5950
+ 4  'h+1' -12.000 'al+++'   2.000 'ca+2'   3.000 'h4sio4(aq)'   3.000
+'reversible'      -35.3591     0.0000
+! 
+! grunerite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'grunerite'
+'surface'
+ 1001.6100      3.5939
+ 4  'h+1' -14.000 'h2o'  -8.000 'h4sio4(aq)'   8.000 'fe++'   7.000
+'reversible'      -35.4069     0.0000
+! 
+! gypsum
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'gypsum'
+'surface'
+  172.1700      2.3051
+ 3  'ca+2'   1.000 'h2o'   2.000 'so4--'   1.000
+'reversible'        4.9180     0.0000
+! 
+! gyrolite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'gyrolite'
+'surface'
+  337.4480      2.4570
+ 4  'h+1'  -4.000 'h2o'  -1.500 'ca+2'   2.000 'h4sio4(aq)'   3.000
+'reversible'      -18.6366     0.0000
+! 
+! halite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'halite'
+'surface'
+   58.4430      2.1634
+ 2  'cl-'   1.000 'na+'   1.000
+'reversible'       -1.5957     0.0000
+! 
+! halloysite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'halloysite'
+'surface'
+  258.1610      2.5998
+ 4  'h+1'  -6.000 'al+++'   2.000 'h2o'   1.000 'h4sio4(aq)'   2.000
+'reversible'       -4.3517     0.0000
+! 
+! hedenbergite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hedenbergite'
+'surface'
+  248.0930      3.6340
+ 5  'h+1'  -4.000 'h2o'  -2.000 'ca+2'   1.000 'h4sio4(aq)'   2.000 'fe++'   1.000
+'reversible'      -15.4627     0.0000
+! 
+! hematite,alp
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hematite,alp'
+'surface'
+  159.6920      5.2749
+ 4  'h+1'  -4.000 'h2o'   2.000 'fe++'   2.000 'o2(aq)'   0.500
+'reversible'       14.8016     0.0000
+! 
+! hematite,bet
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hematite,bet'
+'surface'
+  159.6920      5.2749
+ 4  'h+1'  -4.000 'h2o'   2.000 'fe++'   2.000 'o2(aq)'   0.500
+'reversible'       23.4434     0.0000
+! 
+! hematite,gam
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hematite,gam'
+'surface'
+  159.6920      5.2749
+ 4  'h+1'  -4.000 'h2o'   2.000 'fe++'   2.000 'o2(aq)'   0.500
+'reversible'       32.5801     0.0000
+! 
+! hemicarboalu
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hemicarboalu'
+'surface'
+ 1128.9200      1.9840
+ 5  'h+1' -27.000 'al+++'   4.000 'hco3-'   1.000 'ca+2'   8.000 'h2o'  37.000
+'reversible'     -148.1744     0.0000
+! 
+! hemihydroxic
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hemihydroxic'
+'surface'
+  203.0920    Infinity
+ 4  'h+1'  -2.000 'ca+2'   2.000 'cl-'   2.000 'h2o'   3.000
+'reversible'      -26.5300     0.0000
+! 
+! heulandite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'heulandite'
+'surface'
+  686.7240      2.2310
+ 5  'h+1'  -8.000 'h2o'  -4.000 'al+++'   2.000 'ca+2'   1.000 'h4sio4(aq)'   7.000
+'reversible'        9.1559     0.0000
+! 
+! hexahydrite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hexahydrite'
+'surface'
+  228.4660      1.7200
+ 3  'mg+2'   1.000 'h2o'   6.000 'so4--'   1.000
+'reversible'        1.9103     0.0000
+! 
+! hg2so4
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hg2so4'
+'surface'
+  497.2420      7.5601
+ 5  'h+1'  -2.000 'hg++'   2.000 'so4--'   1.000 'o2(aq)'  -0.500 'h2o'   1.000
+'reversible'       -2.3753     0.0000
+! 
+! hilgenstocki
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hilgenstocki'
+'surface'
+  366.2540    Infinity
+ 4  'h+1'  -6.000 'ca+2'   4.000 'h2o'   1.000 'h2po4-'   2.000
+'reversible'      -23.5931     0.0000
+! 
+! hillebrandit
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hillebrandit'
+'surface'
+  193.3180      2.6635
+ 4  'h+1'  -4.000 'ca+2'   2.000 'h2o'   1.170 'h4sio4(aq)'   1.000
+'reversible'      -30.1120     0.0000
+! 
+! hinsdalite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hinsdalite'
+'surface'
+  581.2120      3.8601
+ 6  'h+1'  -8.000 'al+++'   3.000 'h2o'   6.000 'h2po4-'   1.000 'pb++'   1.000 'so4--'   1.000
+'reversible'       -6.6848     0.0000
+! 
+! hopeite,alph
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hopeite,alph'
+'surface'
+  458.1140      3.1201
+ 4  'h+1'  -4.000 'h2o'   4.000 'h2po4-'   2.000 'zn++'   3.000
+'reversible'       13.6895     0.0000
+! 
+! hopeite,beta
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hopeite,beta'
+'surface'
+  458.1140    Infinity
+ 4  'h+1'  -4.000 'h2o'   4.000 'h2po4-'   2.000 'zn++'   3.000
+'reversible'       -5.0560     0.0000
+! 
+! huntite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'huntite'
+'surface'
+  353.0510      2.8727
+ 4  'h+1'  -4.000 'hco3-'   4.000 'ca+2'   1.000 'mg+2'   3.000
+'reversible'      -30.6663     0.0000
+! 
+! hydrocerussi
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hydrocerussi'
+'surface'
+  775.6030      6.8400
+ 4  'h+1'  -4.000 'hco3-'   2.000 'h2o'   2.000 'pb++'   3.000
+'reversible'       -1.8500     0.0000
+! 
+! hydromagnesi
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hydromagnesi'
+'surface'
+  467.6740      2.2398
+ 4  'h+1'  -6.000 'hco3-'   4.000 'mg+2'   5.000 'h2o'   6.000
+'reversible'      -21.6170     0.0000
+! 
+! hydrophilite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hydrophilite'
+'surface'
+  110.9840      2.1869
+ 2  'ca+2'   1.000 'cl-'   2.000
+'reversible'       -8.7888     0.0000
+! 
+! hydrotalcite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hydrotalcite'
+'surface'
+  443.3600      1.9500
+ 4  'h+1' -14.000 'al+++'   2.000 'mg+2'   4.000 'h2o'  17.000
+'reversible'      -57.2940     0.0000
+! 
+! hydrotalcite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hydrotalcite'
+'surface'
+  451.3390      2.2567
+ 5  'h+1' -13.000 'al+++'   2.000 'hco3-'   1.000 'mg+2'   4.000 'h2o'  14.000
+'reversible'      -45.3283     0.0000
+! 
+! hydroxichlor
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hydroxichlor'
+'surface'
+   92.5380    Infinity
+ 4  'h+1'  -1.000 'ca+2'   1.000 'cl-'   1.000 'h2o'   1.000
+'reversible'      -10.4926     0.0000
+! 
+! hde_ca:13h2o
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hde_ca:13h2o'
+'surface'
+  567.4620    Infinity
+ 4  'h+1'  -6.000 'ca+2'   4.000 'cl-'   2.000 'h2o'  19.000
+'reversible'      -61.4119     0.0000
+! 
+! hde_ca:h2o
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hde_ca:h2o'
+'surface'
+  110.5540    Infinity
+ 4  'h+1'  -1.000 'ca+2'   1.000 'cl-'   1.000 'h2o'   2.000
+'reversible'       -9.2541     0.0000
+! 
+! hde_mg:4h2o
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hde_mg:4h2o'
+'surface'
+  207.1600    Infinity
+ 4  'h+1'  -3.000 'cl-'   1.000 'mg+2'   2.000 'h2o'   7.000
+'reversible'      -21.6386     0.0000
+! 
+! hydro_apa_na
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hydro_apa_na'
+'surface'
+  502.3120      3.1473
+ 4  'h+1'  -7.000 'ca+2'   5.000 'h2o'   1.000 'h2po4-'   3.000
+'reversible'        3.2232     0.0000
+! 
+! hydro_apa_pp
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hydro_apa_pp'
+'surface'
+  502.3120      3.1473
+ 4  'h+1'  -7.000 'ca+2'   5.000 'h2o'   1.000 'h2po4-'   3.000
+'reversible'      -25.5699     0.0000
+! 
+! hydro_apa_sy
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hydro_apa_sy'
+'surface'
+  502.3120      3.1473
+ 4  'h+1'  -7.000 'ca+2'   5.000 'h2o'   1.000 'h2po4-'   3.000
+'reversible'       -1.8000     0.0000
+! 
+! hydroxy_pyro
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hydroxy_pyro'
+'surface'
+ 1337.8700    Infinity
+ 4  'h+1'  -7.000 'h2o'   1.000 'h2po4-'   3.000 'pb++'   5.000
+'reversible'       25.7700     0.0000
+! 
+! i/s_iscz-1_2
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'i/s_iscz-1_2'
+'surface'
+  438.4790      2.2247
+ 9  'h+1'  -7.690 'al+++'   2.152 'k+'   0.530 'mg+2'   0.218 'na+'   0.134 'h2o'   0.681 'h4sio4(aq)'   3.565 'fe++'   0.067 'o2(aq)'   0.013
+'reversible'       -4.9745     0.0000
+! 
+! i/s_iscz-1_d
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'i/s_iscz-1_d'
+'surface'
+  385.0460      2.8032
+ 9  'h+1'  -7.690 'h2o'  -2.285 'al+++'   2.152 'k+'   0.530 'mg+2'   0.218 'na+'   0.134 'h4sio4(aq)'   3.565 'fe++'   0.067 'o2(aq)'   0.013
+'reversible'       -5.3625     0.0000
+! 
+! illite_imt--
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'illite_imt--'
+'surface'
+  401.8430      2.8431
+ 9  'h+1'  -8.160 'h2o'  -1.694 'al+++'   2.040 'k+'   0.762 'mg+2'   0.241 'na+'   0.044 'h4sio4(aq)'   3.387 'fe++'   0.376 'o2(aq)'   0.073
+'reversible'       -2.1134     0.0000
+! 
+! illite-al
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'illite-al'
+'surface'
+  392.6140      2.7485
+ 5  'h+1'  -9.400 'h2o'  -0.600 'al+++'   2.850 'k+'   0.850 'h4sio4(aq)'   3.150
+'reversible'       -3.9359     0.0000
+! 
+! illite-feii
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'illite-feii'
+'surface'
+  400.1060      2.7828
+ 6  'h+1'  -8.400 'h2o'  -1.600 'al+++'   2.350 'k+'   0.850 'h4sio4(aq)'   3.400 'fe++'   0.250
+'reversible'       -3.1285     0.0000
+! 
+! illite-feiii
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'illite-feiii'
+'surface'
+  399.8300      2.7719
+ 7  'h+1'  -9.150 'h2o'  -0.725 'al+++'   2.600 'k+'   0.850 'h4sio4(aq)'   3.150 'fe++'   0.250 'o2(aq)'   0.062
+'reversible'       -1.2670     0.0000
+! 
+! illite-mg
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'illite-mg'
+'surface'
+  392.2220      2.7143
+ 6  'h+1'  -8.400 'h2o'  -1.600 'al+++'   2.350 'k+'   0.850 'mg+2'   0.250 'h4sio4(aq)'   3.400
+'reversible'       -3.5816     0.0000
+! 
+! imenite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'imenite'
+'surface'
+  151.7450      4.7884
+ 4  'h+1'  -2.000 'h2o'  -1.000 'ti(oh)4(aq)'   1.000 'fe++'   1.000
+'reversible'        0.2346     0.0000
+! 
+! jacobsite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'jacobsite'
+'surface'
+  230.6300      5.1792
+ 5  'h+1'  -6.000 'mn++'   1.000 'h2o'   3.000 'fe++'   2.000 'o2(aq)'   0.500
+'reversible'        2.3151     0.0000
+! 
+! jadeite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'jadeite'
+'surface'
+  202.1400      3.3467
+ 5  'h+1'  -4.000 'h2o'  -2.000 'al+++'   1.000 'na+'   1.000 'h4sio4(aq)'   2.000
+'reversible'       -4.4558     0.0000
+! 
+! jaffeite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'jaffeite'
+'surface'
+  510.6800      2.9286
+ 4  'h+1' -12.000 'ca+2'   6.000 'h2o'   5.000 'h4sio4(aq)'   2.000
+'reversible'      -94.5849     0.0000
+! 
+! jennite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'jennite'
+'surface'
+ 1063.3700      2.3299
+ 4  'h+1' -18.000 'ca+2'   9.000 'h2o'   8.000 'h4sio4(aq)'   6.000
+'reversible'     -124.6485     0.0000
+! 
+! k,element
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'k,element'
+'surface'
+   39.1020      0.8620
+ 4  'h+1'  -1.000 'k+'   1.000 'o2(aq)'  -0.250 'h2o'   0.500
+'reversible'      -58.8046     0.0000
+! 
+! k_feldspar
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'k_feldspar'
+'surface'
+  278.3370      2.5566
+ 5  'h+1'  -4.000 'h2o'  -4.000 'al+++'   1.000 'k+'   1.000 'h4sio4(aq)'   3.000
+'reversible'        1.2766     0.0000
+! 
+! k2co3
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'k2co3'
+'surface'
+  138.2130    Infinity
+ 3  'h+1'  -1.000 'hco3-'   1.000 'k+'   2.000
+'reversible'      -14.1821     0.0000
+! 
+! k2o
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'k2o'
+'surface'
+   94.2030      2.3329
+ 3  'h+1'  -2.000 'k+'   2.000 'h2o'   1.000
+'reversible'      -70.8849     0.0000
+! 
+! k2sio3glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'k2sio3glass'
+'surface'
+  154.2880    Infinity
+ 4  'h+1'  -2.000 'h2o'  -1.000 'k+'   2.000 'h4sio4(aq)'   1.000
+'reversible'      -30.5920     0.0000
+! 
+! k2so4.feso4:
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'k2so4.feso4:'
+'surface'
+  434.2660    Infinity
+ 4  'k+'   2.000 'h2o'   6.000 'fe++'   1.000 'so4--'   2.000
+'reversible'       -0.1513     0.0000
+! 
+! kainite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'kainite'
+'surface'
+  248.9750      5.6393
+ 5  'cl-'   1.000 'k+'   1.000 'mg+2'   1.000 'h2o'   3.000 'so4--'   1.000
+'reversible'        0.6857     0.0000
+! 
+! kalicinite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'kalicinite'
+'surface'
+  100.1190    Infinity
+ 2  'hco3-'   1.000 'k+'   1.000
+'reversible'       -0.7758     0.0000
+! 
+! kalsilite,al
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'kalsilite,al'
+'surface'
+  158.1670      2.6410
+ 4  'h+1'  -4.000 'al+++'   1.000 'k+'   1.000 'h4sio4(aq)'   1.000
+'reversible'       -7.4113     0.0000
+! 
+! kalsilite,be
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'kalsilite,be'
+'surface'
+  158.1670      2.6410
+ 4  'h+1'  -4.000 'al+++'   1.000 'k+'   1.000 'h4sio4(aq)'   1.000
+'reversible'       -7.1745     0.0000
+! 
+! kaolinite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'kaolinite'
+'surface'
+  258.1610      2.5941
+ 4  'h+1'  -6.000 'al+++'   2.000 'h2o'   1.000 'h4sio4(aq)'   2.000
+'reversible'       -1.1944     0.0000
+! 
+! kaolinite_b
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'kaolinite_b'
+'surface'
+  258.1610      2.5941
+ 4  'h+1'  -6.000 'al+++'   2.000 'h2o'   1.000 'h4sio4(aq)'   2.000
+'reversible'       -1.9644     0.0000
+! 
+! katoitesi1
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'katoitesi1'
+'surface'
+  402.3400      3.0783
+ 5  'h+1' -12.000 'al+++'   2.000 'ca+2'   3.000 'h2o'   8.000 'h4sio4(aq)'   1.000
+'reversible'      -54.3137     0.0000
+! 
+! k-carbonate
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'k-carbonate'
+'surface'
+  165.2360    Infinity
+ 4  'h+1'  -1.000 'hco3-'   1.000 'k+'   2.000 'h2o'   1.500
+'reversible'      -12.9808     0.0000
+! 
+! kcl.mgcl2.6h
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'kcl.mgcl2.6h'
+'surface'
+  277.8650      2.5523
+ 4  'cl-'   3.000 'k+'   1.000 'mg+2'   1.000 'h2o'   6.000
+'reversible'       -4.3900     0.0000
+! 
+! kh2po4
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'kh2po4'
+'surface'
+  136.0890    Infinity
+ 2  'k+'   1.000 'h2po4-'   1.000
+'reversible'       -0.6514     0.0000
+! 
+! kieserite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'kieserite'
+'surface'
+  138.3890      2.5607
+ 3  'mg+2'   1.000 'h2o'   1.000 'so4--'   1.000
+'reversible'        2.0044     0.0000
+! 
+! k-trona
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'k-trona'
+'surface'
+  258.2510    Infinity
+ 5  'h+1'  -1.000 'hco3-'   2.000 'k+'   2.000 'na+'   1.000 'h2o'   2.000
+'reversible'      -11.5540     0.0000
+! 
+! kyanite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'kyanite'
+'surface'
+  162.0460      3.6753
+ 4  'h+1'  -6.000 'al+++'   2.000 'h2o'   1.000 'h4sio4(aq)'   1.000
+'reversible'       -8.3173     0.0000
+! 
+! la2o3glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'la2o3glass'
+'surface'
+  325.8180    Infinity
+ 3  'h+1'  -6.000 'la+++'   2.000 'h2o'   3.000
+'reversible'      -78.6157     0.0000
+! 
+! lansfordite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'lansfordite'
+'surface'
+  174.3980      1.7100
+ 4  'h+1'  -1.000 'hco3-'   1.000 'mg+2'   1.000 'h2o'   5.000
+'reversible'       -5.2689     0.0000
+! 
+! larnite,alph
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'larnite,alph'
+'surface'
+  172.2400      3.3380
+ 3  'h+1'  -4.000 'ca+2'   2.000 'h4sio4(aq)'   1.000
+'reversible'      -31.5930     0.0000
+! 
+! larnite,beta
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'larnite,beta'
+'surface'
+  172.2400      3.3380
+ 3  'h+1'  -4.000 'ca+2'   2.000 'h4sio4(aq)'   1.000
+'reversible'      -19.0794     0.0000
+! 
+! larnite_l
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'larnite_l'
+'surface'
+  172.2400      3.3380
+ 3  'h+1'  -4.000 'ca+2'   2.000 'h4sio4(aq)'   1.000
+'reversible'      -31.7099     0.0000
+! 
+! laumontite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'laumontite'
+'surface'
+  470.4390      2.2668
+ 4  'h+1'  -8.000 'al+++'   2.000 'ca+2'   1.000 'h4sio4(aq)'   4.000
+'reversible'       -3.6551     0.0000
+! 
+! laurite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'laurite'
+'surface'
+  165.1980      6.4631
+ 5  'h2o'  -3.000 'h+1'   6.000 'ruo4--'   1.000 'so4--'   2.000 'o2(aq)'  -4.500
+'reversible'     -130.5249     0.0000
+! 
+! lawsonite,al
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'lawsonite,al'
+'surface'
+  314.2390      3.1015
+ 5  'h+1'  -8.000 'al+++'   2.000 'ca+2'   1.000 'h2o'   2.000 'h4sio4(aq)'   2.000
+'reversible'      -14.3900     0.0000
+! 
+! lawsonite,be
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'lawsonite,be'
+'surface'
+  314.2390      3.1015
+ 5  'h+1'  -8.000 'al+++'   2.000 'ca+2'   1.000 'h2o'   2.000 'h4sio4(aq)'   2.000
+'reversible'      -14.4581     0.0000
+! 
+! leonhardite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'leonhardite'
+'surface'
+  922.8630      2.2627
+ 5  'h+1' -16.000 'h2o'  -1.000 'al+++'   4.000 'ca+2'   2.000 'h4sio4(aq)'   8.000
+'reversible'     -161.7411     0.0000
+! 
+! leonhardtite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'leonhardtite'
+'surface'
+  192.4350      2.3508
+ 3  'mg+2'   1.000 'h2o'   4.000 'so4--'   1.000
+'reversible'        1.5583     0.0000
+! 
+! leonite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'leonite'
+'surface'
+  366.7010      2.2010
+ 4  'k+'   2.000 'mg+2'   1.000 'h2o'   4.000 'so4--'   2.000
+'reversible'        3.6203     0.0000
+! 
+! lepidocrocit
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'lepidocrocit'
+'surface'
+   88.8540      4.0001
+ 4  'h+1'  -2.000 'h2o'   1.500 'fe++'   1.000 'o2(aq)'   0.250
+'reversible'        6.5932     0.0000
+! 
+! li2sio3glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'li2sio3glass'
+'surface'
+   89.9620    Infinity
+ 4  'h+1'  -2.000 'h2o'  -1.000 'li+'   2.000 'h4sio4(aq)'   1.000
+'reversible'      -16.6686     0.0000
+! 
+! libenthenite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'libenthenite'
+'surface'
+  239.0590      3.9293
+ 4  'h+1'  -3.000 'cu++'   2.000 'h2o'   1.000 'h2po4-'   1.000
+'reversible'       -6.6805     0.0000
+! 
+! lime
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'lime'
+'surface'
+   56.0770      3.3459
+ 3  'h+1'  -2.000 'ca+2'   1.000 'h2o'   1.000
+'reversible'      -26.6919     0.0000
+! 
+! litharge
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'litharge'
+'surface'
+  223.1890      9.3345
+ 3  'h+1'  -2.000 'h2o'   1.000 'pb++'   1.000
+'reversible'      -10.6022     0.0000
+! 
+! maghemite_di
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'maghemite_di'
+'surface'
+  159.6920      5.4902
+ 4  'h+1'  -4.000 'h2o'   2.000 'fe++'   2.000 'o2(aq)'   0.500
+'reversible'       12.0604     0.0000
+! 
+! maghemite_or
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'maghemite_or'
+'surface'
+  159.6920      5.4902
+ 4  'h+1'  -4.000 'h2o'   2.000 'fe++'   2.000 'o2(aq)'   0.500
+'reversible'       11.8577     0.0000
+! 
+! magnesioferr
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'magnesioferr'
+'surface'
+  200.0040      4.5466
+ 5  'h+1'  -6.000 'mg+2'   1.000 'h2o'   3.000 'fe++'   2.000 'o2(aq)'   0.500
+'reversible'       -0.1623     0.0000
+! 
+! magnesite(na
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'magnesite(na'
+'surface'
+   84.3210      3.0095
+ 3  'h+1'  -1.000 'hco3-'   1.000 'mg+2'   1.000
+'reversible'       -0.0939     0.0000
+! 
+! magnesite(sy
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'magnesite(sy'
+'surface'
+   84.3210      3.0095
+ 3  'h+1'  -1.000 'hco3-'   1.000 'mg+2'   1.000
+'reversible'       -0.7624     0.0000
+! 
+! magnetite,al
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'magnetite,al'
+'surface'
+  231.5390      5.2003
+ 4  'h+1'  -6.000 'h2o'   3.000 'fe++'   3.000 'o2(aq)'   0.500
+'reversible'        7.2788     0.0000
+! 
+! magnetite,be
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'magnetite,be'
+'surface'
+  231.5390      5.2003
+ 4  'h+1'  -6.000 'h2o'   3.000 'fe++'   3.000 'o2(aq)'   0.500
+'reversible'        6.3559     0.0000
+! 
+! magnetite(am
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'magnetite(am'
+'surface'
+  231.5390      5.2003
+ 4  'h+1'  -6.000 'h2o'   3.000 'fe++'   3.000 'o2(aq)'   0.500
+'reversible'        3.5859     0.0000
+! 
+! malachite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'malachite'
+'surface'
+  221.1040      4.0303
+ 4  'h+1'  -3.000 'hco3-'   1.000 'cu++'   2.000 'h2o'   2.000
+'reversible'       -3.5093     0.0000
+! 
+! manganosite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'manganosite'
+'surface'
+   70.9370      5.3655
+ 3  'h+1'  -2.000 'mn++'   1.000 'h2o'   1.000
+'reversible'      -14.5968     0.0000
+! 
+! margarite,al
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'margarite,al'
+'surface'
+  398.1850      3.0717
+ 5  'h+1' -14.000 'al+++'   4.000 'ca+2'   1.000 'h2o'   4.000 'h4sio4(aq)'   2.000
+'reversible'      -21.0104     0.0000
+! 
+! margarite,be
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'margarite,be'
+'surface'
+  398.1850      3.0717
+ 5  'h+1' -14.000 'al+++'   4.000 'ca+2'   1.000 'h2o'   4.000 'h4sio4(aq)'   2.000
+'reversible'      -21.4779     0.0000
+! 
+! mercallite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'mercallite'
+'surface'
+  136.1720      2.3300
+ 3  'k+'   1.000 'h+1'   1.000 'so4--'   1.000
+'reversible'        1.8058     0.0000
+! 
+! merwinite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'merwinite'
+'surface'
+  328.7130      3.1486
+ 4  'h+1'  -8.000 'ca+2'   3.000 'mg+2'   1.000 'h4sio4(aq)'   2.000
+'reversible'      -55.2378     0.0000
+! 
+! metacinnabar
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'metacinnabar'
+'surface'
+  232.6540      7.7117
+ 3  'hg++'   1.000 'so4--'   1.000 'o2(aq)'  -2.000
+'reversible'      -78.3402     0.0000
+! 
+! mg(so3):3h2o
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'mg(so3):3h2o'
+'surface'
+  158.4200    Infinity
+ 4  'mg+2'   1.000 'h2o'   3.000 'so4--'   1.000 'o2(aq)'  -0.500
+'reversible'       -8.4768     0.0000
+! 
+! mg(so3):6h2o
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'mg(so3):6h2o'
+'surface'
+  212.4660      1.7258
+ 4  'mg+2'   1.000 'h2o'   6.000 'so4--'   1.000 'o2(aq)'  -0.500
+'reversible'      -17.5830     0.0000
+! 
+! mg,element
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'mg,element'
+'surface'
+   24.3120      1.7371
+ 4  'h+1'  -2.000 'mg+2'   1.000 'o2(aq)'  -0.500 'h2o'   1.000
+'reversible'      -99.5556     0.0000
+! 
+! mg3(po4)2:22
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'mg3(po4)2:22'
+'surface'
+  659.2160    Infinity
+ 4  'h+1'  -4.000 'mg+2'   3.000 'h2o'  22.000 'h2po4-'   2.000
+'reversible'      -16.0000     0.0000
+! 
+! mgcl2.fecl2:
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'mgcl2.fecl2:'
+'surface'
+  366.0940    Infinity
+ 4  'cl-'   4.000 'mg+2'   1.000 'h2o'   8.000 'fe++'   1.000
+'reversible'       -8.5900     0.0000
+! 
+! mghpo4
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'mghpo4'
+'surface'
+  120.2910    Infinity
+ 3  'h+1'  -1.000 'mg+2'   1.000 'h2po4-'   1.000
+'reversible'        5.8155     0.0000
+! 
+! mg-montmoril
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'mg-montmoril'
+'surface'
+  366.2370      2.7520
+ 6  'h+1'  -6.040 'h2o'  -3.960 'al+++'   1.680 'ca+2'   0.170 'mg+2'   0.330 'h4sio4(aq)'   3.990
+'reversible'        0.3512     0.0000
+! 
+! mg-montmo-ca
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'mg-montmo-ca'
+'surface'
+  366.2370      2.7520
+ 6  'h+1'  -6.040 'h2o'  -3.960 'al+++'   1.680 'ca+2'   0.170 'mg+2'   0.330 'h4sio4(aq)'   3.990
+'reversible'        1.6712     0.0000
+! 
+! mg-montmo-k
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'mg-montmo-k'
+'surface'
+  372.3380      2.7979
+ 6  'h+1'  -6.000 'h2o'  -4.000 'al+++'   1.670 'k+'   0.330 'mg+2'   0.330 'h4sio4(aq)'   4.000
+'reversible'        1.9558     0.0000
+! 
+! mg-montmo-mg
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'mg-montmo-mg'
+'surface'
+  363.5570      2.7319
+ 5  'h+1'  -6.040 'h2o'  -3.960 'al+++'   1.680 'mg+2'   0.500 'h4sio4(aq)'   3.990
+'reversible'        0.9724     0.0000
+! 
+! mg-montmo-na
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'mg-montmo-na'
+'surface'
+  367.0210      2.7579
+ 6  'h+1'  -6.000 'h2o'  -4.000 'al+++'   1.670 'mg+2'   0.330 'na+'   0.330 'h4sio4(aq)'   4.000
+'reversible'        1.6699     0.0000
+! 
+! mgsio3glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'mgsio3glass'
+'surface'
+  100.3960    Infinity
+ 4  'h+1'  -2.000 'h2o'  -1.000 'mg+2'   1.000 'h4sio4(aq)'   1.000
+'reversible'      -10.1800     0.0000
+! 
+! mgso4
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'mgso4'
+'surface'
+  120.3740    Infinity
+ 2  'mg+2'   1.000 'so4--'   1.000
+'reversible'       -5.2303     0.0000
+! 
+! microcline
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'microcline'
+'surface'
+  278.3370      2.5596
+ 5  'h+1'  -4.000 'h2o'  -4.000 'al+++'   1.000 'k+'   1.000 'h4sio4(aq)'   3.000
+'reversible'        1.7214     0.0000
+! 
+! minnesotaite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'minnesotaite'
+'surface'
+  473.8940      3.2050
+ 4  'h+1'  -6.000 'h2o'  -4.000 'h4sio4(aq)'   4.000 'fe++'   3.000
+'reversible'      -10.5095     0.0000
+! 
+! mirabilite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'mirabilite'
+'surface'
+  322.1950      1.4700
+ 3  'na+'   2.000 'h2o'  10.000 'so4--'   1.000
+'reversible'       -1.2958     0.0000
+! 
+! mn3(po4)2
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'mn3(po4)2'
+'surface'
+  354.7570    Infinity
+ 3  'h+1'  -4.000 'mn++'   3.000 'h2po4-'   2.000
+'reversible'       -0.8167     0.0000
+! 
+! mnhpo4
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'mnhpo4'
+'surface'
+  150.9170    Infinity
+ 3  'h+1'  -1.000 'mn++'   1.000 'h2po4-'   1.000
+'reversible'        4.1186     0.0000
+! 
+! mnsio3glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'mnsio3glass'
+'surface'
+  131.0220    Infinity
+ 4  'h+1'  -2.000 'h2o'  -1.000 'mn++'   1.000 'h4sio4(aq)'   1.000
+'reversible'      -10.9005     0.0000
+! 
+! monetite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'monetite'
+'surface'
+  136.0570      2.9291
+ 3  'h+1'  -1.000 'ca+2'   1.000 'h2po4-'   1.000
+'reversible'        0.6098     0.0000
+! 
+! monocarboalu
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'monocarboalu'
+'surface'
+  562.6850      2.1480
+ 5  'h+1' -13.000 'al+++'   2.000 'hco3-'   1.000 'ca+2'   4.000 'h2o'  16.680
+'reversible'      -64.2669     0.0000
+! 
+! monohydrocal
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'monohydrocal'
+'surface'
+  118.1030      2.4251
+ 4  'h+1'  -1.000 'hco3-'   1.000 'ca+2'   1.000 'h2o'   1.000
+'reversible'       -2.1170     0.0000
+! 
+! monosulfoalu
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'monosulfoalu'
+'surface'
+  622.5170      2.0000
+ 5  'h+1' -12.000 'al+++'   2.000 'ca+2'   4.000 'h2o'  18.000 'so4--'   1.000
+'reversible'      -56.3636     0.0000
+! 
+! monosulfo-fe
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'monosulfo-fe'
+'surface'
+  680.2480      2.1523
+ 6  'h+1' -10.000 'ca+2'   4.000 'h2o'  17.000 'fe++'   2.000 'so4--'   1.000 'o2(aq)'   0.500
+'reversible'      -40.3117     0.0000
+! 
+! monteponite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'monteponite'
+'surface'
+  128.3990      8.2360
+ 3  'h+1'  -2.000 'cd++'   1.000 'h2o'   1.000
+'reversible'      -11.9222     0.0000
+! 
+! monticellite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'monticellite'
+'surface'
+  156.4740      3.0401
+ 4  'h+1'  -4.000 'ca+2'   1.000 'mg+2'   1.000 'h4sio4(aq)'   1.000
+'reversible'      -23.6606     0.0000
+! 
+! montroydite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'montroydite'
+'surface'
+  216.5890     11.2106
+ 3  'h+1'  -2.000 'hg++'   1.000 'h2o'   1.000
+'reversible'       -1.7154     0.0000
+! 
+! moo3glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'moo3glass'
+'surface'
+  143.9380    Infinity
+ 3  'h2o'  -1.000 'h+1'   2.000 'moo4--'   1.000
+'reversible'      -15.9429     0.0000
+! 
+! mullite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'mullite'
+'surface'
+  426.0530      3.1665
+ 4  'h+1' -18.000 'al+++'   6.000 'h2o'   5.000 'h4sio4(aq)'   2.000
+'reversible'      -26.5760     0.0000
+! 
+! muscovite_de
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'muscovite_de'
+'surface'
+  398.3130      2.8307
+ 4  'h+1' -10.000 'al+++'   3.000 'k+'   1.000 'h4sio4(aq)'   3.000
+'reversible'       -4.3814     0.0000
+! 
+! muscovite_or
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'muscovite_or'
+'surface'
+  398.3130      2.8307
+ 4  'h+1' -10.000 'al+++'   3.000 'k+'   1.000 'h4sio4(aq)'   3.000
+'reversible'       -3.1666     0.0000
+! 
+! na,element
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'na,element'
+'surface'
+   22.9900      0.9656
+ 4  'h+1'  -1.000 'na+'   1.000 'o2(aq)'  -0.250 'h2o'   0.500
+'reversible'      -55.6033     0.0000
+! 
+! na2co3
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'na2co3'
+'surface'
+  105.9890      2.5478
+ 3  'h+1'  -1.000 'hco3-'   1.000 'na+'   2.000
+'reversible'      -10.1231     0.0000
+! 
+! na2co3:7h2o
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'na2co3:7h2o'
+'surface'
+  232.0960    Infinity
+ 4  'h+1'  -1.000 'hco3-'   1.000 'na+'   2.000 'h2o'   7.000
+'reversible'      -11.3338     0.0000
+! 
+! na2hpo4
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'na2hpo4'
+'surface'
+  141.9590      2.5801
+ 3  'h+1'  -1.000 'na+'   2.000 'h2po4-'   1.000
+'reversible'       -8.0880     0.0000
+! 
+! na2o
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'na2o'
+'surface'
+   61.9790      2.3949
+ 3  'h+1'  -2.000 'na+'   2.000 'h2o'   1.000
+'reversible'      -56.6500     0.0000
+! 
+! na2sio3glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'na2sio3glass'
+'surface'
+  122.0640    Infinity
+ 4  'h+1'  -2.000 'h2o'  -1.000 'na+'   2.000 'h4sio4(aq)'   1.000
+'reversible'      -21.1216     0.0000
+! 
+! na2so4.feso4
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'na2so4.feso4'
+'surface'
+  366.0110    Infinity
+ 4  'na+'   2.000 'h2o'   4.000 'fe++'   1.000 'so4--'   2.000
+'reversible'        3.2101     0.0000
+! 
+! na3po4
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'na3po4'
+'surface'
+  163.9410    Infinity
+ 3  'h+1'  -2.000 'na+'   3.000 'h2po4-'   1.000
+'reversible'      -20.1949     0.0000
+! 
+! nah2po4
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'nah2po4'
+'surface'
+  119.9770    Infinity
+ 2  'na+'   1.000 'h2po4-'   1.000
+'reversible'       -2.0213     0.0000
+! 
+! nahcolite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'nahcolite'
+'surface'
+   84.0070      2.2061
+ 2  'hco3-'   1.000 'na+'   1.000
+'reversible'       -0.1030     0.0000
+! 
+! natrolite,al
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'natrolite,al'
+'surface'
+  380.2250      2.2403
+ 4  'h+1'  -8.000 'al+++'   2.000 'na+'   2.000 'h4sio4(aq)'   3.000
+'reversible'       -9.0633     0.0000
+! 
+! natrolite,be
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'natrolite,be'
+'surface'
+  380.2250      2.2403
+ 4  'h+1'  -8.000 'al+++'   2.000 'na+'   2.000 'h4sio4(aq)'   3.000
+'reversible'       -9.0342     0.0000
+! 
+! natron
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'natron'
+'surface'
+  286.1420    Infinity
+ 4  'h+1'  -1.000 'hco3-'   1.000 'na+'   2.000 'h2o'  10.000
+'reversible'      -11.3324     0.0000
+! 
+! nd2o3glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'nd2o3glass'
+'surface'
+  336.4780    Infinity
+ 3  'h+1'  -6.000 'nd+++'   2.000 'h2o'   3.000
+'reversible'      -73.4701     0.0000
+! 
+! nepheline
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'nepheline'
+'surface'
+  142.0550      2.6229
+ 4  'h+1'  -4.000 'al+++'   1.000 'na+'   1.000 'h4sio4(aq)'   1.000
+'reversible'       -9.5189     0.0000
+! 
+! nesquehoni,a
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'nesquehoni,a'
+'surface'
+  138.3670      1.8501
+ 4  'h+1'  -1.000 'hco3-'   1.000 'mg+2'   1.000 'h2o'   3.000
+'reversible'       -7.3116     0.0000
+! 
+! nesquehoni,b
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'nesquehoni,b'
+'surface'
+  138.3670      1.8501
+ 4  'h+1'  -1.000 'hco3-'   1.000 'mg+2'   1.000 'h2o'   3.000
+'reversible'       -4.9464     0.0000
+! 
+! newberyite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'newberyite'
+'surface'
+  174.3370      2.0999
+ 4  'h+1'  -1.000 'mg+2'   1.000 'h2o'   3.000 'h2po4-'   1.000
+'reversible'       -1.4100     0.0000
+! 
+! ni3(po4)2
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'ni3(po4)2'
+'surface'
+  366.0730    Infinity
+ 3  'h+1'  -4.000 'ni++'   3.000 'h2po4-'   2.000
+'reversible'        5.5910     0.0000
+! 
+! nickel,alpha
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'nickel,alpha'
+'surface'
+   58.7100      8.9117
+ 4  'h+1'  -2.000 'ni++'   1.000 'o2(aq)'  -0.500 'h2o'   1.000
+'reversible'      -40.5457     0.0000
+! 
+! nickel,beta
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'nickel,beta'
+'surface'
+   58.7100      8.9117
+ 4  'h+1'  -2.000 'ni++'   1.000 'o2(aq)'  -0.500 'h2o'   1.000
+'reversible'      -40.5814     0.0000
+! 
+! nisio3glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'nisio3glass'
+'surface'
+  134.7940    Infinity
+ 4  'h+1'  -2.000 'h2o'  -1.000 'ni++'   1.000 'h4sio4(aq)'   1.000
+'reversible'      -10.5164     0.0000
+! 
+! nontroniteca
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'nontroniteca'
+'surface'
+  424.4840      3.2256
+ 7  'h+1'  -5.360 'h2o'  -3.640 'al+++'   0.340 'ca+2'   0.170 'h4sio4(aq)'   3.660 'fe++'   2.000 'o2(aq)'   0.500
+'reversible'       18.7283     0.0000
+! 
+! nontronitek
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'nontronitek'
+'surface'
+  430.5860      3.2719
+ 7  'h+1'  -5.320 'h2o'  -3.680 'al+++'   0.330 'k+'   0.330 'h4sio4(aq)'   3.670 'fe++'   2.000 'o2(aq)'   0.500
+'reversible'       20.1228     0.0000
+! 
+! nontronitemg
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'nontronitemg'
+'surface'
+  421.8040      3.2052
+ 7  'h+1'  -5.360 'h2o'  -3.640 'al+++'   0.340 'mg+2'   0.170 'h4sio4(aq)'   3.660 'fe++'   2.000 'o2(aq)'   0.500
+'reversible'       19.3743     0.0000
+! 
+! nontronitena
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'nontronitena'
+'surface'
+  425.2690      3.2315
+ 7  'h+1'  -5.320 'h2o'  -3.680 'al+++'   0.330 'na+'   0.330 'h4sio4(aq)'   3.670 'fe++'   2.000 'o2(aq)'   0.500
+'reversible'       19.9004     0.0000
+! 
+! okenite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'okenite'
+'surface'
+  212.2780      2.2399
+ 4  'h+1'  -2.000 'h2o'  -1.000 'ca+2'   1.000 'h4sio4(aq)'   2.000
+'reversible'       -8.0567     0.0000
+! 
+! orpiment
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'orpiment'
+'surface'
+  246.0350      3.4899
+ 5  'h2o'  -6.000 'h2aso4-'   2.000 'h+1'   8.000 'so4--'   3.000 'o2(aq)'  -7.000
+'reversible'     -325.7371     0.0000
+! 
+! otavite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'otavite'
+'surface'
+  172.4090      5.0265
+ 3  'h+1'  -1.000 'hco3-'   1.000 'cd++'   1.000
+'reversible'        2.3051     0.0000
+! 
+! p,element
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'p,element'
+'surface'
+   30.9740      1.7904
+ 4  'h2o'  -1.500 'h+1'   1.000 'h2po4-'   1.000 'o2(aq)'  -1.250
+'reversible'     -113.4851     0.0000
+! 
+! p4o10glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'p4o10glass'
+'surface'
+  283.8890    Infinity
+ 3  'h2o'  -6.000 'h+1'   4.000 'h2po4-'   4.000
+'reversible'      -74.7550     0.0000
+! 
+! palladium
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'palladium'
+'surface'
+  106.4000     12.0077
+ 4  'h+1'  -2.000 'pd++'   1.000 'o2(aq)'  -0.500 'h2o'   1.000
+'reversible'       -8.8365     0.0000
+! 
+! paragonite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'paragonite'
+'surface'
+  382.2010      2.8839
+ 4  'h+1' -10.000 'al+++'   3.000 'na+'   1.000 'h4sio4(aq)'   3.000
+'reversible'       -7.3601     0.0000
+! 
+! pargasite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'pargasite'
+'surface'
+  835.8560      3.0561
+ 6  'h+1' -22.000 'al+++'   3.000 'ca+2'   2.000 'mg+2'   4.000 'na+'   1.000 'h4sio4(aq)'   6.000
+'reversible'      -75.0197     0.0000
+! 
+! pb,element
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'pb,element'
+'surface'
+  207.1900     11.3423
+ 4  'h+1'  -2.000 'pb++'   1.000 'o2(aq)'  -0.500 'h2o'   1.000
+'reversible'      -38.5020     0.0000
+! 
+! pb3(po4)2
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'pb3(po4)2'
+'surface'
+  811.5130    Infinity
+ 3  'h+1'  -4.000 'h2po4-'   2.000 'pb++'   3.000
+'reversible'       17.6694     0.0000
+! 
+! pb4o(po4)2
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'pb4o(po4)2'
+'surface'
+ 1034.7000    Infinity
+ 4  'h+1'  -6.000 'h2o'   1.000 'h2po4-'   2.000 'pb++'   4.000
+'reversible'      -42.8165     0.0000
+! 
+! pbhpo4
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'pbhpo4'
+'surface'
+  303.1690    Infinity
+ 3  'h+1'  -1.000 'h2po4-'   1.000 'pb++'   1.000
+'reversible'       11.4400     0.0000
+! 
+! pboglass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'pboglass'
+'surface'
+  223.1890    Infinity
+ 3  'h+1'  -2.000 'h2o'   1.000 'pb++'   1.000
+'reversible'      -16.1121     0.0000
+! 
+! pbsio3glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'pbsio3glass'
+'surface'
+  283.2740    Infinity
+ 4  'h+1'  -2.000 'h2o'  -1.000 'pb++'   1.000 'h4sio4(aq)'   1.000
+'reversible'       -6.4578     0.0000
+! 
+! pd(oh)2(s)
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'pd(oh)2(s)'
+'surface'
+  140.4150      4.9477
+ 3  'h+1'  -2.000 'h2o'   2.000 'pd++'   1.000
+'reversible'        0.8211     0.0000
+! 
+! pd4s(s)
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'pd4s(s)'
+'surface'
+  457.6640     10.3944
+ 5  'h+1'  -6.000 'h2o'   3.000 'pd++'   4.000 'so4--'   1.000 'o2(aq)'  -3.500
+'reversible'      -99.2986     0.0000
+! 
+! pdo(s)
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'pdo(s)'
+'surface'
+  122.3990      8.3378
+ 3  'h+1'  -2.000 'h2o'   1.000 'pd++'   1.000
+'reversible'        0.5763     0.0000
+! 
+! pds2
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'pds2'
+'surface'
+  170.5280      4.9717
+ 5  'pd++'   1.000 'h2o'  -1.000 'h+1'   2.000 'so4--'   2.000 'o2(aq)'  -3.500
+'reversible'     -145.7963     0.0000
+! 
+! pentahydrite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'pentahydrite'
+'surface'
+  210.4500      1.9200
+ 3  'mg+2'   1.000 'h2o'   5.000 'so4--'   1.000
+'reversible'        1.5672     0.0000
+! 
+! periclase
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'periclase'
+'surface'
+   40.3110      3.5832
+ 3  'h+1'  -2.000 'mg+2'   1.000 'h2o'   1.000
+'reversible'      -16.9236     0.0000
+! 
+! phillip_ca,a
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'phillip_ca,a'
+'surface'
+  548.5390      2.0700
+ 5  'h+1'  -8.000 'h2o'  -1.000 'al+++'   2.000 'ca+2'   1.000 'h4sio4(aq)'   5.000
+'reversible'       -2.1057     0.0000
+! 
+! phillip_ca,b
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'phillip_ca,b'
+'surface'
+  548.5390      2.0700
+ 5  'h+1'  -8.000 'h2o'  -1.000 'al+++'   2.000 'ca+2'   1.000 'h4sio4(aq)'   5.000
+'reversible'       -2.1347     0.0000
+! 
+! phillipsit,a
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'phillipsit,a'
+'surface'
+  586.6650      2.2138
+ 5  'h+1'  -8.000 'h2o'  -1.000 'al+++'   2.000 'k+'   2.000 'h4sio4(aq)'   5.000
+'reversible'        0.5019     0.0000
+! 
+! phillipsit,b
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'phillipsit,b'
+'surface'
+  586.6650      2.2138
+ 5  'h+1'  -8.000 'h2o'  -1.000 'al+++'   2.000 'k+'   2.000 'h4sio4(aq)'   5.000
+'reversible'        0.4728     0.0000
+! 
+! phillip_na_a
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'phillip_na_a'
+'surface'
+  554.4410      2.0922
+ 5  'h+1'  -8.000 'h2o'  -1.000 'al+++'   2.000 'na+'   2.000 'h4sio4(aq)'   5.000
+'reversible'       -4.9663     0.0000
+! 
+! phillip_na_b
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'phillip_na_b'
+'surface'
+  554.4410      2.0922
+ 5  'h+1'  -8.000 'h2o'  -1.000 'al+++'   2.000 'na+'   2.000 'h4sio4(aq)'   5.000
+'reversible'       -4.9954     0.0000
+! 
+! phlogopite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'phlogopite'
+'surface'
+  417.2860      2.7882
+ 5  'h+1' -10.000 'al+++'   1.000 'k+'   1.000 'mg+2'   3.000 'h4sio4(aq)'   3.000
+'reversible'      -30.0164     0.0000
+! 
+! picromerite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'picromerite'
+'surface'
+  402.7310      2.0400
+ 4  'k+'   2.000 'mg+2'   1.000 'h2o'   6.000 'so4--'   2.000
+'reversible'        3.2543     0.0000
+! 
+! pirssonite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'pirssonite'
+'surface'
+  242.1070      2.3600
+ 5  'h+1'  -2.000 'hco3-'   2.000 'ca+2'   1.000 'na+'   2.000 'h2o'   2.000
+'reversible'      -11.2984     0.0000
+! 
+! platinum
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'platinum'
+'surface'
+  195.0900     21.4620
+ 4  'h+1'  -2.000 'pt++'   1.000 'o2(aq)'  -0.500 'h2o'   1.000
+'reversible'        3.0038     0.0000
+! 
+! plumbogummit
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'plumbogummit'
+'surface'
+  581.1290      4.0402
+ 5  'h+1'  -9.000 'al+++'   3.000 'h2o'   6.000 'h2po4-'   2.000 'pb++'   1.000
+'reversible'        8.1463     0.0000
+! 
+! polyhalite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'polyhalite'
+'surface'
+  602.9490      2.7600
+ 5  'ca+2'   2.000 'k+'   2.000 'mg+2'   1.000 'h2o'   2.000 'so4--'   4.000
+'reversible'       13.7401     0.0000
+! 
+! portlandite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'portlandite'
+'surface'
+   74.0930      2.2414
+ 3  'h+1'  -2.000 'ca+2'   1.000 'h2o'   2.000
+'reversible'      -18.8106     0.0000
+! 
+! potassium_ox
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'potassium_ox'
+'surface'
+   94.2030      2.3329
+ 3  'h+1'  -2.000 'k+'   2.000 'h2o'   1.000
+'reversible'      -70.8849     0.0000
+! 
+! prehnite,alp
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'prehnite,alp'
+'surface'
+  412.3860      2.9227
+ 4  'h+1' -10.000 'al+++'   2.000 'ca+2'   2.000 'h4sio4(aq)'   3.000
+'reversible'      -21.3860     0.0000
+! 
+! prehnite,bet
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'prehnite,bet'
+'surface'
+  412.3860      2.9227
+ 4  'h+1' -10.000 'al+++'   2.000 'ca+2'   2.000 'h4sio4(aq)'   3.000
+'reversible'      -21.4031     0.0000
+! 
+! pseudomalach
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'pseudomalach'
+'surface'
+  575.6720      3.9498
+ 4  'h+1'  -8.000 'cu++'   5.000 'h2o'   4.000 'h2po4-'   2.000
+'reversible'      -21.5565     0.0000
+! 
+! pts2(s)
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'pts2(s)'
+'surface'
+  259.2180      7.9160
+ 5  'pt++'   1.000 'h2o'  -1.000 'h+1'   2.000 'so4--'   2.000 'o2(aq)'  -3.500
+'reversible'     -130.1923     0.0000
+! 
+! pyrite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'pyrite'
+'surface'
+  119.9750      5.0115
+ 5  'fe++'   1.000 'h2o'  -1.000 'h+1'   2.000 'so4--'   2.000 'o2(aq)'  -3.500
+'reversible'     -172.6619     0.0000
+! 
+! pyromorphite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'pyromorphite'
+'surface'
+ 1356.3100      7.1001
+ 4  'h+1'  -6.000 'cl-'   1.000 'h2po4-'   3.000 'pb++'   5.000
+'reversible'       47.3700     0.0000
+! 
+! pyrope,alpha
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'pyrope,alpha'
+'surface'
+  403.1500      3.5592
+ 4  'h+1' -12.000 'al+++'   2.000 'mg+2'   3.000 'h4sio4(aq)'   3.000
+'reversible'      -41.0405     0.0000
+! 
+! pyrope,beta
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'pyrope,beta'
+'surface'
+  403.1500      3.5592
+ 4  'h+1' -12.000 'al+++'   2.000 'mg+2'   3.000 'h4sio4(aq)'   3.000
+'reversible'      -41.1277     0.0000
+! 
+! pyrophyllite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'pyrophyllite'
+'surface'
+  360.3160      2.8461
+ 4  'h+1'  -6.000 'h2o'  -4.000 'al+++'   2.000 'h4sio4(aq)'   4.000
+'reversible'        4.7696     0.0000
+! 
+! pyrrhotite,a
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'pyrrhotite,a'
+'surface'
+   87.9110      4.8303
+ 3  'fe++'   1.000 'so4--'   1.000 'o2(aq)'  -2.000
+'reversible'     -106.5295     0.0000
+! 
+! pyrrhotite,b
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'pyrrhotite,b'
+'surface'
+   87.9110      4.8303
+ 3  'fe++'   1.000 'so4--'   1.000 'o2(aq)'  -2.000
+'reversible'     -105.4459     0.0000
+! 
+! pyrrhotite,g
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'pyrrhotite,g'
+'surface'
+   87.9110      4.8303
+ 3  'fe++'   1.000 'so4--'   1.000 'o2(aq)'  -2.000
+'reversible'     -101.2373     0.0000
+! 
+! quartz,alpha
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'quartz,alpha'
+'surface'
+   60.0850      2.6481
+ 2  'h2o'  -2.000 'h4sio4(aq)'   1.000
+'reversible'        3.0803     0.0000
+! 
+! quartz,beta
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'quartz,beta'
+'surface'
+   60.0850      2.6022
+ 2  'h2o'  -2.000 'h4sio4(aq)'   1.000
+'reversible'        3.0794     0.0000
+! 
+! rb2sio3glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'rb2sio3glass'
+'surface'
+  247.0240    Infinity
+ 4  'h+1'  -2.000 'h2o'  -1.000 'rb+'   2.000 'h4sio4(aq)'   1.000
+'reversible'      -34.0848     0.0000
+! 
+! realgar
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'realgar'
+'surface'
+  106.9860      3.5901
+ 5  'h2o'  -2.500 'h2aso4-'   1.000 'h+1'   3.000 'so4--'   1.000 'o2(aq)'  -2.750
+'reversible'     -127.4349     0.0000
+! 
+! rh2o(s)
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'rh2o(s)'
+'surface'
+  221.8090    Infinity
+ 4  'h+1'  -4.000 'h2o'   2.000 'rh++'   2.000 'o2(aq)'  -0.500
+'reversible'      -22.1085     0.0000
+! 
+! rh2o3(s)
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'rh2o3(s)'
+'surface'
+  253.8080      8.0908
+ 4  'h+1'  -4.000 'h2o'   2.000 'rh++'   2.000 'o2(aq)'   0.500
+'reversible'       -3.5161     0.0000
+! 
+! rhodium
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'rhodium'
+'surface'
+  102.9050     12.4266
+ 4  'h+1'  -2.000 'rh++'   1.000 'o2(aq)'  -0.500 'h2o'   1.000
+'reversible'      -17.3614     0.0000
+! 
+! rhodochrosit
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'rhodochrosit'
+'surface'
+  114.9470      3.6990
+ 3  'h+1'  -1.000 'hco3-'   1.000 'mn++'   1.000
+'reversible'        0.5696     0.0000
+! 
+! riebeckite,a
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'riebeckite,a'
+'surface'
+  935.9040      3.4045
+ 6  'h+1' -12.000 'h2o'  -9.000 'na+'   2.000 'h4sio4(aq)'   8.000 'fe++'   5.000 'o2(aq)'   0.500
+'reversible'        6.2243     0.0000
+! 
+! riebeckite,b
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'riebeckite,b'
+'surface'
+  935.9040      3.4045
+ 6  'h+1' -12.000 'h2o'  -9.000 'na+'   2.000 'h4sio4(aq)'   8.000 'fe++'   5.000 'o2(aq)'   0.500
+'reversible'       74.0779     0.0000
+! 
+! riebeckite,g
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'riebeckite,g'
+'surface'
+  935.9040      3.4045
+ 6  'h+1' -12.000 'h2o'  -9.000 'na+'   2.000 'h4sio4(aq)'   8.000 'fe++'   5.000 'o2(aq)'   0.500
+'reversible'      126.4427     0.0000
+! 
+! romarchite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'romarchite'
+'surface'
+  134.6890      6.2501
+ 3  'h+1'  -2.000 'h2o'   1.000 'sn++'   1.000
+'reversible'       -1.7767     0.0000
+! 
+! ruo2(s)
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'ruo2(s)'
+'surface'
+  133.0690      6.9852
+ 4  'h2o'  -1.000 'h+1'   2.000 'ruo4--'   1.000 'o2(aq)'  -0.500
+'reversible'       28.0804     0.0000
+! 
+! ruthenium
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'ruthenium'
+'surface'
+  101.0700     12.3633
+ 4  'h2o'  -1.000 'h+1'   2.000 'ruo4--'   1.000 'o2(aq)'  -1.500
+'reversible'       -9.8379     0.0000
+! 
+! rutile
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'rutile'
+'surface'
+   79.8990      4.2454
+ 2  'h2o'  -2.000 'ti(oh)4(aq)'   1.000
+'reversible'        8.1964     0.0000
+! 
+! s,alpha
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'s,alpha'
+'surface'
+   32.0640      2.0672
+ 4  'h2o'  -1.000 'h+1'   2.000 'so4--'   1.000 'o2(aq)'  -1.500
+'reversible'      -73.7487     0.0000
+! 
+! s,beta
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'s,beta'
+'surface'
+   32.0640      2.0672
+ 4  'h2o'  -1.000 'h+1'   2.000 'so4--'   1.000 'o2(aq)'  -1.500
+'reversible'      -73.7500     0.0000
+! 
+! sanidine
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'sanidine'
+'surface'
+  278.3370      2.5534
+ 5  'h+1'  -4.000 'h2o'  -4.000 'al+++'   1.000 'k+'   1.000 'h4sio4(aq)'   3.000
+'reversible'        1.4594     0.0000
+! 
+! saponiteca
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'saponiteca'
+'surface'
+  385.7260      2.5614
+ 6  'h+1'  -7.360 'h2o'  -2.640 'al+++'   0.340 'ca+2'   0.170 'mg+2'   3.000 'h4sio4(aq)'   3.660
+'reversible'      -22.3688     0.0000
+! 
+! saponitek
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'saponitek'
+'surface'
+  391.8280      2.6020
+ 6  'h+1'  -7.320 'h2o'  -2.680 'al+++'   0.330 'k+'   0.330 'mg+2'   3.000 'h4sio4(aq)'   3.670
+'reversible'      -20.9567     0.0000
+! 
+! saponitemg
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'saponitemg'
+'surface'
+  383.0460      2.5436
+ 5  'h+1'  -7.360 'h2o'  -2.640 'al+++'   0.340 'mg+2'   3.170 'h4sio4(aq)'   3.660
+'reversible'      -21.7228     0.0000
+! 
+! saponitena
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'saponitena'
+'surface'
+  386.5110      2.5666
+ 6  'h+1'  -7.320 'h2o'  -2.680 'al+++'   0.330 'mg+2'   3.000 'na+'   0.330 'h4sio4(aq)'   3.670
+'reversible'      -21.1792     0.0000
+! 
+! sb,element
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'sb,element'
+'surface'
+  121.7500      6.6977
+ 3  'h2o'  -1.500 'sb(oh)3(aq)'   1.000 'o2(aq)'  -0.750
+'reversible'      -42.8899     0.0000
+! 
+! scholzite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'scholzite'
+'surface'
+  396.7910      3.1500
+ 5  'h+1'  -4.000 'ca+2'   1.000 'h2o'   2.000 'h2po4-'   2.000 'zn++'   2.000
+'reversible'       -7.4411     0.0000
+! 
+! sellaite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'sellaite'
+'surface'
+   62.3090      3.1485
+ 2  'f-'   2.000 'mg+2'   1.000
+'reversible'        9.8999     0.0000
+! 
+! senarmontite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'senarmontite'
+'surface'
+  291.4980      5.5832
+ 2  'h2o'  -3.000 'sb(oh)3(aq)'   2.000
+'reversible'        7.6093     0.0000
+! 
+! sepiolite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'sepiolite'
+'surface'
+  647.8620      2.2684
+ 4  'h+1'  -8.000 'h2o'  -1.000 'mg+2'   4.000 'h4sio4(aq)'   6.000
+'reversible'      -26.1301     0.0000
+! 
+! siderite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'siderite'
+'surface'
+  115.8560      3.9436
+ 3  'h+1'  -1.000 'hco3-'   1.000 'fe++'   1.000
+'reversible'        1.4327     0.0000
+! 
+! siderite_085
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'siderite_085'
+'surface'
+  113.4950      3.7586
+ 4  'h+1'  -1.000 'hco3-'   1.000 'fe++'   0.850 'ca+2'   0.150
+'reversible'        1.5019     0.0000
+! 
+! sillimanite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'sillimanite'
+'surface'
+  162.0460      3.2474
+ 4  'h+1'  -6.000 'al+++'   2.000 'h2o'   1.000 'h4sio4(aq)'   1.000
+'reversible'       -8.7180     0.0000
+! 
+! sio2glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'sio2glass'
+'surface'
+   60.0850    Infinity
+ 2  'h2o'  -2.000 'h4sio4(aq)'   1.000
+'reversible'        4.0975     0.0000
+! 
+! smectitemx_a
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'smectitemx_a'
+'surface'
+  454.0050      2.1030
+10  'h+1'  -7.368 'al+++'   1.996 'ca+2'   0.010 'k+'   0.026 'mg+2'   0.228 'na+'   0.434 'h2o'   1.643 'h4sio4(aq)'   3.612 'fe++'   0.222 'o2(aq)'   0.046
+'reversible'        0.5402     0.0000
+! 
+! smectitemx_b
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'smectitemx_b'
+'surface'
+  476.6680      3.5522
+10  'h+1'  -7.368 'al+++'   1.996 'ca+2'   0.010 'k+'   0.026 'mg+2'   0.228 'na+'   0.434 'h2o'   2.901 'h4sio4(aq)'   3.612 'fe++'   0.222 'o2(aq)'   0.046
+'reversible'        0.0219     0.0000
+! 
+! smectitemx_c
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'smectitemx_c'
+'surface'
+  378.6470      2.8217
+10  'h+1'  -7.368 'h2o'  -2.540 'al+++'   1.996 'ca+2'   0.010 'k+'   0.026 'mg+2'   0.228 'na+'   0.434 'h4sio4(aq)'   3.612 'fe++'   0.222 'o2(aq)'   0.046
+'reversible'       -0.5113     0.0000
+! 
+! smithsonite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'smithsonite'
+'surface'
+  125.3790      4.4343
+ 3  'h+1'  -1.000 'hco3-'   1.000 'zn++'   1.000
+'reversible'        0.6156     0.0000
+! 
+! snoglass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'snoglass'
+'surface'
+  134.6890    Infinity
+ 3  'h+1'  -2.000 'h2o'   1.000 'sn++'   1.000
+'reversible'       -7.4340     0.0000
+! 
+! sodium_oxide
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'sodium_oxide'
+'surface'
+   61.9790      2.4792
+ 3  'h+1'  -2.000 'na+'   2.000 'h2o'   1.000
+'reversible'      -56.6500     0.0000
+! 
+! spencerite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'spencerite'
+'surface'
+  539.4840      3.2500
+ 4  'h+1'  -6.000 'h2o'   5.000 'h2po4-'   2.000 'zn++'   4.000
+'reversible'      -16.8308     0.0000
+! 
+! spessartin,a
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'spessartin,a'
+'surface'
+  495.0280      4.1987
+ 4  'h+1' -12.000 'al+++'   2.000 'mn++'   3.000 'h4sio4(aq)'   3.000
+'reversible'      -35.0235     0.0000
+! 
+! spessartin,b
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'spessartin,b'
+'surface'
+  495.0280      4.1987
+ 4  'h+1' -12.000 'al+++'   2.000 'mn++'   3.000 'h4sio4(aq)'   3.000
+'reversible'      -35.1107     0.0000
+! 
+! sphalerite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'sphalerite'
+'surface'
+   97.4340      4.0887
+ 3  'zn++'   1.000 'so4--'   1.000 'o2(aq)'  -2.000
+'reversible'     -100.2690     0.0000
+! 
+! spinel
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'spinel'
+'surface'
+  142.2730      3.5828
+ 4  'h+1'  -8.000 'al+++'   2.000 'mg+2'   1.000 'h2o'   4.000
+'reversible'      -25.4169     0.0000
+! 
+! sr(oh)2
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'sr(oh)2'
+'surface'
+  121.6350    Infinity
+ 3  'h+1'  -2.000 'h2o'   2.000 'sr++'   1.000
+'reversible'      -22.7963     0.0000
+! 
+! sr(oh)2:8h2o
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'sr(oh)2:8h2o'
+'surface'
+  265.7570    Infinity
+ 3  'h+1'  -2.000 'h2o'  10.000 'sr++'   1.000
+'reversible'      -23.2813     0.0000
+! 
+! sr,element
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'sr,element'
+'surface'
+   87.6200      2.5831
+ 4  'h+1'  -2.000 'sr++'   1.000 'o2(aq)'  -0.500 'h2o'   1.000
+'reversible'     -115.9378     0.0000
+! 
+! sr2sio4
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'sr2sio4'
+'surface'
+  267.3240    Infinity
+ 3  'h+1'  -4.000 'h4sio4(aq)'   1.000 'sr++'   2.000
+'reversible'      -43.2478     0.0000
+! 
+! sr3(po4)2
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'sr3(po4)2'
+'surface'
+  452.8030    Infinity
+ 3  'h+1'  -4.000 'h2po4-'   2.000 'sr++'   3.000
+'reversible'       -5.8184     0.0000
+! 
+! sr5(p4)3(oh)
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'sr5(p4)3(oh)'
+'surface'
+  826.7930    Infinity
+ 5  'h2o' -12.500 'h+1'   2.000 'h2po4-'  12.000 'sr++'   5.000 'o2(aq)' -17.250
+'reversible'      243.2051     0.0000
+! 
+! srcl2
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'srcl2'
+'surface'
+  158.5260    Infinity
+ 2  'cl-'   2.000 'sr++'   1.000
+'reversible'       -6.4860     0.0000
+! 
+! srcl2:2h2o
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'srcl2:2h2o'
+'surface'
+  194.5570    Infinity
+ 3  'cl-'   2.000 'h2o'   2.000 'sr++'   1.000
+'reversible'       -2.6330     0.0000
+! 
+! srcl2:6h2o
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'srcl2:6h2o'
+'surface'
+  266.6180    Infinity
+ 3  'cl-'   2.000 'h2o'   6.000 'sr++'   1.000
+'reversible'       -2.5596     0.0000
+! 
+! srcl2:h2o
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'srcl2:h2o'
+'surface'
+  176.5410    Infinity
+ 3  'cl-'   2.000 'h2o'   1.000 'sr++'   1.000
+'reversible'       -3.5622     0.0000
+! 
+! srcro4
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'srcro4'
+'surface'
+  203.6140    Infinity
+ 2  'cro4--'   1.000 'sr++'   1.000
+'reversible'        5.0982     0.0000
+! 
+! srhpo4
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'srhpo4'
+'surface'
+  183.5990    Infinity
+ 3  'h+1'  -1.000 'h2po4-'   1.000 'sr++'   1.000
+'reversible'        0.3723     0.0000
+! 
+! sro
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'sro'
+'surface'
+  103.6190      5.0082
+ 3  'h+1'  -2.000 'h2o'   1.000 'sr++'   1.000
+'reversible'      -34.3898     0.0000
+! 
+! srs
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'srs'
+'surface'
+  119.6840    Infinity
+ 3  'sr++'   1.000 'so4--'   1.000 'o2(aq)'  -2.000
+'reversible'     -122.4708     0.0000
+! 
+! srsio3
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'srsio3'
+'surface'
+  163.7040    Infinity
+ 4  'h+1'  -2.000 'h2o'  -1.000 'h4sio4(aq)'   1.000 'sr++'   1.000
+'reversible'      -10.6753     0.0000
+! 
+! srsio3glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'srsio3glass'
+'surface'
+  163.7040    Infinity
+ 4  'h+1'  -2.000 'h2o'  -1.000 'h4sio4(aq)'   1.000 'sr++'   1.000
+'reversible'      -17.8854     0.0000
+! 
+! staurolite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'staurolite'
+'surface'
+  851.8650      3.7962
+ 5  'h+1' -31.000 'al+++'   9.000 'h2o'   8.000 'h4sio4(aq)'   4.000 'fe++'   2.000
+'reversible'     -154.9770     0.0000
+! 
+! stibnite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'stibnite'
+'surface'
+  339.6920      4.6271
+ 5  'h2o'  -6.000 'h+1'   6.000 'sb(oh)3(aq)'   2.000 'so4--'   3.000 'o2(aq)'  -6.000
+'reversible'     -285.3492     0.0000
+! 
+! stilbite,alp
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'stilbite,alp'
+'surface'
+ 1431.3600      2.2024
+ 6  'h+1' -20.000 'h2o'  -2.000 'al+++'   5.000 'ca+2'   2.000 'na+'   1.000 'h4sio4(aq)'  13.000
+'reversible'        9.8658     0.0000
+! 
+! stilbite,bet
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'stilbite,bet'
+'surface'
+ 1431.3600      2.2024
+ 6  'h+1' -20.000 'h2o'  -2.000 'al+++'   5.000 'ca+2'   2.000 'na+'   1.000 'h4sio4(aq)'  13.000
+'reversible'        9.7785     0.0000
+! 
+! straetlingit
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'straetlingit'
+'surface'
+  409.3160      1.8982
+ 5  'h+1' -10.000 'al+++'   2.000 'ca+2'   2.000 'h2o'  10.500 'h4sio4(aq)'   1.000
+'reversible'      -37.1851     0.0000
+! 
+! strengite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'strengite'
+'surface'
+  186.8490      2.8969
+ 5  'h+1'  -1.000 'h2o'   1.500 'h2po4-'   1.000 'fe++'   1.000 'o2(aq)'   0.250
+'reversible'       11.8124     0.0000
+! 
+! strontianite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'strontianite'
+'surface'
+  147.6290      3.7844
+ 3  'h+1'  -1.000 'hco3-'   1.000 'sr++'   1.000
+'reversible'       -0.4221     0.0000
+! 
+! sylvite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'sylvite'
+'surface'
+   74.5550      1.9869
+ 2  'cl-'   1.000 'k+'   1.000
+'reversible'       -1.2669     0.0000
+! 
+! syngenite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'syngenite'
+'surface'
+  418.4970      2.7600
+ 4  'ca+2'   1.000 'k+'   2.000 'h2o'   6.000 'so4--'   2.000
+'reversible'        7.4501     0.0000
+! 
+! tachyhydrite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'tachyhydrite'
+'surface'
+  517.6040      1.6600
+ 4  'ca+2'   1.000 'cl-'   6.000 'mg+2'   2.000 'h2o'  12.000
+'reversible'      -17.3800     0.0000
+! 
+! talc
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'talc'
+'surface'
+  379.2890      2.7838
+ 4  'h+1'  -6.000 'h2o'  -4.000 'mg+2'   3.000 'h4sio4(aq)'   4.000
+'reversible'      -18.1506     0.0000
+! 
+! tarbuttite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'tarbuttite'
+'surface'
+  242.7190      4.2100
+ 4  'h+1'  -3.000 'h2o'   1.000 'h2po4-'   1.000 'zn++'   2.000
+'reversible'       -8.2564     0.0000
+! 
+! tenorite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'tenorite'
+'surface'
+   79.5390      6.5089
+ 3  'h+1'  -2.000 'cu++'   1.000 'h2o'   1.000
+'reversible'       -5.6830     0.0000
+! 
+! thaumasite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'thaumasite'
+'surface'
+ 1244.0000      1.8763
+ 6  'h+1'  -6.000 'hco3-'   2.000 'h4sio4(aq)'   2.000 'ca+2'   6.000 'h2o'  28.000 'so4--'   2.000
+'reversible'      -18.6873     0.0000
+! 
+! thenardite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'thenardite'
+'surface'
+  142.0410      2.6634
+ 2  'na+'   2.000 'so4--'   1.000
+'reversible'        0.6774     0.0000
+! 
+! thermonatrit
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'thermonatrit'
+'surface'
+  124.0040      2.2550
+ 4  'h+1'  -1.000 'hco3-'   1.000 'na+'   2.000 'h2o'   1.000
+'reversible'       -9.9743     0.0000
+! 
+! tho2glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'tho2glass'
+'surface'
+  264.0370    Infinity
+ 3  'h+1'  -4.000 'h2o'   2.000 'th++++'   1.000
+'reversible'       -1.8567     0.0000
+! 
+! thorianite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'thorianite'
+'surface'
+  264.0370      9.9999
+ 3  'h+1'  -4.000 'h2o'   2.000 'th++++'   1.000
+'reversible'        1.6823     0.0000
+! 
+! tin,alpha
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'tin,alpha'
+'surface'
+  118.6900      7.2865
+ 4  'h+1'  -2.000 'sn++'   1.000 'o2(aq)'  -0.500 'h2o'   1.000
+'reversible'      -38.7593     0.0000
+! 
+! tin,beta
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'tin,beta'
+'surface'
+  118.6900      7.2865
+ 4  'h+1'  -2.000 'sn++'   1.000 'o2(aq)'  -0.500 'h2o'   1.000
+'reversible'      -39.0454     0.0000
+! 
+! tio2glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'tio2glass'
+'surface'
+   79.8990    Infinity
+ 2  'h2o'  -2.000 'ti(oh)4(aq)'   1.000
+'reversible'       11.7208     0.0000
+! 
+! titanite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'titanite'
+'surface'
+  196.0610      3.5231
+ 5  'h+1'  -2.000 'h2o'  -3.000 'ca+2'   1.000 'h4sio4(aq)'   1.000 'ti(oh)4(aq)'   1.000
+'reversible'        0.3078     0.0000
+! 
+! tobermo(11a)
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'tobermo(11a)'
+'surface'
+  739.9800      2.5856
+ 4  'h+1' -10.000 'h2o'  -1.500 'ca+2'   5.000 'h4sio4(aq)'   6.000
+'reversible'      -54.2153     0.0000
+! 
+! tobermo(14a)
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'tobermo(14a)'
+'surface'
+  830.0570      2.3628
+ 4  'h+1' -10.000 'ca+2'   5.000 'h2o'   3.500 'h4sio4(aq)'   6.000
+'reversible'      -53.7651     0.0000
+! 
+! tremolite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'tremolite'
+'surface'
+  812.4060      2.9767
+ 5  'h+1' -14.000 'h2o'  -8.000 'ca+2'   2.000 'mg+2'   5.000 'h4sio4(aq)'   8.000
+'reversible'    -1647.7516     0.0000
+! 
+! troilite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'troilite'
+'surface'
+   87.9110      4.6102
+ 3  'fe++'   1.000 'so4--'   1.000 'o2(aq)'  -2.000
+'reversible'     -106.4038     0.0000
+! 
+! trona
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'trona'
+'surface'
+  226.0270      2.1124
+ 4  'h+1'  -1.000 'hco3-'   2.000 'na+'   3.000 'h2o'   2.000
+'reversible'       -9.5446     0.0000
+! 
+! truscottite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'truscottite'
+'surface'
+ 1167.6000      2.4390
+ 4  'h+1' -14.000 'h2o' -14.000 'ca+2'   7.000 'h4sio4(aq)'  12.000
+'reversible'      -62.3400     0.0000
+! 
+! tsumebite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'tsumebite'
+'surface'
+  685.9600      6.2200
+ 6  'h+1'  -3.000 'cu++'   1.000 'h2o'   1.000 'h2po4-'   1.000 'pb++'   2.000 'so4--'   1.000
+'reversible'       66.1198     0.0000
+! 
+! u3o8
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'u3o8'
+'surface'
+  842.0850      8.3800
+ 4  'h+1'  -6.000 'h2o'   3.000 'uo2++'   3.000 'o2(aq)'  -0.500
+'reversible'      -26.0695     0.0000
+! 
+! ulvospinel
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'ulvospinel'
+'surface'
+  223.5920      4.7756
+ 3  'h+1'  -4.000 'ti(oh)4(aq)'   1.000 'fe++'   2.000
+'reversible'      -10.7363     0.0000
+! 
+! uo3,gamma
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'uo3,gamma'
+'surface'
+  286.0280      7.2899
+ 3  'h+1'  -2.000 'h2o'   1.000 'uo2++'   1.000
+'reversible'       -5.2189     0.0000
+! 
+! uo3glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'uo3glass'
+'surface'
+  286.0280    Infinity
+ 3  'h+1'  -2.000 'h2o'   1.000 'uo2++'   1.000
+'reversible'      -15.2889     0.0000
+! 
+! uraninite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'uraninite'
+'surface'
+  270.0290     10.9679
+ 4  'h+1'  -2.000 'uo2++'   1.000 'o2(aq)'  -0.500 'h2o'   1.000
+'reversible'      -22.4263     0.0000
+! 
+! usio4glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'usio4glass'
+'surface'
+  330.1140    Infinity
+ 5  'h+1'  -2.000 'h2o'  -1.000 'h4sio4(aq)'   1.000 'uo2++'   1.000 'o2(aq)'  -0.500
+'reversible'      -18.2121     0.0000
+! 
+! valentinite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'valentinite'
+'surface'
+  291.4980      5.8288
+ 2  'h2o'  -3.000 'sb(oh)3(aq)'   2.000
+'reversible'        6.6104     0.0000
+! 
+! variscite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'variscite'
+'surface'
+  157.9840      2.5501
+ 4  'h+1'  -2.000 'al+++'   1.000 'h2o'   2.000 'h2po4-'   1.000
+'reversible'        4.1461     0.0000
+! 
+! vaterite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'vaterite'
+'surface'
+  100.0870      2.6598
+ 3  'h+1'  -1.000 'hco3-'   1.000 'ca+2'   1.000
+'reversible'       -1.4569     0.0000
+! 
+! vivianite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'vivianite'
+'surface'
+  501.6070      2.7100
+ 4  'h+1'  -4.000 'h2o'   8.000 'h2po4-'   2.000 'fe++'   3.000
+'reversible'       11.3100     0.0000
+! 
+! vysotskite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'vysotskite'
+'surface'
+  138.4640      6.7053
+ 3  'pd++'   1.000 'so4--'   1.000 'o2(aq)'  -2.000
+'reversible'      -73.0641     0.0000
+! 
+! wairakite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'wairakite'
+'surface'
+  434.4080      2.2783
+ 5  'h+1'  -8.000 'h2o'  -2.000 'al+++'   2.000 'ca+2'   1.000 'h4sio4(aq)'   4.000
+'reversible'       -7.9718     0.0000
+! 
+! wavellite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'wavellite'
+'surface'
+  411.9860      2.2700
+ 4  'h+1'  -7.000 'al+++'   3.000 'h2o'   8.000 'h2po4-'   2.000
+'reversible'      -12.1491     0.0000
+! 
+! whitloc_high
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'whitloc_high'
+'surface'
+  310.1770      3.1774
+ 3  'h+1'  -4.000 'ca+2'   3.000 'h2po4-'   2.000
+'reversible'       -5.9826     0.0000
+! 
+! whitloc_low
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'whitloc_low'
+'surface'
+  310.1770      3.1774
+ 3  'h+1'  -4.000 'ca+2'   3.000 'h2po4-'   2.000
+'reversible'       -4.5313     0.0000
+! 
+! wollastonite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'wollastonite'
+'surface'
+  116.1620      2.9091
+ 4  'h+1'  -2.000 'h2o'  -1.000 'ca+2'   1.000 'h4sio4(aq)'   1.000
+'reversible'      -11.2966     0.0000
+! 
+! wurtzite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'wurtzite'
+'surface'
+   97.4340      4.0860
+ 3  'zn++'   1.000 'so4--'   1.000 'o2(aq)'  -2.000
+'reversible'     -102.1591     0.0000
+! 
+! xonotlite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'xonotlite'
+'surface'
+  714.9890      2.7831
+ 4  'h+1' -12.000 'h2o'  -5.000 'ca+2'   6.000 'h4sio4(aq)'   6.000
+'reversible'      -73.5739     0.0000
+! 
+! zincite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'zincite'
+'surface'
+   81.3690      5.6743
+ 3  'h+1'  -2.000 'h2o'   1.000 'zn++'   1.000
+'reversible'       -8.4758     0.0000
+! 
+! zn_rockbridg
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'zn_rockbridg'
+'surface'
+  658.7090    Infinity
+ 6  'h+1'  -7.000 'h2o'   3.000 'h2po4-'   3.000 'zn++'   1.000 'fe++'   4.000 'o2(aq)'   1.000
+'reversible'       32.1202     0.0000
+! 
+! zn3(po4)2
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'zn3(po4)2'
+'surface'
+  386.0530    Infinity
+ 3  'h+1'  -4.000 'h2po4-'   2.000 'zn++'   3.000
+'reversible'       -9.2798     0.0000
+! 
+! zn3(po4)2:2h
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'zn3(po4)2:2h'
+'surface'
+  422.0830    Infinity
+ 4  'h+1'  -4.000 'h2o'   2.000 'h2po4-'   2.000 'zn++'   3.000
+'reversible'       -4.5879     0.0000
+! 
+! zn3(po4)2:h2
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'zn3(po4)2:h2'
+'surface'
+  404.0680    Infinity
+ 4  'h+1'  -4.000 'h2o'   1.000 'h2po4-'   2.000 'zn++'   3.000
+'reversible'       -6.6034     0.0000
+! 
+! zn5(po4)3cl
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'zn5(po4)3cl'
+'surface'
+  647.2170    Infinity
+ 4  'h+1'  -6.000 'cl-'   1.000 'h2po4-'   3.000 'zn++'   5.000
+'reversible'      -24.8877     0.0000
+! 
+! zn5(po4)3oh
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'zn5(po4)3oh'
+'surface'
+  628.7720    Infinity
+ 4  'h+1'  -7.000 'h2o'   1.000 'h2po4-'   3.000 'zn++'   5.000
+'reversible'      -13.2203     0.0000
+! 
+! znhpo4
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'znhpo4'
+'surface'
+  161.3490    Infinity
+ 3  'h+1'  -1.000 'h2po4-'   1.000 'zn++'   1.000
+'reversible'        4.8373     0.0000
+! 
+! znsio3glass
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'znsio3glass'
+'surface'
+  141.4540    Infinity
+ 4  'h+1'  -2.000 'h2o'  -1.000 'h4sio4(aq)'   1.000 'zn++'   1.000
+'reversible'        0.9708     0.0000
+! 
+! zoisite
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'zoisite'
+'surface'
+  454.3590      3.3433
+ 5  'h+1' -13.000 'al+++'   3.000 'ca+2'   2.000 'h2o'   1.000 'h4sio4(aq)'   3.000
+'reversible'      -28.7344     0.0000
+! 
+! hg,l
+! equilibrium constant, gram formula weight from TOUGHREACT database and enthalpy change is set to 0
+'hg,l'
+'surface'
+  200.5900     13.5333
+ 4  'h+1'  -2.000 'hg++'   1.000 'h2o'  -1.000 'o2(aq)'  -0.500
+'reversible'      -10.7049     0.0000

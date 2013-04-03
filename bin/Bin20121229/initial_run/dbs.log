@@ -1,0 +1,2175 @@
+Open log file success:dbs.log
+No alias database found: alias.dbs
+Open TOUGHREACT database success: dbs.txt
+Begin reading TOUGHREACT database
+Read head success.
+Read temperature points success.
+Number of termperature points:
+           8
+Number of Species:
+          85
+Read species success
+Number of aqueous species:
+         893
+Number of redox reactions:
+           0
+Read aqueous species success
+Number of minerals:
+         626
+Read minerals success
+Number of gases:
+          22
+Read gases success
+Number of surface complexes:
+           1
+Read surface complexes success
+End reading TOUGHREACT database
+Start converting species
+Convert species:h2o
+Convert species:h+
+Convert species:al+3
+Convert species:ar
+Convert species:b(oh)3
+Convert species:ba+2
+Convert species:be+2
+Convert species:bi+3
+Convert species:ca+2
+Convert species:cd+2
+Convert species:cs+
+Convert species:f-
+Convert species:fr+
+Convert species:ga+3
+Convert species:ge(oh)4
+Convert species:h4sio4
+Convert species:he
+Convert species:hf+4
+Convert species:in+3
+Convert species:k+
+Convert species:kr
+Convert species:li+
+Convert species:mg+2
+Convert species:moo4-2
+Convert species:na+
+Convert species:nbo3-
+Convert species:ne
+Convert species:ni+2
+Convert species:pb+2
+Convert species:pd+2
+Convert species:pt+2
+Convert species:ra+2
+Convert species:rb+
+Convert species:reo4-
+Convert species:rn
+Convert species:sb(oh)3
+Convert species:sc+3
+Convert species:sn+2
+Convert species:sr+2
+Convert species:tco4-
+Convert species:th+4
+Convert species:ti(oh)4
+Convert species:wo4-2
+Convert species:xe
+Convert species:y+3
+Convert species:zn+2
+Convert species:zro+2
+Convert species:ag+
+Convert species:au+
+Convert species:br-
+Convert species:ce+3
+Convert species:cl-
+Convert species:co+2
+Convert species:cro4-2
+Convert species:cu+2
+Convert species:dy+3
+Convert species:er+3
+Convert species:eu+3
+Convert species:fe+2
+Convert species:gd+3
+Convert species:h2aso4-
+Convert species:h2po4-
+Convert species:hco3-
+Convert species:hg+2
+Convert species:ho+3
+Convert species:i-
+Convert species:la+3
+Convert species:lu+3
+Convert species:mn+2
+Convert species:nd+3
+Convert species:nh3
+Convert species:pm+3
+Convert species:pr+3
+Convert species:rh+2
+Convert species:ruo4-2
+Convert species:seo3-2
+Convert species:sm+3
+Convert species:so4-2
+Convert species:tb+3
+Convert species:tl+
+Convert species:tm+3
+Convert species:uo2+2
+Convert species:vo+2
+Convert species:yb+3
+Convert species:o2
+End converting species
+Start converting aqueous species: complexation reactions and redox reactions
+Convert complexation reaction: ag+2
+Convert complexation reaction: ash3
+Convert complexation reaction: au+3
+Convert complexation reaction: br3-
+Convert complexation reaction: bro-
+Convert complexation reaction: bro3-
+Convert complexation reaction: bro4-
+Convert complexation reaction: ce+2
+Convert complexation reaction: ce+4
+Convert complexation reaction: ch4
+Convert complexation reaction: clo-
+Convert complexation reaction: clo2
+Convert complexation reaction: clo2-
+Convert complexation reaction: clo3-
+Convert complexation reaction: clo4-
+Convert complexation reaction: cn-
+Convert complexation reaction: co
+Convert complexation reaction: cr+2
+Convert complexation reaction: cr+3
+Convert complexation reaction: cu+
+Convert complexation reaction: dy+2
+Convert complexation reaction: dy+4
+Convert complexation reaction: er+2
+Convert complexation reaction: er+4
+Convert complexation reaction: eu+2
+Convert complexation reaction: eu+4
+Convert complexation reaction: fe+3
+Convert complexation reaction: gd+2
+Convert complexation reaction: gd+4
+Convert complexation reaction: h2(aq)
+Convert complexation reaction: h2aso3-
+Convert complexation reaction: h2po2-
+Convert complexation reaction: h2po3-
+Convert complexation reaction: hg
+Convert complexation reaction: hg2+2
+Convert complexation reaction: ho+2
+Convert complexation reaction: ho+4
+Convert complexation reaction: hs-
+Convert complexation reaction: hse-
+Convert complexation reaction: hso5-
+Convert complexation reaction: i3-
+Convert complexation reaction: io-
+Convert complexation reaction: io3-
+Convert complexation reaction: io4-
+Convert complexation reaction: la+2
+Convert complexation reaction: lu+4
+Convert complexation reaction: mn+3
+Convert complexation reaction: mno4-
+Convert complexation reaction: mno4-2
+Convert complexation reaction: n2
+Convert complexation reaction: nd+2
+Convert complexation reaction: nd+4
+Convert complexation reaction: no2-
+Convert complexation reaction: no3-
+Convert complexation reaction: o2
+Convert complexation reaction: ph3
+Convert complexation reaction: pm+2
+Convert complexation reaction: pm+4
+Convert complexation reaction: pr+2
+Convert complexation reaction: pr+4
+Convert complexation reaction: rh+3
+Convert complexation reaction: ru+2
+Convert complexation reaction: ru+3
+Convert complexation reaction: s2o3-2
+Convert complexation reaction: s2o4-2
+Convert complexation reaction: s2o6-2
+Convert complexation reaction: s2o8-2
+Convert complexation reaction: seo4-2
+Convert complexation reaction: sm+2
+Convert complexation reaction: sm+4
+Convert complexation reaction: so3-2
+Convert complexation reaction: tb+2
+Convert complexation reaction: tb+4
+Convert complexation reaction: tl+3
+Convert complexation reaction: tm+2
+Convert complexation reaction: tm+4
+Convert complexation reaction: u+3
+Convert complexation reaction: u+4
+Convert complexation reaction: uo2+
+Convert complexation reaction: v+2
+Convert complexation reaction: v+3
+Convert complexation reaction: vo2+
+Convert complexation reaction: yb+2
+Convert complexation reaction: yb+4
+Convert complexation reaction: ag(co3)-
+Convert complexation reaction: ag(co3)2-3
+Convert complexation reaction: ag(hs)2-
+Convert complexation reaction: ag(oh)2-
+Convert complexation reaction: agcl
+Convert complexation reaction: agcl2-
+Convert complexation reaction: agcl3-2
+Convert complexation reaction: agcl4-3
+Convert complexation reaction: agf
+Convert complexation reaction: agh2aso3
+Convert complexation reaction: aghs
+Convert complexation reaction: agno3
+Convert complexation reaction: ago-
+Convert complexation reaction: agoh
+Convert complexation reaction: al(oh)2+
+Convert complexation reaction: al(oh)2f
+Convert complexation reaction: al(oh)2f2-
+Convert complexation reaction: alaso4
+Convert complexation reaction: alh2aso3+2
+Convert complexation reaction: alh2aso4+2
+Convert complexation reaction: alh2po4+2
+Convert complexation reaction: alh3sio4+2
+Convert complexation reaction: alhaso4+
+Convert complexation reaction: alhpo4+
+Convert complexation reaction: alo2-
+Convert complexation reaction: aloh+2
+Convert complexation reaction: alohf2
+Convert complexation reaction: also4+
+Convert complexation reaction: as(oh)3
+Convert complexation reaction: aso(oh)3
+Convert complexation reaction: aso4-3
+Convert complexation reaction: au(hs)2-
+Convert complexation reaction: au(oh)2-
+Convert complexation reaction: aucl
+Convert complexation reaction: aucl2-
+Convert complexation reaction: aucl3-2
+Convert complexation reaction: aucl4-
+Convert complexation reaction: auhs
+Convert complexation reaction: auoh
+Convert complexation reaction: b(oh)4-
+Convert complexation reaction: ba(co3)
+Convert complexation reaction: ba(hco3)+
+Convert complexation reaction: bacl+
+Convert complexation reaction: baco3
+Convert complexation reaction: baf+
+Convert complexation reaction: bah2aso3+
+Convert complexation reaction: baoh+
+Convert complexation reaction: becl+
+Convert complexation reaction: becl2
+Convert complexation reaction: bef+
+Convert complexation reaction: bef2
+Convert complexation reaction: bef3-1
+Convert complexation reaction: bef4-2
+Convert complexation reaction: beo
+Convert complexation reaction: beo2-2
+Convert complexation reaction: beoh+
+Convert complexation reaction: bf4-
+Convert complexation reaction: bio+
+Convert complexation reaction: bio2-
+Convert complexation reaction: bioh+2
+Convert complexation reaction: ca(hco3)+
+Convert complexation reaction: caaso4-
+Convert complexation reaction: cacl+
+Convert complexation reaction: cacl2
+Convert complexation reaction: caco3
+Convert complexation reaction: cacro4
+Convert complexation reaction: caf+
+Convert complexation reaction: cah2aso3+
+Convert complexation reaction: cah2aso4+
+Convert complexation reaction: cah2po4+
+Convert complexation reaction: cahaso4
+Convert complexation reaction: cahpo4
+Convert complexation reaction: caoh+
+Convert complexation reaction: cap2o7-2
+Convert complexation reaction: capo4-
+Convert complexation reaction: caso4
+Convert complexation reaction: cd(co3)2-2
+Convert complexation reaction: cd(h2po4)+
+Convert complexation reaction: cd(so4)2-2
+Convert complexation reaction: cd2oh+3
+Convert complexation reaction: cd4(oh)4+4
+Convert complexation reaction: cdcl+
+Convert complexation reaction: cdcl2
+Convert complexation reaction: cdcl3-
+Convert complexation reaction: cdcl4-2
+Convert complexation reaction: cdco3
+Convert complexation reaction: cdf+
+Convert complexation reaction: cdf2
+Convert complexation reaction: cdhco3+
+Convert complexation reaction: cdhpo4
+Convert complexation reaction: cdo
+Convert complexation reaction: cdo2-2
+Convert complexation reaction: cdoh+
+Convert complexation reaction: cdp2o7-2
+Convert complexation reaction: cds2o3
+Convert complexation reaction: cdso4
+Convert complexation reaction: cebr+2
+Convert complexation reaction: cecl+2
+Convert complexation reaction: cecl2+
+Convert complexation reaction: cecl3
+Convert complexation reaction: cecl4-
+Convert complexation reaction: ceclo4+2
+Convert complexation reaction: ceco3+
+Convert complexation reaction: cef+2
+Convert complexation reaction: cef2+
+Convert complexation reaction: cef3
+Convert complexation reaction: cef4-
+Convert complexation reaction: ceh2po4+2
+Convert complexation reaction: cehco3+2
+Convert complexation reaction: ceio3+2
+Convert complexation reaction: ceno3+2
+Convert complexation reaction: ceo+
+Convert complexation reaction: ceo2-
+Convert complexation reaction: ceo2h
+Convert complexation reaction: ceoh+2
+Convert complexation reaction: ceso4+
+Convert complexation reaction: cf4
+Convert complexation reaction: co(hs)2
+Convert complexation reaction: co2
+Convert complexation reaction: co2oh+3
+Convert complexation reaction: co3-2
+Convert complexation reaction: co4(oh)4+4
+Convert complexation reaction: coaso4-
+Convert complexation reaction: cocl+
+Convert complexation reaction: cocl2
+Convert complexation reaction: cocl3-
+Convert complexation reaction: cocl4-2
+Convert complexation reaction: coco3
+Convert complexation reaction: cof+
+Convert complexation reaction: coh2aso4+
+Convert complexation reaction: cohaso4
+Convert complexation reaction: cohco3+
+Convert complexation reaction: cohpo4
+Convert complexation reaction: cohs+
+Convert complexation reaction: coo
+Convert complexation reaction: coo2-2
+Convert complexation reaction: cooh+
+Convert complexation reaction: cos2o3
+Convert complexation reaction: coso4
+Name truncation: cr(oh)3(h2po4)- to cr(oh)3(h2po
+New name and truncation added: cr(oh)3(h2po4)-  cr(oh)3(h2po
+Convert complexation reaction: cr(oh)3(h2po
+Name truncation: cr(oh)3(hpo4)-2 to cr(oh)3(hpo4
+New name and truncation added: cr(oh)3(hpo4)-2  cr(oh)3(hpo4
+Convert complexation reaction: cr(oh)3(hpo4
+Name truncation: cr(oh)3(po4)-3 to cr(oh)3(po4)
+New name and truncation added: cr(oh)3(po4)-3  cr(oh)3(po4)
+Convert complexation reaction: cr(oh)3(po4)
+Name truncation: cr(oh)4(hpo4)(h2po4)-4 to cr(oh)4(hpo4
+New name and truncation added: cr(oh)4(hpo4)(h2po4)-4  cr(oh)4(hpo4
+Convert complexation reaction: cr(oh)4(hpo4
+Convert complexation reaction: cr(oh)cl2
+Convert complexation reaction: cr2(oh)2+4
+Convert complexation reaction: cr2o7-2
+Convert complexation reaction: cr3(oh)4+5
+Convert complexation reaction: crbr+2
+Convert complexation reaction: crcl+
+Convert complexation reaction: crcl+2
+Convert complexation reaction: crcl2+
+Convert complexation reaction: crh2po4+2
+Convert complexation reaction: crhpo4+
+Convert complexation reaction: cro+
+Convert complexation reaction: cro2-
+Convert complexation reaction: cro3cl-
+Convert complexation reaction: croh+
+Convert complexation reaction: croh+2
+Convert complexation reaction: csbr
+Convert complexation reaction: cscl
+Convert complexation reaction: csi
+Convert complexation reaction: csoh
+Convert complexation reaction: cu(hs)2-
+Convert complexation reaction: cu(oh)2-
+Convert complexation reaction: cuaso4-
+Convert complexation reaction: cucl+
+Convert complexation reaction: cucl
+Convert complexation reaction: cucl2
+Convert complexation reaction: cucl2-
+Convert complexation reaction: cucl3-
+Convert complexation reaction: cucl3-2
+Convert complexation reaction: cucl4-2
+Convert complexation reaction: cucl4-3
+Convert complexation reaction: cuf+
+Convert complexation reaction: cuh2aso3+
+Convert complexation reaction: cuh2aso4+
+Convert complexation reaction: cuh2po4+
+Convert complexation reaction: cuhaso4
+Convert complexation reaction: cuhpo4
+Convert complexation reaction: cuhs
+Convert complexation reaction: cuo
+Convert complexation reaction: cuo2-2
+Convert complexation reaction: cuoh+
+Convert complexation reaction: cuoh
+Convert complexation reaction: cupo4-
+Convert complexation reaction: dycl+2
+Convert complexation reaction: dycl2+
+Convert complexation reaction: dycl3
+Convert complexation reaction: dycl4-
+Convert complexation reaction: dyco3+
+Convert complexation reaction: dyf+2
+Convert complexation reaction: dyf2+
+Convert complexation reaction: dyf3
+Convert complexation reaction: dyf4-
+Convert complexation reaction: dyh2po4+2
+Convert complexation reaction: dyhco3+2
+Convert complexation reaction: dyno3+2
+Convert complexation reaction: dyo+
+Convert complexation reaction: dyo2-
+Convert complexation reaction: dyo2h
+Convert complexation reaction: dyoh+2
+Convert complexation reaction: dyso4+
+Convert complexation reaction: ercl+2
+Convert complexation reaction: ercl2+
+Convert complexation reaction: ercl3
+Convert complexation reaction: ercl4-
+Convert complexation reaction: erco3+
+Convert complexation reaction: erf+2
+Convert complexation reaction: erf2+
+Convert complexation reaction: erf3
+Convert complexation reaction: erf4-
+Convert complexation reaction: erh2po4+2
+Convert complexation reaction: erhco3+2
+Convert complexation reaction: erno3+2
+Convert complexation reaction: ero+
+Convert complexation reaction: ero2-
+Convert complexation reaction: ero2h
+Convert complexation reaction: eroh+2
+Convert complexation reaction: erso4+
+Convert complexation reaction: eucl+
+Convert complexation reaction: eucl+2
+Convert complexation reaction: eucl2+
+Convert complexation reaction: eucl2
+Convert complexation reaction: eucl3
+Convert complexation reaction: eucl3-
+Convert complexation reaction: eucl4-
+Convert complexation reaction: eucl4-2
+Convert complexation reaction: euco3+
+Convert complexation reaction: euf+
+Convert complexation reaction: euf+2
+Convert complexation reaction: euf2+
+Convert complexation reaction: euf2
+Convert complexation reaction: euf3
+Convert complexation reaction: euf3-
+Convert complexation reaction: euf4-
+Convert complexation reaction: euf4-2
+Convert complexation reaction: euh2po4+2
+Convert complexation reaction: euhco3+2
+Convert complexation reaction: euno3+2
+Convert complexation reaction: euo+
+Convert complexation reaction: euo2-
+Convert complexation reaction: euo2h
+Convert complexation reaction: euoh+2
+Convert complexation reaction: euso4+
+Convert complexation reaction: fe(co3)2-
+Convert complexation reaction: fe(co3)2-2
+Convert complexation reaction: fe(oh)4-
+Convert complexation reaction: fe(so4)2-
+Convert complexation reaction: fe2(oh)2+4
+Convert complexation reaction: fe2(so4)3
+Convert complexation reaction: feaso4
+Convert complexation reaction: feaso4-
+Convert complexation reaction: fecl+
+Convert complexation reaction: fecl+2
+Convert complexation reaction: fecl2+
+Convert complexation reaction: fecl2
+Convert complexation reaction: feco3
+Convert complexation reaction: feco3oh-
+Convert complexation reaction: fecro4+
+Convert complexation reaction: fef+
+Convert complexation reaction: fef+2
+Convert complexation reaction: feh(so4)2
+Convert complexation reaction: feh2aso3+2
+Convert complexation reaction: feh2aso4+
+Convert complexation reaction: feh2aso4+2
+Convert complexation reaction: feh2po4+
+Convert complexation reaction: feh2po4+2
+Convert complexation reaction: fehaso4
+Convert complexation reaction: fehaso4+
+Convert complexation reaction: fehco3+
+Convert complexation reaction: fehpo4+
+Convert complexation reaction: fehpo4
+Convert complexation reaction: fehso4+
+Convert complexation reaction: fehso4+2
+Convert complexation reaction: feo
+Convert complexation reaction: feo+
+Convert complexation reaction: feoh+
+Convert complexation reaction: feoh+2
+Convert complexation reaction: fepo4-
+Convert complexation reaction: feso4+
+Convert complexation reaction: feso4
+Convert complexation reaction: ga(oh)2+
+Convert complexation reaction: ga(oh)3
+Convert complexation reaction: ga(oh)4-
+Convert complexation reaction: gaoh+2
+Convert complexation reaction: gdcl+2
+Convert complexation reaction: gdcl2+
+Convert complexation reaction: gdcl3
+Convert complexation reaction: gdcl4-
+Convert complexation reaction: gdco3+
+Convert complexation reaction: gdf+2
+Convert complexation reaction: gdf2+
+Convert complexation reaction: gdf3
+Convert complexation reaction: gdf4-
+Convert complexation reaction: gdh2po4+2
+Convert complexation reaction: gdhco3+2
+Convert complexation reaction: gdno3+2
+Convert complexation reaction: gdo+
+Convert complexation reaction: gdo2-
+Convert complexation reaction: gdo2h
+Convert complexation reaction: gdoh+2
+Convert complexation reaction: gdso4+
+Convert complexation reaction: geo(oh)3-
+Convert complexation reaction: h2as3s6-
+Convert complexation reaction: h2cro4
+Convert complexation reaction: h2n2o2
+Convert complexation reaction: h2p2o7-2
+Convert complexation reaction: h2po3f
+Convert complexation reaction: h2s
+Convert complexation reaction: h2s2o3
+Convert complexation reaction: h2s2o4
+Convert complexation reaction: h2sb2s4
+Convert complexation reaction: h2seo3
+Convert complexation reaction: h2sio4-2
+Convert complexation reaction: h2so3
+Convert complexation reaction: h2vo4-
+Convert complexation reaction: h3as3s6
+Convert complexation reaction: h3aso4
+Convert complexation reaction: h3p2o7-
+Convert complexation reaction: h3po2
+Convert complexation reaction: h3po3
+Convert complexation reaction: h3po4
+Convert complexation reaction: h3vo4
+Convert complexation reaction: h4p2o7
+Convert complexation reaction: halo2
+Convert complexation reaction: has3s6-2
+Convert complexation reaction: haso4-2
+Convert complexation reaction: hbeo2-
+Convert complexation reaction: hbio2
+Convert complexation reaction: hbro
+Convert complexation reaction: hcdo2-
+Convert complexation reaction: hcl
+Convert complexation reaction: hclo
+Convert complexation reaction: hclo2
+Convert complexation reaction: hcn
+Convert complexation reaction: hcoo2-
+Convert complexation reaction: hcro2
+Convert complexation reaction: hcro4-
+Convert complexation reaction: hcuo2-
+Convert complexation reaction: hf
+Convert complexation reaction: hf2-
+Convert complexation reaction: hfeo2
+Convert complexation reaction: hfeo2-
+Convert complexation reaction: hfo+2
+Convert complexation reaction: hfo2
+Convert complexation reaction: hfoh+3
+Convert complexation reaction: hg(hs)2
+Convert complexation reaction: hgcl+
+Convert complexation reaction: hgcl2
+Convert complexation reaction: hgcl3-
+Convert complexation reaction: hgcl4-2
+Convert complexation reaction: hgf+
+Convert complexation reaction: hgo
+Convert complexation reaction: hgoh+
+Convert complexation reaction: hgs(hs)-
+Convert complexation reaction: hhfo2+
+Convert complexation reaction: hhfo3-
+Convert complexation reaction: hhgo2-
+Convert complexation reaction: hino2
+Convert complexation reaction: hio
+Convert complexation reaction: hio3
+Convert complexation reaction: hmno2-
+Convert complexation reaction: hmoo4-
+Convert complexation reaction: hn2o2-
+Convert complexation reaction: hnbo3
+Convert complexation reaction: hnio2-
+Convert complexation reaction: hno2
+Convert complexation reaction: hno3
+Convert complexation reaction: hocl+2
+Convert complexation reaction: hocl2+
+Convert complexation reaction: hocl3
+Convert complexation reaction: hocl4-
+Convert complexation reaction: hoco3+
+Convert complexation reaction: hof+2
+Convert complexation reaction: hof2+
+Convert complexation reaction: hof3
+Convert complexation reaction: hof4-
+Convert complexation reaction: hoh2po4+2
+Convert complexation reaction: hohco3+2
+Convert complexation reaction: hono3+2
+Convert complexation reaction: hoo+
+Convert complexation reaction: hoo2-
+Convert complexation reaction: hoo2h
+Convert complexation reaction: hooh+2
+Convert complexation reaction: hoso4+
+Convert complexation reaction: hp2o7-3
+Convert complexation reaction: hpbo2-
+Convert complexation reaction: hpo3-2
+Convert complexation reaction: hpo3f-
+Convert complexation reaction: hpo4-2
+Convert complexation reaction: hs2o3-
+Convert complexation reaction: hs2o4-
+Convert complexation reaction: hsb2s4-
+Convert complexation reaction: hsco2
+Convert complexation reaction: hseo3-
+Convert complexation reaction: hseo4-
+Convert complexation reaction: hsio3-
+Convert complexation reaction: hsno2-
+Convert complexation reaction: hso3-
+Convert complexation reaction: hso4-
+Convert complexation reaction: htlo2
+Convert complexation reaction: huo2+
+Convert complexation reaction: huo2
+Convert complexation reaction: huo3-
+Convert complexation reaction: huo4-
+Convert complexation reaction: hvo4-2
+Convert complexation reaction: hwo4-
+Convert complexation reaction: hyo2
+Convert complexation reaction: hzno2-
+Convert complexation reaction: hzro2+
+Convert complexation reaction: hzro3-
+Convert complexation reaction: incl+2
+Convert complexation reaction: inf+2
+Convert complexation reaction: ino+
+Convert complexation reaction: ino2-
+Convert complexation reaction: inoh+2
+Convert complexation reaction: kalo2
+Convert complexation reaction: kaso4-2
+Convert complexation reaction: kbr
+Convert complexation reaction: kcl
+Convert complexation reaction: kh2aso4
+Convert complexation reaction: kh2po4
+Convert complexation reaction: khaso4-
+Convert complexation reaction: khpo4-
+Convert complexation reaction: ki
+Convert complexation reaction: koh
+Convert complexation reaction: kp2o7-3
+Convert complexation reaction: kpo4-2
+Convert complexation reaction: kso4-
+Convert complexation reaction: lacl+2
+Convert complexation reaction: lacl2+
+Convert complexation reaction: lacl3
+Convert complexation reaction: lacl4-
+Convert complexation reaction: laco3+
+Convert complexation reaction: laf+2
+Convert complexation reaction: laf2+
+Convert complexation reaction: laf3
+Convert complexation reaction: laf4-
+Convert complexation reaction: lah2po4+2
+Convert complexation reaction: lahco3+2
+Convert complexation reaction: lano3+2
+Convert complexation reaction: lao+
+Convert complexation reaction: lao2-
+Convert complexation reaction: lao2h
+Convert complexation reaction: laoh+2
+Convert complexation reaction: laso4+
+Convert complexation reaction: licl
+Convert complexation reaction: lioh
+Convert complexation reaction: lucl+2
+Convert complexation reaction: lucl2+
+Convert complexation reaction: lucl3
+Convert complexation reaction: lucl4-
+Convert complexation reaction: luco3+
+Convert complexation reaction: luf+2
+Convert complexation reaction: luf2+
+Convert complexation reaction: luf3
+Convert complexation reaction: luf4-
+Convert complexation reaction: luh2po4+2
+Convert complexation reaction: luhco3+2
+Convert complexation reaction: luno3+2
+Convert complexation reaction: luo+
+Convert complexation reaction: luo2-
+Convert complexation reaction: luo2h
+Convert complexation reaction: luoh+2
+Convert complexation reaction: luso4+
+Convert complexation reaction: mg(hco3)+
+Convert complexation reaction: mg4(oh)4+4
+Convert complexation reaction: mgaso4-
+Convert complexation reaction: mgcl+
+Convert complexation reaction: mgco3
+Convert complexation reaction: mgf+
+Convert complexation reaction: mgh2aso3+
+Convert complexation reaction: mgh2aso4+
+Convert complexation reaction: mgh2po4+
+Convert complexation reaction: mghaso4
+Convert complexation reaction: mghpo4
+Convert complexation reaction: mgoh+
+Convert complexation reaction: mgp2o7-2
+Convert complexation reaction: mgpo4-
+Convert complexation reaction: mgso4
+Convert complexation reaction: mnaso4-
+Convert complexation reaction: mncl+
+Convert complexation reaction: mnf+
+Convert complexation reaction: mnh2aso4+
+Convert complexation reaction: mnh2po4+
+Convert complexation reaction: mnhaso4
+Convert complexation reaction: mnhpo4
+Convert complexation reaction: mno
+Convert complexation reaction: mno2-2
+Convert complexation reaction: mnoh+
+Convert complexation reaction: mnpo4-
+Convert complexation reaction: mnso4
+Convert complexation reaction: n2h5+
+Convert complexation reaction: n2h6+2
+Convert complexation reaction: n2o
+Convert complexation reaction: n2o2-2
+Convert complexation reaction: na2p2o7-2
+Convert complexation reaction: naal(oh)2f2
+Convert complexation reaction: naal(oh)3f
+Convert complexation reaction: naalo2
+Convert complexation reaction: naaso4-2
+Convert complexation reaction: nab(oh)4
+Convert complexation reaction: nabr
+Convert complexation reaction: naco3-
+Convert complexation reaction: naf
+Convert complexation reaction: nah2aso3
+Convert complexation reaction: nah2aso4
+Convert complexation reaction: nah2po4
+Convert complexation reaction: nahaso4-
+Convert complexation reaction: nahco3
+Convert complexation reaction: nahp2o7-2
+Convert complexation reaction: nahpo4-
+Convert complexation reaction: nai
+Convert complexation reaction: naoh
+Convert complexation reaction: nap2o7-3
+Convert complexation reaction: napo4-2
+Convert complexation reaction: nas2o3-
+Convert complexation reaction: naso4-
+Convert complexation reaction: ndcl+2
+Convert complexation reaction: ndcl2+
+Convert complexation reaction: ndcl3
+Convert complexation reaction: ndcl4-
+Convert complexation reaction: ndco3+
+Convert complexation reaction: ndf+2
+Convert complexation reaction: ndf2+
+Convert complexation reaction: ndf3
+Convert complexation reaction: ndf4-
+Convert complexation reaction: ndh2po4+2
+Convert complexation reaction: ndhco3+2
+Convert complexation reaction: ndno3+2
+Convert complexation reaction: ndo+
+Convert complexation reaction: ndo2-
+Convert complexation reaction: ndo2h
+Convert complexation reaction: ndoh+2
+Convert complexation reaction: ndso4+
+Convert complexation reaction: nf3
+Convert complexation reaction: nh4+
+Convert complexation reaction: niaso4-
+Convert complexation reaction: nicl+
+Convert complexation reaction: nif+
+Convert complexation reaction: nih2aso4+
+Convert complexation reaction: nihaso4
+Convert complexation reaction: nihp2o7-
+Convert complexation reaction: nio
+Convert complexation reaction: nio2-2
+Convert complexation reaction: nioh+
+Convert complexation reaction: nip2o7-2
+Convert complexation reaction: no
+Convert complexation reaction: ocn-
+Convert complexation reaction: oh-
+Convert complexation reaction: p2o7-4
+Convert complexation reaction: pb(co3)
+Convert complexation reaction: pb(co3)2-2
+Convert complexation reaction: pb(h2po4)+
+Convert complexation reaction: pb(hs)2
+Convert complexation reaction: pb(hs)3-
+Convert complexation reaction: pb(oh)4-2
+Convert complexation reaction: pb(so4)2-2
+Convert complexation reaction: pb2(oh)+3
+Convert complexation reaction: pb4(oh)4+4
+Convert complexation reaction: pb6(oh)8+4
+Convert complexation reaction: pbaso4-
+Convert complexation reaction: pbcl+
+Convert complexation reaction: pbcl2
+Convert complexation reaction: pbcl3-
+Convert complexation reaction: pbcl4-2
+Convert complexation reaction: pbf+
+Convert complexation reaction: pbf2
+Convert complexation reaction: pbh2aso3+
+Convert complexation reaction: pbh2aso4+
+Convert complexation reaction: pbh2po4+
+Convert complexation reaction: pbhaso4
+Convert complexation reaction: pbhco3+
+Convert complexation reaction: pbhpo4
+Convert complexation reaction: pbo
+Convert complexation reaction: pboh+
+Convert complexation reaction: pbp2o7-2
+Convert complexation reaction: pbso4
+Convert complexation reaction: pd(so4)2-2
+Convert complexation reaction: pd(so4)3-4
+Convert complexation reaction: pdcl+
+Convert complexation reaction: pdcl2
+Convert complexation reaction: pdcl3-
+Convert complexation reaction: pdcl4-2
+Convert complexation reaction: pdo
+Convert complexation reaction: pdoh+
+Convert complexation reaction: pdso4
+Convert complexation reaction: po3f-2
+Convert complexation reaction: po4-3
+Convert complexation reaction: prcl+2
+Convert complexation reaction: prcl2+
+Convert complexation reaction: prcl3
+Convert complexation reaction: prcl4-
+Convert complexation reaction: prco3+
+Convert complexation reaction: prf+2
+Convert complexation reaction: prf2+
+Convert complexation reaction: prf3
+Convert complexation reaction: prf4-
+Convert complexation reaction: prh2po4+2
+Convert complexation reaction: prhco3+2
+Convert complexation reaction: prno3+2
+Convert complexation reaction: pro+
+Convert complexation reaction: pro2-
+Convert complexation reaction: pro2h
+Convert complexation reaction: proh+2
+Convert complexation reaction: prso4+
+Convert complexation reaction: pt(so4)2-2
+Convert complexation reaction: pt(so4)3-4
+Convert complexation reaction: ptcl+
+Convert complexation reaction: ptcl2
+Convert complexation reaction: ptcl3-
+Convert complexation reaction: ptcl4-2
+Convert complexation reaction: pto
+Convert complexation reaction: ptoh+
+Convert complexation reaction: ptso4
+Convert complexation reaction: rbbr
+Convert complexation reaction: rbcl
+Convert complexation reaction: rbf
+Convert complexation reaction: rbi
+Convert complexation reaction: rboh
+Convert complexation reaction: rh(so4)2-
+Convert complexation reaction: rh(so4)2-2
+Convert complexation reaction: rh(so4)3-3
+Convert complexation reaction: rh(so4)3-4
+Convert complexation reaction: rhcl+
+Convert complexation reaction: rhcl+2
+Convert complexation reaction: rhcl2+
+Convert complexation reaction: rhcl2
+Convert complexation reaction: rhcl3
+Convert complexation reaction: rhcl3-
+Convert complexation reaction: rhcl4-
+Convert complexation reaction: rhcl4-2
+Convert complexation reaction: rho+
+Convert complexation reaction: rho
+Convert complexation reaction: rhoh+
+Convert complexation reaction: rhoh+2
+Convert complexation reaction: rhso4+
+Convert complexation reaction: rhso4
+Convert complexation reaction: ru(so4)2-
+Convert complexation reaction: ru(so4)2-2
+Convert complexation reaction: ru(so4)3-3
+Convert complexation reaction: ru(so4)3-4
+Convert complexation reaction: rucl+
+Convert complexation reaction: rucl+2
+Convert complexation reaction: rucl2+
+Convert complexation reaction: rucl2
+Convert complexation reaction: rucl3
+Convert complexation reaction: rucl3-
+Convert complexation reaction: rucl4-
+Convert complexation reaction: rucl4-2
+Convert complexation reaction: rucl5-2
+Convert complexation reaction: rucl6-3
+Convert complexation reaction: ruo+
+Convert complexation reaction: ruo
+Convert complexation reaction: ruoh+
+Convert complexation reaction: ruoh+2
+Convert complexation reaction: ruso4+
+Convert complexation reaction: ruso4
+Convert complexation reaction: s-2
+Convert complexation reaction: s2-2
+Convert complexation reaction: s2o5-2
+Convert complexation reaction: s3-2
+Convert complexation reaction: s3o6-2
+Convert complexation reaction: s4-2
+Convert complexation reaction: s4o6-2
+Convert complexation reaction: s5-2
+Convert complexation reaction: s5o6-2
+Convert complexation reaction: sb2s4-2
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert complexation reaction: scn-
+Convert complexation reaction: sco+
+Convert complexation reaction: sco2-
+Convert complexation reaction: scoh+2
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert complexation reaction: secn-
+Convert complexation reaction: sf6
+Convert complexation reaction: si2o2(oh)5-
+Convert complexation reaction: si2o3(oh)4-2
+Convert complexation reaction: si3o5(oh)5-3
+Convert complexation reaction: si3o6(oh)3-3
+Convert complexation reaction: si4o12h4-4
+Convert complexation reaction: si4o6(oh)6-2
+Convert complexation reaction: si4o7(oh)6-4
+Convert complexation reaction: si4o8(oh)4-4
+Convert complexation reaction: si6o15-6
+Convert complexation reaction: sif6-2
+Convert complexation reaction: smcl+2
+Convert complexation reaction: smcl2+
+Convert complexation reaction: smcl3
+Convert complexation reaction: smcl4-
+Convert complexation reaction: smco3+
+Convert complexation reaction: smf+2
+Convert complexation reaction: smf2+
+Convert complexation reaction: smf3
+Convert complexation reaction: smf4-
+Convert complexation reaction: smh2po4+2
+Convert complexation reaction: smhco3+2
+Convert complexation reaction: smno3+2
+Convert complexation reaction: smo+
+Convert complexation reaction: smo2-
+Convert complexation reaction: smo2h
+Convert complexation reaction: smoh+2
+Convert complexation reaction: smso4+
+Convert complexation reaction: sno
+Convert complexation reaction: snoh+
+Convert complexation reaction: sr(co3)
+Convert complexation reaction: sr(hco3)+
+Convert complexation reaction: sraso4-
+Convert complexation reaction: srcl+
+Convert complexation reaction: srf+
+Convert complexation reaction: srh2aso3+
+Convert complexation reaction: srh2aso4+
+Convert complexation reaction: srh2po4+
+Convert complexation reaction: srhaso4
+Convert complexation reaction: srhpo4
+Convert complexation reaction: sroh+
+Convert complexation reaction: srp2o7-2
+Convert complexation reaction: srpo4-
+Convert complexation reaction: srso4
+Convert complexation reaction: tbcl+2
+Convert complexation reaction: tbcl2+
+Convert complexation reaction: tbcl3
+Convert complexation reaction: tbcl4-
+Convert complexation reaction: tbco3+
+Convert complexation reaction: tbf+2
+Convert complexation reaction: tbf2+
+Convert complexation reaction: tbf3
+Convert complexation reaction: tbf4-
+Convert complexation reaction: tbh2po4+2
+Convert complexation reaction: tbhco3+2
+Convert complexation reaction: tbno3+2
+Convert complexation reaction: tbo+
+Convert complexation reaction: tbo2-
+Convert complexation reaction: tbo2h
+Convert complexation reaction: tboh+2
+Convert complexation reaction: tbso4+
+Convert complexation reaction: tlcl+2
+Convert complexation reaction: tlcl
+Convert complexation reaction: tlf
+Convert complexation reaction: tlo+
+Convert complexation reaction: tlo2-
+Convert complexation reaction: tloh+2
+Convert complexation reaction: tloh
+Convert complexation reaction: tmcl+2
+Convert complexation reaction: tmcl2+
+Convert complexation reaction: tmcl3
+Convert complexation reaction: tmcl4-
+Convert complexation reaction: tmco3+
+Convert complexation reaction: tmf+2
+Convert complexation reaction: tmf2+
+Convert complexation reaction: tmf3
+Convert complexation reaction: tmf4-
+Convert complexation reaction: tmh2po4+2
+Convert complexation reaction: tmhco3+2
+Convert complexation reaction: tmno3+2
+Convert complexation reaction: tmo+
+Convert complexation reaction: tmo2-
+Convert complexation reaction: tmo2h
+Convert complexation reaction: tmoh+2
+Convert complexation reaction: tmso4+
+Convert complexation reaction: u(oh)+3
+Convert complexation reaction: uo+
+Convert complexation reaction: uo+2
+Convert complexation reaction: uo2
+Convert complexation reaction: uo2oh+
+Convert complexation reaction: uo2oh
+Convert complexation reaction: uo3
+Convert complexation reaction: uo3-
+Convert complexation reaction: uo4-2
+Convert complexation reaction: uoh+2
+Convert complexation reaction: vo+
+Convert complexation reaction: vo4-3
+Convert complexation reaction: voh+
+Convert complexation reaction: voh+2
+Convert complexation reaction: vooh+
+Convert complexation reaction: ybcl+2
+Convert complexation reaction: ybcl2+
+Convert complexation reaction: ybcl3
+Convert complexation reaction: ybcl4-
+Convert complexation reaction: ybco3+
+Convert complexation reaction: ybf+2
+Convert complexation reaction: ybf2+
+Convert complexation reaction: ybf3
+Convert complexation reaction: ybf4-
+Convert complexation reaction: ybh2po4+2
+Convert complexation reaction: ybhco3+2
+Convert complexation reaction: ybno3+2
+Convert complexation reaction: ybo+
+Convert complexation reaction: ybo2-
+Convert complexation reaction: ybo2h
+Convert complexation reaction: yboh+2
+Convert complexation reaction: ybso4+
+Convert complexation reaction: yo+
+Convert complexation reaction: yo2-
+Convert complexation reaction: yoh+2
+Convert complexation reaction: znaso4-
+Convert complexation reaction: zncl+
+Convert complexation reaction: zncl2
+Convert complexation reaction: zncl3-
+Convert complexation reaction: znf+
+Convert complexation reaction: znh2aso4+
+Convert complexation reaction: znh2po4+
+Convert complexation reaction: znhaso4
+Convert complexation reaction: znhpo4
+Convert complexation reaction: zno
+Convert complexation reaction: zno2-2
+Convert complexation reaction: znoh+
+Convert complexation reaction: znpo4-
+Convert complexation reaction: zr+4
+Convert complexation reaction: zro2
+Convert complexation reaction: zroh+3
+End converting aqueous species: complexation reactions and redox reactions
+Start converting gases
+Convert gas: ar(g)
+Convert gas: br2(g)
+Convert gas: ch4(g)
+Convert gas: cl2(g)
+Convert gas: co(g)
+Convert gas: co2(g)
+Convert gas: f2(g)
+Convert gas: h2(g)
+Convert gas: h2o(g)
+Convert gas: h2s(g)
+Convert gas: hcl(g)
+Convert gas: he(g)
+Convert gas: hg(g)
+Convert gas: i2(g)
+Convert gas: kr(g)
+Convert gas: n2(g)
+Convert gas: ne(g)
+Convert gas: nh3(g)
+Convert gas: o2(g)
+Convert gas: s2(g)
+Convert gas: so2(g)
+Convert gas: xe(g)
+Start converting minerals
+Name truncation: 2k2so4.fe2(so4)3:14h2o to 2k2so4.fe2(s
+New name and truncation added: 2k2so4.fe2(so4)3:14h2o  2k2so4.fe2(s
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: 2k2so4.fe2(s
+Name truncation: 2kcl.fecl3:h2o to 2kcl.fecl3:h
+New name and truncation added: 2kcl.fecl3:h2o  2kcl.fecl3:h
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: 2kcl.fecl3:h
+Name truncation: acanthite(alpha) to acanthite(al
+New name and truncation added: acanthite(alpha)  acanthite(al
+Convert minerals: acanthite(al
+Name truncation: acanthite(beta) to acanthite(be
+New name and truncation added: acanthite(beta)  acanthite(be
+Convert minerals: acanthite(be
+Name truncation: acanthite(gamma) to acanthite(ga
+New name and truncation added: acanthite(gamma)  acanthite(ga
+Convert minerals: acanthite(ga
+Convert minerals: adamite
+Name truncation: aegerine(alpha) to aegerine(alp
+New name and truncation added: aegerine(alpha)  aegerine(alp
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: aegerine(alp
+Convert minerals: afwillite
+Convert minerals: ag(element)
+Convert minerals: ag2o
+Convert minerals: akermanite
+Convert minerals: al(element)
+Convert minerals: alabandite
+Convert minerals: alamosite
+Convert minerals: albite(high)
+Convert minerals: albite(low)
+Convert minerals: alf3
+Name truncation: almandine(alpha) to almandine(al
+New name and truncation added: almandine(alpha)  almandine(al
+Convert minerals: almandine(al
+Convert minerals: alunite(k)
+Convert minerals: alunite(na)
+Convert minerals: amesite
+Convert minerals: amesite(fe)
+Name truncation: amorphous_silica to amorphous_si
+New name and truncation added: amorphous_silica  amorphous_si
+Convert minerals: amorphous_si
+Convert minerals: analcime
+Convert minerals: andalusite
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: andradite
+Convert minerals: anglesite
+Convert minerals: anhydrite
+Convert minerals: annite
+Convert minerals: anorthite
+Convert minerals: antarcticite
+Name truncation: anthophyllite to anthophyllit
+New name and truncation added: anthophyllite  anthophyllit
+Convert minerals: anthophyllit
+Convert minerals: antigorite
+Convert minerals: aplowite
+Convert minerals: aragonite
+Convert minerals: arcanite
+Name truncation: argutite(alpha) to argutite(alp
+New name and truncation added: argutite(alpha)  argutite(alp
+Convert minerals: argutite(alp
+Name truncation: argutite(beta) to argutite(bet
+New name and truncation added: argutite(beta)  argutite(bet
+Convert minerals: argutite(bet
+Name truncation: arsenocrandallite to arsenocranda
+New name and truncation added: arsenocrandallite  arsenocranda
+Convert minerals: arsenocranda
+Name truncation: arsenoflorencite(ce) to arsenofloren
+New name and truncation added: arsenoflorencite(ce)  arsenofloren
+Convert minerals: arsenofloren
+Name truncation: arsenoflorencite(la) to arsenofloren
+Error(ignored): Truncate name duplicated, the same truncate name already exist: arsenofloren
+New name and truncation added: arsenoflorencite(la)  arsenofloren
+Convert minerals: arsenofloren
+Name truncation: arsenogorceixite to arsenogorcei
+New name and truncation added: arsenogorceixite  arsenogorcei
+Convert minerals: arsenogorcei
+Name truncation: arsenogoyazite to arsenogoyazi
+New name and truncation added: arsenogoyazite  arsenogoyazi
+Convert minerals: arsenogoyazi
+Convert minerals: arsenolite
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: arsenopyrite
+Convert minerals: artinite
+Convert minerals: as(element)
+Convert minerals: as2o5
+Convert minerals: au(element)
+Convert minerals: augelite
+Convert minerals: austinite
+Convert minerals: azurite
+Convert minerals: b(oh)3
+Convert minerals: b2o3
+Convert minerals: ba3(aso4)2
+Convert minerals: bahaso4:h2o
+Convert minerals: bahpo4
+Convert minerals: barite
+Convert minerals: bassanite
+Name truncation: beidellite(ca) to beidellite(c
+New name and truncation added: beidellite(ca)  beidellite(c
+Convert minerals: beidellite(c
+Name truncation: beidellite(k) to beidellite(k
+New name and truncation added: beidellite(k)  beidellite(k
+Convert minerals: beidellite(k
+Name truncation: beidellite(mg) to beidellite(m
+New name and truncation added: beidellite(mg)  beidellite(m
+Convert minerals: beidellite(m
+Name truncation: beidellite(na) to beidellite(n
+New name and truncation added: beidellite(na)  beidellite(n
+Convert minerals: beidellite(n
+Name truncation: beidellitesbid to beidellitesb
+New name and truncation added: beidellitesbid  beidellitesb
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: beidellitesb
+Name truncation: beidellitesbid(4.576h2o) to beidellitesb
+Error(ignored): Truncate name duplicated, the same truncate name already exist: beidellitesb
+New name and truncation added: beidellitesbid(4.576h2o)  beidellitesb
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: beidellitesb
+Convert minerals: berlinite
+Convert minerals: berndtite
+Name truncation: berthierine(th) to berthierine(
+New name and truncation added: berthierine(th)  berthierine(
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: berthierine(
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: berthierite
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: beudantite
+Convert minerals: bieberite
+Convert minerals: bischofite
+Convert minerals: bloedite
+Convert minerals: bobbierite
+Convert minerals: boehmite
+Name truncation: bornite(alpha) to bornite(alph
+New name and truncation added: bornite(alpha)  bornite(alph
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: bornite(alph
+Name truncation: bornite(beta) to bornite(beta
+New name and truncation added: bornite(beta)  bornite(beta
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: bornite(beta
+Name truncation: bornite(gamma) to bornite(gamm
+New name and truncation added: bornite(gamma)  bornite(gamm
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: bornite(gamm
+Convert minerals: bromellite
+Convert minerals: brucite
+Convert minerals: brushite
+Name truncation: bunsenite(alpha) to bunsenite(al
+New name and truncation added: bunsenite(alpha)  bunsenite(al
+Convert minerals: bunsenite(al
+Name truncation: bunsenite(beta) to bunsenite(be
+New name and truncation added: bunsenite(beta)  bunsenite(be
+Convert minerals: bunsenite(be
+Convert minerals: burkeite
+Convert minerals: c(element)
+Convert minerals: c3ah6
+Convert minerals: c3fh6
+Convert minerals: c4ah13
+Convert minerals: c4fh13
+Convert minerals: ca(element)
+Name truncation: ca3(aso4)2:3.66h2o to ca3(aso4)2:3
+New name and truncation added: ca3(aso4)2:3.66h2o  ca3(aso4)2:3
+Convert minerals: ca3(aso4)2:3
+Name truncation: ca4(oh)2(aso4)2:4h2o to ca4(oh)2(aso
+New name and truncation added: ca4(oh)2(aso4)2:4h2o  ca4(oh)2(aso
+Convert minerals: ca4(oh)2(aso
+Name truncation: ca4h(po4)3:2.5h2o to ca4h(po4)3:2
+New name and truncation added: ca4h(po4)3:2.5h2o  ca4h(po4)3:2
+Convert minerals: ca4h(po4)3:2
+Convert minerals: ca5(aso4)3oh
+Name truncation: caalh(po4)2:6h2o to caalh(po4)2:
+New name and truncation added: caalh(po4)2:6h2o  caalh(po4)2:
+Convert minerals: caalh(po4)2:
+Convert minerals: cacl2:2h2o
+Convert minerals: cacl2:4h2o
+Convert minerals: cacl2:h2o
+Convert minerals: cacro4(s)
+Convert minerals: cahaso3
+Convert minerals: cahaso4:h2o
+Convert minerals: calcite
+Convert minerals: calomel
+Convert minerals: carbonate(k)
+Convert minerals: carnallite
+Convert minerals: cassiterite
+Convert minerals: cattierite
+Convert minerals: cd(element)
+Convert minerals: cd(oh)2
+Convert minerals: cd3(po4)2
+Convert minerals: cd5(po4)3cl
+Convert minerals: cd5(po4)3oh
+Convert minerals: cdcl2
+Convert minerals: cdcl2:2.5h2o
+Convert minerals: cdcl2:h2o
+Convert minerals: cdsio3
+Convert minerals: cdso4
+Convert minerals: cdso4:8/3h2o
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: celadonite
+Name truncation: celadonite(fe) to celadonite(f
+New name and truncation added: celadonite(fe)  celadonite(f
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: celadonite(f
+Convert minerals: celestite
+Convert minerals: cerussite
+Convert minerals: chabazite
+Convert minerals: chalcedony
+Name truncation: chalcocite(alpha) to chalcocite(a
+New name and truncation added: chalcocite(alpha)  chalcocite(a
+Convert minerals: chalcocite(a
+Name truncation: chalcocyanite to chalcocyanit
+New name and truncation added: chalcocyanite  chalcocyanit
+Convert minerals: chalcocyanit
+Name truncation: chalcopyrite(alpha) to chalcopyrite
+New name and truncation added: chalcopyrite(alpha)  chalcopyrite
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: chalcopyrite
+Name truncation: chalcopyrite(beta) to chalcopyrite
+Error(ignored): Truncate name duplicated, the same truncate name already exist: chalcopyrite
+New name and truncation added: chalcopyrite(beta)  chalcopyrite
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: chalcopyrite
+Name truncation: chalcopyrite(gamma) to chalcopyrite
+Error(ignored): Truncate name duplicated, the same truncate name already exist: chalcopyrite
+New name and truncation added: chalcopyrite(gamma)  chalcopyrite
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: chalcopyrite
+Name truncation: chamosite(daphnite) to chamosite(da
+New name and truncation added: chamosite(daphnite)  chamosite(da
+Convert minerals: chamosite(da
+Name truncation: chlorapatite(pp) to chlorapatite
+New name and truncation added: chlorapatite(pp)  chlorapatite
+Convert minerals: chlorapatite
+Name truncation: chlorapatite(synth) to chlorapatite
+Error(ignored): Truncate name duplicated, the same truncate name already exist: chlorapatite
+New name and truncation added: chlorapatite(synth)  chlorapatite
+Convert minerals: chlorapatite
+Name truncation: chlorargyrite to chlorargyrit
+New name and truncation added: chlorargyrite  chlorargyrit
+Convert minerals: chlorargyrit
+Convert minerals: chloritoid
+Name truncation: chloromagnesite to chloromagnes
+New name and truncation added: chloromagnesite  chloromagnes
+Convert minerals: chloromagnes
+Convert minerals: chromite
+Convert minerals: chrysotile
+Name truncation: cinnabar(alpha) to cinnabar(alp
+New name and truncation added: cinnabar(alpha)  cinnabar(alp
+Convert minerals: cinnabar(alp
+Name truncation: cinnabar(beta) to cinnabar(bet
+New name and truncation added: cinnabar(beta)  cinnabar(bet
+Convert minerals: cinnabar(bet
+Convert minerals: claudetite
+Convert minerals: clinochlore
+Convert minerals: clinoclase
+Name truncation: clinoptilolite(ca) to clinoptiloli
+New name and truncation added: clinoptilolite(ca)  clinoptiloli
+Convert minerals: clinoptiloli
+Name truncation: clinoptilolite(k) to clinoptiloli
+Error(ignored): Truncate name duplicated, the same truncate name already exist: clinoptiloli
+New name and truncation added: clinoptilolite(k)  clinoptiloli
+Convert minerals: clinoptiloli
+Name truncation: clinoptilolite(na) to clinoptiloli
+Error(ignored): Truncate name duplicated, the same truncate name already exist: clinoptiloli
+New name and truncation added: clinoptilolite(na)  clinoptiloli
+Convert minerals: clinoptiloli
+Convert minerals: clinozoisite
+Convert minerals: co(element)
+Name truncation: co(feo2)2(alpha) to co(feo2)2(al
+New name and truncation added: co(feo2)2(alpha)  co(feo2)2(al
+Convert minerals: co(feo2)2(al
+Name truncation: co(oh)2(blue) to co(oh)2(blue
+New name and truncation added: co(oh)2(blue)  co(oh)2(blue
+Convert minerals: co(oh)2(blue
+Name truncation: co(oh)2(pink-pc) to co(oh)2(pink
+New name and truncation added: co(oh)2(pink-pc)  co(oh)2(pink
+Convert minerals: co(oh)2(pink
+Name truncation: co(oh)2(pink-wc) to co(oh)2(pink
+Error(ignored): Truncate name duplicated, the same truncate name already exist: co(oh)2(pink
+New name and truncation added: co(oh)2(pink-wc)  co(oh)2(pink
+Convert minerals: co(oh)2(pink
+Convert minerals: co2sio4
+Convert minerals: co3(po4)2
+Convert minerals: cocl2
+Convert minerals: cocl2:6h2o
+Name truncation: coesite(alpha) to coesite(alph
+New name and truncation added: coesite(alpha)  coesite(alph
+Convert minerals: coesite(alph
+Convert minerals: cof2
+Convert minerals: cohpo4
+Convert minerals: conichalcite
+Convert minerals: coo
+Convert minerals: cooperite
+Convert minerals: copiapite
+Convert minerals: coquimbite
+Convert minerals: cordierite
+Name truncation: cordierite(hydrated) to cordierite(h
+New name and truncation added: cordierite(hydrated)  cordierite(h
+Convert minerals: cordierite(h
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: corkite
+Convert minerals: cornetite
+Name truncation: corundum(alpha) to corundum(alp
+New name and truncation added: corundum(alpha)  corundum(alp
+Convert minerals: corundum(alp
+Name truncation: corundum(gamma) to corundum(gam
+New name and truncation added: corundum(gamma)  corundum(gam
+Convert minerals: corundum(gam
+Convert minerals: cos(alpha)
+Convert minerals: cos(beta)
+Convert minerals: coso4
+Convert minerals: cotunnite
+Convert minerals: covellite
+Convert minerals: cr(element)
+Convert minerals: cr(oh)2(s)
+Convert minerals: cr(oh)3(s)
+Convert minerals: cr2(so4)3(s)
+Convert minerals: cr2s3(s)
+Convert minerals: crandallite
+Convert minerals: crcl2(s)
+Convert minerals: crcl3(s)
+Name truncation: cristobalite(alpha) to cristobalite
+New name and truncation added: cristobalite(alpha)  cristobalite
+Convert minerals: cristobalite
+Name truncation: cristobalite(beta) to cristobalite
+Error(ignored): Truncate name duplicated, the same truncate name already exist: cristobalite
+New name and truncation added: cristobalite(beta)  cristobalite
+Convert minerals: cristobalite
+Convert minerals: cro2(s)
+Convert minerals: cro3(s)
+Convert minerals: crocoite
+Name truncation: cronstedtite(th) to cronstedtite
+New name and truncation added: cronstedtite(th)  cronstedtite
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: cronstedtite
+Convert minerals: crpo4(green)
+Name truncation: crpo4(purple) to crpo4(purple
+New name and truncation added: crpo4(purple)  crpo4(purple
+Convert minerals: crpo4(purple
+Convert minerals: crs(s)
+Convert minerals: csh(0.8)
+Convert minerals: csh(1.2)
+Convert minerals: csh(1.6)
+Convert minerals: cu(element)
+Convert minerals: cu3(po4)2
+Name truncation: cu3(po4)2:3h2o to cu3(po4)2:3h
+New name and truncation added: cu3(po4)2:3h2o  cu3(po4)2:3h
+Convert minerals: cu3(po4)2:3h
+Convert minerals: cu5(po4)3cl
+Convert minerals: cu5(po4)3oh
+Name truncation: cummingtonite to cummingtonit
+New name and truncation added: cummingtonite  cummingtonit
+Convert minerals: cummingtonit
+Convert minerals: cuprite
+Convert minerals: dawsonite
+Convert minerals: diaspore
+Convert minerals: dickite
+Convert minerals: diopside
+Convert minerals: dolomite
+Name truncation: dolomite(disordered) to dolomite(dis
+New name and truncation added: dolomite(disordered)  dolomite(dis
+Convert minerals: dolomite(dis
+Name truncation: dolomite(ordered) to dolomite(ord
+New name and truncation added: dolomite(ordered)  dolomite(ord
+Convert minerals: dolomite(ord
+Convert minerals: duftite
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: eastonite
+Name truncation: edenite(alpha) to edenite(alph
+New name and truncation added: edenite(alpha)  edenite(alph
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: edenite(alph
+Name truncation: enstatite(alpha) to enstatite(al
+New name and truncation added: enstatite(alpha)  enstatite(al
+Convert minerals: enstatite(al
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: epidote
+Convert minerals: epsomite
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: erdite
+Convert minerals: eskolaite
+Convert minerals: ettringite
+Name truncation: ettringite(cr) to ettringite(c
+New name and truncation added: ettringite(cr)  ettringite(c
+Convert minerals: ettringite(c
+Name truncation: ettringite(fe) to ettringite(f
+New name and truncation added: ettringite(fe)  ettringite(f
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: ettringite(f
+Name truncation: farringtonite to farringtonit
+New name and truncation added: farringtonite  farringtonit
+Convert minerals: farringtonit
+Convert minerals: faustite
+Convert minerals: fayalite
+Convert minerals: fco3apatite
+Convert minerals: fe(element)
+Convert minerals: fe(oh)2
+Convert minerals: fe10s11
+Convert minerals: fe11s12
+Convert minerals: fe2(so4)3
+Convert minerals: fe7.016s8
+Convert minerals: fe9s10
+Convert minerals: fecl2
+Convert minerals: fecl2:2h2o
+Convert minerals: fecl2:4h2o
+Convert minerals: fecl2:h2o
+Convert minerals: fecl3
+Convert minerals: fecl3:6h2o
+Convert minerals: feo
+Name truncation: ferricopiapite to ferricopiapi
+New name and truncation added: ferricopiapite  ferricopiapi
+Convert minerals: ferricopiapi
+Name truncation: ferrihydrite(2l) to ferrihydrite
+New name and truncation added: ferrihydrite(2l)  ferrihydrite
+Convert minerals: ferrihydrite
+Name truncation: ferrihydrite(6l) to ferrihydrite
+Error(ignored): Truncate name duplicated, the same truncate name already exist: ferrihydrite
+New name and truncation added: ferrihydrite(6l)  ferrihydrite
+Convert minerals: ferrihydrite
+Convert minerals: ferrite(mn)
+Name truncation: ferrohexahydrite to ferrohexahyd
+New name and truncation added: ferrohexahydrite  ferrohexahyd
+Convert minerals: ferrohexahyd
+Name truncation: ferropargasite to ferropargasi
+New name and truncation added: ferropargasite  ferropargasi
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: ferropargasi
+Name truncation: ferrosilite(alpha) to ferrosilite(
+New name and truncation added: ferrosilite(alpha)  ferrosilite(
+Convert minerals: ferrosilite(
+Name truncation: ferrosilite(beta) to ferrosilite(
+Error(ignored): Truncate name duplicated, the same truncate name already exist: ferrosilite(
+New name and truncation added: ferrosilite(beta)  ferrosilite(
+Convert minerals: ferrosilite(
+Name truncation: ferrotremolite to ferrotremoli
+New name and truncation added: ferrotremolite  ferrotremoli
+Convert minerals: ferrotremoli
+Convert minerals: fes(am)
+Convert minerals: feso4
+Convert minerals: florencite
+Name truncation: florencite(la) to florencite(l
+New name and truncation added: florencite(la)  florencite(l
+Convert minerals: florencite(l
+Name truncation: fluorapatite(natur) to fluorapatite
+New name and truncation added: fluorapatite(natur)  fluorapatite
+Convert minerals: fluorapatite
+Convert minerals: fluorite
+Name truncation: fluorphlogopite to fluorphlogop
+New name and truncation added: fluorphlogopite  fluorphlogop
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: fluorphlogop
+Convert minerals: forsterite
+Convert minerals: foshagite
+Convert minerals: friedel_salt
+Convert minerals: galena
+Name truncation: gallobeudantite to gallobeudant
+New name and truncation added: gallobeudantite  gallobeudant
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: gallobeudant
+Convert minerals: gaooh
+Convert minerals: gaylussite
+Convert minerals: gehlenite
+Convert minerals: gibbsite
+Convert minerals: gibbsite(am)
+Convert minerals: gibbsite(mc)
+Convert minerals: gismondine
+Convert minerals: glaserite
+Convert minerals: glauberite
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: glauconite
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: glaucophane
+Convert minerals: goethite
+Convert minerals: gorceixite
+Convert minerals: goyazite
+Convert minerals: greenalite
+Convert minerals: greenockite
+Name truncation: greenrust(cl) to greenrust(cl
+New name and truncation added: greenrust(cl)  greenrust(cl
+Convert minerals: greenrust(cl
+Name truncation: greenrust(co3) to greenrust(co
+New name and truncation added: greenrust(co3)  greenrust(co
+Convert minerals: greenrust(co
+Name truncation: greenrust(oh) to greenrust(oh
+New name and truncation added: greenrust(oh)  greenrust(oh
+Convert minerals: greenrust(oh
+Name truncation: greenrust(so3) to greenrust(so
+New name and truncation added: greenrust(so3)  greenrust(so
+Convert minerals: greenrust(so
+Name truncation: greenrust2(so4) to greenrust2(s
+New name and truncation added: greenrust2(so4)  greenrust2(s
+Convert minerals: greenrust2(s
+Convert minerals: greigite
+Convert minerals: grossular
+Convert minerals: grunerite
+Convert minerals: guerinite
+Convert minerals: gypsum
+Convert minerals: gyrolite
+Convert minerals: halite
+Convert minerals: halloysite
+Convert minerals: halotrichite
+Convert minerals: hedenbergite
+Convert minerals: hematite
+Name truncation: hemicarboaluminate to hemicarboalu
+New name and truncation added: hemicarboaluminate  hemicarboalu
+Convert minerals: hemicarboalu
+Name truncation: hemihydroxichloride(ca) to hemihydroxic
+New name and truncation added: hemihydroxichloride(ca)  hemihydroxic
+Convert minerals: hemihydroxic
+Name truncation: heulandite(ca) to heulandite(c
+New name and truncation added: heulandite(ca)  heulandite(c
+Convert minerals: heulandite(c
+Name truncation: heulandite(na) to heulandite(n
+New name and truncation added: heulandite(na)  heulandite(n
+Convert minerals: heulandite(n
+Convert minerals: hexahydrite
+Convert minerals: hg(l)
+Convert minerals: hg2so4
+Name truncation: hilgenstockite to hilgenstocki
+New name and truncation added: hilgenstockite  hilgenstocki
+Convert minerals: hilgenstocki
+Name truncation: hillebrandite to hillebrandit
+New name and truncation added: hillebrandite  hillebrandit
+Convert minerals: hillebrandit
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: hinsdalite
+Name truncation: hopeite(alpha) to hopeite(alph
+New name and truncation added: hopeite(alpha)  hopeite(alph
+Convert minerals: hopeite(alph
+Name truncation: hopeite(beta) to hopeite(beta
+New name and truncation added: hopeite(beta)  hopeite(beta
+Convert minerals: hopeite(beta
+Convert minerals: huntite
+Name truncation: hydrocalumnite(cr) to hydrocalumni
+New name and truncation added: hydrocalumnite(cr)  hydrocalumni
+Convert minerals: hydrocalumni
+Name truncation: hydrocerussite to hydrocerussi
+New name and truncation added: hydrocerussite  hydrocerussi
+Convert minerals: hydrocerussi
+Name truncation: hydromagnesite to hydromagnesi
+New name and truncation added: hydromagnesite  hydromagnesi
+Convert minerals: hydromagnesi
+Convert minerals: hydrophilite
+Convert minerals: hydrotalcite
+Name truncation: hydrotalcite(co3) to hydrotalcite
+New name and truncation added: hydrotalcite(co3)  hydrotalcite
+Convert minerals: hydrotalcite
+Name truncation: hydroxichloride(ca) to hydroxichlor
+New name and truncation added: hydroxichloride(ca)  hydroxichlor
+Convert minerals: hydroxichlor
+Name truncation: hydroxichloride(ca:13h2o) to hydroxichlor
+Error(ignored): Truncate name duplicated, the same truncate name already exist: hydroxichlor
+New name and truncation added: hydroxichloride(ca:13h2o)  hydroxichlor
+Convert minerals: hydroxichlor
+Name truncation: hydroxichloride(ca:h2o) to hydroxichlor
+Error(ignored): Truncate name duplicated, the same truncate name already exist: hydroxichlor
+New name and truncation added: hydroxichloride(ca:h2o)  hydroxichlor
+Convert minerals: hydroxichlor
+Name truncation: hydroxichloride(mg:4h2o) to hydroxichlor
+Error(ignored): Truncate name duplicated, the same truncate name already exist: hydroxichlor
+New name and truncation added: hydroxichloride(mg:4h2o)  hydroxichlor
+Convert minerals: hydroxichlor
+Name truncation: hydroxyapatite(natur) to hydroxyapati
+New name and truncation added: hydroxyapatite(natur)  hydroxyapati
+Convert minerals: hydroxyapati
+Convert minerals: illite(al)
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: illite(feii)
+Name truncation: illite(feiii) to illite(feiii
+New name and truncation added: illite(feiii)  illite(feiii
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: illite(feiii
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: illite(imt2)
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: illite(mg)
+Convert minerals: ilmenite
+Convert minerals: imogolite
+Convert minerals: jacobsite
+Convert minerals: jadeite
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: jarosite(ag)
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: jarosite(cr)
+Convert minerals: jarosite(h)
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: jarosite(k)
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: jarosite(na)
+Name truncation: jarosite(nh4) to jarosite(nh4
+New name and truncation added: jarosite(nh4)  jarosite(nh4
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: jarosite(nh4
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: jarosite(pb)
+Convert minerals: jennite
+Convert minerals: k(element)
+Convert minerals: k2co3
+Convert minerals: k2o
+Name truncation: k2so4.feso4:6h2o to k2so4.feso4:
+New name and truncation added: k2so4.feso4:6h2o  k2so4.feso4:
+Convert minerals: k2so4.feso4:
+Convert minerals: kainite
+Convert minerals: kalicinite
+Name truncation: kalsilite(alpha) to kalsilite(al
+New name and truncation added: kalsilite(alpha)  kalsilite(al
+Convert minerals: kalsilite(al
+Name truncation: kalsilite(beta) to kalsilite(be
+New name and truncation added: kalsilite(beta)  kalsilite(be
+Convert minerals: kalsilite(be
+Convert minerals: kaolinite
+Convert minerals: katoitesi1
+Name truncation: kcl.mgcl2:6h2o to kcl.mgcl2:6h
+New name and truncation added: kcl.mgcl2:6h2o  kcl.mgcl2:6h
+Convert minerals: kcl.mgcl2:6h
+Convert minerals: kh2po4
+Convert minerals: kieserite
+Convert minerals: kornelite
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: krausite(cr)
+Convert minerals: kyanite
+Convert minerals: la2o3glass
+Convert minerals: lanarkite
+Convert minerals: lansfordite
+Name truncation: larnite(alpha) to larnite(alph
+New name and truncation added: larnite(alpha)  larnite(alph
+Convert minerals: larnite(alph
+Name truncation: larnite(beta) to larnite(beta
+New name and truncation added: larnite(beta)  larnite(beta
+Convert minerals: larnite(beta
+Name truncation: larnite(gamma) to larnite(gamm
+New name and truncation added: larnite(gamma)  larnite(gamm
+Convert minerals: larnite(gamm
+Convert minerals: laumontite
+Convert minerals: laurelite
+Convert minerals: laurionite
+Convert minerals: laurite
+Name truncation: lawsonite(alpha) to lawsonite(al
+New name and truncation added: lawsonite(alpha)  lawsonite(al
+Convert minerals: lawsonite(al
+Convert minerals: leonhardtite
+Convert minerals: leonite
+Name truncation: lepidocrocite to lepidocrocit
+New name and truncation added: lepidocrocite  lepidocrocit
+Convert minerals: lepidocrocit
+Convert minerals: libenthenite
+Convert minerals: lime
+Convert minerals: linnaeite
+Convert minerals: litharge
+Convert minerals: lizardite
+Convert minerals: loellingite
+Convert minerals: mackinawite
+Name truncation: maghemite(disordered) to maghemite(di
+New name and truncation added: maghemite(disordered)  maghemite(di
+Convert minerals: maghemite(di
+Name truncation: magnesiochromite to magnesiochro
+New name and truncation added: magnesiochromite  magnesiochro
+Convert minerals: magnesiochro
+Name truncation: magnesioferrite to magnesioferr
+New name and truncation added: magnesioferrite  magnesioferr
+Convert minerals: magnesioferr
+Name truncation: magnesite(natur) to magnesite(na
+New name and truncation added: magnesite(natur)  magnesite(na
+Convert minerals: magnesite(na
+Convert minerals: magnetite
+Name truncation: magnetite(am) to magnetite(am
+New name and truncation added: magnetite(am)  magnetite(am
+Convert minerals: magnetite(am
+Convert minerals: malachite
+Convert minerals: manganosite
+Convert minerals: mansfieldite
+Convert minerals: marcassite
+Convert minerals: margarite
+Convert minerals: massicot
+Convert minerals: melanterite
+Convert minerals: mercallite
+Name truncation: merlinoite(k) to merlinoite(k
+New name and truncation added: merlinoite(k)  merlinoite(k
+Convert minerals: merlinoite(k
+Name truncation: merlinoite(na) to merlinoite(n
+New name and truncation added: merlinoite(na)  merlinoite(n
+Convert minerals: merlinoite(n
+Convert minerals: merwinite
+Convert minerals: metacinnabar
+Convert minerals: mg(element)
+Name truncation: mg3(po4)2:22h2o to mg3(po4)2:22
+New name and truncation added: mg3(po4)2:22h2o  mg3(po4)2:22
+Convert minerals: mg3(po4)2:22
+Name truncation: mgcl2.fecl2:8h2o to mgcl2.fecl2:
+New name and truncation added: mgcl2.fecl2:8h2o  mgcl2.fecl2:
+Convert minerals: mgcl2.fecl2:
+Convert minerals: mghpo4
+Convert minerals: mgso4
+Convert minerals: microcline
+Convert minerals: mimetite
+Convert minerals: minium
+Convert minerals: minnesotaite
+Convert minerals: mirabilite
+Convert minerals: mn3(po4)2
+Convert minerals: mnhpo4
+Convert minerals: monetite
+Name truncation: monocarboaluminate to monocarboalu
+New name and truncation added: monocarboaluminate  monocarboalu
+Convert minerals: monocarboalu
+Name truncation: monohydrocalcite to monohydrocal
+New name and truncation added: monohydrocalcite  monohydrocal
+Convert minerals: monohydrocal
+Name truncation: monosulfate(fe) to monosulfate(
+New name and truncation added: monosulfate(fe)  monosulfate(
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: monosulfate(
+Name truncation: monosulfoaluminate to monosulfoalu
+New name and truncation added: monosulfoaluminate  monosulfoalu
+Convert minerals: monosulfoalu
+Convert minerals: monteponite
+Convert minerals: monticellite
+Name truncation: montmorillonite(hcca) to montmorillon
+New name and truncation added: montmorillonite(hcca)  montmorillon
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: montmorillon
+Name truncation: montmorillonite(hck) to montmorillon
+Error(ignored): Truncate name duplicated, the same truncate name already exist: montmorillon
+New name and truncation added: montmorillonite(hck)  montmorillon
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: montmorillon
+Name truncation: montmorillonite(hcmg) to montmorillon
+Error(ignored): Truncate name duplicated, the same truncate name already exist: montmorillon
+New name and truncation added: montmorillonite(hcmg)  montmorillon
+Convert minerals: montmorillon
+Name truncation: montmorillonite(hcna) to montmorillon
+Error(ignored): Truncate name duplicated, the same truncate name already exist: montmorillon
+New name and truncation added: montmorillonite(hcna)  montmorillon
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: montmorillon
+Name truncation: montmorillonite(mgca) to montmorillon
+Error(ignored): Truncate name duplicated, the same truncate name already exist: montmorillon
+New name and truncation added: montmorillonite(mgca)  montmorillon
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: montmorillon
+Name truncation: montmorillonite(mgk) to montmorillon
+Error(ignored): Truncate name duplicated, the same truncate name already exist: montmorillon
+New name and truncation added: montmorillonite(mgk)  montmorillon
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: montmorillon
+Name truncation: montmorillonite(mgmg) to montmorillon
+Error(ignored): Truncate name duplicated, the same truncate name already exist: montmorillon
+New name and truncation added: montmorillonite(mgmg)  montmorillon
+Convert minerals: montmorillon
+Name truncation: montmorillonite(mgna) to montmorillon
+Error(ignored): Truncate name duplicated, the same truncate name already exist: montmorillon
+New name and truncation added: montmorillonite(mgna)  montmorillon
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: montmorillon
+Convert minerals: montroydite
+Convert minerals: moorhouseite
+Name truncation: mordeniteb(ca) to mordeniteb(c
+New name and truncation added: mordeniteb(ca)  mordeniteb(c
+Convert minerals: mordeniteb(c
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: mordenitej
+Convert minerals: mullite
+Name truncation: muscovite(disordered) to muscovite(di
+New name and truncation added: muscovite(disordered)  muscovite(di
+Convert minerals: muscovite(di
+Name truncation: muscovite(ordered) to muscovite(or
+New name and truncation added: muscovite(ordered)  muscovite(or
+Convert minerals: muscovite(or
+Convert minerals: na(element)
+Convert minerals: na2co3
+Convert minerals: na2co3:7h2o
+Convert minerals: na2hpo4
+Convert minerals: na2o
+Name truncation: na2so4.feso4:4h2o to na2so4.feso4
+New name and truncation added: na2so4.feso4:4h2o  na2so4.feso4
+Convert minerals: na2so4.feso4
+Convert minerals: na3po4
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: nafes2
+Convert minerals: nah2po4
+Convert minerals: nahcolite
+Convert minerals: natrolite
+Convert minerals: natron
+Convert minerals: nepheline
+Name truncation: nesquehonite(alpha) to nesquehonite
+New name and truncation added: nesquehonite(alpha)  nesquehonite
+Convert minerals: nesquehonite
+Name truncation: nesquehonite(beta) to nesquehonite
+Error(ignored): Truncate name duplicated, the same truncate name already exist: nesquehonite
+New name and truncation added: nesquehonite(beta)  nesquehonite
+Convert minerals: nesquehonite
+Convert minerals: newberyite
+Convert minerals: ni(alpha)
+Convert minerals: ni3(po4)2
+Name truncation: nontronite(ca) to nontronite(c
+New name and truncation added: nontronite(ca)  nontronite(c
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: nontronite(c
+Name truncation: nontronite(k) to nontronite(k
+New name and truncation added: nontronite(k)  nontronite(k
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: nontronite(k
+Name truncation: nontronite(mg) to nontronite(m
+New name and truncation added: nontronite(mg)  nontronite(m
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: nontronite(m
+Name truncation: nontronite(na) to nontronite(n
+New name and truncation added: nontronite(na)  nontronite(n
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: nontronite(n
+Convert minerals: okenite
+Convert minerals: olivenite
+Convert minerals: orpiment
+Convert minerals: otavite
+Convert minerals: p(element)
+Convert minerals: paragonite
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: pargasite
+Convert minerals: pb(element)
+Convert minerals: pb(h2po4)2
+Convert minerals: pb(oh)2
+Convert minerals: pb2sio4
+Convert minerals: pb3(po4)2
+Convert minerals: pb4o(po4)2
+Convert minerals: pbhpo4
+Convert minerals: pd(element)
+Convert minerals: pd(oh)2(s)
+Convert minerals: pd4s(s)
+Convert minerals: pdo(s)
+Convert minerals: pds2
+Convert minerals: pentahydrite
+Convert minerals: periclase
+Name truncation: philipsbornite to philipsborni
+New name and truncation added: philipsbornite  philipsborni
+Convert minerals: philipsborni
+Name truncation: phillipsite(ca) to phillipsite(
+New name and truncation added: phillipsite(ca)  phillipsite(
+Convert minerals: phillipsite(
+Name truncation: phillipsite(k) to phillipsite(
+Error(ignored): Truncate name duplicated, the same truncate name already exist: phillipsite(
+New name and truncation added: phillipsite(k)  phillipsite(
+Convert minerals: phillipsite(
+Name truncation: phillipsite(na) to phillipsite(
+Error(ignored): Truncate name duplicated, the same truncate name already exist: phillipsite(
+New name and truncation added: phillipsite(na)  phillipsite(
+Convert minerals: phillipsite(
+Convert minerals: phlogopite
+Name truncation: phlogopite(na) to phlogopite(n
+New name and truncation added: phlogopite(na)  phlogopite(n
+Convert minerals: phlogopite(n
+Convert minerals: phosgenite
+Convert minerals: picromerite
+Convert minerals: pirssonite
+Convert minerals: plattnerite
+Name truncation: plumbogummite to plumbogummit
+New name and truncation added: plumbogummite  plumbogummit
+Convert minerals: plumbogummit
+Name truncation: plumbonacrite to plumbonacrit
+New name and truncation added: plumbonacrite  plumbonacrit
+Convert minerals: plumbonacrit
+Convert minerals: polyhalite
+Convert minerals: portlandite
+Convert minerals: prehnite
+Name truncation: pseudomalachite to pseudomalach
+New name and truncation added: pseudomalachite  pseudomalach
+Convert minerals: pseudomalach
+Convert minerals: pt(element)
+Convert minerals: pts2
+Convert minerals: pyrite
+Convert minerals: pyromorphite
+Name truncation: pyromorphite(br) to pyromorphite
+New name and truncation added: pyromorphite(br)  pyromorphite
+Convert minerals: pyromorphite
+Name truncation: pyromorphite(cl) to pyromorphite
+Error(ignored): Truncate name duplicated, the same truncate name already exist: pyromorphite
+New name and truncation added: pyromorphite(cl)  pyromorphite
+Convert minerals: pyromorphite
+Name truncation: pyromorphite(f) to pyromorphite
+Error(ignored): Truncate name duplicated, the same truncate name already exist: pyromorphite
+New name and truncation added: pyromorphite(f)  pyromorphite
+Convert minerals: pyromorphite
+Name truncation: pyrope(alpha) to pyrope(alpha
+New name and truncation added: pyrope(alpha)  pyrope(alpha
+Convert minerals: pyrope(alpha
+Convert minerals: pyrophyllite
+Name truncation: pyroxene(caal) to pyroxene(caa
+New name and truncation added: pyroxene(caal)  pyroxene(caa
+Convert minerals: pyroxene(caa
+Convert minerals: pyrrhotite
+Name truncation: quartz(alpha) to quartz(alpha
+New name and truncation added: quartz(alpha)  quartz(alpha
+Convert minerals: quartz(alpha
+Convert minerals: quartz(beta)
+Convert minerals: realgar
+Convert minerals: rh(element)
+Convert minerals: rh2o(s)
+Convert minerals: rh2o3(s)
+Name truncation: rhodochrosite to rhodochrosit
+New name and truncation added: rhodochrosite  rhodochrosit
+Convert minerals: rhodochrosit
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: riebeckite
+Name truncation: rockbridgite(zn) to rockbridgite
+New name and truncation added: rockbridgite(zn)  rockbridgite
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: rockbridgite
+Convert minerals: romarchite
+Convert minerals: romerite
+Convert minerals: rozenite
+Convert minerals: ru(element)
+Convert minerals: ruo2(s)
+Convert minerals: rutile
+Convert minerals: s(alpha)
+Convert minerals: s(beta)
+Convert minerals: s(gamma)
+Convert minerals: sanidine
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: saponite(ca)
+Name truncation: saponite(feca) to saponite(fec
+New name and truncation added: saponite(feca)  saponite(fec
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: saponite(fec
+Name truncation: saponite(fek) to saponite(fek
+New name and truncation added: saponite(fek)  saponite(fek
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: saponite(fek
+Name truncation: saponite(femg) to saponite(fem
+New name and truncation added: saponite(femg)  saponite(fem
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: saponite(fem
+Name truncation: saponite(fena) to saponite(fen
+New name and truncation added: saponite(fena)  saponite(fen
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: saponite(fen
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: saponite(k)
+Convert minerals: saponite(mg)
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: saponite(na)
+Convert minerals: sb(element)
+Convert minerals: scholzite
+Convert minerals: schultenite
+Name truncation: schwertmannite to schwertmanni
+New name and truncation added: schwertmannite  schwertmanni
+Convert minerals: schwertmanni
+Convert minerals: scolecite
+Convert minerals: scorodite
+Name truncation: scorodite(am) to scorodite(am
+New name and truncation added: scorodite(am)  scorodite(am
+Convert minerals: scorodite(am
+Convert minerals: sellaite
+Convert minerals: senarmontite
+Convert minerals: sepiolite
+Convert minerals: siderite
+Name truncation: siderophyllite to siderophylli
+New name and truncation added: siderophyllite  siderophylli
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: siderophylli
+Convert minerals: siderotil
+Convert minerals: sillimanite
+Name truncation: smectite(mx80) to smectite(mx8
+New name and truncation added: smectite(mx80)  smectite(mx8
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: smectite(mx8
+Name truncation: smectite(mx80:3.989h2o) to smectite(mx8
+Error(ignored): Truncate name duplicated, the same truncate name already exist: smectite(mx8
+New name and truncation added: smectite(mx80:3.989h2o)  smectite(mx8
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: smectite(mx8
+Name truncation: smectite(mx80:5.189h2o) to smectite(mx8
+Error(ignored): Truncate name duplicated, the same truncate name already exist: smectite(mx8
+New name and truncation added: smectite(mx80:5.189h2o)  smectite(mx8
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: smectite(mx8
+Convert minerals: smithsonite
+Convert minerals: sn(alpha)
+Convert minerals: sn(beta)
+Convert minerals: spencerite
+Name truncation: spessartine(alpha) to spessartine(
+New name and truncation added: spessartine(alpha)  spessartine(
+Convert minerals: spessartine(
+Name truncation: sphaerocobaltite to sphaerocobal
+New name and truncation added: sphaerocobaltite  sphaerocobal
+Convert minerals: sphaerocobal
+Convert minerals: sphalerite
+Convert minerals: spinel
+Name truncation: spingcreekite to spingcreekit
+New name and truncation added: spingcreekite  spingcreekit
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: spingcreekit
+Convert minerals: sr(element)
+Convert minerals: sr(oh)2
+Convert minerals: sr(oh)2:8h2o
+Convert minerals: sr2sio4
+Convert minerals: sr3(aso4)2
+Convert minerals: sr3(po4)2
+Name truncation: sr5(po4)3(oh) to sr5(po4)3(oh
+New name and truncation added: sr5(po4)3(oh)  sr5(po4)3(oh
+Convert minerals: sr5(po4)3(oh
+Convert minerals: srcl2
+Convert minerals: srcl2:2h2o
+Convert minerals: srcl2:6h2o
+Convert minerals: srcl2:h2o
+Convert minerals: srcro4
+Convert minerals: srhpo4
+Convert minerals: sro
+Convert minerals: srs
+Convert minerals: srsio3
+Convert minerals: staurolite
+Convert minerals: stellerite
+Name truncation: sterlinghillite to sterlinghill
+New name and truncation added: sterlinghillite  sterlinghill
+Convert minerals: sterlinghill
+Convert minerals: stibnite
+Convert minerals: stilbite
+Name truncation: straetlingite to straetlingit
+New name and truncation added: straetlingite  straetlingit
+Convert minerals: straetlingit
+Convert minerals: strengite
+Convert minerals: strontianite
+Convert minerals: sudoite
+Convert minerals: sudoite(fe)
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: svanbergite
+Convert minerals: sylvite
+Convert minerals: symplesite
+Convert minerals: syngenite
+Convert minerals: szomolnokite
+Convert minerals: tachyhydrite
+Convert minerals: talc
+Convert minerals: tarbuttite
+Convert minerals: tenorite
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: thaumasite
+Convert minerals: thenardite
+Name truncation: thermonatrite to thermonatrit
+New name and truncation added: thermonatrite  thermonatrit
+Convert minerals: thermonatrit
+Convert minerals: thorianite
+Convert minerals: titanite
+Name truncation: tobermorite(11a) to tobermorite(
+New name and truncation added: tobermorite(11a)  tobermorite(
+Convert minerals: tobermorite(
+Name truncation: tobermorite(14a) to tobermorite(
+Error(ignored): Truncate name duplicated, the same truncate name already exist: tobermorite(
+New name and truncation added: tobermorite(14a)  tobermorite(
+Convert minerals: tobermorite(
+Convert minerals: tremolite
+Convert minerals: troilite
+Convert minerals: trona(k)
+Convert minerals: trona(na)
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: tsumebite
+Convert minerals: u3o8
+Convert minerals: ulvospinel
+Convert minerals: uo3(gamma)
+Convert minerals: uraninite
+Convert minerals: valentinite
+Convert minerals: variscite
+Convert minerals: vaterite
+Name truncation: vermiculite(ca) to vermiculite(
+New name and truncation added: vermiculite(ca)  vermiculite(
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: vermiculite(
+Name truncation: vermiculite(k) to vermiculite(
+Error(ignored): Truncate name duplicated, the same truncate name already exist: vermiculite(
+New name and truncation added: vermiculite(k)  vermiculite(
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: vermiculite(
+Name truncation: vermiculite(mg) to vermiculite(
+Error(ignored): Truncate name duplicated, the same truncate name already exist: vermiculite(
+New name and truncation added: vermiculite(mg)  vermiculite(
+Convert minerals: vermiculite(
+Name truncation: vermiculite(na) to vermiculite(
+Error(ignored): Truncate name duplicated, the same truncate name already exist: vermiculite(
+New name and truncation added: vermiculite(na)  vermiculite(
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: vermiculite(
+Convert minerals: vivianite
+Convert minerals: vysotskite
+Convert minerals: wairakite
+Convert minerals: wavellite
+Convert minerals: waylandite
+Convert minerals: weillite
+Name truncation: westerveldite to westerveldit
+New name and truncation added: westerveldite  westerveldit
+Convert minerals: westerveldit
+Name truncation: whitlockite(high) to whitlockite(
+New name and truncation added: whitlockite(high)  whitlockite(
+Convert minerals: whitlockite(
+Name truncation: whitlockite(low) to whitlockite(
+Error(ignored): Truncate name duplicated, the same truncate name already exist: whitlockite(
+New name and truncation added: whitlockite(low)  whitlockite(
+Convert minerals: whitlockite(
+Convert minerals: wollastonite
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: woodhouseite
+Convert minerals: wurtzite
+Convert minerals: wustite
+Convert minerals: xonotlite
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: yavapaiite
+Warning:Number of components exceed 5, only 5 components are converted.
+Convert minerals: zairite
+Convert minerals: zeolitep(ca)
+Convert minerals: zincite
+Convert minerals: zn3(po4)2
+Name truncation: zn3(po4)2:2h2o to zn3(po4)2:2h
+New name and truncation added: zn3(po4)2:2h2o  zn3(po4)2:2h
+Convert minerals: zn3(po4)2:2h
+Name truncation: zn3(po4)2:h2o to zn3(po4)2:h2
+New name and truncation added: zn3(po4)2:h2o  zn3(po4)2:h2
+Convert minerals: zn3(po4)2:h2
+Convert minerals: zn5(po4)3cl
+Convert minerals: zn5(po4)3oh
+Convert minerals: znhpo4
+Convert minerals: zoisite
+Open min3p database success: comp.dbs
+Open min3p database success: complex.dbs
+Open min3p database success: redox.dbs
+Open min3p database success: gases.dbs
+Open min3p database success: mineral.dbs
+Write min3p database success: comp.dbs
+Write min3p database success: complex.dbs
+Write min3p database success: redox.dbs
+Write min3p database success: gases.dbs
+Write min3p database success: mineral.dbs
+Open/Create name truncation file success:name_truncation.txt
+Write name truncation: name_truncation.txt
+End writing name truncation.
+Number of truncated names:
+         193
+Warnings:          81
+Errors:            33
