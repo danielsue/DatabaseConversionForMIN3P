@@ -41,6 +41,8 @@ module dbs_min3p
         integer         ::      NCP = 0                    !number of basis species defining the secondary species
         real            ::      STQ(20) = 0.0d0             !stoichiometric coefficients of the components comprising the aqueous species                                                        
         character(nMNLmin3P)   ::      NameOfSTQ(20) = ""          !name of the reactant or product
+        
+        integer         ::      iAssociation = 1           !Indication of reaction direction, if iAssociation = 1, association, else if iAssociation = -1, dissociation
 
     end type typeMin3PAqueousSpecies
     
@@ -57,6 +59,8 @@ module dbs_min3p
         real            ::      STQ(20) = 0.0d0             !stoichiometric coefficients of the components                                                       
         character(nMNLmin3P)   ::      NameOfSTQ(20) = ""          !name of the reactant or product  
         
+        integer         ::      iAssociation = 1           !Indication of reaction direction, if iAssociation = 1, association, else if iAssociation = -1, dissociation
+        
     end type typeMin3PGas
     
     ! define miniral data structure
@@ -72,6 +76,8 @@ module dbs_min3p
         integer         ::      NCP = 0                    !number of basis species defining the secondary species
         real            ::      STQ(20) = 0.0d0             !stoichiometric coefficients of the components                                                       
         character(nMNLmin3P)   ::      NameOfSTQ(20) = ""          !name of the reactant or product 
+        
+        integer         ::      iAssociation = 1           !Indication of reaction direction, if iAssociation = 1, association, else if iAssociation = -1, dissociation
         
     end type typeMin3PMineral   
 
@@ -96,8 +102,66 @@ module dbs_min3p
     character(9), parameter  ::  filePathDbsMin3PGases     =   "gases.dbs"      !gases.dbs for min3p
     character(9), parameter  ::  filePathDbsMin3PRedox     =   "redox.dbs"      !redox.dbs for min3p
     character(11), parameter ::  filePathDbsMin3PMinerals  =   "mineral.dbs"    !mineral.dbs for min3p
-
     
+    !!**************************************************************************************
+    !! IMPORTANT NOTE ON THE SIGH OF EQUILIBRIUM CONSTANT
+    !! 1. Database of MIN3P uses association reactions
+    !! 2. Database of Toughreact or Crunchflow uses dissociation reaction (sign turn around)
+    !! 3. Database of Phreeqc has both association and dissociation reactions
+    !!    -Secondary species: association (the same sign)
+    !!    -Minerals (Phases): dissociation (sign turn around)
+    !!    -Gases (Phases): dissociation (sign turn around)
+    !!**************************************************************************************
+    !!MIN3P uses association reactions (formation of dependent/secondary species). 
+    !!(the sign turn around, if reactions are expressed as dissociation reactions (not done in MIN3P for complexes, gases and minerals).
+    !!
+    !!For complexes:
+    !!------------------
+    !!Example:
+    !!
+    !!mgoh+            15.9520  -11.4400                 1.00 6.50  .00  41.3190    .00
+    !!      3   mg+2           1.000 h2o            1.000 h+1           -1.000
+    !!
+    !!This stands for the association reaction:  mg+2   + h2o - h+1  -> mgoh+
+    !!
+    !!K = products/reactants
+    !!K = [MgOH+] [H+] [Mg2+]^-1
+    !![MgOH+] = K x  [H+]^-1 [Mg2+]
+    !![MgOH+] = 10^- 11.4400  x  [H+]^-1 [Mg2+]
+    !!
+    !!
+    !!For gases:
+    !!-------------
+    !!Example:
+    !!
+    !!ch4(g)             3.373   2.8894                                  16.0432  !modified 9/99
+    !!      1   ch4(aq)        1.000
+    !!
+    !!This stands for the association reaction: ch4(aq) -> ch4(g)
+    !!K = pCH4/{CH4(aq)}
+    !!pCH4 = K {CH4(aq)}
+    !!pCH4 = 10^2.8894 {CH4(aq)}
+    !!
+    !!
+    !!for minerals:
+    !! --------------
+    !!Example:
+    !!
+    !!'calcite'
+    !!'surface'
+    !!100.0894    2.7100
+    !!2  'ca+2'    1.000  'co3-2'    1.000
+    !!'reversible'    8.4750  2.5850
+    !!
+    !!Stands for the association reaction: Ca2+ + CO32- à calcite    K_a
+    !!K_a = 1/{Ca2+}{CO32-}
+    !!10^8.4750  = 1/{Ca2+}{CO32-}
+    !! 
+    !!
+    !!This is consistent with the above for complexes and gases, but is a bit backward in terms of the standard definition:
+    !!SR = IAP/Ksp = {Ca2+}{CO32-}/Ksp
+    !!Which is valid for a dissociation reaction
+    !!Calcite -> Ca2+ + CO32-     Ksp
     
     
 contains
@@ -106,16 +170,21 @@ contains
     subroutine OpenAllDbsMin3P
     
         use ifport
+        USE IFPOSIX
     
         implicit none
-        
+        integer :: opendirid, ierror
         logical ::  path_exists = .false. 
+        
+        ierror = -1
         
         !check and create folder if necessary
         
         if(len_trim(targetDatabasePath) > 0) then
-            inquire(file = trim(targetDatabasePath), exist = path_exists)
-            if (.not. path_exists) then
+            !inquire(file = trim(targetDatabasePath), exist = path_exists)      !do not use this, not correct
+            CALL PXFOPENDIR (trim(targetDatabasePath),len_trim(targetDatabasePath),opendirid,ierror) 
+            
+            if (ierror /= 0) then
                 path_exists = makedirqq(trim(targetDatabasePath))
                 if (path_exists) then
                     call WriteLog("Create output folder for min3p database: success")
