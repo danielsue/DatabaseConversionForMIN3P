@@ -33,7 +33,9 @@
 		<File RelativePath=".\dbs_conversion.f90"/>
 		<File RelativePath=".\dbs_crunchflow.f90"/>
 		<File RelativePath=".\dbs_min3p.f90"/>
+		<File RelativePath=".\dbs_phreeqc.f90"/>
 		<File RelativePath=".\dbs_toughreact.f90"/>
+		<File RelativePath=".\elements.f90"/>
 		<File RelativePath=".\file_utility.f90"/>
 		<File RelativePath=".\geochemistry.f90"/>
 		<File RelativePath=".\global.f90"/>

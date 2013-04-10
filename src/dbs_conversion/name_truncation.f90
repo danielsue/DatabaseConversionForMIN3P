@@ -11,7 +11,7 @@ module name_truncation
 
     use global, only : iUnitNameTruncation, bOpenNameTruncation, ErrorHandling
     use logfile, only : WriteLog, nWarnings, nErrors
-    use file_utility, only : LowerCase
+    use file_utility, only : SetLowerCase
 
     implicit none
     

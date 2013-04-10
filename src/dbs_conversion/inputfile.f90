@@ -4,7 +4,7 @@ module inputfile
 
 use global, only  : iUnitInp, bOpenInp, ErrorHandling
 use logfile, only : WriteLog
-use file_utility, only : LowerCase
+use file_utility, only : SetLowerCase
 use sourcedata, only : nNameLength
 use file_utility, only : getNameFromString
 
@@ -180,7 +180,7 @@ contains
             if(len_trim(strBuffer) /= 0 ) then
             
                 ! Conver all case to lower case
-                call LowerCase(strBuffer)
+                call SetLowerCase(strBuffer)
 
                 if (strBuffer(1:1) /= strComment) then
                     exit

@@ -120,7 +120,7 @@ contains
         character(*), intent(in) :: strLog
         real, intent(in) :: realValue
         
-        write(*,"(a, 1x, i)") trim(strLog), realValue
+        write(*,"(a, 1x, f)") trim(strLog), realValue
         
         if(bOpenLog) then
             write(iUnitLog, "(a, 1x, f)")  trim(strLog), realValue

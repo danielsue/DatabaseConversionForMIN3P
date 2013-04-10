@@ -23,7 +23,7 @@ module file_utility
     end function IsZero
 
     ! Convert upper case to lower case
-    subroutine LowerCase(string)
+    subroutine SetLowerCase(string)
 
         implicit none
 
@@ -44,7 +44,22 @@ module file_utility
 
         end do
 
-    end subroutine lowerCase
+    end subroutine SetLowerCase
+    
+    ! Get lower case of a string
+    function GetLowerCase(n, string) result (lowString)
+        
+        implicit none
+        integer, intent(in) :: n
+        character(n), intent(in) :: string
+        character(n) :: lowString
+        
+        lowString = string
+        
+        call SetLowerCase(lowString)
+    
+    end function GetLowerCase
+    
 
     ! replace character in string
     subroutine replaceCharacter(str, stra, strb)
@@ -57,6 +72,8 @@ module file_utility
         
         integer :: i, j, k, n1, n2, n3
         
+        tempstr = ""
+        
         n1 = len(str)
         n2 = len(stra)
         n3 = len(strb)        
@@ -68,9 +85,11 @@ module file_utility
                 cycle
             end if
             if(str(i:i+n2-1) == stra(1:n2)) then
-                tempstr(j: j + n3 - 1) = strb(1:n3)
-                j = j + n3
-                k = n2 - 1
+                if(n3 > 0) then
+                    tempstr(j: j + n3 - 1) = strb(1:n3)
+                    j = j + n3
+                    k = n2 - 1
+                end if
             else                
                 tempstr(j:j) = str(i:i)
                 j = j + 1
@@ -110,7 +129,34 @@ module file_utility
         
      end subroutine skipNValues
      
-     !Get name from string
+     !count the number of datas in a string
+     function countNumberOfDatas(string, separator) result (iNumber)
+     
+        implicit none
+        character(*), intent(in) :: string
+        character(*), intent(in) :: separator
+        integer :: iNumber        
+        integer :: i, j, k  
+        character(1024) :: str
+        
+        str =adjustl(string)
+        iNumber = 0
+        k = len(separator)
+        
+        do while(len_trim(str) > 0) 
+            j = index(trim(str), separator)
+            if( j > 0) then
+                iNumber = iNumber + 1
+                str = adjustl(str(j+k:))
+            else
+                iNumber = iNUmber + 1
+                exit
+            end if
+        end do
+     
+     end function countNumberOfDatas
+     
+     !Get name from string, string format: 'name' aa bb cc
      subroutine getNameFromString(string, namelen, name)
      
         implicit none
@@ -141,5 +187,45 @@ module file_utility
         !end if
         
      end subroutine getNameFromString
+     
+    !index of first character (a to z) in the string
+    function iIndexOfAlphabet(string) result (iIndex)
+    
+        implicit none    
+        character(*), intent(in) :: string  
+        integer :: iIndex        
+        integer :: i, j, n
+        
+        iIndex = -1
+        n = len(string)
+        do i = 1, n
+            j = ichar(string(i:i))
+            if ((j >= 65 .and. j<= 90) .or. (j>=97 .and. j<=122)) then
+                iIndex = i
+                exit
+            end if
+        end do
+    
+    end function
+    
+    !check if the string contains only alphabetic
+    function bIsAlphabetic(string) result(bFlag)
+    
+        implicit none
+        character(*), intent(in) :: string
+        logical :: bFlag
+        integer :: i, j, n
+        
+        bFlag = .true.
+        n = len(string)
+        do i = 1, n
+            j = ichar(string(i:i))
+            if (j < 65 .or. (j > 90 .and. j < 97) .or. j > 122) then
+                bFlag = .false.
+                exit
+            end if
+        end do
+            
+    end function bIsAlphabetic
 
 end module

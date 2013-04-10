@@ -17,6 +17,7 @@ module global
     integer, parameter  ::  iUnitNameTruncation     =   iUnitDbsAlias + 1           !name_truncation.txt
     integer, parameter  ::  iUnitInp                =   iUnitNameTruncation + 1     !input file for dbs conversion
     integer, parameter  ::  iUnitDbsCF              =   iUnitInp + 1                !database of crunch flow
+    integer, parameter  ::  iUnitDbsPhreeqc         =   iUnitDbsCF + 1              !database of Phreeqc
     
     logical             ::  bOpenLog                =   .false.
     logical             ::  bOpenDbsTR              =   .false. 
@@ -29,6 +30,7 @@ module global
     logical             ::  bOpenNameTruncation     =   .false.
     logical             ::  bOpenInp                =   .false.
     logical             ::  bOpenDbsCF              =   .false.
+    logical             ::  bOpenDbsPhreeqc         =   .false.
     
  
 contains
@@ -91,6 +93,10 @@ contains
         
         if (bOpenDbsCF) then
             close(iUnitDbsCF)
+        end if
+        
+        if (bOpenDbsPhreeqc) then
+            close(iUnitDbsPhreeqc)
         end if
     
     end subroutine CloseAllFiles

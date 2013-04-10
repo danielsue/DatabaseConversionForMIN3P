@@ -4,7 +4,7 @@ module alias
 
     use global, only : iUnitDbsAlias, bOpenDbsAlias, ErrorHandling
     use logfile, only : WriteLog, nWarnings, nErrors
-    use file_utility, only : LowerCase
+    use file_utility, only : SetLowerCase
 
     implicit none
     
@@ -84,7 +84,7 @@ contains
             strBuffer = adjustl(strBuffer)
             
             ! Conver all case to lower case
-            call lowerCase(strBuffer)
+            call SetLowerCase(strBuffer)
 
             if (len_trim(strBuffer) == 0 ) then
                 cycle

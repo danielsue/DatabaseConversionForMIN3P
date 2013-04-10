@@ -14,7 +14,7 @@ module convt2min3p
     use name_truncation, only :     AddNameTruncation
     use alias,           only :     GetAliasFromName
 
-    use inputfile,       only :     targetDatabasePath, targetTemperature, targetMasterVariable, bSortData
+    use inputfile,       only :     targetDatabasePath, targetTemperature, targetMasterVariable, bSortData, sourceDatabaseType
 
     use geochemistry,    only :     switchMasterVariable
     
@@ -98,32 +98,41 @@ contains
             !Convert charge
             min3PSpecies(i)%Z = species(i)%Z
             
-            !Convert Debye-Huckel constants
-            !Ion effective or hydrated radius used to compute the Debye-Huckel a0 parameter (see Appendix H
-            !of Toughreact_V2_User_Guide.pdf for details).
-            !DHA = 2(r + 1.91|Z|)/(|Z| + 1) for anions      r is the effective ionic radius, referred to %A0
-            !DHA = 2(r + 1.81|Z|)/(|Z| + 1) for cations      r is the effective ionic radius, referred to %A0
-            !   .........................................
-            if (species(i)%Z < 0) then
-                min3PSpecies(i)%DHA = 2.0*(species(i)%A0 + 1.91 * abs(species(i)%Z)) / (abs(species(i)%Z) + 1.0)
-            else if (species(i)%Z > 0) then
-                min3PSpecies(i)%DHA = 2.0*(species(i)%A0 + 1.81 * abs(species(i)%Z)) / (abs(species(i)%Z) + 1.0)
-            else                                                            !!When Z = 0, what is the formulation
-                min3PSpecies(i)%DHA = species(i)%A0
+            
+            if (trim(sourceDatabaseType) == "toughreact" .or. trim(sourceDatabaseType) == "crunchflow" ) then
+                !Convert Debye-Huckel constants
+                !Ion effective or hydrated radius used to compute the Debye-Huckel a0 parameter (see Appendix H
+                !of Toughreact_V2_User_Guide.pdf for details).
+                !DHA = 2(r + 1.91|Z|)/(|Z| + 1) for anions      r is the effective ionic radius, referred to %A0
+                !DHA = 2(r + 1.81|Z|)/(|Z| + 1) for cations      r is the effective ionic radius, referred to %A0
+                !   .........................................
+                if (species(i)%Z < 0) then
+                    min3PSpecies(i)%DHA = 2.0*(species(i)%A0 + 1.91 * abs(species(i)%Z)) / (abs(species(i)%Z) + 1.0)
+                else if (species(i)%Z > 0) then
+                    min3PSpecies(i)%DHA = 2.0*(species(i)%A0 + 1.81 * abs(species(i)%Z)) / (abs(species(i)%Z) + 1.0)
+                else                                                            !!When Z = 0, what is the formulation
+                    min3PSpecies(i)%DHA = species(i)%A0
+                end if                
+                min3PSpecies(i)%DHB = 0
+            else if (trim(sourceDatabaseType) == "phreeqc") then
+                min3PSpecies(i)%DHA = species(i)%DHA
+                min3PSpecies(i)%DHB = species(i)%DHB
             end if
-                
-            min3PSpecies(i)%DHB = 0
             
             !Convert the gram formula weight, molecular weight
             min3PSpecies(i)%MWT = species(i)%MWT
             
             !Calculate alkalinity factor
-            if(trim(min3PSpecies(i)%Name) == "co3-2" .or. trim(min3PSpecies(i)%Name) == "co3--") then
-                min3PSpecies(i)%AlkFac = 2.0d0
-            else if(trim(min3PSpecies(i)%Name) == "hco3-" .or. trim(min3PSpecies(i)%Name) == "hco3-1") then
-                min3PSpecies(i)%AlkFac = 1.0d0
-            else if (trim(min3PSpecies(i)%Name) == "h+" .or. trim(min3PSpecies(i)%Name) == "h+1") then
-                min3PSpecies(i)%AlkFac = -1.0d0
+            if (trim(sourceDatabaseType) == "toughreact" .or. trim(sourceDatabaseType) == "crunchflow" ) then
+                if(trim(min3PSpecies(i)%Name) == "co3-2" .or. trim(min3PSpecies(i)%Name) == "co3--") then
+                    min3PSpecies(i)%AlkFac = 2.0d0
+                else if(trim(min3PSpecies(i)%Name) == "hco3-" .or. trim(min3PSpecies(i)%Name) == "hco3-1") then
+                    min3PSpecies(i)%AlkFac = 1.0d0
+                else if (trim(min3PSpecies(i)%Name) == "h+" .or. trim(min3PSpecies(i)%Name) == "h+1") then
+                    min3PSpecies(i)%AlkFac = -1.0d0
+                end if
+            else if (trim(sourceDatabaseType) == "phreeqc") then
+                min3PSpecies(i)%AlkFac = species(i)%AlkFac
             end if
             
             call WriteLog("Convert species:" // trim(min3PSpecies(i)%Name))
@@ -153,6 +162,7 @@ contains
         
         if(nMin3PRedoxReactions>0) then
             allocate(min3PRedoxReactions(nMin3PRedoxReactions))
+            min3PRedoxReactions(1:nMin3PRedoxReactions)%iAssociation = 1
         end if
         
         if (allocated(min3PComplexReactions)) then
@@ -161,6 +171,7 @@ contains
         
         if (nMin3PComplexReactions > 0) then
             allocate(min3PComplexReactions(nMin3PComplexReactions))
+            min3PComplexReactions(1:nMin3PComplexReactions)%iAssociation = 1
         end if
 
         j = 0
@@ -193,29 +204,37 @@ contains
                     else
                         call WriteLog("Alias used for : " // trim(aqueousSpecies(i)%Name) // " to " // trim(min3PRedoxReactions(j)%Name))
                     end if
-                end if
+                end if 
+                    
+                min3PRedoxReactions(j)%EnthalpyChange = aqueousSpecies(i)%EnthalpyChange * min3PRedoxReactions(j)%iAssociation * aqueousSpecies(i)%iAssociation
                 
-                min3PRedoxReactions(j)%EnthalpyChange = 0.0d0
                 !The second temperature in TOUGHREACT 25C is used. 
                 !Should modify if 25C does not exist or in the different position.
                 min3PRedoxReactions(j)%AKLOG = aqueousSpecies(i)%AKLOG          !Min3P use the reverse equilibrium constant
                 
                 min3PRedoxReactions(j)%Z = aqueousSpecies(i)%Z
                 
-                !Convert Debye-Huckel constants
-                !Ion effective or hydrated radius used to compute the Debye-Huckel a0 parameter (see Appendix H
-                !of Toughreact_V2_User_Guide.pdf for details).
-                !DHA = 2(r + 1.91|Z|)/(|Z| + 1) for anions      r is the effective ionic radius, referred to %A0
-                !DHA = 2(r + 1.81|Z|)/(|Z| + 1) for cations      r is the effective ionic radius, referred to %A0
-                !   .........................................
-                if (aqueousSpecies(i)%Z < 0) then
-                    min3PRedoxReactions(j)%DHA = 2.0*(aqueousSpecies(i)%A0 + 1.91 * abs(aqueousSpecies(i)%Z)) / (abs(aqueousSpecies(i)%Z) + 1.0)
-                else if (aqueousSpecies(i)%Z > 0) then
-                    min3PRedoxReactions(j)%DHA = 2.0*(aqueousSpecies(i)%A0 + 1.81 * abs(aqueousSpecies(i)%Z)) / (abs(aqueousSpecies(i)%Z) + 1.0)
-                else                                                            !!When Z = 0, what is the formulation
-                    min3PRedoxReactions(j)%DHA = aqueousSpecies(i)%A0
+                if (trim(sourceDatabaseType) == "toughreact" .or. trim(sourceDatabaseType) == "crunchflow" ) then
+                    !Convert Debye-Huckel constants
+                    !Ion effective or hydrated radius used to compute the Debye-Huckel a0 parameter (see Appendix H
+                    !of Toughreact_V2_User_Guide.pdf for details).
+                    !DHA = 2(r + 1.91|Z|)/(|Z| + 1) for anions      r is the effective ionic radius, referred to %A0
+                    !DHA = 2(r + 1.81|Z|)/(|Z| + 1) for cations      r is the effective ionic radius, referred to %A0
+                    !   .........................................
+                    if (aqueousSpecies(i)%Z < 0) then
+                        min3PRedoxReactions(j)%DHA = 2.0*(aqueousSpecies(i)%A0 + 1.91 * abs(aqueousSpecies(i)%Z)) / (abs(aqueousSpecies(i)%Z) + 1.0)
+                    else if (aqueousSpecies(i)%Z > 0) then
+                        min3PRedoxReactions(j)%DHA = 2.0*(aqueousSpecies(i)%A0 + 1.81 * abs(aqueousSpecies(i)%Z)) / (abs(aqueousSpecies(i)%Z) + 1.0)
+                    else                                                            !!When Z = 0, what is the formulation
+                        min3PRedoxReactions(j)%DHA = aqueousSpecies(i)%A0
+                    end if
+                    min3PRedoxReactions(j)%DHB = 0
+                    
+                else if (trim(sourceDatabaseType) == "phreeqc") then
+                    min3PRedoxReactions(j)%DHA = aqueousSpecies(i)%DHA
+                    min3PRedoxReactions(j)%DHB = aqueousSpecies(i)%DHB
                 end if
-                min3PRedoxReactions(j)%DHB = 0
+                
                 min3PRedoxReactions(j)%MWT = aqueousSpecies(i)%MWT
 
                 !Calculate alkalinity factor
@@ -269,7 +288,7 @@ contains
                 call switchMasterVariable(trim(min3PRedoxReactions(j)%Name), min3PRedoxReactions(j)%NCP, nMNLmin3P, min3PRedoxReactions(j)%NameOfSTQ, &
                 min3PRedoxReactions(j)%STQ, nTemperature, min3PRedoxReactions(j)%AKLOG,masterVariable_min3p)
                 
-                min3PRedoxReactions(j)%AKLOG = -min3PRedoxReactions(j)%AKLOG
+                min3PRedoxReactions(j)%AKLOG = min3PRedoxReactions(j)%AKLOG * min3PRedoxReactions(j)%iAssociation * aqueousSpecies(i)%iAssociation
 
                 min3PRedoxReactions(j)%AKLOG_exp = linearInterpolation(nTemperature, temperature, min3PRedoxReactions(j)%AKLOG, temperature_min3p)
                 
@@ -299,28 +318,36 @@ contains
                     else
                         call WriteLog("Alias used for : " // trim(aqueousSpecies(i)%Name) // " to " // trim(min3PComplexReactions(k)%Name))
                     end if
-                end if
+                end if     
                 
-                min3PComplexReactions(k)%EnthalpyChange = 0.0d0
+                min3PComplexReactions(k)%EnthalpyChange = aqueousSpecies(i)%EnthalpyChange * min3PComplexReactions(k)%iAssociation * aqueousSpecies(i)%iAssociation
+                
                 !The second temperature in TOUGHREACT 25C is used. 
                 !Should modify if 25C does not exist or in the different position.
                 min3PComplexReactions(k)%AKLOG = aqueousSpecies(i)%AKLOG  
                 
                 min3PComplexReactions(k)%Z = aqueousSpecies(i)%Z
-                !Convert Debye-Huckel constants
-                !Ion effective or hydrated radius used to compute the Debye-Huckel a0 parameter (see Appendix H
-                !of Toughreact_V2_User_Guide.pdf for details).
-                !DHA = 2(r + 1.91|Z|)/(|Z| + 1) for anions      r is the effective ionic radius, referred to %A0
-                !DHA = 2(r + 1.81|Z|)/(|Z| + 1) for cations      r is the effective ionic radius, referred to %A0
-                !   .........................................
-                if (aqueousSpecies(i)%Z < 0) then
-                    min3PComplexReactions(k)%DHA = 2.0*(aqueousSpecies(i)%A0 + 1.91 * abs(aqueousSpecies(i)%Z)) / (abs(aqueousSpecies(i)%Z) + 1.0)
-                else if(aqueousSpecies(i)%Z > 0) then
-                    min3PComplexReactions(k)%DHA = 2.0*(aqueousSpecies(i)%A0 + 1.81 * abs(aqueousSpecies(i)%Z)) / (abs(aqueousSpecies(i)%Z) + 1.0)
-                else                                                            !!When Z = 0, what is the formulation
-                    min3PComplexReactions(k)%DHA = aqueousSpecies(i)%A0
+                
+                if (trim(sourceDatabaseType) == "toughreact" .or. trim(sourceDatabaseType) == "crunchflow" ) then
+                    !Convert Debye-Huckel constants
+                    !Ion effective or hydrated radius used to compute the Debye-Huckel a0 parameter (see Appendix H
+                    !of Toughreact_V2_User_Guide.pdf for details).
+                    !DHA = 2(r + 1.91|Z|)/(|Z| + 1) for anions      r is the effective ionic radius, referred to %A0
+                    !DHA = 2(r + 1.81|Z|)/(|Z| + 1) for cations      r is the effective ionic radius, referred to %A0
+                    !   .........................................
+                    if (aqueousSpecies(i)%Z < 0) then
+                        min3PComplexReactions(k)%DHA = 2.0*(aqueousSpecies(i)%A0 + 1.91 * abs(aqueousSpecies(i)%Z)) / (abs(aqueousSpecies(i)%Z) + 1.0)
+                    else if(aqueousSpecies(i)%Z > 0) then
+                        min3PComplexReactions(k)%DHA = 2.0*(aqueousSpecies(i)%A0 + 1.81 * abs(aqueousSpecies(i)%Z)) / (abs(aqueousSpecies(i)%Z) + 1.0)
+                    else                                                            !!When Z = 0, what is the formulation
+                        min3PComplexReactions(k)%DHA = aqueousSpecies(i)%A0
+                    end if
+                    min3PComplexReactions(k)%DHB = 0
+                else if (trim(sourceDatabaseType) == "phreeqc") then
+                    min3PComplexReactions(k)%DHA = aqueousSpecies(i)%DHA
+                    min3PComplexReactions(k)%DHB = aqueousSpecies(i)%DHB
                 end if
-                min3PComplexReactions(k)%DHB = 0
+                
                 min3PComplexReactions(k)%MWT = aqueousSpecies(i)%MWT
 
                 !Calculate alkalinity factor
@@ -372,7 +399,7 @@ contains
                 call switchMasterVariable(trim(min3PComplexReactions(k)%Name),min3PComplexReactions(k)%NCP, nMNLmin3P, min3PComplexReactions(k)%NameOfSTQ, &
                 min3PComplexReactions(k)%STQ, nTemperature, min3PComplexReactions(k)%AKLOG,masterVariable_min3p)
 
-                min3PComplexReactions(k)%AKLOG = -min3PComplexReactions(k)%AKLOG
+                min3PComplexReactions(k)%AKLOG = min3PComplexReactions(k)%AKLOG * min3PComplexReactions(k)%iAssociation * aqueousSpecies(i)%iAssociation 
                 
                 min3PComplexReactions(k)%AKLOG_exp = linearInterpolation(nTemperature, temperature, min3PComplexReactions(k)%AKLOG, temperature_min3p)
                 
@@ -398,7 +425,8 @@ contains
         end if
         
         if (nMin3PGases > 0) then
-            allocate(min3PGases(nMin3PGases))        
+            allocate(min3PGases(nMin3PGases))   
+            min3PGases(1:nMin3PGases)%iAssociation = 1
         end if
         
         call WriteLog("Start converting gases")
@@ -427,7 +455,7 @@ contains
                 end if
             end if
             
-            min3PGases(i)%EnthalpyChange = 0.0d0
+            min3PGases(i)%EnthalpyChange = gases(i)%EnthalpyChange * min3PGases(i)%iAssociation * gases(i)%iAssociation
             !The second temperature in TOUGHREACT 25C is used. 
             !Should modify if 25C does not exist or in the different position.
             min3PGases(i)%AKLOG = gases(i)%AKLOG 
@@ -471,7 +499,7 @@ contains
             call switchMasterVariable(trim(min3PGases(i)%Name), min3PGases(i)%NCP, nMNLmin3P, min3PGases(i)%NameOfSTQ, &
             min3PGases(i)%STQ, nTemperature, min3PGases(i)%AKLOG,masterVariable_min3p)
             
-            min3PGases(i)%AKLOG = -min3PGases(i)%AKLOG
+            min3PGases(i)%AKLOG = min3PGases(i)%AKLOG * min3PGases(i)%iAssociation * gases(i)%iAssociation 
 
             min3PGases(i)%AKLOG_exp = linearInterpolation(nTemperature, temperature, min3PGases(i)%AKLOG, temperature_min3p)
                 
@@ -493,7 +521,8 @@ contains
         end if
         
         if (nMin3PMinerals > 0) then
-            allocate(min3PMinerals(nMin3PMinerals))        
+            allocate(min3PMinerals(nMin3PMinerals)) 
+            min3PMinerals(1:nMin3PMinerals)%iAssociation = 1
         end if
         
         call WriteLog("Start converting minerals")
@@ -523,16 +552,20 @@ contains
                 end if
             end if
             
-            min3PMinerals(i)%EnthalpyChange = 0.0d0
+            min3PMinerals(i)%EnthalpyChange = minerals(i)%EnthalpyChange * min3PMinerals(i)%iAssociation * minerals(i)%iAssociation
             !The second temperature in TOUGHREACT 25C is used. 
             !Should modify if 25C does not exist or in the different position.
-            min3PMinerals(i)%AKLOG = minerals(i)%AKLOG   
+            min3PMinerals(i)%AKLOG = minerals(i)%AKLOG               
 
             !Molecular weight
             min3PMinerals(i)%MWT = minerals(i)%MWT
             
             !Density
-            min3PMinerals(i)%Density = minerals(i)%MWT / minerals(i)%VMIN
+            if (trim(sourceDatabaseType) == "toughreact" .or. trim(sourceDatabaseType) == "crunchflow" ) then
+                min3PMinerals(i)%Density = minerals(i)%MWT / minerals(i)%VMIN
+            else if (trim(sourceDatabaseType) == "phreeqc") then
+                min3PMinerals(i)%Density = 1.0d0
+            end if
 
             !Number of components
             min3PMinerals(i)%NCP = min(minerals(i)%NCP,20)
@@ -570,7 +603,7 @@ contains
             call switchMasterVariable(trim(min3PMinerals(i)%Name), min3PMinerals(i)%NCP, nMNLmin3P, min3PMinerals(i)%NameOfSTQ, &
             min3PMinerals(i)%STQ, nTemperature, min3PMinerals(i)%AKLOG,masterVariable_min3p)
             
-            min3PMinerals(i)%AKLOG = -min3PMinerals(i)%AKLOG
+            min3PMinerals(i)%AKLOG = min3PMinerals(i)%AKLOG * min3PMinerals(i)%iAssociation * minerals(i)%iAssociation
 
             min3PMinerals(i)%AKLOG_exp = linearInterpolation(nTemperature, temperature, min3PMinerals(i)%AKLOG, temperature_min3p)
                 

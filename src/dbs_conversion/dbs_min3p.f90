@@ -6,7 +6,7 @@ module dbs_min3p
     
     use logfile, only : WriteLog
     
-    use inputfile, only : targetDatabasePath, IsInSpecifiedExport, bSpecifiedExport
+    use inputfile, only : targetDatabasePath, IsInSpecifiedExport, bSpecifiedExport, sourceDatabaseType
     
     implicit none
     
@@ -153,7 +153,7 @@ module dbs_min3p
     !!2  'ca+2'    1.000  'co3-2'    1.000
     !!'reversible'    8.4750  2.5850
     !!
-    !!Stands for the association reaction: Ca2+ + CO32- à calcite    K_a
+    !!Stands for the association reaction: Ca2+ + CO32- ?calcite    K_a
     !!K_a = 1/{Ca2+}{CO32-}
     !!10^8.4750  = 1/{Ca2+}{CO32-}
     !! 
@@ -254,6 +254,10 @@ contains
         
         integer ::  i
         
+        write(iUnitDbsMin3PComp, 99) "!This database is converted from " // trim(sourceDatabaseType)
+        if(trim(sourceDatabaseType) == "phreeqc") then
+            write(iUnitDbsMin3PComp, 99) "!IMPORTANT NOTE: PLEASE CHECK IF THE MOLECULAR WEIGHT OF EACH COMPONENT IS CORRECT"
+        end if
         do i = 1, nMin3PSpecies
             if (bSpecifiedExport) then
                 if (.not. IsInSpecifiedExport(min3PSpecies(i)%Name)) then
@@ -265,7 +269,8 @@ contains
         end do
         
         call WriteLog("Write min3p database success: " // trim(filePathDbsMin3PComp)) 
-        
+
+99      format(a)        
 100     format(a12,f4.1,4x,f5.2,f5.2,8x,f11.5,f7.2)
     
     end subroutine writeDbsMin3PComp
@@ -278,6 +283,7 @@ contains
         
         integer ::  i, j
         
+        write(iUnitDbsMin3PComplex, 199) "!This database is converted from " // trim(sourceDatabaseType)
         do i = 1, nMin3PComplexReactions
             if (bSpecifiedExport) then
                 if (.not. IsInSpecifiedExport(min3PComplexReactions(i)%Name)) then
@@ -293,7 +299,8 @@ contains
         end do
         
         call WriteLog("Write min3p database success: " // trim(filePathDbsMin3PComplex)) 
-        
+
+199     format(a)        
 200     format(a12,2x,2f10.4,16x,3f5.2,f9.4,f7.2)
 201     format(6x,i1,3x,20(a12,1x,f7.3,1x))     
     
@@ -307,6 +314,7 @@ contains
         
         integer ::  i, j
         
+        write(iUnitDbsMin3PRedox, 300) "!This database is converted from " // trim(sourceDatabaseType)
         do i = 1, nMin3PRedoxReactions
             if (bSpecifiedExport) then
                 if (.not. IsInSpecifiedExport(min3PRedoxReactions(i)%Name)) then
@@ -316,8 +324,8 @@ contains
             
             write(iUnitDbsMin3PRedox, 300) "! "
             write(iUnitDbsMin3PRedox, 300) "! "// trim(min3PRedoxReactions(i)%Name)
-            write(iUnitDbsMin3PRedox, 300) "! equilibrium constant calculated from other database"
-            write(iUnitDbsMin3PRedox, 300) "! enthalpy change is set to be zero"            
+            write(iUnitDbsMin3PRedox, 300) "! equilibrium constant is calculated from other database"
+            write(iUnitDbsMin3PRedox, 300) "! enthalpy change is set to be zero if not available"            
             write(iUnitDbsMin3PRedox, 300) "'"//trim(min3PRedoxReactions(i)%Name)//"'"
             write(iUnitDbsMin3PRedox, 301) min3PRedoxReactions(i)%NCP, (("'"//trim(min3PRedoxReactions(i)%NameOfSTQ(j))//"'",min3PRedoxReactions(i)%STQ(j)), &
                                             j = 1, min3PRedoxReactions(i)%NCP)
@@ -342,7 +350,7 @@ contains
         implicit none
         
         integer ::  i, j
-        
+        write(iUnitDbsMin3PGases, 399) "!This database is converted from " // trim(sourceDatabaseType)
         do i = 1, nmin3PGases
             if (bSpecifiedExport) then 
                 if (.not. IsInSpecifiedExport(min3PGases(i)%Name)) then
@@ -354,7 +362,7 @@ contains
         end do
         
         call WriteLog("Write min3p database success: " // trim(filePathDbsMin3PGases))         
-        
+399     format(a)        
 400     format(a12,2x,2f10.4,31x,f9.4)
 401     format(6x,i1,3x,20(a12,1x,f7.3,1x))        
     
@@ -374,7 +382,7 @@ contains
         implicit none
         
         integer ::  i, j
-        
+        write(iUnitDbsMin3PMinerals, 500) "!This database is converted from " // trim(sourceDatabaseType)
         do i = 1, nMin3PMinerals
             if (bSpecifiedExport) then 
                 if (.not. IsInSpecifiedExport(min3PMinerals(i)%Name)) then
@@ -383,8 +391,12 @@ contains
             end if
 
             write(iUnitDbsMin3PMinerals, 500) "! "
-            write(iUnitDbsMin3PMinerals, 500) "! " // trim(min3PMinerals(i)%Name)
-            write(iUnitDbsMin3PMinerals, 500) "! " // "equilibrium constant, gram formula weight from other database and enthalpy change is set to 0"
+            write(iUnitDbsMin3PMinerals, 500) "! " // trim(min3PMinerals(i)%Name)            
+            write(iUnitDbsMin3PMinerals, 500) "! equilibrium constant and formula weight are calculated from other database"
+            write(iUnitDbsMin3PMinerals, 500) "! enthalpy change is set to 0 if not available"
+            if(trim(sourceDatabaseType) == "phreeqc") then
+                write(iUnitDbsMin3PMinerals, 500) "! Lack density, set this value to  1.0 instead"
+            end if
             write(iUnitDbsMin3PMinerals, 500) "'"//trim(min3PMinerals(i)%Name)//"'"
             write(iUnitDbsMin3PMinerals, 500) "'surface'"
             write(iUnitDbsMin3PMinerals, 501) min3PMinerals(i)%MWT, min3PMinerals(i)%Density            

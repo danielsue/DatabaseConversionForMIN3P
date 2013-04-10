@@ -18,7 +18,8 @@
     use logfile,            only :  filePathLog, OpenLogFile, WriteLog, WriteLogSummary
     use dbs_toughreact,     only :  OpenDbsTR, ReadDbsTR, CloseDbsTR
     use dbs_crunchflow,     only :  OpenDbsCF, ReadDbsCF, CloseDbsCF
-    use convt2min3p,  only :  convert2Min3PDbs
+    use dbs_phreeqc,        only :  OpenDbsPhreeqc, ReadDbsPhreeqc, CloseDbsPhreeqc
+    use convt2min3p,        only :  convert2Min3PDbs
     use dbs_min3p,          only :  OpenAllDbsMin3P, WriteAllDbsMin3P, temperature_min3p
     use alias,              only :  OpenDbsAlias, ReadDbsAlias
     use name_truncation,    only :  OpenNameTruncation, WriteNameTruncation
@@ -39,8 +40,12 @@
 2   format (/,'    ------------------------------------------------'   &
      &      //,'                  DATABASE CONVERSION'                  &
      &       /,'                        FOR MIN3P'                      &
-     &      //,'                       DANYANG SU'                      &
-     &      //,'                 EMAIL: DSU@EOS.UBC.CA'                 &
+     &      //,'                     VERSION 1.0.23'                    &
+     &      //,'                   AUTHOR: DANYANG SU'                  &
+     &      //,'            PLEASE EMAIL QUESTION AND BUG TO'           &
+     &      //,'                      DSU@EOS.UBC.CA '                  &
+     &      //,'                            OR'                         &
+     &      //,'                    DANYANG.SU@GMAIL.COM'               &
      &       /,'   -------------------------------------------------'//)  
     
     write(*,*) "Type in the input file path (*.inp): "
@@ -96,6 +101,12 @@
             call OpenDbsCF
             call ReadDbsCF
             call CloseDbsCF
+            
+        case ("phreeqc")
+            
+            call OpenDbsPhreeqc
+            call ReadDbsPhreeqc
+            call CloseDbsPhreeqc
 
         case default
 

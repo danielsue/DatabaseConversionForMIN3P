@@ -6,7 +6,7 @@ module dbs_toughreact
     
     use logfile, only : WriteLog, nWarnings, nErrors
 
-    use file_utility, only : LowerCase, IsZero, getNameFromString, skipNValues, replaceCharacter
+    use file_utility, only : SetLowerCase, IsZero, getNameFromString, skipNValues, replaceCharacter
     
     use alias, only : GetNameFromAlias
 
@@ -133,7 +133,7 @@ contains
             if(len_trim(strBuffer) /= 0 ) then
             
                 ! Conver all case to lower case
-                call lowerCase(strBuffer)
+                call SetLowerCase(strBuffer)
 
                 if (strBuffer(1:1) /= strComment) then
                     call replaceCharacter(strBuffer, achar(9), " ")
@@ -353,6 +353,9 @@ contains
                 deallocate(aqueousSpecies)
             end if
             allocate(aqueousSpecies(nAqueousSpecies))
+            
+            aqueousSpecies(1:nAqueousSpecies)%iAssociation = -1
+            
             do i = 1, nAqueousSpecies                
                 !read first line
                 j = 3 * i - 2
@@ -517,6 +520,9 @@ contains
                 deallocate(minerals)
             end if
             allocate(minerals(nMinerals))
+            
+            minerals(1:nMinerals)%iAssociation = -1
+            
             do i = 1, nMinerals                
                 !read first line
                 j = 3 * i - 2
@@ -653,6 +659,9 @@ contains
                 deallocate(gases)
             end if
             allocate(gases(nGases))
+            
+            gases(1:nGases)%iAssociation = -1
+            
             do i = 1, nGases                
                 !read first line
                 j = 3 * i - 2
@@ -788,6 +797,9 @@ contains
                 deallocate(surfaceComplexes)
             end if
             allocate(surfaceComplexes(nSurfaceComplexes))
+            
+            surfaceComplexes(1:nSurfaceComplexes)%iAssociation = -1
+            
             do i = 1, nSurfaceComplexes                
                 !read first line
                 j = 3 * i - 2
