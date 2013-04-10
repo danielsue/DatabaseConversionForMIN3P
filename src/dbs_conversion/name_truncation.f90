@@ -96,12 +96,12 @@ contains
         
         if (checkDuplicateTruncation(strNameTruncation)) then
             nErrors = nErrors + 1
-            call WriteLog("Error(ignored): Truncate name duplicated, the same truncate name already exist: " // trim(strNameTruncation))            
+            call WriteLog("Error: Truncate name duplicated, the same truncate name already exist: " // trim(strNameTruncation))            
         end if
         
         if (checkConflictTruncation(strNameTruncation)) then
             nErrors = nErrors + 1
-            call WriteLog("Error(ignored): Truncate name conflict with the origional name: " // trim(strNameTruncation))            
+            call WriteLog("Error: Truncate name conflict with the origional name: " // trim(strNameTruncation))            
         end if
            
         if (nNameTruncation == maxNameTruncation) then

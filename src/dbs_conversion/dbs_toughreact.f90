@@ -241,7 +241,7 @@ contains
             end if
             if (nSpecies == maxStrBuffers) then
                 nErrors = nErrors + 1
-                call WriteLog("The maximum database of TOUGHREACT is 100,000 lines for each section." // & 
+                call WriteLog("Error: The maximum database of TOUGHREACT is 100,000 lines for each section." // & 
                                 "Please modify the source code parameter maxStrBuffers to read more data.")
                 call ErrorHandling
             end if
@@ -258,10 +258,13 @@ contains
             do i = 1, nSpecies
                 call getNameFromString(strBuffers(i), nNameLength, species(i)%Name)
                 !Check if this name is used as an alias
-                if (GetNameFromAlias(species(i)%Name) /= "") then
+                strName = GetNameFromAlias(species(i)%Name)
+                if (trim(strName) /= "") then
                     nErrors = nErrors + 1
-                    call WriteLog("Error: This name has already been used as an alias in alias.dbs: "//trim(species(i)%Name))
+                    call WriteLog("Error: This name has already been used as an alias in alias.dbs: "// trim(strName) // "  ->  " //trim(species(i)%Name))
+                    call WriteLog("Ignore this error if "// trim(strName) // " and " //trim(species(i)%Name) // " are the same")
                 end if
+                
                 call skipNValues(strBuffers(i), 1)
                 read(strBuffers(i),* , end = 9999, err = 9999) species(i)%A0, species(i)%Z, species(i)%MWT
             end do
@@ -360,11 +363,14 @@ contains
                 !read first line
                 j = 3 * i - 2
                 call getNameFromString(strBuffers(j), nNameLength, aqueousSpecies(i)%Name)
-                !Check if this name is used as an alias
-                if (GetNameFromAlias(aqueousSpecies(i)%Name) /= "") then
+                !Check if this name is used as an alias               
+                strName = GetNameFromAlias(aqueousSpecies(i)%Name)
+                if (trim(strName) /= "") then
                     nErrors = nErrors + 1
-                    call WriteLog("Error: This name has already been used as an alias in alias.dbs: "//trim(species(i)%Name))
+                    call WriteLog("Error: This name has already been used as an alias in alias.dbs: "// trim(strName) // "  ->  " //trim(aqueousSpecies(i)%Name))
+                    call WriteLog("Ignore this error if "// trim(strName) // " and " //trim(aqueousSpecies(i)%Name) // " are the same")
                 end if
+                
                 call skipNValues(strBuffers(j),1)
                 read(strBuffers(j),*, end = 9999, err = 9999) aqueousSpecies(i)%MWT, aqueousSpecies(i)%A0, aqueousSpecies(i)%Z, aqueousSpecies(i)%NCP
                 !call allocateOneAqueousSpecies(i,aqueousSpecies(i)%NCP, nTemperature)
@@ -373,10 +379,13 @@ contains
                     read(strBuffers(j),*, end = 9999, err = 9999) aqueousSpecies(i)%STQ(k)
                     call getNameFromString(strBuffers(j), nNameLength, aqueousSpecies(i)%NameOfSTQ(k))
                     !Check if this name is used as an alias
-                    if (GetNameFromAlias(aqueousSpecies(i)%NameOfSTQ(k)) /= "") then
+                    strName = GetNameFromAlias(aqueousSpecies(i)%NameOfSTQ(k))
+                    if (trim(strName) /= "") then
                         nErrors = nErrors + 1
-                        call WriteLog("Error: This name has already been used as an alias in alias.dbs: "//trim(aqueousSpecies(i)%NameOfSTQ(k)))
+                        call WriteLog("Error: This name has already been used as an alias in alias.dbs: "// trim(strName) // "  ->  " //trim(aqueousSpecies(i)%NameOfSTQ(k)))
+                        call WriteLog("Ignore this error if "// trim(strName) // " and " //trim(aqueousSpecies(i)%NameOfSTQ(k)) // " are the same")
                     end if
+                
                     if(k < aqueousSpecies(i)%NCP) then
                         call skipNValues(strBuffers(j),2)
                     end if
@@ -528,10 +537,12 @@ contains
                 j = 3 * i - 2
                 call getNameFromString(strBuffers(j), nNameLength, minerals(i)%Name)
                 
-                !Check if this name is used as an alias
-                if (GetNameFromAlias(minerals(i)%Name) /= "") then
+                !Check if this name is used as an alias                
+                strName = GetNameFromAlias(minerals(i)%Name)
+                if (trim(strName) /= "") then
                     nErrors = nErrors + 1
-                    call WriteLog("Error: This name has already been used as an alias in alias.dbs: "//trim(minerals(i)%Name))
+                    call WriteLog("Error: This name has already been used as an alias in alias.dbs: "// trim(strName) // "  ->  " //trim(minerals(i)%Name))
+                    call WriteLog("Ignore this error if "// trim(strName) // " and " //trim(minerals(i)%Name) // " are the same")
                 end if
                 
                 call skipNValues(strBuffers(j),1)
@@ -543,9 +554,11 @@ contains
                     call getNameFromString(strBuffers(j), nNameLength, minerals(i)%NameOfSTQ(k))
                     
                     !Check if this name is used as an alias
-                    if (GetNameFromAlias(minerals(i)%NameOfSTQ(k)) /= "") then
+                    strName = GetNameFromAlias(minerals(i)%NameOfSTQ(k))
+                    if (trim(strName) /= "") then
                         nErrors = nErrors + 1
-                        call WriteLog("Error: This name has already been used as an alias in alias.dbs: "//trim(minerals(i)%NameOfSTQ(k)))
+                        call WriteLog("Error: This name has already been used as an alias in alias.dbs: "// trim(strName) // "  ->  " //trim(minerals(i)%NameOfSTQ(k)))
+                        call WriteLog("Ignore this error if "// trim(strName) // " and " //trim(minerals(i)%NameOfSTQ(k)) // " are the same")
                     end if
                     
                     if(k < minerals(i)%NCP) then
@@ -668,9 +681,11 @@ contains
                 call getNameFromString(strBuffers(j), nNameLength, gases(i)%Name)
                 
                 !Check if this name is used as an alias
-                if (GetNameFromAlias(gases(i)%Name) /= "") then
+                strName = GetNameFromAlias(gases(i)%Name)
+                if (trim(strName) /= "") then
                     nErrors = nErrors + 1
-                    call WriteLog("Error: This name has already been used as an alias in alias.dbs: "//trim(gases(i)%Name))
+                    call WriteLog("Error: This name has already been used as an alias in alias.dbs: "// trim(strName) // "  ->  " //trim(gases(i)%Name))
+                    call WriteLog("Ignore this error if "// trim(strName) // " and " //trim(gases(i)%Name) // " are the same")
                 end if
                 
                 call skipNValues(strBuffers(j),1)
@@ -682,10 +697,12 @@ contains
                     call getNameFromString(strBuffers(j), nNameLength, gases(i)%NameOfSTQ(k))
                     
                     !Check if this name is used as an alias
-                    if (GetNameFromAlias(gases(i)%NameOfSTQ(k)) /= "") then
+                    strName = GetNameFromAlias(gases(i)%NameOfSTQ(k))
+                    if (trim(strName) /= "") then
                         nErrors = nErrors + 1
-                        call WriteLog("Error: This name has already been used as an alias in alias.dbs: "//trim(gases(i)%NameOfSTQ(k)))
-                    end if     
+                        call WriteLog("Error: This name has already been used as an alias in alias.dbs: "// trim(strName) // "  ->  " //trim(gases(i)%NameOfSTQ(k)))
+                        call WriteLog("Ignore this error if "// trim(strName) // " and " //trim(gases(i)%NameOfSTQ(k)) // " are the same")
+                    end if
                     
                     if(k < gases(i)%NCP) then
                         call skipNValues(strBuffers(j),2)
@@ -806,9 +823,11 @@ contains
                 call getNameFromString(strBuffers(j), nNameLength, surfaceComplexes(i)%Name)
                 
                 !Check if this name is used as an alias
-                if (GetNameFromAlias(surfaceComplexes(i)%Name) /= "") then
+                strName = GetNameFromAlias(surfaceComplexes(i)%Name)
+                if (trim(strName) /= "") then
                     nErrors = nErrors + 1
-                    call WriteLog("Error: This name has already been used as an alias in alias.dbs: "//trim(surfaceComplexes(i)%Name))
+                    call WriteLog("Error: This name has already been used as an alias in alias.dbs: "// trim(strName) // "  ->  " //trim(surfaceComplexes(i)%Name))
+                    call WriteLog("Ignore this error if "// trim(strName) // " and " //trim(surfaceComplexes(i)%Name) // " are the same")
                 end if
                 
                 call skipNValues(strBuffers(j),1)
@@ -820,9 +839,11 @@ contains
                     call getNameFromString(strBuffers(j), nNameLength, surfaceComplexes(i)%NameOfSTQ(k))
                     
                     !Check if this name is used as an alias
-                    if (GetNameFromAlias(surfaceComplexes(i)%NameOfSTQ(k)) /= "") then
+                    strName = GetNameFromAlias(surfaceComplexes(i)%NameOfSTQ(k))
+                    if (trim(strName) /= "") then
                         nErrors = nErrors + 1
-                        call WriteLog("Error: This name has already been used as an alias in alias.dbs: "//trim(surfaceComplexes(i)%NameOfSTQ(k)))
+                        call WriteLog("Error: This name has already been used as an alias in alias.dbs: "// trim(strName) // "  ->  " //trim(surfaceComplexes(i)%NameOfSTQ(k)))
+                        call WriteLog("Ignore this error if "// trim(strName) // " and " //trim(surfaceComplexes(i)%NameOfSTQ(k)) // " are the same")
                     end if
                     
                     if(k < surfaceComplexes(i)%NCP) then

@@ -760,7 +760,7 @@ contains
         implicit none
 
         integer :: i, j, k
-        character (nNameLength) :: strName
+        character (nNameLength) :: strName, strName2
         logical :: bFindSpecies
         integer :: nTempSpecies = 0
 
@@ -786,7 +786,7 @@ contains
                 
                 if (nSpecies == maxStrBuffers) then
                     nErrors = nErrors + 1
-                    call WriteLog("The maximum database of Phreeqc is 100,000 lines for each section." // & 
+                    call WriteLog("Error: The maximum database of Phreeqc is 100,000 lines for each section." // & 
                                     "Please modify the source code parameter maxStrBuffers to read more data.")
                     call ErrorHandling
                 end if
@@ -816,10 +816,14 @@ contains
                     call getSpecieName(strBuffers(i), nNameLength, species(i)%Name)
                     
                     !Check if this name is used as an alias
-                    if (GetNameFromAlias(GetLowerCase(len(species(i)%Name), species(i)%Name)) /= "") then
+                    strName2 = GetLowerCase(len(species(i)%Name), species(i)%Name)
+                    strName = GetNameFromAlias(strName2)
+                    if (trim(strName) /= "") then
                         nErrors = nErrors + 1
-                        call WriteLog("Error: This name has already been used as an alias in alias.dbs: "//trim(species(i)%Name))
+                        call WriteLog("Error: This name has already been used as an alias in alias.dbs: "// trim(strName) // "  ->  " //trim(strName2))
+                        call WriteLog("Ignore this error if "// trim(strName) // " and " //trim(strName2) // " are the same")
                     end if
+                    
                     !Read Debye-Hukel a, Debye-Hukel b 
                     call getDH_AB(strBuffers(i), species(i)%DHA, species(i)%DHB)
                     
@@ -867,7 +871,7 @@ contains
                 
                 if (nTempSpecies == maxStrBuffers) then
                     nErrors = nErrors + 1
-                    call WriteLog("The maximum database of Phreeqc is 100,000 lines for each section." // & 
+                    call WriteLog("Error: The maximum database of Phreeqc is 100,000 lines for each section." // & 
                                     "Please modify the source code parameter maxStrBuffers to read more data.")
                     call ErrorHandling
                 end if
@@ -1027,7 +1031,7 @@ contains
                 
                 if (nAqueousSpecies == maxStrBuffers) then
                     nErrors = nErrors + 1
-                    call WriteLog("The maximum database of Phreeqc is 100,000 lines for each section." // & 
+                    call WriteLog("Error: The maximum database of Phreeqc is 100,000 lines for each section." // & 
                                     "Please modify the source code parameter maxStrBuffers to read more data.")
                     call ErrorHandling
                 end if
@@ -1146,7 +1150,7 @@ contains
                 
                 if (nGases == maxStrBuffers) then
                     nErrors = nErrors + 1
-                    call WriteLog("The maximum database of Phreeqc is 100,000 lines for each section." // & 
+                    call WriteLog("Error: The maximum database of Phreeqc is 100,000 lines for each section." // & 
                                     "Please modify the source code parameter maxStrBuffers to read more data.")
                     call ErrorHandling
                 end if
@@ -1261,7 +1265,7 @@ contains
                 
                 if (nMinerals == maxStrBuffers) then
                     nErrors = nErrors + 1
-                    call WriteLog("The maximum database of Phreeqc is 100,000 lines for each section." // & 
+                    call WriteLog("Error: The maximum database of Phreeqc is 100,000 lines for each section." // & 
                                     "Please modify the source code parameter maxStrBuffers to read more data.")
                     call ErrorHandling
                 end if

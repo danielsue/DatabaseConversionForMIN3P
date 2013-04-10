@@ -40,7 +40,7 @@
 2   format (/,'    ------------------------------------------------'   &
      &      //,'                  DATABASE CONVERSION'                  &
      &       /,'                        FOR MIN3P'                      &
-     &      //,'                     VERSION 1.0.23'                    &
+     &      //,'                     VERSION 1.0.24'                    &
      &      //,'                   AUTHOR: DANYANG SU'                  &
      &      //,'            PLEASE EMAIL QUESTION AND BUG TO'           &
      &      //,'                      DSU@EOS.UBC.CA '                  &

@@ -148,7 +148,7 @@ contains
            
         if (nNameAlias == maxAlias) then
             nErrors = nErrors + 1
-            call WriteLog("The maximum database of alias is 1,000 lines." // &
+            call WriteLog("Error: The maximum database of alias is 1,000 lines." // &
                             "Please modify the source code parameter maxAlias to read more data.")
             call ErrorHandling
         end if 
