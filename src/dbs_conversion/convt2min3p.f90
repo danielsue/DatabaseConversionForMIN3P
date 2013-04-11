@@ -16,7 +16,7 @@ module convt2min3p
 
     use inputfile,       only :     targetDatabasePath, targetTemperature, targetMasterVariable, bSortData, sourceDatabaseType
 
-    use geochemistry,    only :     switchMasterVariable
+    use geochemistry,    only :     switchMasterVariable, switchReactionComponent
     
 contains    
 
@@ -46,9 +46,58 @@ contains
 
         implicit none
 
+        integer :: i, j
+        character (nNameLength) :: strName
+        
         temperature_min3p = targetTemperature
 
         masterVariable_min3p = targetMasterVariable
+        
+        !check alias for switched components
+        do i = 1, nSwitchedReactions
+            strName = switchedReactions(i)%Name            
+            if(len_trim(strName)>nMNLmin3P) then
+                strName = GetAliasFromName(strName)       !get alias for long name
+                if(trim(strName) == "") then
+                    call WriteLog("Name truncation: " // trim(switchedReactions(i)%Name) // " to " // switchedReactions(i)%Name(1:nMNLmin3P)) 
+                    call AddNameTruncation(trim(switchedReactions(i)%Name), switchedReactions(i)%Name(1:nMNLmin3P))
+                    switchedReactions(i)%Name = switchedReactions(i)%Name(1:nMNLmin3P)
+                else
+                    call WriteLog("Alias used for : " // trim(switchedReactions(i)%Name) // " to " // trim(strName))
+                    switchedReactions(i)%Name = trim(strName)
+                end if
+            else
+                strName = GetAliasFromName(strName)
+                if(trim(strName) /= "") then
+                    call WriteLog("Alias used for : " // trim(switchedReactions(i)%Name) // " to " // trim(strName))
+                    switchedReactions(i)%Name = trim(strName)
+                end if    
+            end if
+            
+            do j = 1, switchedReactions(i)%NCP
+                
+                strName = switchedReactions(i)%NameOfSTQ(j)            
+                if(len_trim(strName)>nMNLmin3P) then
+                    strName = GetAliasFromName(strName)       !get alias for long name
+                    if(trim(strName) == "") then
+                        call WriteLog("Name truncation: " // trim(switchedReactions(i)%NameOfSTQ(j)) // " to " // switchedReactions(i)%NameOfSTQ(j)(1:nMNLmin3P)) 
+                        call AddNameTruncation(trim(switchedReactions(i)%NameOfSTQ(j)), switchedReactions(i)%NameOfSTQ(j)(1:nMNLmin3P))
+                        switchedReactions(i)%NameOfSTQ(j) = switchedReactions(i)%NameOfSTQ(j)(1:nMNLmin3P)
+                    else
+                        call WriteLog("Alias used for : " // trim(switchedReactions(i)%NameOfSTQ(j)) // " to " // trim(strName))
+                        switchedReactions(i)%NameOfSTQ(j) = trim(strName)
+                    end if
+                else
+                    strName = GetAliasFromName(strName)
+                    if(trim(strName) /= "") then
+                        call WriteLog("Alias used for : " // trim(switchedReactions(i)%NameOfSTQ(j)) // " to " // trim(strName))
+                        switchedReactions(i)%NameOfSTQ(j) = trim(strName)
+                    end if    
+                end if
+                
+            end do
+            
+        end do       
 
     end subroutine setConvertParameters
 
@@ -284,11 +333,16 @@ contains
                         end if
                     end if
                 end do
-
-                call switchMasterVariable(trim(min3PRedoxReactions(j)%Name), min3PRedoxReactions(j)%NCP, nMNLmin3P, min3PRedoxReactions(j)%NameOfSTQ, &
-                min3PRedoxReactions(j)%STQ, nTemperature, min3PRedoxReactions(j)%AKLOG,masterVariable_min3p)
+                
+                if (trim(sourceDatabaseType) == "toughreact" .or. trim(sourceDatabaseType) == "crunchflow" ) then
+                    call switchMasterVariable(trim(min3PRedoxReactions(j)%Name), min3PRedoxReactions(j)%NCP, nMNLmin3P, min3PRedoxReactions(j)%NameOfSTQ, &
+                    min3PRedoxReactions(j)%STQ, nTemperature, min3PRedoxReactions(j)%AKLOG,masterVariable_min3p)
+                end if
                 
                 min3PRedoxReactions(j)%AKLOG = min3PRedoxReactions(j)%AKLOG * min3PRedoxReactions(j)%iAssociation * aqueousSpecies(i)%iAssociation
+                
+                call switchReactionComponent(trim(min3PRedoxReactions(j)%Name), min3PRedoxReactions(j)%NCP, nMNLmin3P, min3PRedoxReactions(j)%NameOfSTQ, &
+                    min3PRedoxReactions(j)%STQ, nTemperature, min3PRedoxReactions(j)%AKLOG, min3PRedoxReactions(j)%iAssociation)
 
                 min3PRedoxReactions(j)%AKLOG_exp = linearInterpolation(nTemperature, temperature, min3PRedoxReactions(j)%AKLOG, temperature_min3p)
                 
@@ -396,10 +450,15 @@ contains
                     end if                    
                 end do
 
-                call switchMasterVariable(trim(min3PComplexReactions(k)%Name),min3PComplexReactions(k)%NCP, nMNLmin3P, min3PComplexReactions(k)%NameOfSTQ, &
-                min3PComplexReactions(k)%STQ, nTemperature, min3PComplexReactions(k)%AKLOG,masterVariable_min3p)
-
+                if (trim(sourceDatabaseType) == "toughreact" .or. trim(sourceDatabaseType) == "crunchflow" ) then
+                    call switchMasterVariable(trim(min3PComplexReactions(k)%Name),min3PComplexReactions(k)%NCP, nMNLmin3P, min3PComplexReactions(k)%NameOfSTQ, &
+                    min3PComplexReactions(k)%STQ, nTemperature, min3PComplexReactions(k)%AKLOG,masterVariable_min3p)
+                end if
+                
                 min3PComplexReactions(k)%AKLOG = min3PComplexReactions(k)%AKLOG * min3PComplexReactions(k)%iAssociation * aqueousSpecies(i)%iAssociation 
+                
+                call switchReactionComponent(trim(min3PComplexReactions(k)%Name),min3PComplexReactions(k)%NCP, nMNLmin3P, min3PComplexReactions(k)%NameOfSTQ, &
+                    min3PComplexReactions(k)%STQ, nTemperature, min3PComplexReactions(k)%AKLOG, min3PComplexReactions(k)%iAssociation)
                 
                 min3PComplexReactions(k)%AKLOG_exp = linearInterpolation(nTemperature, temperature, min3PComplexReactions(k)%AKLOG, temperature_min3p)
                 
@@ -496,10 +555,15 @@ contains
                 end if
             end do
 
-            call switchMasterVariable(trim(min3PGases(i)%Name), min3PGases(i)%NCP, nMNLmin3P, min3PGases(i)%NameOfSTQ, &
-            min3PGases(i)%STQ, nTemperature, min3PGases(i)%AKLOG,masterVariable_min3p)
+            if (trim(sourceDatabaseType) == "toughreact" .or. trim(sourceDatabaseType) == "crunchflow" ) then
+                call switchMasterVariable(trim(min3PGases(i)%Name), min3PGases(i)%NCP, nMNLmin3P, min3PGases(i)%NameOfSTQ, &
+                min3PGases(i)%STQ, nTemperature, min3PGases(i)%AKLOG,masterVariable_min3p)
+            end if
             
-            min3PGases(i)%AKLOG = min3PGases(i)%AKLOG * min3PGases(i)%iAssociation * gases(i)%iAssociation 
+            min3PGases(i)%AKLOG = min3PGases(i)%AKLOG * min3PGases(i)%iAssociation * gases(i)%iAssociation
+            
+            call switchReactionComponent(trim(min3PGases(i)%Name), min3PGases(i)%NCP, nMNLmin3P, min3PGases(i)%NameOfSTQ, &
+                min3PGases(i)%STQ, nTemperature, min3PGases(i)%AKLOG, min3PGases(i)%iAssociation)
 
             min3PGases(i)%AKLOG_exp = linearInterpolation(nTemperature, temperature, min3PGases(i)%AKLOG, temperature_min3p)
                 
@@ -600,10 +664,15 @@ contains
                 end if
             end do
 
-            call switchMasterVariable(trim(min3PMinerals(i)%Name), min3PMinerals(i)%NCP, nMNLmin3P, min3PMinerals(i)%NameOfSTQ, &
-            min3PMinerals(i)%STQ, nTemperature, min3PMinerals(i)%AKLOG,masterVariable_min3p)
+            if (trim(sourceDatabaseType) == "toughreact" .or. trim(sourceDatabaseType) == "crunchflow" ) then
+                call switchMasterVariable(trim(min3PMinerals(i)%Name), min3PMinerals(i)%NCP, nMNLmin3P, min3PMinerals(i)%NameOfSTQ, &
+                min3PMinerals(i)%STQ, nTemperature, min3PMinerals(i)%AKLOG,masterVariable_min3p)
+            end if            
             
             min3PMinerals(i)%AKLOG = min3PMinerals(i)%AKLOG * min3PMinerals(i)%iAssociation * minerals(i)%iAssociation
+            
+            call switchReactionComponent(trim(min3PMinerals(i)%Name), min3PMinerals(i)%NCP, nMNLmin3P, min3PMinerals(i)%NameOfSTQ, &
+                min3PMinerals(i)%STQ, nTemperature, min3PMinerals(i)%AKLOG, min3PMinerals(i)%iAssociation)            
 
             min3PMinerals(i)%AKLOG_exp = linearInterpolation(nTemperature, temperature, min3PMinerals(i)%AKLOG, temperature_min3p)
                 

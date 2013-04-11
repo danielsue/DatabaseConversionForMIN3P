@@ -13,6 +13,8 @@
 !e.g, toughreact, min3p, crunchflow
 source database type
 toughreact
+!crunchflow
+!phreeqc
 
 !Set source database path, required.
 !For toughreact or crunchflow database, this is a file path.
@@ -31,13 +33,52 @@ target database temperature
 !Set target master variable, optional.
 !Can be h2(aq), o2(aq) or 'same as source database'.
 !If not provided, use the master variable in the source database.
-!Note: if the target master variable is the same as the 
+!Note 1: if the target master variable is the same as the 
 !the master varialbe in the source database, you can comment out 
 !the command or provide same as source database.
+!Note 2: this only works for toughreact and crunchflow database.
+!For Phreeqc, please use "switch component" (bellow) instead.
 target database master variable
 h2(aq)
+!o2(aq)
 
+!Switch reaction component
+!This is an extended function of change master variable.
+!This switched component can be master specie, secondary sepcies, 
+!phases and any expression you wanted.
+!The first line after the command line is the number of components
+!that need to be switched and number of log_k values.
+!The data line start with switched component, followed by 
+!reaction equation and log_k values.
+!Note: The switched component should be the first in the left or right of "=" in reaction. 
+!The coefficient of the switched component should be 1.0.
+!For the reaction, keep at least one blank space before the connector "+", "-", and "=". 
+!The first blank space can be omited. 
+!Coefficient of 1.0 can be omited.
+!The reaction equation can be association or diassociation.
+!Keep in mind that the sign of log_k should be in correspondence with reaction direction. 
+!The character of reaction equation is NOT case-sensitive
+!Example
+! switch reaction component
+! 1    8		;number of components that need to be switched, number of logK (temperature points)
+! H2(aq);  H2(aq) = H2O - 0.5O2(aq);  log_k 50.4436	46.0719	40.94	36.1423	31.297	27.365	24.0854	21.2681      (A: This is correct)
+! H2(aq);  H2O - 0.5O2(aq) = H2(aq);  log_k -50.4436 -46.0719 -40.94 -36.1423 -31.297 -27.365 -24.0854 -21.2681  (B: This is correct)
+! The above reaction (A and B) have the same results in database conversion.
+! The following is incorrect because H2(aq) is not in the first location and the coefficient is -2.0, not 1.0
+! H2(aq);  O2(aq) = 2 H2O - 2H2(aq);  log_k 100.8872   92.1438   81.8800   72.2846   62.5940   54.7300   48.1708   42.5362 
 
+switch reaction component
+1    8		;number of components that need to be switched, number of logK (temperature points)
+!H2(aq);  H2(aq) = H2O - 0.5 O2(aq);  log_k 50.4436	46.0719	40.94	36.1423	31.297	27.365	24.0854	21.2681
+H2(aq);  H2O - 0.5O2(aq) = H2(aq);  log_k -50.4436 -46.0719 -40.94 -36.1423 -31.297 -27.365 -24.0854 -21.2681
+
+!Sample commands 2
+!switch reaction component
+!4    1		;number of components that need to be switched, number of logK (temperature points)
+!SiO2(OH)2-2; +1.000Si(OH)4  -2.000H+  = SiO2(OH)2-2; log_K     -23.1397
+!SiO(OH)3-; +1.000Si(OH)4 -1.000H+  = SiO(OH)3-; log_K     -9.80974
+!Al(OH)4-; +1.000Al+3  +4.000H2O -4.000H+  = Al(OH)4-; log_K   	-22.8786
+!OH-; +1.000H2O  -1.000H+  = OH-; log_K   	-13.9998
 
 !--------------------------------
 !Block 3: Output settings
@@ -57,124 +98,43 @@ min3p_dbs
 
 !Sort components by ascending lexical order, optional.
 !This is useful when you need to compare the databases converted
-!from different database.
+!from different database, making it easier to check if the databases are the same.
 sort data by lexical order
-
 
 !Export the following species only
 !This is useful when you need to compare the databases converted
 !from different database.
 !
 export following species only
-156
+31
 
 !'define redox master variable'
 'h2(aq)'
 
 !'components'
-!16                           ;number of components (nc-1)
+!4                           ;number of components (nc-1)
 'h+1'
 'na+'
 'cl-'
 'so4--'
-'hco3-'
-'al+++'
-'h4sio4(aq)'
-'k+'
-'mg+2'
-'sr++'
-'ca+2'
-'fe++'
-'b(oh)3(aq)'	
-'h2(aq)'	
-'traceri'					;!!!tracers are not found
-'tracerv' 
 
 !'redox couples'
 !0                             ;number of redox couples (nr)
 
 !'secondary aqueous species'
-!76                          ;number of secondary aqueous species
-'fe+++'                        ;program give out that it is missing after manually added
+!8                          ;number of secondary aqueous species
+'fe+++'                     ;program give out that it is missing after manually added
 'o2(aq)'
 'hs-'
 'h2s(aq)'
 'ch4(aq)'
 'oh-'
 'co3--'
-'co2(aq)'
-'b(oh)4-'
-'nab(oh)4(aq)'
-'al(oh)2+'
-'alh3sio4++'
-'alo2-'
-'aloh++'
-'also4+'
-'ca(hco3)+'
-'cacl+'
-'cacl2(aq)'
-'caco3(aq)'
-'caoh+'
-'caso4(aq)'
-'fe(co3)2--'
-'fecl+'
-'fecl2(aq)'
-'feco3(aq)'
-'feco3oh-'
-'fehco3+'
-'feo'
-'feo2--'
-'feoh+'
-'feso4(aq)'
-'h2sio4--'
-'halo2(aq)'
-'hcl(aq)'
-'hfeo2-'
-'hsio3-'
-'hso4-'
-'kalo2(aq)'
-'kcl(aq)'
-'koh(aq)'
-'kso4-'
-'mg(hco3)+'
-'mg4(oh)4++++'
-'mgcl+'
-'mgco3(aq)'
-'mgoh+'
-'mgso4(aq)'
-'naalo2(aq)'
-'nacl(aq)'
-'naco3-'
-'nahco3(aq)'
-'naoh(aq)'
-'naso4-'
-'si2o2(oh)5-'
-'si2o3(oh)4--'
-'si3o5(oh)5-3'
-'si3o6(oh)3-3'
-'si4o12h4----'
-'si4o6(oh)6--'
-'si4o7(oh)6-4'
-'si4o8(oh)4-4'
-'si6o15------'
-'sr(co3)(aq)'
-'sr(hco3)+'
-'srcl+'
-'sroh+'
-'srso4(aq)'
-'fe(co3)2-'
-'fecl++'
-'fecl2+'
-'feco3+'
-'feo+'
-'feo2-'
-'feoh++'
-'feso4+'
-'hfeo2(aq)'			
+'co2(aq)'	
 
 !'gases'
-!4                              ;number of gases
-'co2(g)'					   ;names of gases
+!4                          ;number of gases
+'co2(g)'					;names of gases
 'h2(g)'
 'o2(g)'
 'h2s(g)'
@@ -187,7 +147,7 @@ export following species only
 'k-x(na)'
 
 !'minerals'
-!55                            ;number of minerals
+!10                            ;number of minerals
 'amorphous_si'                 ;-label prec
 'anhydrite'         
 'calcite'                      ;-label neutre, h+
@@ -198,48 +158,4 @@ export following species only
 'cj4-glass'                    ;-label residual 
 'daphnite_14a'                 
 'dolomite'                     ;-label neutre, h+
-'ettringite'
-'ettringite_f'
-'fe-saponitec'
-'fe-saponiten'
-'fe-saponitek'
-'fe-saponitem'
-'fe-montmo_ca'
-'fe-montmo_na'
-'fe-montmo_mg'
-'fe-montmo_k'
-'greenalite'
-'goethite_b'  
-'gypsum'
-'illite-feii'
-'illite-feiii'
-'illite-mg'
-'iron'                        ;-label monod 
-'kaolinite_b'                 ;-label neutre, oh-, h+
-'magnetite,be'    
-'microcline'                  ;-label neutre     
-'mg-montmo-na'                ;-label neutre, h+, oh-
-'mg-montmo-k'
-'mg-montmo-mg'
-'mg-montmo-ca'                ;-label neutre, h+, oh-
-'nontroniteca'
-'nontronitek'
-'nontronitemg'
-'nontronitena'
-'pyrite'                      ;-label oxygen, ferric
-'pyrrhotite,a'               
-'quartz_alpha'                   
-'saponitemg'        
-'saponitena'        
-'saponitek'       
-'saponiteca'       
-'sideritelt'                
-'siderite'
-'huntite'
-'sepiolite'
-'minnesotaite'
-'brucite'
-'csh_0.8'						
-'maghemite_di'
-'gyrolite'
-'mineralh2_45'                 ;-rate -5.  
+ 

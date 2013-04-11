@@ -194,5 +194,8 @@ module sourcedata
     
     type(TypeSurfaceComplexes),allocatable   ::  surfaceComplexes(:)    ! surfaceComplexes
     integer                                  ::  nSurfaceComplexes = 0  ! number of surface complexes 
+    
+    type(TypeDerivedSpecies), allocatable    ::  switchedReactions(:)   ! switchedReactions
+    integer                                  ::  nSwitchedReactions = 0 ! number of switched reactions
 
 end module sourcedata

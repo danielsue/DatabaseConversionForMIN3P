@@ -3,10 +3,11 @@
 module inputfile
 
 use global, only  : iUnitInp, bOpenInp, ErrorHandling
-use logfile, only : WriteLog
-use file_utility, only : SetLowerCase
-use sourcedata, only : nNameLength
+use logfile, only : WriteLog, nErrors
+use file_utility, only : SetLowerCase, replaceCharacter
+use sourcedata, only : nNameLength, switchedReactions, nSwitchedReactions
 use file_utility, only : getNameFromString
+use geochemistry, only : analyseReactionEquation
 
 implicit none
 
@@ -58,7 +59,9 @@ contains
      
         implicit none  
         
-        integer :: i 
+        integer :: i, j, k, m, n
+        
+        character(nNameLength) :: tempStrName
         
         call WriteLog ("Begin reading input file")
         
@@ -76,6 +79,7 @@ contains
                     call readNextLine
                     sourceDatabaseType = strBuffer
                     call WriteLog("source database type: " // trim(sourceDatabaseType))
+                    
                 case ("source database path")
                     call readNextLine
                     sourceDatabasePath = strBuffer
@@ -85,22 +89,86 @@ contains
                     call readNextLine
                     read(strBuffer, *) targetTemperature
                     call WriteLog("target database temperature: " // trim(strBuffer))
+                    
                 case ("target database master variable")
                     call readNextLine
                     targetMasterVariable = strBuffer
                     call WriteLog("target database master variable: " // trim(targetMasterVariable))
                     
+                case ("switch reaction component")   
+                    call readNextLine
+                    read(strBuffer,* , end = 9999, err = 9999) k, n
+                    if(allocated(switchedReactions)) then
+                        deallocate(switchedReactions)
+                    end if
+                    nSwitchedReactions = 0
+                    if(k > 0) then
+                        allocate(switchedReactions(k))
+                        nSwitchedReactions = k
+                    end if
+                    
+                    do i = 1, k
+                        call readNextLine
+                        j = index(strBuffer, ";")
+                        if(j < 2) then
+                            goto 9999
+                        end if
+
+                        switchedReactions(i)%Name = trim(adjustl(strBuffer(:j - 1)))
+                        
+                        m = index(strBuffer(j+1:), trim(switchedReactions(i)%Name))
+                        
+                        if (m < 1) then
+                            nErrors = nErrors + 1
+                            call WriteLog ("Error: Switched component is not found in the reaction equation")
+                            call ErrorHandling 
+                        end if
+                        
+                        if(index(strBuffer(j+1:), "=") > m) then
+                            call analyseReactionEquation(trim(adjustl(strBuffer(j+1:))), nNameLength, .false., tempStrName,    &
+                            switchedReactions(i)%NCP, switchedReactions(i)%NameOfSTQ, switchedReactions(i)%STQ, .false.)
+                            switchedReactions(i)%iAssociation = -1
+                        else
+                            call analyseReactionEquation(trim(adjustl(strBuffer(j+1:))), nNameLength, .true., tempStrName,     &
+                            switchedReactions(i)%NCP, switchedReactions(i)%NameOfSTQ, switchedReactions(i)%STQ, .true.)
+                            switchedReactions(i)%iAssociation = 1
+                        end if
+                        
+                        j = index(strBuffer, "log_k")
+                        if(j < 1) then
+                            nErrors = nErrors + 1
+                            call WriteLog("Error: log_k is not found")
+                            call ErrorHandling
+                        end if
+                        read(strBuffer(j+5:),* , end = 9999, err = 9999) switchedReactions(i)%AKLOG(1:n)
+                        
+                        call WriteLog("Add switched component: " // trim(switchedReactions(i)%Name))
+                        if(switchedReactions(i)%iAssociation == 1) then
+                            call WriteLog("Reaction direction: Association")
+                        else 
+                            call WriteLog("Reaction direction: Diassociation") 
+                        end if
+                        call WriteLog("LogK")
+                        call WriteLog(n, switchedReactions(i)%AKLOG(1:n))
+                        do j = 1, switchedReactions(i)%NCP
+                            call WriteLog("Component and coefficient: " // trim(switchedReactions(i)%NameOfSTQ(j)), switchedReactions(i)%STQ(j))
+                        end do                        
+                    end do                    
+                    
                 case ("target database type")
                     call readNextLine
                     targetDatabaseType = strBuffer
                     call WriteLog("target database type: " // trim(targetDatabaseType))
+                    
                 case ("target database path")
                     call readNextLine
                     targetDatabasePath = strBuffer
                     call WriteLog("target database path: " // trim(targetDatabasePath))
+                    
                 case ("sort data by lexical order")
                     bSortData = .true.
                     call WriteLog("sort data by lexical order: true")
+                    
                 case ("export following species only")                    
                     bSpecifiedExport = .true.
                     call readNextLine
@@ -131,6 +199,12 @@ contains
         end do
 
         call WriteLog ("End reading input file")
+        
+        return
+        
+9999    call WriteLog("Error detected in input file")
+        call WriteLog(trim(strBuffer))
+        call ErrorHandling 
      
      end subroutine ReadInp
      
@@ -181,6 +255,8 @@ contains
             
                 ! Conver all case to lower case
                 call SetLowerCase(strBuffer)
+                
+                call replaceCharacter(strBuffer, achar(9), " ")
 
                 if (strBuffer(1:1) /= strComment) then
                     exit
