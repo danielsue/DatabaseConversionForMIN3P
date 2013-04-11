@@ -172,7 +172,7 @@ contains
             min3PSpecies(i)%MWT = species(i)%MWT
             
             !Calculate alkalinity factor
-            if (trim(sourceDatabaseType) == "toughreact" .or. trim(sourceDatabaseType) == "crunchflow" ) then
+            !if (trim(sourceDatabaseType) == "toughreact" .or. trim(sourceDatabaseType) == "crunchflow" ) then
                 if(trim(min3PSpecies(i)%Name) == "co3-2" .or. trim(min3PSpecies(i)%Name) == "co3--") then
                     min3PSpecies(i)%AlkFac = 2.0d0
                 else if(trim(min3PSpecies(i)%Name) == "hco3-" .or. trim(min3PSpecies(i)%Name) == "hco3-1") then
@@ -180,9 +180,9 @@ contains
                 else if (trim(min3PSpecies(i)%Name) == "h+" .or. trim(min3PSpecies(i)%Name) == "h+1") then
                     min3PSpecies(i)%AlkFac = -1.0d0
                 end if
-            else if (trim(sourceDatabaseType) == "phreeqc") then
-                min3PSpecies(i)%AlkFac = species(i)%AlkFac
-            end if
+            !else if (trim(sourceDatabaseType) == "phreeqc") then        !Phreeqc sometimes lack this value
+            !    min3PSpecies(i)%AlkFac = species(i)%AlkFac
+            !end if
             
             call WriteLog("Convert species:" // trim(min3PSpecies(i)%Name))
             

@@ -1,41 +1,30 @@
-!
+! 
 !This input file contains parameters used in database conversion.
-!Current support database conversion from toughreact to min3p,
-!and from crunchflow to min3p.
-!
-
-
+!This file is not case-sensitive. 
 !--------------------------------
 !Block 1: Database settings
 !--------------------------------
 
-!Set source database type, required.
-!e.g, toughreact, min3p, crunchflow
+!set source database type, required.
 source database type
-toughreact
+phreeqc
 !crunchflow
-!phreeqc
+!toughreact
 
-!Set source database path, required.
-!For toughreact or crunchflow database, this is a file path.
-!For min3p, this is a folder.
+!set source database path, required.
 source database path
-TR_FeII-H2-mod3.dat
+Phreeqc-1.dat
 
 !--------------------------------
 !Block 2: Conversion settings
 !--------------------------------
-
-!set target database temperature, required.
+!Set target database temperature, required for Toughreact and Crunchflow database .
 target database temperature 
 25
-
-!Set target master variable, optional.
-!Can be h2(aq), o2(aq) or 'same as source database'.
-!If not provided, use the master variable in the source database.
-!Note 1: if the target master variable is the same as the 
-!the master varialbe in the source database, you can comment out 
-!the command or provide same as source database.
+!Set target master variable, optional. Can be h2(aq), o2(aq) or 'same as source database'.
+!If not provided, use the same master variable in the source database.
+!Note 1: if the target master variable is the same as the the master varialbe in the source database, 
+!you can comment out this command or provide ‘same as source database’.
 !Note 2: this only works for toughreact and crunchflow database.
 !For Phreeqc, please use "switch component" (bellow) instead.
 target database master variable
@@ -43,119 +32,53 @@ h2(aq)
 !o2(aq)
 
 !Switch reaction component
-!This is an extended function of change master variable.
-!This switched component can be master specie, secondary sepcies, 
-!phases and any expression you wanted.
-!The first line after the command line is the number of components
-!that need to be switched and number of log_k values.
-!The data line start with switched component, followed by 
-!reaction equation and log_k values.
-!Note: The switched component should be the first in the left or right of "=" in reaction. 
-!The coefficient of the switched component should be 1.0.
+!This is an extended function of change master variable. This switched component can be master specie, 
+!secondary sepcies, phases and any expression you wanted.
+!The first line after the command line is the number of components that need to be switched and 
+!number of log_k values. The data line start with switched component, followed by reaction equation 
+!and log_k values.
+!Note 1: The switched component should be in the first position in the left or right side of "=". 
+!The coefficient of the switched component should be 1..
 !For the reaction, keep at least one blank space before the connector "+", "-", and "=". 
-!The first blank space can be omited. 
-!Coefficient of 1.0 can be omited.
-!The reaction equation can be association or diassociation.
+!The first blank space and coefficient of 1.0 can be omitted.
+!The reaction equation can be association or disassociation.
 !Keep in mind that the sign of log_k should be in correspondence with reaction direction. 
-!The character of reaction equation is NOT case-sensitive
+!Note 2: The switched component should be in the right order. First come, first service.
 !Example
 ! switch reaction component
-! 1    8		;number of components that need to be switched, number of logK (temperature points)
-! H2(aq);  H2(aq) = H2O - 0.5O2(aq);  log_k 50.4436	46.0719	40.94	36.1423	31.297	27.365	24.0854	21.2681      (A: This is correct)
-! H2(aq);  H2O - 0.5O2(aq) = H2(aq);  log_k -50.4436 -46.0719 -40.94 -36.1423 -31.297 -27.365 -24.0854 -21.2681  (B: This is correct)
-! The above reaction (A and B) have the same results in database conversion.
-! The following is incorrect because H2(aq) is not in the first location and the coefficient is -2.0, not 1.0
-! H2(aq);  O2(aq) = 2 H2O - 2H2(aq);  log_k 100.8872   92.1438   81.8800   72.2846   62.5940   54.7300   48.1708   42.5362 
-
+! 1    4		;number of components that need to be switched, number of logK (temperature points)
+! H2(aq);  H2(aq) = H2O - 0.5O2(aq);  log_k 50.4436 46.0719 40.94 36.1423                 (A: correct)
+! H2(aq);  H2O - 0.5O2(aq) = H2(aq);  log_k -50.4436 -46.0719 -40.94 -36.1423           (B: correct)
+! The above data (A and B) means reaction expressed by H2(aq) will be switched to O2(aq).
+! The following is incorrect because H2(aq) is not in the first location and the coefficient is -2.0, not 1.
+! H2(aq);  O2(aq) = 2 H2O - 2H2(aq);  log_k  100.8872   92.1438   81.8800   72.2846   (C: incorrect)
 switch reaction component
-1    8		;number of components that need to be switched, number of logK (temperature points)
-!H2(aq);  H2(aq) = H2O - 0.5 O2(aq);  log_k 50.4436	46.0719	40.94	36.1423	31.297	27.365	24.0854	21.2681
-H2(aq);  H2O - 0.5O2(aq) = H2(aq);  log_k -50.4436 -46.0719 -40.94 -36.1423 -31.297 -27.365 -24.0854 -21.2681
-
-!Sample commands 2
-!switch reaction component
-!4    1		;number of components that need to be switched, number of logK (temperature points)
-!SiO2(OH)2-2; +1.000Si(OH)4  -2.000H+  = SiO2(OH)2-2; log_K     -23.1397
-!SiO(OH)3-; +1.000Si(OH)4 -1.000H+  = SiO(OH)3-; log_K     -9.80974
-!Al(OH)4-; +1.000Al+3  +4.000H2O -4.000H+  = Al(OH)4-; log_K   	-22.8786
-!OH-; +1.000H2O  -1.000H+  = OH-; log_K   	-13.9998
+4    1	;number of components that need to be switched, number of logK (temperature points)
+SiO2(OH)2-2; +1.000Si(OH)4  -2.000H+  = SiO2(OH)2-2; log_k  -23.1397 	
+SiO(OH)3-; +1.000Si(OH)4 -1.000H+  = SiO(OH)3-; log_k   -9.80974
+Al(OH)4-; +1.000Al+3  +4.000H2O -4.000H+  = Al(OH)4-; log_k   -22.8786
+OH-; +1.000H2O  -1.000H+  = OH-; log_k   -13.9998
 
 !--------------------------------
 !Block 3: Output settings
 !--------------------------------
-
-!set target database type, required.
-!e.g, toughreact, min3p, crunchflow
+!set target database type, required.Currently the database type can only be min3p.
 target database type
 min3p
 
-!set targer database path, optional.
-!if not provided, use the path of the program.
-!For toughreact or crunchflow database, this is a file path.
-!FOR MIN3P, THIS IS A FOLDER, PLEASE CREATE THE FOLDER BEFORE RUNNING THE PROGRAM.
+!Set targer database path, optional.
+!if not provided, use the current path as the output location.
 target database path
-min3p_dbs
+Phreeqc2min3p_h2aq_1
 
-!Sort components by ascending lexical order, optional.
-!This is useful when you need to compare the databases converted
-!from different database, making it easier to check if the databases are the same.
-sort data by lexical order
+!Sort the output data by ascending lexical order, optional.
+!This is useful when you need to compare the databases converted from different databases.
+!sort data by lexical order
 
-!Export the following species only
-!This is useful when you need to compare the databases converted
-!from different database.
-!
-export following species only
-31
-
-!'define redox master variable'
-'h2(aq)'
-
-!'components'
-!4                           ;number of components (nc-1)
-'h+1'
-'na+'
-'cl-'
-'so4--'
-
-!'redox couples'
-!0                             ;number of redox couples (nr)
-
-!'secondary aqueous species'
-!8                          ;number of secondary aqueous species
-'fe+++'                     ;program give out that it is missing after manually added
-'o2(aq)'
-'hs-'
-'h2s(aq)'
-'ch4(aq)'
-'oh-'
-'co3--'
-'co2(aq)'	
-
-!'gases'
-!4                          ;number of gases
-'co2(g)'					;names of gases
-'h2(g)'
-'o2(g)'
-'h2s(g)'
-
-!'sorbed species'
-!4
-'na-x(na)'
-'ca-x(na)'
-'mg-x(na)'
-'k-x(na)'
-
-!'minerals'
-!10                            ;number of minerals
-'amorphous_si'                 ;-label prec
-'anhydrite'         
-'calcite'                      ;-label neutre, h+
-'celestite'
-'chalcedony'                   ;-label prec
-'clinochlore_'                
-'cronstedti,a'      
-'cj4-glass'                    ;-label residual 
-'daphnite_14a'                 
-'dolomite'                     ;-label neutre, h+
- 
+!Export the specied species only, optional.
+!This is useful when you need to compare the databases converted from different database.
+!export following species only
+!3
+!'species1'
+!'species2'
+!'species3'
