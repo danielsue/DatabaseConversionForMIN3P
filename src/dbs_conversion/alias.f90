@@ -4,7 +4,7 @@ module alias
 
     use global, only : iUnitDbsAlias, bOpenDbsAlias, ErrorHandling
     use logfile, only : WriteLog, nWarnings, nErrors
-    use file_utility, only : SetLowerCase
+    use file_utility, only : SetLowerCase, replaceCharacter
 
     implicit none
     
@@ -93,6 +93,8 @@ contains
             if (strBuffer(1:1) /= strComment) then
                 !considering some of the species name has blank space, in the alias database, the name and alias first is seperated by ";"
                 !if ";" is not found, then consider blank space as separator
+                call replaceCharacter(strBuffer, achar(9), " ") 
+                
                 i = index(strBuffer,";")
                 if(i > 0) then
                     strName = trim(adjustl(strBuffer(1:i-1)))
