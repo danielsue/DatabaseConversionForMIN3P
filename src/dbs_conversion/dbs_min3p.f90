@@ -254,10 +254,10 @@ contains
         
         integer ::  i
         
-        write(iUnitDbsMin3PComp, 99) "!This database is converted from " // trim(sourceDatabaseType)
-        if(trim(sourceDatabaseType) == "phreeqc") then
-            write(iUnitDbsMin3PComp, 99) "!IMPORTANT NOTE: PLEASE CHECK IF THE MOLECULAR WEIGHT OF EACH COMPONENT IS CORRECT"
-        end if
+        !write(iUnitDbsMin3PComp, 99) "!This database is converted from " // trim(sourceDatabaseType)
+        !if(trim(sourceDatabaseType) == "phreeqc") then
+        !    write(iUnitDbsMin3PComp, 99) "!IMPORTANT NOTE: PLEASE CHECK IF THE MOLECULAR WEIGHT OF EACH COMPONENT IS CORRECT"
+        !end if
         do i = 1, nMin3PSpecies
             if (bSpecifiedExport) then
                 if (.not. IsInSpecifiedExport(min3PSpecies(i)%Name)) then
@@ -283,7 +283,7 @@ contains
         
         integer ::  i, j
         
-        write(iUnitDbsMin3PComplex, 199) "!This database is converted from " // trim(sourceDatabaseType)
+        !write(iUnitDbsMin3PComplex, 199) "!This database is converted from " // trim(sourceDatabaseType)
         do i = 1, nMin3PComplexReactions
             if (bSpecifiedExport) then
                 if (.not. IsInSpecifiedExport(min3PComplexReactions(i)%Name)) then
@@ -314,7 +314,7 @@ contains
         
         integer ::  i, j
         
-        write(iUnitDbsMin3PRedox, 300) "!This database is converted from " // trim(sourceDatabaseType)
+        !write(iUnitDbsMin3PRedox, 300) "!This database is converted from " // trim(sourceDatabaseType)
         do i = 1, nMin3PRedoxReactions
             if (bSpecifiedExport) then
                 if (.not. IsInSpecifiedExport(min3PRedoxReactions(i)%Name)) then
@@ -350,7 +350,7 @@ contains
         implicit none
         
         integer ::  i, j
-        write(iUnitDbsMin3PGases, 399) "!This database is converted from " // trim(sourceDatabaseType)
+        !write(iUnitDbsMin3PGases, 399) "!This database is converted from " // trim(sourceDatabaseType)
         do i = 1, nmin3PGases
             if (bSpecifiedExport) then 
                 if (.not. IsInSpecifiedExport(min3PGases(i)%Name)) then
@@ -382,7 +382,7 @@ contains
         implicit none
         
         integer ::  i, j
-        write(iUnitDbsMin3PMinerals, 500) "!This database is converted from " // trim(sourceDatabaseType)
+        !write(iUnitDbsMin3PMinerals, 500) "!This database is converted from " // trim(sourceDatabaseType)
         do i = 1, nMin3PMinerals
             if (bSpecifiedExport) then 
                 if (.not. IsInSpecifiedExport(min3PMinerals(i)%Name)) then
