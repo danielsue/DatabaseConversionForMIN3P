@@ -1,3 +1,8 @@
+!****************************************************************************
+!    Geochemitry database conversion program
+!    Author: Danyang Su
+!    Email: dsu@eos.ubc.ca; danyang.su@gmail.com
+!****************************************************************************
 !Module of global parameters
 !The parameters are by default public and can be accessed from outside of the module 
     

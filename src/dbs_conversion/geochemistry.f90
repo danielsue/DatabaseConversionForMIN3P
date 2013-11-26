@@ -1,3 +1,8 @@
+!****************************************************************************
+!    Geochemitry database conversion program
+!    Author: Danyang Su
+!    Email: dsu@eos.ubc.ca; danyang.su@gmail.com
+!****************************************************************************
 !module of geochemistry
 module geochemistry
 

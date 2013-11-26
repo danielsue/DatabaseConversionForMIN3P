@@ -1,4 +1,9 @@
-﻿!Module to read and store toughreact database
+﻿!****************************************************************************
+!    Geochemitry database conversion program
+!    Author: Danyang Su
+!    Email: dsu@eos.ubc.ca; danyang.su@gmail.com
+!****************************************************************************
+!Module to read and store toughreact database
     
 module dbs_toughreact 
 

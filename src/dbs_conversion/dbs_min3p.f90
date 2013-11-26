@@ -1,3 +1,8 @@
+!****************************************************************************
+!    Geochemitry database conversion program
+!    Author: Danyang Su
+!    Email: dsu@eos.ubc.ca; danyang.su@gmail.com
+!****************************************************************************
 ! Module of min3p database
     
 module dbs_min3p

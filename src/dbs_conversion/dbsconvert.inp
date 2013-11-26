@@ -1,3 +1,9 @@
+!****************************************************************************
+!    Geochemitry database conversion program
+!    Author: Danyang Su
+!    Email: dsu@eos.ubc.ca; danyang.su@gmail.com
+!****************************************************************************
+
 ! 
 !This input file contains parameters used in database conversion.
 !This file is not case-sensitive. 

@@ -1,3 +1,8 @@
+!****************************************************************************
+!    Geochemitry database conversion program
+!    Author: Danyang Su
+!    Email: dsu@eos.ubc.ca; danyang.su@gmail.com
+!****************************************************************************
 ! Module of NameTruncation, similar to alias.
 ! This file is used to collect the name and truncation information during database conversion.
 ! It help you to decide the which name should be given a better alias.

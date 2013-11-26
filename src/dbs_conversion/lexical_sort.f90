@@ -1,3 +1,8 @@
+!****************************************************************************
+!    Geochemitry database conversion program
+!    Author: Danyang Su
+!    Email: dsu@eos.ubc.ca; danyang.su@gmail.com
+!****************************************************************************
 ! module for alphabetical sort
 ! This module is download from http://computer-programming-forum.com/49-fortran/aba487e1d497c041.htm
 ! and modify by Danyang Su

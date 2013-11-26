@@ -1,3 +1,9 @@
+!****************************************************************************
+!    Geochemitry database conversion program
+!    Author: Danyang Su
+!    Email: dsu@eos.ubc.ca; danyang.su@gmail.com
+!****************************************************************************
+
 module sourcedata
 
     integer, parameter                      :: nNameLength = 60
