@@ -23,6 +23,7 @@ module global
     integer, parameter  ::  iUnitInp                =   iUnitNameTruncation + 1     !input file for dbs conversion
     integer, parameter  ::  iUnitDbsCF              =   iUnitInp + 1                !database of crunch flow
     integer, parameter  ::  iUnitDbsPhreeqc         =   iUnitDbsCF + 1              !database of Phreeqc
+    integer, parameter  ::  iUnitDbsMolarMass       =   iUnitDbsPhreeqc + 1         !database of molar mass
     
     logical             ::  bOpenLog                =   .false.
     logical             ::  bOpenDbsTR              =   .false. 
@@ -36,6 +37,7 @@ module global
     logical             ::  bOpenInp                =   .false.
     logical             ::  bOpenDbsCF              =   .false.
     logical             ::  bOpenDbsPhreeqc         =   .false.
+    logical             ::  bOpenDbsMolarMass       =   .false.
     
  
 contains
@@ -102,6 +104,10 @@ contains
         
         if (bOpenDbsPhreeqc) then
             close(iUnitDbsPhreeqc)
+        end if
+        
+        if (bOpenDbsMolarMass) then
+            close(iUnitDbsMolarMass)
         end if
     
     end subroutine CloseAllFiles

@@ -20,7 +20,7 @@ module file_utility
         real, intent(in) :: dvalue
         logical ::bFlag
         bFlag = .false.
-        if(abs(dvalue) < 1.0E-100) then
+        if(abs(dvalue) <= 1.0E-100) then
             bFlag = .true.
         else
             bFlag = .false.
@@ -232,5 +232,25 @@ module file_utility
         end do
             
     end function bIsAlphabetic
+    
+    !check if the string contains only alphabetic
+    function bIsDigitalPart(string) result(bFlag)
+    
+        implicit none
+        character(*), intent(in) :: string
+        logical :: bFlag
+        integer :: i, j, n
+        
+        bFlag = .true.
+        n = len(string)
+        do i = 1, n
+            j = ichar(string(i:i))
+            if (j < 43 .or. j > 57) then
+                bFlag = .false.
+                exit
+            end if
+        end do
+            
+    end function bIsDigitalPart
 
 end module

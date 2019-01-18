@@ -27,6 +27,7 @@
     use convt2min3p,        only :  convert2Min3PDbs
     use dbs_min3p,          only :  OpenAllDbsMin3P, WriteAllDbsMin3P, temperature_min3p
     use alias,              only :  OpenDbsAlias, ReadDbsAlias
+    use molarmass,          only :  OpenDbsMolarMass, ReadDbsMolarMass
     use name_truncation,    only :  OpenNameTruncation, WriteNameTruncation
     use inputfile,          only :  OpenInp, ReadInp, CloseInp, filePathInp, & 
                                      sourceDatabaseType, targetDatabaseType
@@ -45,7 +46,7 @@
 2   format (/,'    ------------------------------------------------'   &
      &      //,'                  DATABASE CONVERSION'                  &
      &       /,'                        FOR MIN3P'                      &
-     &      //,'                     VERSION 1.0.27'                    &
+     &      //,'                     VERSION 1.0.31'                    &
      &      //,'                   AUTHOR: DANYANG SU'                  &
      &      //,'            PLEASE EMAIL QUESTION AND BUG TO'           &
      &      //,'                      DSU@EOS.UBC.CA '                  &
@@ -87,10 +88,15 @@
     ! Close input file
     call CloseInp
 
-    ! Open alias database if the file exists and open
+    ! Open alias database if the file exists
     call OpenDbsAlias
 
     call ReadDbsAlias
+    
+    ! Open molar mass database if the file exists
+    call OpenDbsMolarMass
+
+    call ReadDbsMolarMass
 
     ! Read source database
     select case (trim(sourceDatabaseType))

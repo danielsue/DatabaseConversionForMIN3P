@@ -8,9 +8,11 @@ module geochemistry
 
 use logfile, only : WriteLog, nErrors, nWarnings
 use global, only : ErrorHandling
-use file_utility, only : iIndexOfAlphabet, bIsAlphabetic, replaceCharacter
+use file_utility, only : iIndexOfAlphabet, bIsAlphabetic, replaceCharacter, bIsDigitalPart, &
+                         SetLowerCase
 use elements, only:  getMWT, bMatchElement
 use sourcedata, only : nNameLength, nSwitchedReactions, switchedReactions
+use molarmass, only : GetMolarMassFromName, nMolarMass
 
 implicit none
 
@@ -365,8 +367,20 @@ contains
         character(1024) :: str
         
         molecularMass = 0
-        str = string
+       
+        call WriteLog("getMolecularMass from " // trim(string)) 
         
+        if (nMolarMass > 0) then
+            str = string
+            call SetLowerCase(str)
+            molecularMass = GetMolarMassFromName(trim(adjustl(str)))
+            if (molecularMass >= 1.0d0) then
+                return
+            end if
+        end if
+        
+        str = string
+       
         if (trim(str) == "e-") then
             return
         end if
@@ -443,13 +457,14 @@ contains
         
         return
         
-9999    call WriteLog("Error detected in the formula form")
+9999    call WriteLog("Error detected in the formula form - getMolecularMass")
         call WriteLog(trim(string))
         call ErrorHandling  
      
      end function getMolecularMass 
      
      !calculate the atomic mass of a section, e.g, in the bracket pair
+     !add support with nested bracket pair, (Th(OH)(Edta))2-2
      function calculateMWTSection(string) result(mass)
      
         implicit none
@@ -460,9 +475,18 @@ contains
         integer :: nlen     
         
         integer :: i, k, n        
-        mass = 0        
-        str = string
+        mass = 0  
         
+        if (nMolarMass > 0) then
+            str = string
+            call SetLowerCase(str)
+            mass = GetMolarMassFromName(trim(adjustl(str)))
+            if (mass >= 1.0d0) then
+                return
+            end if
+        end if
+        
+        str = string
         n = len_trim(str)
         i = 1
         do while(i <= n)
@@ -535,7 +559,8 @@ contains
         
         return
         
-9999    call WriteLog("Error detected in the formula form")
+9999    call WriteLog("Error detected in the formula form - calculateMWTSection")
+        call WriteLog("Form not support, add the molar mass in the database molarmass.dbs")
         call WriteLog(trim(string))
         call ErrorHandling  
                
@@ -547,28 +572,35 @@ contains
         implicit none
         character(*), intent(in) :: string
         character(1024) :: str
-        integer :: i 
+        integer :: i, j
         
         str = string
         
-        !remove the "charge part"        
-        i = index(str, "+") 
+        !remove the "charge part"   
+        !format 0: e.g., Am(+2), do not change
+        j = index(str, ")", back = .true.) 
+        if (j == len(trim(str))) then
+            return
+        end if
+        
+        !format 1: normal, e.g., CO3-2 to CO3
+        i = index(str, "+", back = .true.) 
         if(i == 1) then
             goto 9999
         else if(i > 1) then
             str = str(:i-1)
         end if
         
-        i = index(str, "-") 
+        i = index(str, "-", back = .true.) 
         if(i ==1 ) then
             goto 9999
         else if(i > 1) then
             str = str(:i-1)
         end if
-        
+
         return
         
-9999    call WriteLog("Error detected in the formula form")
+9999    call WriteLog("Error detected in the formula form - getSpecieNameWithoutCharge")
         call WriteLog(trim(string))
         call ErrorHandling 
      
@@ -931,6 +963,18 @@ contains
                 name = trim(tempStr(1:i))
             end if     
         end if
+        
+        !Check if the name is started with a digital, e.g., 1.000Na+, then remove the digital part
+        j = len(name)
+        do i = 1, j
+            if (bIsDigitalPart(name(i:i))) then
+                name(i:i) = " "
+            else
+                exit
+            end if
+        end do
+        
+        name = trim(adjustl(name))
      
      end subroutine getSpecieName
      

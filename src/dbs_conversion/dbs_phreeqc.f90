@@ -203,6 +203,15 @@ contains
     !Line 3b:      delta_h   -40.14
     !Line 5b:      -gamma    3.5     0.0
     !
+    !llnl.dat database
+    !1.0000 SO4-- + 1.0000 Ce+++  =  CeSO4+
+    !        -llnl_gamma           4.0    
+    !        log_k           -3.687
+    !	-delta_H	19.2464	kJ/mol	# Calculated enthalpy of reaction	CeSO4+
+    !#	Enthalpy of formation:	-380.2 kcal/mol
+    !        -analytic 3.0156e+002 8.5149e-002 -1.1025e+004 -1.1866e+002 -1.7213e+002
+    !#       -Range:  0-300
+
     function iTypeOfData(str, strEndLabel) result (iType)
     
         implicit none
@@ -210,7 +219,7 @@ contains
         character(*), intent(in) :: str
         character(*), intent(in) :: strEndLabel
         integer :: iType        !0 - unknown, 1 - master specie, 2 - reaction
-        integer :: i, j
+        integer :: i, j, k
         
         if (trim(str) == trim(strEndLabel)) then
             iType = -1
@@ -220,17 +229,24 @@ contains
         iType = 0 
         
         i = index(str, "=")
+        k = index(str, "1.000")
+        if (k > 0 .and. k < i) then     !master specie start with 1.000, e.g., 1.000Ca+2     = Ca+2
+            k = k + 5
+        else                            !master specie do not start with 1.000, e.g., Ca+2     = Ca+2
+            k = 1
+        end if
+        
         
         if (i > 0) then
             j = index(str, strComment)
             if(j > i) then
-                if (trim(adjustl(str(1:i-1))) == trim(adjustl(str(i+1:j-1)))) then
+                if (trim(adjustl(str(k:i-1))) == trim(adjustl(str(i+1:j-1)))) then
                     iType = 1       !master species, left == right
                 else
                     iType = 2       !reaction equation
                 end if
             else
-                if (trim(adjustl(str(1:i-1))) == trim(adjustl(str(i+1:)))) then
+                if (trim(adjustl(str(k:i-1))) == trim(adjustl(str(i+1:)))) then
                     iType = 1       !master species, left == right
                 else
                     iType = 2       !
@@ -268,7 +284,7 @@ contains
             iType = 1           !log_k data
         end if
 
-        if (index(str,"-gamma")>0) then
+        if (index(str,"-gamma")>0 .or. index(str,"-llnl_gamma")>0) then
             iType = 2           !delta_h data
         end if
 
@@ -325,11 +341,21 @@ contains
         
         if (i > 0) then
             read(str(i + 6: ),*, end = 9999, err = 9999) dha, dhb
-        else
-            dha = 0
-            dhb = 0
+            return
         end if
         
+        i = index(str, "-llnl_gamma")
+        
+        write(*,*) "index of -llnl_gamma", i
+        
+        if (i > 0) then
+            read(str(i + 11: ),*, end = 9999, err = 9999) dha
+            dhb = 0
+            return
+        end if
+        
+        dha = 0
+        dhb = 0
         return
         
 9999    call WriteLog("Error detected in getting Deebye-huckel parameters from the follow string")
@@ -374,7 +400,8 @@ contains
         implicit none
         character(*), intent(in) :: string
         real, intent(out) :: enthalpyChange
-        integer :: i
+        integer :: i, j
+        real*8, parameter :: kj2kcal = 0.239006d0
         
         character(1024) :: str
         str = string
@@ -383,11 +410,17 @@ contains
         i = index(str, "delta_h")
         
         if (i > 0) then
-            read(str(i + 7: ),*, end = 9999, err = 9999) enthalpyChange
+            read(str(i + 7: ),*, end = 9999, err = 9999) enthalpyChange  
         else
-            enthalpyChange = 0            
+            enthalpyChange = 0   
         end if
         
+        !Unit convert, default is kCal/mol
+        j = index(str, "kj/mol")
+        if (j > i) then
+          enthalpyChange = enthalpyChange*kj2kcal
+        end if
+
         return
         
 9999    call WriteLog("Error detected in getting enthalpy change from the follow string")
@@ -552,6 +585,7 @@ contains
                 j = 0                
                 do i = 1, nTempSpecies
                     call getSpecieName(strBuffers(i), nNameLength, masterSpecies(i)%Name)
+                    call WriteLog("masterspecies name added: " // trim(masterSpecies(i)%Name))
                     call skipNValues(strBuffers(i),2)
                     read(strBuffers(i),*, end = 9999, err = 9999) masterSpecies(i)%AlkFac
                     call skipNValues(strBuffers(i),2)

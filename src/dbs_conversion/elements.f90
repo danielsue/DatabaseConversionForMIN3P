@@ -184,7 +184,7 @@ module elements
         elementList(40)%MWT=91.224
         elementList(41)%MWT=92.9064
         elementList(42)%MWT=95.94
-        elementList(43)%MWT=98
+        elementList(43)%MWT=96.906365
         elementList(44)%MWT=101.07
         elementList(45)%MWT=102.9055
         elementList(46)%MWT=106.42
